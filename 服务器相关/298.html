@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.jpg?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.gif?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.gif?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'TIUJ36KF8R',
+      apiKey: '57a17d02ea395f8205e670397d1b6417',
+      indexName: 'lice.cc',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"输入搜索","hits_empty":"没有找到: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5826418077790563",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <meta name="description" content="LNMP一键安装包除去安装所必须的依赖包，还会默认安装以下软件： Nginx、MySQL/MariaDB、PHP、phpMyAdmin、Zend Optimizer/Zend GuardLoader。用户可以根据自己的需要安装其他组件，如FTP服务器、缓存组件，也可以使用升级脚本对Nginx、MySQL、PHP进行升级。 安装这些组件或升级都需要在lnmp下载解压缩后的目录，比如下载到/root目">
+<meta name="keywords" content="lnmp,Nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LNMP安装了哪些软件？安装目录在哪？">
+<meta property="og:url" content="https://lice.cc/服务器相关/298.html">
+<meta property="og:site_name" content="李策">
+<meta property="og:description" content="LNMP一键安装包除去安装所必须的依赖包，还会默认安装以下软件： Nginx、MySQL/MariaDB、PHP、phpMyAdmin、Zend Optimizer/Zend GuardLoader。用户可以根据自己的需要安装其他组件，如FTP服务器、缓存组件，也可以使用升级脚本对Nginx、MySQL、PHP进行升级。 安装这些组件或升级都需要在lnmp下载解压缩后的目录，比如下载到/root目">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-29T02:35:21.243Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LNMP安装了哪些软件？安装目录在哪？">
+<meta name="twitter:description" content="LNMP一键安装包除去安装所必须的依赖包，还会默认安装以下软件： Nginx、MySQL/MariaDB、PHP、phpMyAdmin、Zend Optimizer/Zend GuardLoader。用户可以根据自己的需要安装其他组件，如FTP服务器、缓存组件，也可以使用升级脚本对Nginx、MySQL、PHP进行升级。 安装这些组件或升级都需要在lnmp下载解压缩后的目录，比如下载到/root目">
+
+
+
+
+
+
+  <link rel="canonical" href="https://lice.cc/服务器相关/298.html">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>LNMP安装了哪些软件？安装目录在哪？ | 李策</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">李策</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">分享生活，享受生活！</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-友情链接">
+    <a href="/links/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-link"></i> <br>友情链接</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lice.cc/服务器相关/298.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李策">
+      <meta itemprop="description" content="分享生活,享受生活,大家好,我是李策。">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李策">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">LNMP安装了哪些软件？安装目录在哪？
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-11-22 20:26:41" itemprop="dateCreated datePublished" datetime="2016-11-22T20:26:41+08:00">2016-11-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-05-29 10:35:21" itemprop="dateModified" datetime="2018-05-29T10:35:21+08:00">2018-05-29</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/服务器相关/" itemprop="url" rel="index"><span itemprop="name">服务器相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/服务器相关/298.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/服务器相关/298.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>LNMP一键安装包除去安装所必须的依赖包，还会默认安装以下软件： Nginx、MySQL/MariaDB、PHP、phpMyAdmin、Zend Optimizer/Zend GuardLoader。用户可以根据自己的需要安装其他组件，如FTP服务器、缓存组件，也可以使用升级脚本对Nginx、MySQL、PHP进行升级。 <strong>安装这些组件或升级都需要在lnmp下载解压缩后的目录，比如下载到/root目录，就进入/root/lnmp1.2-full目录，执行以下命令。</strong> <strong>虚拟主机管理：</strong></p>
+<p>参见：</p>
+<p><a href="http://lnmp.org/faq/lnmp-vhost-add-howto.html" target="_blank" rel="noopener">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a><strong>FTP服务器：</strong></p>
+<ul>
+<li>可选1，<a href="https://lnmp.org/faq/ftpserver.html" target="_blank" rel="noopener">PureFTPd</a>，执行：./pureftpd.sh 安装，<a href="http://yourIP/ftp/" target="_blank" rel="noopener">http://yourIP/ftp/</a> 进行管理。</li>
+<li>可选2(LNMP1.2下已经移除该脚本)，<a href="https://lnmp.org/faq/ftpserver.html" target="_blank" rel="noopener">Proftpd</a>，执行：./proftpd.sh 安装，执行命令：/root/proftpd_vhost.sh 添加FTP账号。</li>
+</ul>
+<p><strong>缓存加速：</strong></p>
+<p>LNMP1.2及更高版本统一使用./addons.sh 进行安装和卸载。 使用方法：./addons.sh {install|uninstall} {eaccelerator|xcache|memcached|opcache|redis|imagemagick|ioncube} 详细教程：</p>
+<p><a href="http://lnmp.org/faq/addons.html" target="_blank" rel="noopener">http://lnmp.org/faq/addons.html</a></p>
+<p>LNMP1.1下：*   可选1，<a href="https://lnmp.org/faq/Add-ons.html#eAccelerator" target="_blank" rel="noopener">eAccelerator</a>，执行：./eaccelerator.sh 安装。</p>
+<ul>
+<li>可选2，<a href="https://lnmp.org/faq/Add-ons.html#memcached" target="_blank" rel="noopener">memcached</a>，执行：./memcached.sh安装。</li>
+<li>可选3，<a href="https://lnmp.org/faq/Add-ons.html#xcache" target="_blank" rel="noopener">xcache</a>，安装时需选择版本和设置密码， <a href="http://yourIP/xcache/" target="_blank" rel="noopener">http://yourIP/xcache/</a> 进行管理，用户名 admin，密码为安装xcache时设置的。执行：./xcache.sh安装。</li>
+<li>可选4，<a href="https://lnmp.org/faq/Add-ons.html#redis" target="_blank" rel="noopener">redis</a>，执行：./redis.sh安装。</li>
+<li>可选5，<a href="https://lnmp.org/faq/Add-ons.html#opcache" target="_blank" rel="noopener">opcache</a>，执行：opcache.sh安装。<a href="http://yourIP/ocp.php" target="_blank" rel="noopener">http://yourIP/ocp.php</a> 进行管理。Zend Opcache与eaccelerator相冲突，需卸载eaccelerator。</li>
+</ul>
+<p>LNMP1.2及更高版本： 统一使用./upgrade.sh 进行升级工作。 使用方法：./upgrade.sh {nginx|mysql|mariadb|m2m|php|phpa} 详细教程：<a href="http://lnmp.org/faq/lnmp1-2-upgrade.html" target="_blank" rel="noopener">http://lnmp.org/faq/lnmp1-2-upgrade.html</a> LNMP1.1下： <strong>升级脚本：</strong></p>
+<ul>
+<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">Nginx升脚本可</a>，升级至任意Nginx版本。执行：./upgrade_nginx.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">PHP升级脚本</a>，可升级至大部分PHP版本。执行：./upgrade_php.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">MySQL升级脚本</a>，可升级至任意MySQL版本，MySQL升级风险较大，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">MySQL升级至MariaDB</a>，可从MySQL升级至Mariadb，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql2mariadb.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">MariaDB升级脚本</a>，可升级已安装的Mariadb，虽然会自动备份数据，依然建议自行再备份一下。执行：./upgrade_mariadb.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">LNMPA PHP升级脚本</a>，可升级LNMPA的PHP至大部分版本。执行：./upgrade_lnmpa_php.sh 按提示进行升级。</li>
+</ul>
+<p><strong>图像处理：</strong></p>
+<ul>
+<li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#imageMagick" target="_blank" rel="noopener">imageMagick</a>，执行：./imageMagick.sh 安装。 执行：./imageMagick.sh 安装，imageMagick路径：/usr/local/imagemagick/bin/。</li>
+</ul>
+<p><strong>解密：</strong></p>
+<ul>
+<li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#ionCube" target="_blank" rel="noopener">ionCube</a>，执行：./ionCube.sh 安装。</li>
+</ul>
+<p><strong>其他：</strong></p>
+<ul>
+<li>可选1，执行：./php5.2.17.sh 可安装一个不与LNMP冲突的PHP 5.2.17单独存在，使用时需要将nginx虚拟主机配置文件里的 php-cgi.sock 修改为 php-cgi52.sock。</li>
+<li>可选2，执行：./reset_mysql_root_password.sh 可重置MySQL/MariaDB的root密码。</li>
+<li>可选3，执行：./check502.sh 可检测php-fpm是否挂掉,502报错时重启，配合crontab使用。</li>
+<li>可选4，执行：./cut_nginx_logs.sh 日志切割脚本。</li>
+<li>可选5，执行：./remove_disable_function.sh 运行此脚本可删掉禁用函数。</li>
+</ul>
+<p><strong>LNMP相关软件安装目录</strong> Nginx 目录: /usr/local/nginx/ MySQL 目录 : /usr/local/mysql/ MySQL数据库所在目录：/usr/local/mysql/var/ MariaDB 目录 : /usr/local/mariadb/ MariaDB数据库所在目录：/usr/local/mariadb/var/ PHP目录 : /usr/local/php/ PHPMyAdmin目录 : 0.9版本为/home/wwwroot/phpmyadmin/ 1.0及以后版本为 /home/wwwroot/default/phpmyadmin/ 强烈建议将此目录重命名为其不容易猜到的名字。phpmyadmin可自己从官网下载新版替换。 默认网站目录 : 0.9版本为 /home/wwwroot/ 1.0及以后版本为 /home/wwwroot/default/ Nginx日志目录：/home/wwwlogs/ /root/vhost.sh添加的虚拟主机配置文件所在目录：/usr/local/nginx/conf/vhost/ PureFtpd 目录：/usr/local/pureftpd/ PureFtpd web管理目录： 0.9版为/home/wwwroot/default/ftp/ 1.0版为 /home/wwwroot/default/ftp/ Proftpd 目录：/usr/local/proftpd/ Redis 目录：/usr/local/redis/ <strong>LNMP相关配置文件位置</strong> Nginx主配置(默认虚拟主机)文件：/usr/local/nginx/conf/nginx.conf 添加的虚拟主机配置文件：/usr/local/nginx/conf/vhost/域名.conf MySQL配置文件：/etc/my.cnf PHP配置文件：/usr/local/php/etc/php.ini php-fpm配置文件：/usr/local/php/etc/php-fpm.conf PureFtpd配置文件：/usr/local/pureftpd/pure-ftpd.conf PureFtpd MySQL配置文件：/usr/local/pureftpd/pureftpd-mysql.conf Proftpd配置文件：/usr/local/proftpd/etc/proftpd.conf 1.2及之前版本为/usr/local/proftpd/proftpd.conf Proftpd 用户配置文件：/usr/local/proftpd/etc/vhost/用户名.conf Redis 配置文件：/usr/local/redis/etc/redis.conf <strong>LNMPA相关目录文件位置</strong> Apache目录：/usr/local/apache/ Apache配置文件：/usr/local/apache/conf/httpd.conf Apache虚拟主机配置文件目录：/usr/local/apache/conf/vhost/ Apache默认虚拟主机配置文件：/usr/local/apache/conf/extra/httpd-vhosts.conf 虚拟主机配置文件名称：/usr/local/apache/conf/vhost/域名.conf</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>李策</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://lice.cc/服务器相关/298.html" title="LNMP安装了哪些软件？安装目录在哪？">https://lice.cc/服务器相关/298.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/lnmp/" rel="tag"># lnmp</a>
+          
+            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/服务器相关/296.html" rel="next" title="LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程">
+                <i class="fa fa-chevron-left"></i> LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/生活DAY/301.html" rel="prev" title="2016年最后一天，杂记">
+                2016年最后一天，杂记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/avatar.jpg" alt="李策">
+            
+              <p class="site-author-name" itemprop="name">李策</p>
+              <p class="site-description motion-element" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">62</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">66</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="//github.com/licecn" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:lice@ailice.cn" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="//gitee.com/licesn/" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5826418077790563",
+    enable_page_level_ads: true
+  });
+</script>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">爱我中华</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: false,
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+
+    $(function(){
+      $.get('https://ailice.leanapp.cn')　
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.3.0"></script>
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=6.3.0"></script>
+
+
+  
+
+  
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5826418077790563",
+    enable_page_level_ads: true
+  });
+</script>
+</body>
+</html>
