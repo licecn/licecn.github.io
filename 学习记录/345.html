@@ -29,7 +29,7 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-<meta name="description" content="lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。 1rm -rf [文件路径] 但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。1chattr -i /home/wwwroot/你的网站目录/.user.ini ok,大功告成，如果想加锁的话可以把 -i 改成 +i">
+  <meta name="description" content="lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。 1rm -rf [文件路径] 但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。1chattr -i /home/wwwroot/你的网站目录/.user.ini ok,大功告成，如果想加锁的话可以把 -i 改成 +i">
 <meta name="keywords" content="lnmp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lnmp删除文件.user.ini提示没有权限（Operation not permitted）">
