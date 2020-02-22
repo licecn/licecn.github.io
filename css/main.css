@@ -49,7 +49,7 @@ h1, h2, h3,h4,h5,h6{
 }
 /*缩略图*/
 .index .main .list-unstyled .have-img img{
-	max-width: inherit;
+	max-width: 100%;
 }
 /*more*/
 .btn{
@@ -81,7 +81,7 @@ h1, h2, h3,h4,h5,h6{
     display: inherit;
     font-size: 25px;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1;
 }
 .list-unstyled .title:visited{
 	color:#969696;
@@ -145,7 +145,7 @@ h1, h2, h3,h4,h5,h6{
 
 /*分页*/
 .pagination a,.pagination span{
-  padding: 10px 20px;
+  padding: 10px 10px;
   line-height: 1;
 }
 .pagination .current{
