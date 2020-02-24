@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2016-04-15T02:58:08.000Z" itemprop="datePublished">2016-04-15 10:58:08</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/wp小记/243.html" class="leancloud_visitors" data-flag-title="wordpress主题去版权网站不能打开">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>使用wordpress 主题一般都是用别人的，毕竟自己的能力有限。以前刚开始玩什么也不懂，感觉挂着别人的版权，挂着别人的连接感觉很不爽，于是乎，删之。 但是，到了现在，个人感觉主题作者写个主题很辛苦，挂版权没什么不好。由于学了seo所以连接肯定是不会挂的，版权是没问题的。那么问题来了，很多主题的作者为了留住版权设置了暗箱，删掉版权网站打不开了。 在这里我说一下简单的在去掉版权的同时也能打开网站。其实很简单，就是将版权注释掉就可以了，现在很多主题作者应该还没有将算法写的很复杂所以可以这样简单的去掉版权并能正常显示网站。好了 就这样吧。</p>
@@ -114,7 +117,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -173,5 +201,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

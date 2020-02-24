@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2014-11-29T03:41:46.000Z" itemprop="datePublished">2014-11-29 11:41:46</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/生活DAY/107.html" class="leancloud_visitors" data-flag-title="随便写一些这些天的事">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>这些天一直都在忙新闻源的事，可以说所有的精力都在上面了，月初的剧风行动，还有月末的百度大力打击垃圾信息，无形的压力让我很难走。绝处逢生这个词验证了我的新突破，感觉做了很多事，但效果不理想，但是总体来说我很满意，这也说明付出可能有回报，但是不付出就一定没有回报。不想写太多了，一个月有这么一篇足以了。就这样吧。</p>
@@ -112,7 +115,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -171,5 +199,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

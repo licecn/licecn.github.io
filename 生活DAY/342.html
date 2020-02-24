@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2018-08-09T08:08:30.000Z" itemprop="datePublished">2018-08-09 16:08:30</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/生活DAY/342.html" class="leancloud_visitors" data-flag-title="今天遇到一名军人聊了两句">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>今天来到一个公司，发现新招了一个员工，给他解决了一些问题之后我就坐在工位上打开电脑看新闻，通过听他和公司人聊天知道他是一名军人，说了很多野外生存的事情。</p>
@@ -114,7 +117,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -173,5 +201,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

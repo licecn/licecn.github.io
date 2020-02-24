@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2016-06-21T06:35:06.000Z" itemprop="datePublished">2016-06-21 14:35:06</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/Java笔记/260.html" class="leancloud_visitors" data-flag-title="【ZT】Java做了6年，给新手一些建议">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>1.不要再拿AWT和Swing练手了，很少公司会用，多写点算法和数据结构，工作后你会获益良多 </p>
@@ -122,7 +125,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -181,5 +209,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

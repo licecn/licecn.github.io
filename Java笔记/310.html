@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2017-08-03T12:07:45.000Z" itemprop="datePublished">2017-08-03 20:07:45</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/Java笔记/310.html" class="leancloud_visitors" data-flag-title="Java中 @ page指令语法介绍">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token annotation punctuation">@page</span> \<span class="token punctuation">[</span>language<span class="token operator">=</span><span class="token string">"Java"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span><span class="token keyword">extends</span><span class="token operator">=</span><span class="token string">"package.class"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span><span class="token keyword">import</span><span class="token operator">=</span><span class="token string">"package.class|package.*,..."</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>session<span class="token operator">=</span><span class="token string">"true|false"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>buffer<span class="token operator">=</span><span class="token string">"none|8KB|size Kb"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>autoFlush<span class="token operator">=</span><span class="token string">"true|false"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>isThreadSafe<span class="token operator">=</span><span class="token string">"true|false"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>info<span class="token operator">=</span><span class="token string">"text"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>errorPage<span class="token operator">=</span><span class="token string">"relativeURL"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>contentType<span class="token operator">=</span><span class="token string">"mimeType\[;charset=characterSet\]"</span><span class="token operator">|</span><span class="token string">"text/html;charSet=ISO-8859-1"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>pageEncoding<span class="token operator">=</span><span class="token string">"ISO-8859-1"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>isErrorPage<span class="token operator">=</span><span class="token string">"true|false"</span>\<span class="token punctuation">]</span> <span class="token operator">%</span><span class="token operator">></span>
@@ -114,7 +117,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -173,5 +201,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

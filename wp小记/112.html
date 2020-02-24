@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2015-01-08T07:21:28.000Z" itemprop="datePublished">2015-01-08 15:21:28</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/wp小记/112.html" class="leancloud_visitors" data-flag-title="wordpress小记：4》wp_footer()控制底部版权">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个&lt;?php wp_footer(); ?&gt; 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。</p>
@@ -115,7 +118,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -174,5 +202,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

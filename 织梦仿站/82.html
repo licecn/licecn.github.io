@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2014-07-16T06:21:11.000Z" itemprop="datePublished">2014-07-16 14:21:11</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/织梦仿站/82.html" class="leancloud_visitors" data-flag-title="织梦搜索登陆提示信息的修改">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>　　在我们搜索文档过于频繁或者留言成功，等待管理员审核的时候，都会返回一个“DEDECMS提示信息!”的提示框，然后是“如果你的浏览器没反应，请点击这里…”。要去掉这个提示信息，方法很简单，修改两个地方就可以了： 　　在include/common.func.php文件中有两处提示信息，打开文件后搜索“DEDECMS提示信息”就可以定位这两处。 　　第一处代码如下：</p>
@@ -124,7 +127,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -183,5 +211,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

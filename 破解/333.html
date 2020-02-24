@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2017-10-07T14:44:18.000Z" itemprop="datePublished">2017-10-07 22:44:18</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/破解/333.html" class="leancloud_visitors" data-flag-title="新手入门脱壳简单介绍">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&lt;XXXX 6。特殊 常见语言的入口点：</p>
@@ -181,7 +184,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -240,5 +268,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

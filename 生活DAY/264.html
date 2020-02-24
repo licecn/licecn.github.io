@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2016-07-29T03:40:22.000Z" itemprop="datePublished">2016-07-29 11:40:22</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/生活DAY/264.html" class="leancloud_visitors" data-flag-title="win10快速实现10内开机">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>教程一：win10快速实现10内开机 很多用户反映，Win10系统在最近的更新后，开机变得很慢，动不动就要30几秒，简直就要回到5年前了。那么有没有什么办法可以解决更新后Win10开机慢的问题呢? Win10更新后开机变得很慢怎么办? </p>
@@ -117,7 +120,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -176,5 +204,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

@@ -88,7 +88,10 @@
 	    <div class="post-meta">
         <time datetime="2015-02-05T07:23:55.000Z" itemprop="datePublished">2015-02-05 15:23:55</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/wp小记/119.html" class="leancloud_visitors" data-flag-title="wordpress小记：5》解决wordpress打开慢的问题">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>自从更新的wordpress以后，发现网站打开的速度很慢，也不知道什么原因，开始以为是虚拟主机的问题，后来发现不是，就从网上查了查，发现是由于 Google服务器无法访问造成的，因为系统中会加载谷歌Opensans字体样式，导致网站非常的慢，需要加载很久才可以勉强打开，于是从网上找了一些方法来解决。</p>
@@ -119,7 +122,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -178,5 +206,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

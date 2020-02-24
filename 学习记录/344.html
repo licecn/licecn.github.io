@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2018-08-21T07:32:38.000Z" itemprop="datePublished">2018-08-21 15:32:38</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/学习记录/344.html" class="leancloud_visitors" data-flag-title="Windows Git本地代码推送到github的命令及配置">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <h2 id="一、配置"><a href="#一、配置" class="headerlink" title="一、配置"></a>一、配置</h2><p>安装git这里就不多说了，个人感觉和安装qq没啥区别。</p>
@@ -136,7 +139,32 @@ git clone git@github<span class="token punctuation">.</span>com<span class="toke
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -195,5 +223,6 @@ git clone git@github<span class="token punctuation">.</span>com<span class="toke
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

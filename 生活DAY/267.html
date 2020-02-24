@@ -86,7 +86,10 @@
 	    <div class="post-meta">
         <time datetime="2016-08-17T01:32:56.000Z" itemprop="datePublished">2016-08-17 09:32:56</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/生活DAY/267.html" class="leancloud_visitors" data-flag-title="十年前十年后我们错过了什么">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>1st. 十年前，自习课上，你递来一张纸条，上面写着:我喜欢你。 我怔了怔，扭头看你。 你一丝不苟写着作业，一副若有所思的样子，只是握笔的手有些发颤，眸子里写满了慌乱。 白色衬衣染着阳光的味道，侧脸很是好看。 十年后，你寄来一张请帖，上面说:我要结婚了。 婚礼那天，我如约而至。 台上，你挽着她的臂膀，两人依偎在对方怀里，脸上挂满了幸福。白色西装配上领带 ，洁净无瑕。帅气而梦幻。 角落里，我端起酒杯一饮而尽，眼眶有些湿润。 婚礼结束，你问我怎么了。 我摇了摇头，说，没事。 傻瓜，我怎么会哭呢？那是辣的。 </p>
@@ -120,7 +123,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -179,5 +207,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

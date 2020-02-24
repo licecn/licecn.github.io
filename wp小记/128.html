@@ -95,7 +95,10 @@
 	    <div class="post-meta">
         <time datetime="2015-03-02T06:38:30.000Z" itemprop="datePublished">2015-03-02 14:38:30</time>
         <span>字数:9527</span>
-        <span>阅读:9527</span>
+        <span id="/wp小记/128.html" class="leancloud_visitors" data-flag-title="wordpress小记：6》(WP)wordpress如何添加微博2015">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">500</i>
+        </span>
 	    </div>
 	    <div class="post-body">
 	        <p>记忆当中在wordpress中添加微博，是一件很简单的事，但是现在却发现没有以前那么容易了，在网上了找了很多大多都是以前的东西，后来发现一个微信开放平台，在这里找到了我想要的东西。</p>
@@ -139,7 +142,32 @@
         
         </div>
     </div>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -198,5 +226,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>

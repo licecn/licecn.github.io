@@ -29,18 +29,18 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="您的浏览器版本过低 请升级浏览器   	 		请使用IE9等高版本浏览器或者谷歌浏览器！">
+  <meta name="description" content="您的浏览器版本过低 请升级浏览器    	 		请使用IE9等高版本浏览器或者谷歌浏览器！">
 <meta name="keywords" content="李策">
 <meta property="og:type" content="website">
 <meta property="og:title" content="李策">
 <meta property="og:url" content="https://lice.cc/upgrade.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="您的浏览器版本过低 请升级浏览器   	 		请使用IE9等高版本浏览器或者谷歌浏览器！">
+<meta property="og:description" content="您的浏览器版本过低 请升级浏览器    	 		请使用IE9等高版本浏览器或者谷歌浏览器！">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2020-02-04T13:55:23.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="李策">
-<meta name="twitter:description" content="您的浏览器版本过低 请升级浏览器   	 		请使用IE9等高版本浏览器或者谷歌浏览器！">
+<meta name="twitter:description" content="您的浏览器版本过低 请升级浏览器    	 		请使用IE9等高版本浏览器或者谷歌浏览器！">
   <meta name="robots" content="all">
   <meta name="google" content="all">
   <meta name="googlebot" content="all">
@@ -99,7 +99,32 @@
 </html>
 	        </div>
 	    </article>
-</div>          
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
         </div>
         <!-- zy左侧列表结束 -->        
         <!-- 侧边栏 -->
@@ -154,9 +179,9 @@
               <li class="cc-tname"><a href="/tags/Centos/" class="tstyle-2">Centos (2)</a></li>
               <li class="cc-tname"><a href="/tags/Nginx/" class="tstyle-3">Nginx (4)</a></li>
               <li class="cc-tname"><a href="/tags/学习记录/" class="tstyle-4">学习记录 (2)</a></li>
-              <li class="cc-tname"><a href="/tags/seo/" class="tstyle-1">seo (4)</a></li>
-              <li class="cc-tname"><a href="/tags/百度快照/" class="tstyle-2">百度快照 (2)</a></li>
-              <li class="cc-tname"><a href="/tags/SEO优化/" class="tstyle-3">SEO优化 (2)</a></li>
+              <li class="cc-tname"><a href="/tags/SEO优化/" class="tstyle-1">SEO优化 (2)</a></li>
+              <li class="cc-tname"><a href="/tags/seo/" class="tstyle-2">seo (4)</a></li>
+              <li class="cc-tname"><a href="/tags/百度快照/" class="tstyle-3">百度快照 (2)</a></li>
               <li class="cc-tname"><a href="/tags/wordpress/" class="tstyle-4">wordpress (4)</a></li>
               <li class="cc-tname"><a href="/tags/wp小记/" class="tstyle-1">wp小记 (3)</a></li>
               <li class="cc-tname"><a href="/tags/javascript/" class="tstyle-2">javascript (2)</a></li>
@@ -178,5 +203,6 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
 </body>
 </html>
