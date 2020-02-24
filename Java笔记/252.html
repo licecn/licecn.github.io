@@ -29,18 +29,18 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="以下三个方法：123456789101112131415import  java.util.Arrays; public   class  Sum&amp;#123;     public   static   void  main(String\[\] args)  &amp;#123;       int vec\[\] = new int\[\]&amp;#123;1, 5, 3&amp;#125;;  // 第一种方法">
+  <meta name="description" content="以下三个方法：import  java.util.Arrays;  public   class  Sum {      public   static   void  main(String\[\] args)  {        int vec\[\] = new int\[\]{1, 5, 3};  // 第一种方法                  int  vec\[\]  =  { 3">
 <meta name="keywords" content="java,java数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java创建一个数组的方法">
 <meta property="og:url" content="https://lice.cc/Java笔记/252.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="以下三个方法：123456789101112131415import  java.util.Arrays; public   class  Sum&amp;#123;     public   static   void  main(String\[\] args)  &amp;#123;       int vec\[\] = new int\[\]&amp;#123;1, 5, 3&amp;#125;;  // 第一种方法">
+<meta property="og:description" content="以下三个方法：import  java.util.Arrays;  public   class  Sum {      public   static   void  main(String\[\] args)  {        int vec\[\] = new int\[\]{1, 5, 3};  // 第一种方法                  int  vec\[\]  =  { 3">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-11T04:59:11.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java创建一个数组的方法">
-<meta name="twitter:description" content="以下三个方法：123456789101112131415import  java.util.Arrays; public   class  Sum&amp;#123;     public   static   void  main(String\[\] args)  &amp;#123;       int vec\[\] = new int\[\]&amp;#123;1, 5, 3&amp;#125;;  // 第一种方法">
+<meta name="twitter:description" content="以下三个方法：import  java.util.Arrays;  public   class  Sum {      public   static   void  main(String\[\] args)  {        int vec\[\] = new int\[\]{1, 5, 3};  // 第一种方法                  int  vec\[\]  =  { 3">
   <meta name="robots" content="all">
   <meta name="google" content="all">
   <meta name="googlebot" content="all">
@@ -49,7 +49,8 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
   <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
   <link rel="stylesheet" href="/css/main.css?rev=@@hash">
-</head> 
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -88,7 +89,22 @@
         <span>阅读:9527</span>
 	    </div>
 	    <div class="post-body">
-	        <h3 id="以下三个方法："><a href="#以下三个方法：" class="headerlink" title="以下三个方法："></a>以下三个方法：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>  java.util.Arrays; </span><br><span class="line"><span class="keyword">public</span>   <span class="class"><span class="keyword">class</span>  <span class="title">Sum</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">     <span class="function"><span class="keyword">public</span>   <span class="keyword">static</span>   <span class="keyword">void</span>  <span class="title">main</span><span class="params">(String\[\] args)</span>  </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> vec\[\] = <span class="keyword">new</span> <span class="keyword">int</span>\[\]&#123;<span class="number">1</span>, <span class="number">5</span>, <span class="number">3</span>&#125;;  <span class="comment">// 第一种方法          </span></span><br><span class="line">       <span class="keyword">int</span>  vec\[\]  =  &#123; <span class="number">37</span> ,  <span class="number">47</span> ,  <span class="number">23</span> &#125; ;   <span class="comment">// 第二种方法  </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   <span class="keyword">int</span> vec\[\] = <span class="keyword">new</span> <span class="keyword">int</span> \[<span class="number">3</span>\];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">   vec\[i\]=i+<span class="number">1</span>;           <span class="comment">//第三种方法</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+	        <h3 id="以下三个方法："><a href="#以下三个方法：" class="headerlink" title="以下三个方法："></a>以下三个方法：</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">import</span>  java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Arrays<span class="token punctuation">;</span> 
+<span class="token keyword">public</span>   <span class="token keyword">class</span>  <span class="token class-name">Sum</span>
+<span class="token punctuation">{</span>
+     <span class="token keyword">public</span>   <span class="token keyword">static</span>   <span class="token keyword">void</span>  <span class="token function">main</span><span class="token punctuation">(</span>String\<span class="token punctuation">[</span>\<span class="token punctuation">]</span> args<span class="token punctuation">)</span>  <span class="token punctuation">{</span>
+       <span class="token keyword">int</span> vec\<span class="token punctuation">[</span>\<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int<span class="token punctuation">\</span></span><span class="token punctuation">[</span>\<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 第一种方法          </span>
+       <span class="token keyword">int</span>  vec\<span class="token punctuation">[</span>\<span class="token punctuation">]</span>  <span class="token operator">=</span>  <span class="token punctuation">{</span> <span class="token number">37</span> <span class="token punctuation">,</span>  <span class="token number">47</span> <span class="token punctuation">,</span>  <span class="token number">23</span> <span class="token punctuation">}</span> <span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 第二种方法  </span>
+
+
+   <span class="token keyword">int</span> vec\<span class="token punctuation">[</span>\<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span> \<span class="token punctuation">[</span><span class="token number">3</span>\<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">3</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+   vec\<span class="token punctuation">[</span>i\<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">//第三种方法</span>
+
+
+<span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 	    </div>
 	    <div class="post-tag">

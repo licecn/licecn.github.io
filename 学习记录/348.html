@@ -29,18 +29,18 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="12345678910(function()&amp;#123;    var _id    = 309847;    var isHome = $(&apos;a[title=&quot;我的卡包&quot;]&apos;).html();    var _temp  = isHome ? &quot;&quot; : $(&apos;span[title]:first&apos;).attr(&apos;title&apos;).slice(4);    var _name  = &apos;10.15 (1">
+  <meta name="description" content="(function(){     var _id    = 309847;     var isHome = $(&apos;a[title=&quot;我的卡包&quot;]&apos;).html();     var _temp  = isHome ? &quot;&quot; : $(&apos;span[title]:first&apos;).attr(&apos;title&apos;).slice(4);     var _name  = &apos;10.15 (19A583)Clover">
 <meta name="keywords" content="百度盘">
 <meta property="og:type" content="article">
 <meta property="og:title" content="获取百度盘文件真实路径">
 <meta property="og:url" content="https://lice.cc/学习记录/348.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="12345678910(function()&amp;#123;    var _id    = 309847;    var isHome = $(&apos;a[title=&quot;我的卡包&quot;]&apos;).html();    var _temp  = isHome ? &quot;&quot; : $(&apos;span[title]:first&apos;).attr(&apos;title&apos;).slice(4);    var _name  = &apos;10.15 (1">
+<meta property="og:description" content="(function(){     var _id    = 309847;     var isHome = $(&apos;a[title=&quot;我的卡包&quot;]&apos;).html();     var _temp  = isHome ? &quot;&quot; : $(&apos;span[title]:first&apos;).attr(&apos;title&apos;).slice(4);     var _name  = &apos;10.15 (19A583)Clover">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-10-26T05:51:31.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="获取百度盘文件真实路径">
-<meta name="twitter:description" content="12345678910(function()&amp;#123;    var _id    = 309847;    var isHome = $(&apos;a[title=&quot;我的卡包&quot;]&apos;).html();    var _temp  = isHome ? &quot;&quot; : $(&apos;span[title]:first&apos;).attr(&apos;title&apos;).slice(4);    var _name  = &apos;10.15 (1">
+<meta name="twitter:description" content="(function(){     var _id    = 309847;     var isHome = $(&apos;a[title=&quot;我的卡包&quot;]&apos;).html();     var _temp  = isHome ? &quot;&quot; : $(&apos;span[title]:first&apos;).attr(&apos;title&apos;).slice(4);     var _name  = &apos;10.15 (19A583)Clover">
   <meta name="robots" content="all">
   <meta name="google" content="all">
   <meta name="googlebot" content="all">
@@ -49,7 +49,8 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
   <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
   <link rel="stylesheet" href="/css/main.css?rev=@@hash">
-</head> 
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -88,7 +89,17 @@
         <span>阅读:9527</span>
 	    </div>
 	    <div class="post-body">
-	        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> _id    = <span class="number">309847</span>;</span><br><span class="line">    <span class="keyword">var</span> isHome = $(<span class="string">'a[title="我的卡包"]'</span>).html();</span><br><span class="line">    <span class="keyword">var</span> _temp  = isHome ? <span class="string">""</span> : $(<span class="string">'span[title]:first'</span>).attr(<span class="string">'title'</span>).slice(<span class="number">4</span>);</span><br><span class="line">    <span class="keyword">var</span> _name  = <span class="string">'10.15 (19A583)Clover PE ZD-SQ.dmg'</span>; <span class="comment">//10.15 (19A583)Clover PE ZD-SQ.dmg 改为所下载文件名称</span></span><br><span class="line">    <span class="keyword">var</span> _path  = <span class="built_in">encodeURIComponent</span>(_temp + <span class="string">'/'</span> + _name);</span><br><span class="line">    <span class="keyword">var</span> _link  = <span class="string">'https://pcs.baidu.com/rest/2.0/pcs/file?method=download&amp;app_id='</span>+_id+<span class="string">'&amp;path='</span>+_path;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'下载地址为：'</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'%c%s'</span>,<span class="string">'color:#00ff00;background-color:#000000;'</span>,_link);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+	        <pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> _id    <span class="token operator">=</span> <span class="token number">309847</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> isHome <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'a[title="我的卡包"]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> _temp  <span class="token operator">=</span> isHome <span class="token operator">?</span> <span class="token string">""</span> <span class="token punctuation">:</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'span[title]:first'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> _name  <span class="token operator">=</span> <span class="token string">'10.15 (19A583)Clover PE ZD-SQ.dmg'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//10.15 (19A583)Clover PE ZD-SQ.dmg 改为所下载文件名称</span>
+    <span class="token keyword">var</span> _path  <span class="token operator">=</span> <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>_temp <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> _name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> _link  <span class="token operator">=</span> <span class="token string">'https://pcs.baidu.com/rest/2.0/pcs/file?method=download&amp;app_id='</span><span class="token operator">+</span>_id<span class="token operator">+</span><span class="token string">'&amp;path='</span><span class="token operator">+</span>_path<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'下载地址为：'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'%c%s'</span><span class="token punctuation">,</span><span class="token string">'color:#00ff00;background-color:#000000;'</span><span class="token punctuation">,</span>_link<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>首先 把别人分享的文件保存在自己的网盘里然后在控制台复制上面代码，将<strong>10.15 (19A583)Clover PE ZD-SQ.dmg</strong>改为你想要下载的文件名。</p>
 
 	    </div>

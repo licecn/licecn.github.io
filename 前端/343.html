@@ -29,18 +29,18 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="最近给自己写的www.web1234.org 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。  一、 1&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,height=device-height,initial">
+  <meta name="description" content="最近给自己写的www.web1234.org 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。  一、 &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,height=device-">
 <meta name="keywords" content="自适应">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自适应布局需要注意的总结">
 <meta property="og:url" content="https://lice.cc/前端/343.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="最近给自己写的www.web1234.org 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。  一、 1&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,height=device-height,initial">
+<meta property="og:description" content="最近给自己写的www.web1234.org 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。  一、 &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,height=device-">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-11T05:24:13.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自适应布局需要注意的总结">
-<meta name="twitter:description" content="最近给自己写的www.web1234.org 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。  一、 1&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,height=device-height,initial">
+<meta name="twitter:description" content="最近给自己写的www.web1234.org 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。  一、 &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,height=device-">
   <meta name="robots" content="all">
   <meta name="google" content="all">
   <meta name="googlebot" content="all">
@@ -49,7 +49,8 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
   <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
   <link rel="stylesheet" href="/css/main.css?rev=@@hash">
-</head> 
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -91,7 +92,8 @@
 	        <p>最近给自己写的<a href="http://www.web1234.org" target="_blank" rel="noopener">www.web1234.org</a> 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。</p>
 <hr>
 <p>一、</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width,height<span class="token punctuation">=</span>device-height,initial-scale<span class="token punctuation">=</span>1.0, minimum-scale<span class="token punctuation">=</span>1.0, maximum-scale<span class="token punctuation">=</span>1.0, user-scalable<span class="token punctuation">=</span>no<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>1.name=”viewport”      //设置视口（网页可绘制的区域）</p>
 <p>2.width=device-width    //应用程序的宽度和屏幕的宽度是一样的</p>
 <p>3.height=device-height  //应用程序的高度和屏幕的高是一样的</p>
@@ -100,9 +102,11 @@
 <p>6.maximum-scale=1.0  //用户可以放大到的最大尺度（1.0表示不缩放）</p>
 <p>7.user-scalable=no  //用户是否可以通过他的手势来缩放整个应用程序，使应用程序的尺度发生一个改变（yes/no）</p>
 <p>二、</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"target-densitydpi=device-dpi, width=480px, user-scalable=no"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>target-densitydpi<span class="token punctuation">=</span>device-dpi, width<span class="token punctuation">=</span>480px, user-scalable<span class="token punctuation">=</span>no<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>1.target-densitydpi=device-dpi     //指定屏幕像素密度DPI,device-dpi 为设备原本的DPI值,不会有任何缩放.( dpi是单位,一般指每英寸的像素)<br><a id="more"></a><br>三、</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> <span class="attr">content</span>=<span class="string">"yes"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>apple-mobile-web-app-capable<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>yes<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>//说明：网站开启对web app程序的支持</p>
 <p>1.apple-mobile-web-app-capable //</p>
 <p>2.content=”yes”  //是否开启（开启）</p>

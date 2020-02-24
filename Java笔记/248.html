@@ -29,19 +29,19 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="format方法 123456789101112// 使用format()方法将日期转换为指定格式的文本SimpleDateFormat sdf1 = new SimpleDateFormat(&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;);SimpleDateFormat sdf2 = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm&quot;);SimpleDateFor">
+  <meta name="description" content="format方法     // 使用format()方法将日期转换为指定格式的文本     SimpleDateFormat sdf1 = new SimpleDateFormat(&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;);     SimpleDateFormat sdf2 = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm&quot;);     SimpleDat">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Date format()和parse() SimpleDateFormat()">
 <meta property="og:url" content="https://lice.cc/Java笔记/248.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="format方法 123456789101112// 使用format()方法将日期转换为指定格式的文本SimpleDateFormat sdf1 = new SimpleDateFormat(&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;);SimpleDateFormat sdf2 = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm&quot;);SimpleDateFor">
+<meta property="og:description" content="format方法     // 使用format()方法将日期转换为指定格式的文本     SimpleDateFormat sdf1 = new SimpleDateFormat(&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;);     SimpleDateFormat sdf2 = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm&quot;);     SimpleDat">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ailice.cn/wp-content/uploads/2016/04/53b23219000153b608030239.jpg">
 <meta property="og:updated_time" content="2019-09-06T16:22:55.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Date format()和parse() SimpleDateFormat()">
-<meta name="twitter:description" content="format方法 123456789101112// 使用format()方法将日期转换为指定格式的文本SimpleDateFormat sdf1 = new SimpleDateFormat(&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;);SimpleDateFormat sdf2 = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm&quot;);SimpleDateFor">
+<meta name="twitter:description" content="format方法     // 使用format()方法将日期转换为指定格式的文本     SimpleDateFormat sdf1 = new SimpleDateFormat(&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;);     SimpleDateFormat sdf2 = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm&quot;);     SimpleDat">
 <meta name="twitter:image" content="https://ailice.cn/wp-content/uploads/2016/04/53b23219000153b608030239.jpg">
   <meta name="robots" content="all">
   <meta name="google" content="all">
@@ -51,7 +51,8 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
   <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
   <link rel="stylesheet" href="/css/main.css?rev=@@hash">
-</head> 
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -91,9 +92,29 @@
 	    </div>
 	    <div class="post-body">
 	        <p>format方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用format()方法将日期转换为指定格式的文本</span></span><br><span class="line">SimpleDateFormat sdf1 = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy年MM月dd日 HH时mm分ss秒"</span>);</span><br><span class="line">SimpleDateFormat sdf2 = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy/MM/dd HH:mm"</span>);</span><br><span class="line">SimpleDateFormat sdf3 = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</span><br><span class="line">   </span><br><span class="line"><span class="comment">// 创建Date对象，表示当前时间</span></span><br><span class="line">   Date now=<span class="keyword">new</span> Date();</span><br><span class="line">   </span><br><span class="line">   <span class="comment">// 调用format()方法，将日期转换为字符串并输出</span></span><br><span class="line">System.out.println(  sdf1.format(now)                        );</span><br><span class="line">System.out.println(sdf2.format(now));</span><br><span class="line">System.out.println(sdf3.format(now));</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token comment" spellcheck="true">// 使用format()方法将日期转换为指定格式的文本</span>
+    SimpleDateFormat sdf1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"yyyy年MM月dd日 HH时mm分ss秒"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    SimpleDateFormat sdf2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"yyyy/MM/dd HH:mm"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    SimpleDateFormat sdf3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 创建Date对象，表示当前时间</span>
+    Date now<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 调用format()方法，将日期转换为字符串并输出</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>  sdf1<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>now<span class="token punctuation">)</span>                        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sdf2<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>now<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sdf3<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>now<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>parse方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用parse()方法将文本转换为日期</span></span><br><span class="line">String d = <span class="string">"2014-6-1 21:05:36"</span>;</span><br><span class="line">SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</span><br><span class="line">   </span><br><span class="line">    <span class="comment">// 调用parse()方法，将字符串转换为日期</span></span><br><span class="line">Date date =sdf.parse(d);</span><br><span class="line">   </span><br><span class="line">System.out.println(date);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token comment" spellcheck="true">// 使用parse()方法将文本转换为日期</span>
+    String d <span class="token operator">=</span> <span class="token string">"2014-6-1 21:05:36"</span><span class="token punctuation">;</span>
+    SimpleDateFormat sdf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"yyyy-MM-dd HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token comment" spellcheck="true">// 调用parse()方法，将字符串转换为日期</span>
+    Date date <span class="token operator">=</span>sdf<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>SimpleDateFormat方法 来设置时间格式。</p>
 <blockquote>
 <p>Date 类最主要的作用就是获得当前时间，同时这个类里面也具有设置时间以及一些其他的功能，但是由于本身设计的问题，这些方法却遭到众多批评，不建议使用，更推荐使用 Calendar 类进行时间和日期的处理。</p>

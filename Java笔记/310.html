@@ -29,18 +29,18 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="1&amp;lt;%@page \[language=&quot;Java&quot;\] \[extends=&quot;package.class&quot;\] \[import=&quot;package.class|package.*,...&quot;\] \[session=&quot;true|false&quot;\] \[buffer=&quot;none|8KB|size Kb&quot;\] \[autoFlush=&quot;true|false&quot;\] \[isThreadSafe=&quot;t">
+  <meta name="description" content="&amp;lt;%@page \[language=&quot;Java&quot;\] \[extends=&quot;package.class&quot;\] \[import=&quot;package.class|package.*,...&quot;\] \[session=&quot;true|false&quot;\] \[buffer=&quot;none|8KB|size Kb&quot;\] \[autoFlush=&quot;true|false&quot;\] \[isThreadSafe=&quot;tr">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java中 @ page指令语法介绍">
 <meta property="og:url" content="https://lice.cc/Java笔记/310.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="1&amp;lt;%@page \[language=&quot;Java&quot;\] \[extends=&quot;package.class&quot;\] \[import=&quot;package.class|package.*,...&quot;\] \[session=&quot;true|false&quot;\] \[buffer=&quot;none|8KB|size Kb&quot;\] \[autoFlush=&quot;true|false&quot;\] \[isThreadSafe=&quot;t">
+<meta property="og:description" content="&amp;lt;%@page \[language=&quot;Java&quot;\] \[extends=&quot;package.class&quot;\] \[import=&quot;package.class|package.*,...&quot;\] \[session=&quot;true|false&quot;\] \[buffer=&quot;none|8KB|size Kb&quot;\] \[autoFlush=&quot;true|false&quot;\] \[isThreadSafe=&quot;tr">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-11T04:43:19.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中 @ page指令语法介绍">
-<meta name="twitter:description" content="1&amp;lt;%@page \[language=&quot;Java&quot;\] \[extends=&quot;package.class&quot;\] \[import=&quot;package.class|package.*,...&quot;\] \[session=&quot;true|false&quot;\] \[buffer=&quot;none|8KB|size Kb&quot;\] \[autoFlush=&quot;true|false&quot;\] \[isThreadSafe=&quot;t">
+<meta name="twitter:description" content="&amp;lt;%@page \[language=&quot;Java&quot;\] \[extends=&quot;package.class&quot;\] \[import=&quot;package.class|package.*,...&quot;\] \[session=&quot;true|false&quot;\] \[buffer=&quot;none|8KB|size Kb&quot;\] \[autoFlush=&quot;true|false&quot;\] \[isThreadSafe=&quot;tr">
   <meta name="robots" content="all">
   <meta name="google" content="all">
   <meta name="googlebot" content="all">
@@ -49,7 +49,8 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
   <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
   <link rel="stylesheet" href="/css/main.css?rev=@@hash">
-</head> 
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -88,7 +89,8 @@
         <span>阅读:9527</span>
 	    </div>
 	    <div class="post-body">
-	        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="meta">@page</span> \[language=<span class="string">"Java"</span>\] \[extends=<span class="string">"package.class"</span>\] \[<span class="keyword">import</span>=<span class="string">"package.class|package.*,..."</span>\] \[session=<span class="string">"true|false"</span>\] \[buffer=<span class="string">"none|8KB|size Kb"</span>\] \[autoFlush=<span class="string">"true|false"</span>\] \[isThreadSafe=<span class="string">"true|false"</span>\] \[info=<span class="string">"text"</span>\] \[errorPage=<span class="string">"relativeURL"</span>\] \[contentType=<span class="string">"mimeType\[;charset=characterSet\]"</span>|<span class="string">"text/html;charSet=ISO-8859-1"</span>\] \[pageEncoding=<span class="string">"ISO-8859-1"</span>\] \[isErrorPage=<span class="string">"true|false"</span>\] %&gt;</span><br></pre></td></tr></table></figure>
+	        <pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token annotation punctuation">@page</span> \<span class="token punctuation">[</span>language<span class="token operator">=</span><span class="token string">"Java"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span><span class="token keyword">extends</span><span class="token operator">=</span><span class="token string">"package.class"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span><span class="token keyword">import</span><span class="token operator">=</span><span class="token string">"package.class|package.*,..."</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>session<span class="token operator">=</span><span class="token string">"true|false"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>buffer<span class="token operator">=</span><span class="token string">"none|8KB|size Kb"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>autoFlush<span class="token operator">=</span><span class="token string">"true|false"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>isThreadSafe<span class="token operator">=</span><span class="token string">"true|false"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>info<span class="token operator">=</span><span class="token string">"text"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>errorPage<span class="token operator">=</span><span class="token string">"relativeURL"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>contentType<span class="token operator">=</span><span class="token string">"mimeType\[;charset=characterSet\]"</span><span class="token operator">|</span><span class="token string">"text/html;charSet=ISO-8859-1"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>pageEncoding<span class="token operator">=</span><span class="token string">"ISO-8859-1"</span>\<span class="token punctuation">]</span> \<span class="token punctuation">[</span>isErrorPage<span class="token operator">=</span><span class="token string">"true|false"</span>\<span class="token punctuation">]</span> <span class="token operator">%</span><span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p> language：声明当前JSP页面使用的脚本语言 extends：指定JSP页面编译所产生的Java类所继承的父类，或所实现的接口。 import：导入包。 session：设定是否需要HTTP Session。 buffer：指定缓存区大小。 autoFlush：当输出缓冲区即将溢出时，是否需要强制输出缓冲区的内容。true-正常输出；false-溢出时产生异常。 info：设置JSP程序的信息，可以通过Servlet.getServletInfo()方法获取。 errorPage：指定错误处理页面。 isErrorPage：设置本页是否为错误处理程序。如果是处理页面，不需设置errorPage。 contentType：设法网页的文件格式和编码字符集。默认MIME类型是text/html。 pageEncoding：指定网页的编码字符集。</p>
 
 	    </div>

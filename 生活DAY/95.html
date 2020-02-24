@@ -29,20 +29,20 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？  为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。  12命令：netsh wlan set hostednetwork mode=allow">
+  <meta name="description" content="其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？  为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。  命令： netsh wlan set hostednetwork mode=allow">
 <meta name="keywords" content="wifi,win7,无线网卡">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何通过笔记本[win7系统]设置自己的wifi">
 <meta property="og:url" content="https://lice.cc/生活DAY/95.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？  为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。  12命令：netsh wlan set hostednetwork mode=allow">
+<meta property="og:description" content="其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？  为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。  命令： netsh wlan set hostednetwork mode=allow">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ailice.cn/wp-content/uploads/2014/09/wifi001-300x133.jpg">
 <meta property="og:image" content="https://ailice.cn/wp-content/uploads/2014/09/wifi002-300x148.jpg">
 <meta property="og:updated_time" content="2019-09-11T04:10:17.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何通过笔记本[win7系统]设置自己的wifi">
-<meta name="twitter:description" content="其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？  为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。  12命令：netsh wlan set hostednetwork mode=allow">
+<meta name="twitter:description" content="其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？  为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。  命令： netsh wlan set hostednetwork mode=allow">
 <meta name="twitter:image" content="https://ailice.cn/wp-content/uploads/2014/09/wifi001-300x133.jpg">
   <meta name="robots" content="all">
   <meta name="google" content="all">
@@ -52,7 +52,8 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
   <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
   <link rel="stylesheet" href="/css/main.css?rev=@@hash">
-</head> 
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -93,7 +94,9 @@
 	    <div class="post-body">
 	        <p>其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？</p>
 <p> 为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。 </p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">命令：</span><br><span class="line">netsh wlan set hostednetwork mode=allow ssid=wifi7  key=ailicecn</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-php"><code class="language-php">命令：
+netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid<span class="token operator">=</span>wifi7  key<span class="token operator">=</span>ailicecn 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>这里解释一下这三个参数 </p>
 <p>mode：是否启用虚拟WiFi网卡，改为disallow则为禁用。</p>
 <p> ssid：无线网名称，最好用英文(以wifi7为例)，即要设定的wifi名称。</p>
@@ -103,7 +106,8 @@
 <p>然后会多出这个玩意，但是有红叉怎么办，没事，在设置一下就ok了。。</p>
 <p> <a href="https://ailice.cn/wp-content/uploads/2014/09/wifi002.jpg" target="_blank" rel="noopener"><img src="https://ailice.cn/wp-content/uploads/2014/09/wifi002-300x148.jpg" alt="wifi"></a> </p>
 <p>设置如上图，点确定。就ok了。那么接下来怎么启动wifi呢 ？？ </p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令：netsh wlan start hostednetwork</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-php"><code class="language-php">命令：netsh wlan start hostednetwork 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>将这个命令放到txt文档保存，改后缀bat。   右击管理员运行 就ok 了。。 等等等等。。。。，是不是还没有wifi？？？  是啊 是啊 是啊 ，为啥？？？ 简单，把电脑的无线网卡打开，然后运行一下那个命令就行了。哈哈，对了以后，在想开启wifi只需要以管理员运行那个bat文件就可以了。（命令：netsh wlan start hostednetwork ） 赶快来试一试把。</p>
 
 	    </div>

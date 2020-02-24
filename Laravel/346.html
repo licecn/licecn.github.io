@@ -51,7 +51,8 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
   <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
   <link rel="stylesheet" href="/css/main.css?rev=@@hash">
-</head> 
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -97,20 +98,29 @@
 <p>安装之后通过命令<strong>composer –version</strong> 来查看是否安装成功。</p>
 <a id="more"></a>
 <h2 id="通过composer安装laravel"><a href="#通过composer安装laravel" class="headerlink" title="通过composer安装laravel"></a>通过composer安装laravel</h2><p>通过composer安装laravel 有两种方式，但是本人习惯使用<strong>composer create-project </strong>来创建。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer create-project --prefer-dist laravel/she <span class="string">"5.5.*"</span><span class="comment">//laravel代表laravel项目 ；she代表项目名称。5.5* 代表版本号  本人载安装的时候忽略了这一项 。</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-php"><code class="language-php">composer create<span class="token operator">-</span>project <span class="token operator">--</span>prefer<span class="token operator">-</span>dist laravel<span class="token operator">/</span>she <span class="token string">"5.5.*"</span><span class="token comment" spellcheck="true">//laravel代表laravel项目 ；she代表项目名称。5.5* 代表版本号  本人载安装的时候忽略了这一项 。</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这里说一下安装的时候设置一下镜像，这样下载的快些，并且不会出现问题。</p>
 <p>配置全局镜像：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https:<span class="comment">//mirrors.aliyun.com/composer/</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-php"><code class="language-php">composer config <span class="token operator">-</span>g repo<span class="token punctuation">.</span>packagist composer https<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//mirrors.aliyun.com/composer/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>取消配置：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g --<span class="keyword">unset</span> repos.packagist</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-php"><code class="language-php">composer config <span class="token operator">-</span>g <span class="token operator">--</span>unset repos<span class="token punctuation">.</span>packagist
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="使用phpstudy搭建本地环境"><a href="#使用phpstudy搭建本地环境" class="headerlink" title="使用phpstudy搭建本地环境"></a>使用phpstudy搭建本地环境</h2><p>laravel框架对环境有一些要求，虽然官网有自己的推荐，但是作为长时间使用phpstudy的人来说，能不换就不换吧。</p>
 <p>来看看官方对其他环境的要求：</p>
- <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- PHP &gt;= <span class="number">5.5</span><span class="number">.9</span></span><br><span class="line">- OpenSSL PHP Extension</span><br><span class="line">- PDO PHP Extension</span><br><span class="line">- Mbstring PHP Extension</span><br><span class="line">- Tokenizer PHP Extension</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-php"><code class="language-php">  <span class="token operator">-</span> <span class="token constant">PHP</span> <span class="token operator">>=</span> <span class="token number">5.5</span><span class="token punctuation">.</span><span class="token number">9</span>
+  <span class="token operator">-</span> OpenSSL <span class="token constant">PHP</span> Extension
+  <span class="token operator">-</span> <span class="token constant">PDO</span> <span class="token constant">PHP</span> Extension
+  <span class="token operator">-</span> Mbstring <span class="token constant">PHP</span> Extension
+  <span class="token operator">-</span> Tokenizer <span class="token constant">PHP</span> Extension
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>  在phpstudy找到相应的服务开启即可。</p>
 <p>因为laravel 的入口文件在项目的public文件夹，所以url要写成：localhost/she/public  //she 为项目名称</p>
 <p>到此基本配置完成。</p>
 <p>如果你使用nginx，那么在vhost.conf 里的 location /   下加入：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">try_files $uri $uri/ /index.php?$query_string;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-php"><code class="language-php">try_files <span class="token variable">$uri</span> <span class="token variable">$uri</span><span class="token operator">/</span> <span class="token operator">/</span>index<span class="token punctuation">.</span>php<span class="token operator">?</span><span class="token variable">$query_string</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>还有就是大家最好下载所以使用版本的文档，这样大多数问题基本可以解决。</p>
 <p>大家也可以在laravel china 社区查找相关问题。虽然现在没以前火热了，但解决基本问题还是可以的。</p>
 <p><a href="https://learnku.com/laravel" target="_blank" rel="noopener">https://learnku.com/laravel</a></p>

@@ -29,18 +29,18 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&amp;lt;XXXX 6。特殊 常见语言的入口点： 12345678910 VB：004012D4 &amp;gt; 68 54474000 push QQ个性网.00404754004012D9 E8 F0FFFFFF call &amp;lt;jmp.&amp;a">
+  <meta name="description" content="壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&amp;lt;XXXX 6。特殊 常见语言的入口点：  VB：  004012D4 &amp;gt; 68 54474000 push QQ个性网.00404754 004012D9 E8 F0FFFFFF call  004012DE 0000 add by">
 <meta name="keywords" content="脱壳">
 <meta property="og:type" content="article">
 <meta property="og:title" content="新手入门脱壳简单介绍">
 <meta property="og:url" content="https://lice.cc/破解/333.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&amp;lt;XXXX 6。特殊 常见语言的入口点： 12345678910 VB：004012D4 &amp;gt; 68 54474000 push QQ个性网.00404754004012D9 E8 F0FFFFFF call &amp;lt;jmp.&amp;a">
+<meta property="og:description" content="壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&amp;lt;XXXX 6。特殊 常见语言的入口点：  VB：  004012D4 &amp;gt; 68 54474000 push QQ个性网.00404754 004012D9 E8 F0FFFFFF call  004012DE 0000 add by">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-11T04:36:16.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="新手入门脱壳简单介绍">
-<meta name="twitter:description" content="壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&amp;lt;XXXX 6。特殊 常见语言的入口点： 12345678910 VB：004012D4 &amp;gt; 68 54474000 push QQ个性网.00404754004012D9 E8 F0FFFFFF call &amp;lt;jmp.&amp;a">
+<meta name="twitter:description" content="壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&amp;lt;XXXX 6。特殊 常见语言的入口点：  VB：  004012D4 &amp;gt; 68 54474000 push QQ个性网.00404754 004012D9 E8 F0FFFFFF call  004012DE 0000 add by">
   <meta name="robots" content="all">
   <meta name="google" content="all">
   <meta name="googlebot" content="all">
@@ -49,7 +49,8 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
   <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
   <link rel="stylesheet" href="/css/main.css?rev=@@hash">
-</head> 
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -89,11 +90,75 @@
 	    </div>
 	    <div class="post-body">
 	        <p>壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&lt;XXXX 6。特殊 常见语言的入口点：</p>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> VB：</span><br><span class="line"></span><br><span class="line"><span class="number">004012</span>D4 &gt; <span class="number">68</span> <span class="number">54474000</span> push QQ个性网<span class="number">.00404754</span></span><br><span class="line"><span class="number">004012</span>D9 E8 F0FFFFFF <span class="keyword">call</span> &lt;jmp.&amp;MSVBVM60.<span class="meta">#100&gt;</span></span><br><span class="line"><span class="number">004012</span>DE <span class="number">0000</span> add <span class="built_in">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E0</span> <span class="number">0000</span> add <span class="built_in">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E2</span> <span class="number">0000</span> add <span class="built_in">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E4</span> <span class="number">3000</span> <span class="keyword">xor</span> <span class="built_in">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E6</span> <span class="number">0000</span> add <span class="built_in">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E8</span> <span class="number">48</span> dec eax</span><br></pre></td></tr></table></figure>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">delphi:</span><br><span class="line"></span><br><span class="line"><span class="number">004</span>A5C54 &gt; <span class="number">55</span> push ebp</span><br><span class="line"><span class="number">004</span>A5C55 <span class="number">8</span>BEC mov ebp,esp</span><br><span class="line"><span class="number">004</span>A5C57 <span class="number">83</span>C4 F0 add esp,<span class="number">-10</span></span><br><span class="line"><span class="number">004</span>A5C5A B8 EC594A00 mov eax,openpro<span class="number">.004</span>A59EC</span><br></pre></td></tr></table></figure>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">BC++:</span><br><span class="line"></span><br><span class="line"><span class="number">00401678</span> &gt; /EB <span class="number">10</span> jmp <span class="built_in">short</span> btengine<span class="number">.0040168</span>A</span><br><span class="line"><span class="number">0040167</span>A |<span class="number">66</span>:<span class="number">623</span>A bound di,dword ptr ds:\[edx\]</span><br><span class="line"><span class="number">0040167</span>D |<span class="number">43</span> inc ebx</span><br><span class="line"><span class="number">0040167</span>E |<span class="number">2</span>B2B <span class="keyword">sub</span> ebp,dword ptr ds:\[ebx\]</span><br><span class="line"><span class="number">00401680</span> |<span class="number">48</span> dec eax</span><br><span class="line"><span class="number">00401681</span> |<span class="number">4</span>F dec edi</span><br><span class="line"><span class="number">00401682</span> |<span class="number">4</span>F dec edi</span><br><span class="line"><span class="number">00401683</span> |<span class="number">4</span>B dec ebx</span><br><span class="line"><span class="number">00401684</span> |<span class="number">90</span> nop</span><br><span class="line"><span class="number">00401685</span> -|E9 <span class="number">98005400</span> jmp <span class="number">00941722</span></span><br><span class="line"><span class="number">0040168</span>A \\A1 <span class="number">8</span>B005400 mov eax,dword ptr ds:\[<span class="number">54008</span>B\]</span><br><span class="line"><span class="number">0040168</span>F C1E0 <span class="number">02</span> shl eax,<span class="number">2</span></span><br><span class="line"><span class="number">00401692</span> A3 <span class="number">8</span>F005400 mov dword ptr ds:\[<span class="number">54008</span>F\],eax</span><br><span class="line"><span class="number">00401697</span> <span class="number">52</span> push edx</span><br><span class="line"><span class="number">00401698</span> <span class="number">6</span>A <span class="number">00</span> push <span class="number">0</span></span><br><span class="line"><span class="number">0040169</span>A E8 <span class="number">99</span>D01300 <span class="keyword">call</span> &lt;jmp.&amp;KERNEL32.GetModuleHandleA&gt;</span><br><span class="line"><span class="number">0040169</span>F <span class="number">8</span>BD0 mov edx,eax</span><br></pre></td></tr></table></figure>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">VC++:</span><br><span class="line"></span><br><span class="line"><span class="number">0040</span>A41E &gt; <span class="number">55</span> push ebp</span><br><span class="line"><span class="number">0040</span>A41F <span class="number">8</span>BEC mov ebp,esp</span><br><span class="line"><span class="number">0040</span>A421 <span class="number">6</span>A FF push <span class="number">-1</span></span><br><span class="line"><span class="number">0040</span>A423 <span class="number">68</span> C8CB4000 push 跑跑排行<span class="number">.0040</span>CBC8</span><br><span class="line"><span class="number">0040</span>A428 <span class="number">68</span> A4A54000 push &lt;jmp.&amp;MSVCRT.\_except\_handler3&gt;</span><br><span class="line"><span class="number">0040</span>A42D <span class="number">64</span>:A1 <span class="number">00000000</span> mov eax,dword ptr fs:\[<span class="number">0</span>\]</span><br><span class="line"><span class="number">0040</span>A433 <span class="number">50</span> push eax</span><br><span class="line"><span class="number">0040</span>A434 <span class="number">64</span>:<span class="number">8925</span> <span class="number">0000000</span>&gt;mov dword ptr fs:\[<span class="number">0</span>\],esp</span><br><span class="line"><span class="number">0040</span>A43B <span class="number">83</span>EC <span class="number">68</span> <span class="keyword">sub</span> esp,<span class="number">68</span></span><br><span class="line"><span class="number">0040</span>A43E <span class="number">53</span> push ebx</span><br><span class="line"><span class="number">0040</span>A43F <span class="number">56</span> push esi</span><br><span class="line"><span class="number">0040</span>A440 <span class="number">57</span> push edi</span><br></pre></td></tr></table></figure>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">MASM(汇编):</span><br><span class="line"></span><br><span class="line"><span class="number">004035</span>C9 &gt; <span class="number">6</span>A <span class="number">00</span> push <span class="number">0</span></span><br><span class="line"><span class="number">004035</span>CB E8 A20A0000 <span class="keyword">call</span> &lt;jmp.&amp;kernel32.GetModuleHandleA&gt;</span><br><span class="line"><span class="number">004035</span>D0 A3 <span class="number">5</span>B704000 mov dword ptr ds:\[<span class="number">40705</span>B\],eax</span><br><span class="line"><span class="number">004035</span>D5 <span class="number">68</span> <span class="number">80000000</span> push <span class="number">80</span></span><br><span class="line"><span class="number">004035</span>DA <span class="number">68</span> <span class="number">2</span>C754000 push <span class="number">11.0040752</span>C</span><br><span class="line"><span class="number">004035</span>DF FF35 <span class="number">5</span>B704000 push dword ptr ds:\[<span class="number">40705</span>B\]</span><br><span class="line"><span class="number">004035E5</span> E8 <span class="number">820</span>A0000 <span class="keyword">call</span> &lt;jmp.&amp;kernel32.GetModuleFileNameA&gt;</span><br><span class="line"><span class="number">004035</span>EA E8 <span class="number">87070000</span> <span class="keyword">call</span> <span class="number">11.00403</span>D76</span><br><span class="line"><span class="number">004035</span>EF <span class="number">6</span>A <span class="number">00</span> push <span class="number">0</span></span><br><span class="line"><span class="number">004035</span>F1 <span class="number">68</span> <span class="number">0</span>B364000 push <span class="number">11.0040360</span>B</span><br><span class="line"><span class="number">004035</span>F6 <span class="number">6</span>A <span class="number">00</span> push <span class="number">0</span></span><br><span class="line"><span class="number">004035</span>F8 <span class="number">6</span>A <span class="number">64</span> push <span class="number">64</span></span><br><span class="line"><span class="number">004035</span>FA FF35 <span class="number">5</span>B704000 push dword ptr ds:\[<span class="number">40705</span>B\]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-vb"><code class="language-vb"> VB：
+
+004012D4 > 68 54474000 push QQ个性网.00404754
+004012D9 E8 F0FFFFFF call <jmp.&MSVBVM60.#100>
+004012DE 0000 add byte ptr ds:\[eax\],al
+004012E0 0000 add byte ptr ds:\[eax\],al
+004012E2 0000 add byte ptr ds:\[eax\],al
+004012E4 3000 xor byte ptr ds:\[eax\],al
+004012E6 0000 add byte ptr ds:\[eax\],al
+004012E8 48 dec eax
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-vb"><code class="language-vb">delphi:
+
+004A5C54 > 55 push ebp
+004A5C55 8BEC mov ebp,esp
+004A5C57 83C4 F0 add esp,-10
+004A5C5A B8 EC594A00 mov eax,openpro.004A59EC
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-vb"><code class="language-vb">BC++:
+
+00401678 > /EB 10 jmp short btengine.0040168A
+0040167A |66:623A bound di,dword ptr ds:\[edx\]
+0040167D |43 inc ebx
+0040167E |2B2B sub ebp,dword ptr ds:\[ebx\]
+00401680 |48 dec eax
+00401681 |4F dec edi
+00401682 |4F dec edi
+00401683 |4B dec ebx
+00401684 |90 nop
+00401685 -|E9 98005400 jmp 00941722
+0040168A \\A1 8B005400 mov eax,dword ptr ds:\[54008B\]
+0040168F C1E0 02 shl eax,2
+00401692 A3 8F005400 mov dword ptr ds:\[54008F\],eax
+00401697 52 push edx
+00401698 6A 00 push 0
+0040169A E8 99D01300 call <jmp.&KERNEL32.GetModuleHandleA>
+0040169F 8BD0 mov edx,eax
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-vb"><code class="language-vb">VC++:
+
+0040A41E > 55 push ebp
+0040A41F 8BEC mov ebp,esp
+0040A421 6A FF push -1
+0040A423 68 C8CB4000 push 跑跑排行.0040CBC8
+0040A428 68 A4A54000 push <jmp.&MSVCRT.\_except\_handler3>
+0040A42D 64:A1 00000000 mov eax,dword ptr fs:\[0\]
+0040A433 50 push eax
+0040A434 64:8925 0000000>mov dword ptr fs:\[0\],esp
+0040A43B 83EC 68 sub esp,68
+0040A43E 53 push ebx
+0040A43F 56 push esi
+0040A440 57 push edi
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-vb"><code class="language-vb">MASM(汇编):
+
+004035C9 > 6A 00 push 0
+004035CB E8 A20A0000 call <jmp.&kernel32.GetModuleHandleA>
+004035D0 A3 5B704000 mov dword ptr ds:\[40705B\],eax
+004035D5 68 80000000 push 80
+004035DA 68 2C754000 push 11.0040752C
+004035DF FF35 5B704000 push dword ptr ds:\[40705B\]
+004035E5 E8 820A0000 call <jmp.&kernel32.GetModuleFileNameA>
+004035EA E8 87070000 call 11.00403D76
+004035EF 6A 00 push 0
+004035F1 68 0B364000 push 11.0040360B
+004035F6 6A 00 push 0
+004035F8 6A 64 push 64
+004035FA FF35 5B704000 push dword ptr ds:\[40705B\]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 	    </div>
 	    <div class="post-tag">

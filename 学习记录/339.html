@@ -52,7 +52,8 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
   <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
   <link rel="stylesheet" href="/css/main.css?rev=@@hash">
-</head> 
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -95,14 +96,39 @@
 <blockquote>
 <p>名称的识别：（主要用于在看文档上）</p>
 </blockquote>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">之前老的AP命名规则</span><br><span class="line">LAP： lightweight AP（轻量级AP，也就是我们常说的瘦AP）</span><br><span class="line">AP： 前面不加其他字符，就是胖AP，也就是我们说的Autonomous AP。</span><br><span class="line"></span><br><span class="line">目前新的AP命名规则</span><br><span class="line">CAP：Controller-Based AP（基于控制器的AP，也就是瘦AP）</span><br><span class="line">SAP：Standalong AP（独立的AP，也就是胖AP）</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c#"><code class="language-c#">之前老的AP命名规则
+LAP： lightweight AP（轻量级AP，也就是我们常说的瘦AP）
+AP： 前面不加其他字符，就是胖AP，也就是我们说的Autonomous AP。
+
+目前新的AP命名规则
+CAP：Controller-Based AP（基于控制器的AP，也就是瘦AP）
+SAP：Standalong AP（独立的AP，也就是胖AP）
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>通过命令识别</p>
 </blockquote>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ap<span class="meta">#show version</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c#"><code class="language-c#">ap#show version
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><br><br>显示如下图：<br></p>
 <p><img src="https://ailice.cn/images/003w0htjzy70Sm5mIST5b&amp;690.jpg" alt="瘦ap"><br><br><br><img src="https://ailice.cn/images/003w0htjzy70SebV058e6&amp;690.jpg" alt="胖ap"><br><br><br>    k9w8为瘦ap、k9w7为胖ap<br><br><br>通过命令发现自己的的ap为瘦ap，好在还可以升级，这里就介绍升级过程了，当然之后我也会把我的升级过程抽时间整理一下，毕竟废了很多时间。<br><br><br>预留一下连接：<br><br><br>然后通过超级终端连接ap设置web访问的命令如下：<br><br></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ap&gt;enable</span><br><span class="line"></span><br><span class="line">显示让输入密码，这个密码在输入的过程中是看不到的，输进去回车就行，默认为Cisco，注意首字母为大写。</span><br><span class="line"></span><br><span class="line">ap<span class="comment">#</span></span><br><span class="line"></span><br><span class="line">ap<span class="comment">#conf t \\回车 备注：conf t 是我写的缩写，如果想看全，按tab键可自动补全</span></span><br><span class="line"></span><br><span class="line">ap...<span class="comment">#int bvi1</span></span><br><span class="line"></span><br><span class="line">ap...<span class="comment">#ip address 192.168.1.1 255.255.255.0</span></span><br><span class="line"></span><br><span class="line">ap...<span class="comment">#no shutdown</span></span><br><span class="line"></span><br><span class="line">ap...<span class="comment">#end</span></span><br><span class="line"></span><br><span class="line">ap<span class="comment">#show run \\查看有没有成功</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-php"><code class="language-php">ap<span class="token operator">></span>enable
+
+显示让输入密码，这个密码在输入的过程中是看不到的，输进去回车就行，默认为Cisco，注意首字母为大写。
+
+ap<span class="token shell-comment comment">#</span>
+
+ap<span class="token shell-comment comment">#conf t \\回车 备注：conf t 是我写的缩写，如果想看全，按tab键可自动补全</span>
+
+ap<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token shell-comment comment">#int bvi1</span>
+
+ap<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token shell-comment comment">#ip address 192.168.1.1 255.255.255.0</span>
+
+ap<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token shell-comment comment">#no shutdown</span>
+
+ap<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token shell-comment comment">#end</span>
+
+ap<span class="token shell-comment comment">#show run \\查看有没有成功</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><br><br>到这里就可以通过ip来访问web管理页面了，当然账号密码是默认的Cisco。好了今天就到这里，下一篇抽时间写吧，还有没事百度一下，总有你想要的。<br><br></p>
 
 	    </div>
