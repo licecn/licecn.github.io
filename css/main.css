@@ -35,6 +35,9 @@ h1, h2, h3,h4,h5,h6{
   position: relative;
   top: -85px;
 }
+blockquote{
+  border-left: 1px solid;
+}
 /*首页列表调整*/
 .list-unstyled > li{
 	position: relative;
