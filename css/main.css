@@ -572,3 +572,26 @@ table tr td:last-child {
 .category{
   color: #969696;
 }
+/*toc*/
+.site-post-toc{
+  margin: 10px;
+  padding-top: 10px;
+  /*padding-bottom: 10px;*/
+  background: #fff;
+  box-shadow: 0 1px 2px 0 #e2e2e2;
+  overflow: hidden;
+  min-height: 150px;
+}
+.site-post-toc .toc{
+  list-style: none;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.post-body h1,.post-body h2,.post-body h3,
+.post-body h4,.post-body h5,.post-body h6{
+  padding-top:80px;margin-top:-80px;
+}
+.sidebar .site-post-toc .post-toc-title{
+
+}
