@@ -38,6 +38,10 @@ h1, h2, h3,h4,h5,h6{
 blockquote{
   border-left: 5px solid;
 }
+ul li{
+  list-style: none;
+  padding-left: 0;
+}
 /*首页列表调整*/
 .list-unstyled > li{
 	position: relative;
@@ -108,7 +112,7 @@ blockquote{
     line-height: 20px;
     margin-bottom: 8px;
 }
-.list-unstyled .meta span{
+.list-unstyled .meta > span{
 	margin-right: 10px;
 	color: #b4b4b4;
 }
@@ -490,6 +494,12 @@ blockquote{
 }
 .article-tag-list-item{
   display: inline-block;
+  margin-left: 5px;
+}
+.article-tag-list-link:hover{
+  background: #333;
+  color: #fff;
+  border: 1px solid #333;
 }
 .site-post-wrap .post .post-tag .article-tag-list:before{
   font-family: "FontAwesome";
@@ -550,4 +560,15 @@ table tr td:first-child {
 table tr th:last-child,
 table tr td:last-child {
     margin-bottom: 0;
+}
+
+.category-list-count:before{
+  content: "(";
+  margin-left:10px;
+}
+.category-list-count:after{
+  content: ")"
+}
+.category{
+  color: #969696;
 }
