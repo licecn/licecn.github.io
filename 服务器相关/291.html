@@ -1,34 +1,117 @@
-<!DOCTYPE html> 
-<html lang="zh-CN"> 
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
-  <!-- meta & link -->
-  <meta charset="utf-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="format-detection" content="telephone=no,email=no,adress=no"> 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="renderer" content="webkit|ie-comp|ie-stand">
-  <!-- uc强制竖屏 -->
-  <meta name="screen-orientation" content="portrait">
-  <!-- QQ强制竖屏 -->
-  <meta name="x5-orientation" content="portrait">
-  <!-- UC强制全屏 -->
-  <meta name="full-screen" content="yes">
-  <!-- QQ强制全屏 -->
-  <meta name="x5-fullscreen" content="true">
-  <!-- UC应用模式 -->
-  <meta name="browsermode" content="application">
-  <!-- QQ应用模式 -->
-  <meta name="x5-page-mode" content="app">
-  <link rel="dns-prefetch" href="https://lice.cc">
-  <!--Title-->
-  <title>windows apache nginx php mysql 服务器配置 | 李策</title>
-  <link rel="icon" href="/favicon.ico">
-  <!--[if lt IE 9]>
-    <script type="text/javascript">window.location.href="upgrade.html"</script>
-  <![endif]-->
-  <!--SEO-->
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.jpg?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.gif?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.gif?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'TIUJ36KF8R',
+      apiKey: '57a17d02ea395f8205e670397d1b6417',
+      indexName: 'lice.cc',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"输入搜索","hits_empty":"没有找到: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5826418077790563",
+    enable_page_level_ads: true
+  });
+</script>
+
   <meta name="description" content="在网上找了很多windows apache nginx php mysql 相关的配置，在这里做个笔记，以后用到的地方来看看。也不是很确定是不是正确的，到时候在百度吧。  网上配置服务器教程多如牛毛,但是写的明明白白或者有配图,等你自己去实践你会发现问题还是非常的多,笔者就以双服务器配置演示一次,抛弃我使用很久的集成环境,到写这篇笔记时候,已经完美可以运行项目了,在配置过程中,还是遇到很多问题我都">
 <meta name="keywords" content="Nginx,apache">
 <meta property="og:type" content="article">
@@ -43,59 +126,344 @@
 <meta name="twitter:title" content="windows apache nginx php mysql 服务器配置">
 <meta name="twitter:description" content="在网上找了很多windows apache nginx php mysql 相关的配置，在这里做个笔记，以后用到的地方来看看。也不是很确定是不是正确的，到时候在百度吧。  网上配置服务器教程多如牛毛,但是写的明明白白或者有配图,等你自己去实践你会发现问题还是非常的多,笔者就以双服务器配置演示一次,抛弃我使用很久的集成环境,到写这篇笔记时候,已经完美可以运行项目了,在配置过程中,还是遇到很多问题我都">
 <meta name="twitter:image" content="https://ailice.cn/wp-content/uploads/2016/11/2012060309493179445.png">
-  <meta name="robots" content="all">
-  <meta name="google" content="all">
-  <meta name="googlebot" content="all">
-  <meta name="verify" content="all">
+
+
+
+
+
+
   <link rel="canonical" href="https://lice.cc/服务器相关/291.html">
-  <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
-  <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
-  <link rel="stylesheet" href="/css/main.css?rev=@@hash">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>windows apache nginx php mysql 服务器配置 | 李策</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 <link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
-<body>
-  <header class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button id="navbutton" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">你真帅</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </span>
-        </button>
-        <a href="/" class="navbar-brand">李策</a>        
-      </div>
-      <nav class="navbar-collapse collapse" id="navbar" aria-expanded="false">
-        <ul class="nav navbar-nav">
-          <li class><a href="/">主页</a></li>
-          <li class><a href="/archives/">归档</a></li>
-          <li class><a href="/categories/">分类</a></li>
-          <li class><a href="/tags/">标签</a></li>
-          <li class><a href="/about/">About</a></li>
-          <li class><a href="/links/">友链</a></li>
-        </ul>
-      </nav><!--/.nav-collapse -->
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">李策</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-  </header>
-  <main class="container m-h-10 index">
-      <div class="row">
-        <!-- 左侧列表开始 -->
-        <div class="col-xs-12 col-md-9 main">
-        <div class="site-post-wrap">
-	<article class="post">
-	    <h1 class="post-head">windows apache nginx php mysql 服务器配置</h1>
-	    <div class="post-meta">
-        <time datetime="2016-11-08T02:54:34.000Z" itemprop="datePublished">2016-11-08 10:54:34</time>
-        <span><a href="/categories/服务器相关/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 服务器相关
-                  </a></span>
-        <span id="/服务器相关/291.html" class="leancloud_visitors" data-flag-title="windows apache nginx php mysql 服务器配置">
-        <em class="post-meta-item-text">阅读量:</em>
-        <i class="leancloud-visitors-count">0</i>
-        </span>
-	    </div>
-	    <div class="post-body">
-	        <p>在网上找了很多windows apache nginx php mysql 相关的配置，在这里做个笔记，以后用到的地方来看看。也不是很确定是不是正确的，到时候在百度吧。 </p>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">分享生活，享受生活！</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-友情链接">
+    <a href="/links/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-link"></i> <br>友情链接</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lice.cc/服务器相关/291.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李策">
+      <meta itemprop="description" content="分享生活,享受生活,大家好,我是李策。">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李策">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">windows apache nginx php mysql 服务器配置
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-11-08 10:54:34" itemprop="dateCreated datePublished" datetime="2016-11-08T10:54:34+08:00">2016-11-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-11 12:50:08" itemprop="dateModified" datetime="2019-09-11T12:50:08+08:00">2019-09-11</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/服务器相关/" itemprop="url" rel="index"><span itemprop="name">服务器相关</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/服务器相关/291.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/服务器相关/291.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在网上找了很多windows apache nginx php mysql 相关的配置，在这里做个笔记，以后用到的地方来看看。也不是很确定是不是正确的，到时候在百度吧。 </p>
 <p>网上配置服务器教程多如牛毛,但是写的明明白白或者有配图,等你自己去实践你会发现问题还是非常的多,笔者就以双服务器配置演示一次,抛弃我使用很久的集成环境,到写这篇笔记时候,已经完美可以运行项目了,在配置过程中,还是遇到很多问题我都一一列出来,希望你们可以在遇到相同错误有个好的解决方案,在配置之前对于以前安装的集成环境卸载,然后用软件清理完注册表垃圾,什么管家之类都可以,不说名字了.接着去下载Nginx1.2版本windows的zip文件,一般不用msi,zip是绿色软件,重装系统也可以用,接着下载mysql5.5,zip版本,比较大,100多M,压缩版msi小好多,但是zip绿色版更好.</p>
 <p>这里所有软件都是win32位系统版本,windows7旗舰版上边测试的,还有php下载5.2.17,就是VC6编译的zip版本,这里有ts是安全版本,另一版本我在配置apache有问题,所以记住是ts版本,也就是生产环境版本,同时下载对应版本的源代码,这个如果你和我一样,打算用C/C++来开发php扩展,记住一定要下载这个对应版本源代码,否则编译扩展的时候不能成功,接着下载phpmyadmin数据库管理软件包吧,只有几M,选择多语言的,后边使用.还有就是apache服务器,这个我找了半天没有zip版本,只好下载msi版本.准备工作就这么多. </p>
 <p>现在进入正题,先安装哪个呢,我是先解压php到C:/web/php5目录,以后我的开发软件apache,nginx,mysql都在c:/web下面对应文件夹不多说了.网站目录我放到G这个独立盘,所以后边的myphpadmin和mysql数据库data数据都在G盘,最后用thinkphp框架测试是否成功! </p>
@@ -104,32 +472,553 @@
 <p>datadir=G:/data</p>
 <p>注意字符集不要设置,否则出现1067错误,就是这个文件错误,分别设置的是mysql目录和数据目录,数据重要所以不妨到c. 用cmd进入到c:\web\mysql\bin,这个会不,就是cd命令 输入命令 mysqld –install mysql5 –defaults-file=C:/web/mysql/my.ini 这个是注册服务到系统 接着 net start mysql5启动,相应的net stop mysql5就是关闭,后边有命令文件下载,压缩包版mysql默认用户root,密码空,把mysql的bin目录加入环境变量,打开cmd 输入mysql -uroot -p;就进入了,说明mysql安装成功啦. 安装phpmyadmin,解压到G盘根目录,文件夹就是phpmyadmin,现在在nginx服务器上面就可以操作mysql,不过默认是不能密码为空,空密码不能登陆,出现1045错误.修改libraries/config.default.php 422行为true phpmyadmin下面config.sample.inc.php 36行为true. 就可以用root空密码了,注意重启nginx哦,mysql哦.登陆进去,首先是添加密码. 接着进去修改mysql-user表,添加root密码并使用password函数.这样重启mysql就可以正常了,注意改回上边的两个false为true. 这里刚刚修改密码后要重启mysql,最好清除缓存和cookies,否则容易出现1045错误,明明密码正确不能登陆切记!!! apache配置;一路点下一步注意这一过程中端口选择8080,后边配置中改也可以.在安装完以后,apache启动不了,我的就是这个问 我想是前面装过集成环境或是nginx引起的,不管他,自己配置好了,把php5路径添加到环境变量,不然后边apache启动不了,或者复制到system32,选择前者 接着打开conf/httpd.conf修改配置. ServerRoot “C:/web/apache” #apache服务器目录 Listen 8080 #端口号 LoadFile “C:/web/php5/libmysql.dll” LoadModule php5_module “C:/web/php5/php5apache2_2.dll” PHPIniDir “C:/web/php5/php.ini” #三行就是启动php的 ServerName 127.0.0.1:8080 #服务器名称新添加 DocumentRoot “G:/“ #网站目录 # 同上 DirectoryIndex index.php index.html # 添加index.php AddType application/x-httpd-php .php #添加php文件类型 现在就可以启动apache了,完美可以支持mysql,php用phpmyadmin测试即可. 没有截图,这个主要是写的文字,不过应该还是能看懂吧,就是修改一些配置文件,后边我会附上我的配置文件,我打一个包,清单就是在各自文件夹,注意启动nginx的两个命令不能移动到nginx文件夹以外否则启动不了. <a href="https://ailice.cn/wp-content/uploads/2016/11/2012060309493179445.png" target="_blank" rel="noopener"><img src="https://ailice.cn/wp-content/uploads/2016/11/2012060309493179445.png" alt="2012060309493179445"></a> 这就是同时运行的两个服务器,一个是80端口,一个是8080端口,同时登录到phpmyadmin的图片.    记录就先到这里吧。以后在说了。</p>
 
-	    </div>
-	    <div class="post-tag">
-          <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apache/">apache</a></li></ul>
-	    </div>
-	</article>
-	<div class="post-prev-next">
-	    <div class="article-nav prev-next-wrap clearfix">
-        
-        <a href="/服务器相关/296.html" class="pre-post btn btn-default" title='LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程</span>
-        </a>
-        
-        
-        <a href="/服务器相关/288.html" class="next-post btn btn-default" title='Centos Nginx Lnmp 服务器配置'>
-            <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Centos Nginx Lnmp 服务器配置</span><i class="fa fa-angle-right fa-fw"></i>
-        </a>
-        
-        </div>
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>李策</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://lice.cc/服务器相关/291.html" title="windows apache nginx php mysql 服务器配置">https://lice.cc/服务器相关/291.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+          
+            <a href="/tags/apache/" rel="tag"># apache</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/服务器相关/288.html" rel="next" title="Centos Nginx Lnmp 服务器配置">
+                <i class="fa fa-chevron-left"></i> Centos Nginx Lnmp 服务器配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/服务器相关/296.html" rel="prev" title="LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程">
+                LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/avatar.jpg" alt="李策">
+            
+              <p class="site-author-name" itemprop="name">李策</p>
+              <p class="site-description motion-element" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">62</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">66</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="//github.com/licecn" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:lice@ailice.cn" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="//gitee.com/licesn/" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5826418077790563",
+    enable_page_level_ads: true
+  });
+</script>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">爱我中华</span>
+
+  
+
+  
 </div>
 
 
-  <div class="comments" id="comments"></div>
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  
+  
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
@@ -137,86 +1026,87 @@
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
-        el:'#comments',
+        el: '#comments' ,
+        verify: true,
+        notify: false,
         appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
         appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
-        notify: false,
-        verify: true,
-        placeholder: '写点什么吧！',
-        avatar: 'monsterid',
-        meta: guest,
-        pageSize: 10 || 10,
-        visitor: true
-    })
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+
+    $(function(){
+      $.get('https://ailice.leanapp.cn')　
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.3.0"></script>
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
 </script>
 
-          
-        </div>
-        <!-- zy左侧列表结束 -->        
-        <!-- 侧边栏 -->
-        <aside class="hidden-xs hidden-sm col-md-3 sidebar">
-          <div class="site-overview">
-            <div class="site-author">
-              <img src="/img/avatar.jpg" alt="李策" class="site-author-image" itemprop="image">
-              <p class="site-author-name" itemprop="name">李策</p>
-              <p class="site-description" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
-            </div>
-            <nav class="site-state">
-              <div class="site-state-item site-state-posts">
-                <a href="/archives/">
-                  <span class="site-state-item-count">62</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/">
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/">
-                  <span class="site-state-item-count">66</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            </nav>
-            <div class="links-of-author">
-              <span class="links-of-author-item">
-                <a href="//github.com/licecn" target="_blank" title="Github" rel="external nofollow"><i class="fa fa-fw fa-github"></i>Github</a>
-              </span>
-              <span class="links-of-author-item">
-                <a href="mailto:licecn_com@163.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-              </span>
-              <span class="links-of-author-item">
-                <a href="//gitee.com/licesn" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
-              </span>            </div>
-            
-          </div>
-          
-          
-<div class="site-post-toc">
-<div class="post-toc-title">文章目录</div>
 
-<span style="font-size:16px;font-weight:bold;line-height:110px;">此文章没有目录</span>
+  
 
-</div>
+  
+  
 
-        </aside>
-        <!-- 侧边栏结束 -->        
-      </div>
-  </main><!-- /.container -->
-  <footer class="bs-docs-footer">
-    <div class="container">
-      <p>© 2014 - 2020</p>
-      <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
-      <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
-      <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>
-      <span><a href="//weibo.com/ailicecn" rel="nofollow" target="_blank" title="Weibo"><img src="/img/social-weibo.png" alt="weibo"></a></span>
-      <a class="go-top fa fa-angle-up hidden-xs hidden-sm" href="javascript:scroll(0,0)" title="返回顶部" aria-label="返回顶部"></a>
-    </div>
-  </footer>
-  <script src="/js/index.js?rev=@@hash"></script>
+  
 
+  
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=6.3.0"></script>
+
+
+  
+
+  
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5826418077790563",
+    enable_page_level_ads: true
+  });
+</script>
 </body>
 </html>

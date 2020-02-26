@@ -1,34 +1,117 @@
-<!DOCTYPE html> 
-<html lang="zh-CN"> 
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
-  <!-- meta & link -->
-  <meta charset="utf-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="format-detection" content="telephone=no,email=no,adress=no"> 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="renderer" content="webkit|ie-comp|ie-stand">
-  <!-- uc强制竖屏 -->
-  <meta name="screen-orientation" content="portrait">
-  <!-- QQ强制竖屏 -->
-  <meta name="x5-orientation" content="portrait">
-  <!-- UC强制全屏 -->
-  <meta name="full-screen" content="yes">
-  <!-- QQ强制全屏 -->
-  <meta name="x5-fullscreen" content="true">
-  <!-- UC应用模式 -->
-  <meta name="browsermode" content="application">
-  <!-- QQ应用模式 -->
-  <meta name="x5-page-mode" content="app">
-  <link rel="dns-prefetch" href="https://lice.cc">
-  <!--Title-->
-  <title>【ZT】Java做了6年，给新手一些建议 | 李策</title>
-  <link rel="icon" href="/favicon.ico">
-  <!--[if lt IE 9]>
-    <script type="text/javascript">window.location.href="upgrade.html"</script>
-  <![endif]-->
-  <!--SEO-->
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.jpg?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.gif?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.gif?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'TIUJ36KF8R',
+      apiKey: '57a17d02ea395f8205e670397d1b6417',
+      indexName: 'lice.cc',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"输入搜索","hits_empty":"没有找到: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5826418077790563",
+    enable_page_level_ads: true
+  });
+</script>
+
   <meta name="description" content="1.不要再拿AWT和Swing练手了，很少公司会用，多写点算法和数据结构，工作后你会获益良多  2.学Java最重要不是记住基础类型有几种，int的范围是多少，而是培养自己一切皆对象的OO思维，那些所谓的基础，在你实际开发过程中，随着代码量的积累，会变成永久记忆刻在你脑海里的  3.设计模式和代码重构，Java的两大精髓，一定要重视，要记住结构良好，命名规范的代码，就是最好的注释，很多做了多年ja">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
@@ -41,59 +124,344 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【ZT】Java做了6年，给新手一些建议">
 <meta name="twitter:description" content="1.不要再拿AWT和Swing练手了，很少公司会用，多写点算法和数据结构，工作后你会获益良多  2.学Java最重要不是记住基础类型有几种，int的范围是多少，而是培养自己一切皆对象的OO思维，那些所谓的基础，在你实际开发过程中，随着代码量的积累，会变成永久记忆刻在你脑海里的  3.设计模式和代码重构，Java的两大精髓，一定要重视，要记住结构良好，命名规范的代码，就是最好的注释，很多做了多年ja">
-  <meta name="robots" content="all">
-  <meta name="google" content="all">
-  <meta name="googlebot" content="all">
-  <meta name="verify" content="all">
+
+
+
+
+
+
   <link rel="canonical" href="https://lice.cc/Java笔记/260.html">
-  <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
-  <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
-  <link rel="stylesheet" href="/css/main.css?rev=@@hash">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>【ZT】Java做了6年，给新手一些建议 | 李策</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 <link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head> 
-<body>
-  <header class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button id="navbutton" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">你真帅</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </span>
-        </button>
-        <a href="/" class="navbar-brand">李策</a>        
-      </div>
-      <nav class="navbar-collapse collapse" id="navbar" aria-expanded="false">
-        <ul class="nav navbar-nav">
-          <li class><a href="/">主页</a></li>
-          <li class><a href="/archives/">归档</a></li>
-          <li class><a href="/categories/">分类</a></li>
-          <li class><a href="/tags/">标签</a></li>
-          <li class><a href="/about/">About</a></li>
-          <li class><a href="/links/">友链</a></li>
-        </ul>
-      </nav><!--/.nav-collapse -->
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">李策</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-  </header>
-  <main class="container m-h-10 index">
-      <div class="row">
-        <!-- 左侧列表开始 -->
-        <div class="col-xs-12 col-md-9 main">
-        <div class="site-post-wrap">
-	<article class="post">
-	    <h1 class="post-head">【ZT】Java做了6年，给新手一些建议</h1>
-	    <div class="post-meta">
-        <time datetime="2016-06-21T06:35:06.000Z" itemprop="datePublished">2016-06-21 14:35:06</time>
-        <span><a href="/categories/Java笔记/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> Java笔记
-                  </a></span>
-        <span id="/Java笔记/260.html" class="leancloud_visitors" data-flag-title="【ZT】Java做了6年，给新手一些建议">
-        <em class="post-meta-item-text">阅读量:</em>
-        <i class="leancloud-visitors-count">0</i>
-        </span>
-	    </div>
-	    <div class="post-body">
-	        <p>1.不要再拿AWT和Swing练手了，很少公司会用，多写点算法和数据结构，工作后你会获益良多 </p>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">分享生活，享受生活！</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-友情链接">
+    <a href="/links/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-link"></i> <br>友情链接</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lice.cc/Java笔记/260.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李策">
+      <meta itemprop="description" content="分享生活,享受生活,大家好,我是李策。">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李策">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【ZT】Java做了6年，给新手一些建议
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-06-21 14:35:06" itemprop="dateCreated datePublished" datetime="2016-06-21T14:35:06+08:00">2016-06-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-11 12:23:38" itemprop="dateModified" datetime="2019-09-11T12:23:38+08:00">2019-09-11</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java笔记/" itemprop="url" rel="index"><span itemprop="name">Java笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Java笔记/260.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java笔记/260.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>1.不要再拿AWT和Swing练手了，很少公司会用，多写点算法和数据结构，工作后你会获益良多 </p>
 <p>2.学Java最重要不是记住基础类型有几种，int的范围是多少，而是培养自己一切皆对象的OO思维，那些所谓的基础，在你实际开发过程中，随着代码量的积累，会变成永久记忆刻在你脑海里的 </p>
 <p>3.设计模式和代码重构，Java的两大精髓，一定要重视，要记住结构良好，命名规范的代码，就是最好的注释，很多做了多年java的人只是机械的按照约定俗成的格式写代码，甚至从没试图去搞清楚为什么Service层要加一个interface来实现。 </p>
 <p>4.学习框架的时候，不要图快从网上抄大段的配置，去官网或github上找官方文档，照着配，自己做过一次，以后会少很多配置方面的痛苦，相信我 </p>
@@ -105,32 +473,551 @@
 <p>From java ba to baidu.com</p>
 </blockquote>
 
-	    </div>
-	    <div class="post-tag">
-          <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	    </div>
-	</article>
-	<div class="post-prev-next">
-	    <div class="article-nav prev-next-wrap clearfix">
-        
-        <a href="/生活DAY/264.html" class="pre-post btn btn-default" title='win10快速实现10内开机'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">win10快速实现10内开机</span>
-        </a>
-        
-        
-        <a href="/生活DAY/255.html" class="next-post btn btn-default" title='小米兰亭字体_下载'>
-            <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">小米兰亭字体_下载</span><i class="fa fa-angle-right fa-fw"></i>
-        </a>
-        
-        </div>
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>李策</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://lice.cc/Java笔记/260.html" title="【ZT】Java做了6年，给新手一些建议">https://lice.cc/Java笔记/260.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/生活DAY/255.html" rel="next" title="小米兰亭字体_下载">
+                <i class="fa fa-chevron-left"></i> 小米兰亭字体_下载
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/生活DAY/264.html" rel="prev" title="win10快速实现10内开机">
+                win10快速实现10内开机 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/avatar.jpg" alt="李策">
+            
+              <p class="site-author-name" itemprop="name">李策</p>
+              <p class="site-description motion-element" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">62</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">66</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="//github.com/licecn" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:lice@ailice.cn" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="//gitee.com/licesn/" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5826418077790563",
+    enable_page_level_ads: true
+  });
+</script>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">爱我中华</span>
+
+  
+
+  
 </div>
 
 
-  <div class="comments" id="comments"></div>
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  
+  
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
@@ -138,86 +1025,87 @@
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
-        el:'#comments',
+        el: '#comments' ,
+        verify: true,
+        notify: false,
         appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
         appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
-        notify: false,
-        verify: true,
-        placeholder: '写点什么吧！',
-        avatar: 'monsterid',
-        meta: guest,
-        pageSize: 10 || 10,
-        visitor: true
-    })
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+
+    $(function(){
+      $.get('https://ailice.leanapp.cn')　
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.3.0"></script>
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
 </script>
 
-          
-        </div>
-        <!-- zy左侧列表结束 -->        
-        <!-- 侧边栏 -->
-        <aside class="hidden-xs hidden-sm col-md-3 sidebar">
-          <div class="site-overview">
-            <div class="site-author">
-              <img src="/img/avatar.jpg" alt="李策" class="site-author-image" itemprop="image">
-              <p class="site-author-name" itemprop="name">李策</p>
-              <p class="site-description" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
-            </div>
-            <nav class="site-state">
-              <div class="site-state-item site-state-posts">
-                <a href="/archives/">
-                  <span class="site-state-item-count">62</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/">
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/">
-                  <span class="site-state-item-count">66</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            </nav>
-            <div class="links-of-author">
-              <span class="links-of-author-item">
-                <a href="//github.com/licecn" target="_blank" title="Github" rel="external nofollow"><i class="fa fa-fw fa-github"></i>Github</a>
-              </span>
-              <span class="links-of-author-item">
-                <a href="mailto:licecn_com@163.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-              </span>
-              <span class="links-of-author-item">
-                <a href="//gitee.com/licesn" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
-              </span>            </div>
-            
-          </div>
-          
-          
-<div class="site-post-toc">
-<div class="post-toc-title">文章目录</div>
 
-<span style="font-size:16px;font-weight:bold;line-height:110px;">此文章没有目录</span>
+  
 
-</div>
+  
+  
 
-        </aside>
-        <!-- 侧边栏结束 -->        
-      </div>
-  </main><!-- /.container -->
-  <footer class="bs-docs-footer">
-    <div class="container">
-      <p>© 2014 - 2020</p>
-      <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
-      <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
-      <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>
-      <span><a href="//weibo.com/ailicecn" rel="nofollow" target="_blank" title="Weibo"><img src="/img/social-weibo.png" alt="weibo"></a></span>
-      <a class="go-top fa fa-angle-up hidden-xs hidden-sm" href="javascript:scroll(0,0)" title="返回顶部" aria-label="返回顶部"></a>
-    </div>
-  </footer>
-  <script src="/js/index.js?rev=@@hash"></script>
+  
 
+  
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=6.3.0"></script>
+
+
+  
+
+  
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5826418077790563",
+    enable_page_level_ads: true
+  });
+</script>
 </body>
 </html>
