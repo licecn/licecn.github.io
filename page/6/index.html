@@ -85,8 +85,8 @@
               <div class="content">
                 <a href="/生活DAY/95.html" target="_blank" class="title">如何通过笔记本[win7系统]设置自己的wifi</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/生活DAY/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 生活DAY
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -101,8 +101,7 @@
                     <p>其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？</p>
 <p> 为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。 </p>
 <pre class="line-numbers language-php"><code class="language-php">命令：
-netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid<span class="token operator">=</span>wifi7  key<span class="token operator">=</span>ailicecn 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid<span class="token operator">=</span>wifi7  key<span class="token operator">=</span>ailicecn <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>这里解释一下这三个参数 </p>
 <p>mode：是否启用虚拟WiFi网卡，改为disallow则为禁用。</p>
 <p> ssid：无线网名称，最好用英文(以wifi7为例)，即要设定的wifi名称。</p>
@@ -112,8 +111,7 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
 <p>然后会多出这个玩意，但是有红叉怎么办，没事，在设置一下就ok了。。</p>
 <p> <a href="https://ailice.cn/wp-content/uploads/2014/09/wifi002.jpg" target="_blank" rel="noopener"><img src="https://ailice.cn/wp-content/uploads/2014/09/wifi002-300x148.jpg" alt="wifi"></a> </p>
 <p>设置如上图，点确定。就ok了。那么接下来怎么启动wifi呢 ？？ </p>
-<pre class="line-numbers language-php"><code class="language-php">命令：netsh wlan start hostednetwork 
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-php"><code class="language-php">命令：netsh wlan start hostednetwork <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>将这个命令放到txt文档保存，改后缀bat。   右击管理员运行 就ok 了。。 等等等等。。。。，是不是还没有wifi？？？  是啊 是啊 是啊 ，为啥？？？ 简单，把电脑的无线网卡打开，然后运行一下那个命令就行了。哈哈，对了以后，在想开启wifi只需要以管理员运行那个bat文件就可以了。（命令：netsh wlan start hostednetwork ） 赶快来试一试把。</p>
 
                 
@@ -125,8 +123,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
               <div class="content">
                 <a href="/学习记录/93.html" target="_blank" class="title">黑客(hacker)必备插件[火狐(firefox)]</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/学习记录/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 学习记录
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -149,8 +147,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
               <div class="content">
                 <a href="/织梦仿站/82.html" target="_blank" class="title">织梦搜索登陆提示信息的修改</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/织梦仿站/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 织梦仿站
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -166,15 +164,13 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
 <pre class="line-numbers language-php"><code class="language-php"><span class="token variable">$htmlhead</span> <span class="token operator">=</span> “\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n<span class="token punctuation">\</span><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>nDEDECMS</span>提示信息\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n<span class="token punctuation">\</span><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n</span>”<span class="token punctuation">;</span> 
 <span class="token variable">$htmlhead</span> <span class="token punctuation">.</span><span class="token operator">=</span> “\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>ndiv</span><span class="token punctuation">{</span>line<span class="token operator">-</span>height<span class="token punctuation">:</span><span class="token number">160</span><span class="token operator">%</span><span class="token punctuation">;</span><span class="token punctuation">}</span>\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n</span>”<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token function">isset</span><span class="token punctuation">(</span><span class="token variable">$GLOBALS</span>\<span class="token punctuation">[</span><span class="token string">'ucsynlogin'</span>\<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token variable">$GLOBALS</span>\<span class="token punctuation">[</span><span class="token string">'ucsynlogin'</span>\<span class="token punctuation">]</span> <span class="token punctuation">:</span> ”<span class="token punctuation">)</span><span class="token punctuation">.</span>”\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n</span>
 
-\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n<span class="token punctuation">\</span><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n</span>”<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n<span class="token punctuation">\</span><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n</span>”<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>　　第二处代码如下：</p>
 <pre class="line-numbers language-php"><code class="language-php"><span class="token variable">$rmsg</span> <span class="token punctuation">.</span><span class="token operator">=</span> “document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>\<span class="token package"><span class="token punctuation">\</span></span>”<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span></span><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation">=</span>’width:450px;padding:0px;border:1px</span> <span class="token attr-name">solid</span> <span class="token attr-name">#D1DDAA;’</span><span class="token punctuation">></span></span></span>”<span class="token punctuation">;</span>  
 <span class="token variable">$rmsg</span> <span class="token punctuation">.</span><span class="token operator">=</span> “<span class="token markup">&lt;div style=’padding:6px;font-size:12px;border-bottom:1px solid #D1DDAA;background:#DBEEBD url({$GLOBALS\['cfg_phpurl'\]}/img/wbg.gif)’;’></span><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span></span><span class="token constant">DEDECMS</span> 提示信息！<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span></span><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></span>\<span class="token package"><span class="token punctuation">\</span></span>”<span class="token punctuation">)</span><span class="token punctuation">;</span>\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n</span>”<span class="token punctuation">;</span>  
-<span class="token variable">$rmsg</span> <span class="token punctuation">.</span><span class="token operator">=</span> “document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>\<span class="token package"><span class="token punctuation">\</span></span>”<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">='</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span><span class="token number">130</span>px<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span><span class="token number">10</span>pt<span class="token punctuation">;</span><span class="token property">background</span><span class="token punctuation">:</span><span class="token hexcode">#ffffff</span></span><span class="token punctuation">'</span></span><span class="token punctuation">></span></span></span><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span></span>\<span class="token package"><span class="token punctuation">\</span></span>”<span class="token punctuation">)</span><span class="token punctuation">;</span>\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n</span>”<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token variable">$rmsg</span> <span class="token punctuation">.</span><span class="token operator">=</span> “document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>\<span class="token package"><span class="token punctuation">\</span></span>”<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">='</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span><span class="token number">130</span>px<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span><span class="token number">10</span>pt<span class="token punctuation">;</span><span class="token property">background</span><span class="token punctuation">:</span><span class="token hexcode">#ffffff</span></span><span class="token punctuation">'</span></span><span class="token punctuation">></span></span></span><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span></span>\<span class="token package"><span class="token punctuation">\</span></span>”<span class="token punctuation">)</span><span class="token punctuation">;</span>\<span class="token package"><span class="token punctuation">\</span>r<span class="token punctuation">\</span><span class="token punctuation">\</span>n</span>”<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>　　只要修改了这两处的“DEDECMS提示信息”就可以了！</p>
-<p><blockquote>第一处是title的修改，也就是修改标题的显示信息，第二处的页面标题的修改。。</blockquote><br></p>
+<blockquote>第一处是title的修改，也就是修改标题的显示信息，第二处的页面标题的修改。。</blockquote>
 
                 
                 </div>
@@ -185,8 +181,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
               <div class="content">
                 <a href="/SEO优化/80.html" target="_blank" class="title">HTTP状态码（HTTP Status Code）返回查询</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/SEO优化/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> SEO优化
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -241,13 +237,11 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
 <p> 　　416 (请求范围不符合要求) 如果页面无法提供请求的范围，则服务器会返回此状态代码。</p>
 <p> 　　417 (未满足期望值) 服务器未满足”期望”请求标头字段的要求。 </p>
 <p>　　5xx(服务器错误) 　　这些状态代码表示服务器在尝试处理请求时发生内部错误。</p>
-<pre><code>     这些错误可能是服务器本身的错误，而不是请求出错。
-</code></pre><p> 　　代码 说明 　　500 (服务器内部错误) 服务器遇到错误，无法完成请求。</p>
+<pre><code>     这些错误可能是服务器本身的错误，而不是请求出错。</code></pre><p> 　　代码 说明 　　500 (服务器内部错误) 服务器遇到错误，无法完成请求。</p>
 <p> 　　501 (尚未实施) 服务器不具备完成请求的功能。 例如，服务器无法识别请求方法时可能会返回此代码。</p>
 <p> 　　502 (错误网关) 服务器作为网关或代理，从上游服务器收到无效响应。</p>
 <p> 　　503 (服务不可用) 服务器目前无法使用(由于超载或停机维护)。</p>
-<pre><code>     通常，这只是暂时状态。
-</code></pre><p> 　　504 (网关超时) 服务器作为网关或代理，但是没有及时从上游服务器收到请求。</p>
+<pre><code>     通常，这只是暂时状态。</code></pre><p> 　　504 (网关超时) 服务器作为网关或代理，但是没有及时从上游服务器收到请求。</p>
 <p> 　　505 (HTTP 版本不受支持) 服务器不支持请求中所用的 HTTP 协议版本。</p>
 </blockquote>
 
@@ -260,8 +254,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
               <div class="content">
                 <a href="/SEO优化/77.html" target="_blank" class="title">关于站长工具的br问题</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/SEO优化/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> SEO优化
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -284,8 +278,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
               <div class="content">
                 <a href="/学习记录/73.html" target="_blank" class="title">五十个UI设计资源网站</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/学习记录/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 学习记录
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -366,8 +360,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
               <div class="content">
                 <a href="/生活DAY/70.html" target="_blank" class="title">今天搬了床铺搬到里面了</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/生活DAY/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 生活DAY
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -390,8 +384,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
               <div class="content">
                 <a href="/wp小记/66.html" target="_blank" class="title">wordpress小记：3》文章id不连续问题</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/wp小记/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> wp小记
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -422,8 +416,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
               <div class="content">
                 <a href="/生活DAY/64.html" target="_blank" class="title">博客就这样明天开始搞站</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/生活DAY/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 生活DAY
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -446,8 +440,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
               <div class="content">
                 <a href="/wp小记/50.html" target="_blank" class="title">wordpress小记：2》我的博客用的wp插件</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/wp小记/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> wp小记
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -554,8 +548,8 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
 <div class="site-tags">
             <h4 class="cc-title">热门标签</h4>
             <ul class="cc-all-tname clearfix">
-              <li class="cc-tname"><a href="/tags/生活DAY/" class="tstyle-1">生活DAY (5)</a></li>
-              <li class="cc-tname"><a href="/tags/生活/" class="tstyle-2">生活 (4)</a></li>
+              <li class="cc-tname"><a href="/tags/生活/" class="tstyle-1">生活 (4)</a></li>
+              <li class="cc-tname"><a href="/tags/生活DAY/" class="tstyle-2">生活DAY (5)</a></li>
               <li class="cc-tname"><a href="/tags/lnmp/" class="tstyle-3">lnmp (4)</a></li>
               <li class="cc-tname"><a href="/tags/laravel/" class="tstyle-4">laravel (2)</a></li>
               <li class="cc-tname"><a href="/tags/Centos/" class="tstyle-1">Centos (2)</a></li>
@@ -586,6 +580,29 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
+
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
 
 </body>
 </html>

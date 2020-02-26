@@ -29,18 +29,18 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。 rm -rf [文件路径]  但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。   chattr -i /home/wwwroot/你的网站目录/.user.ini  ok,大功告成，如果想加锁的话可以把 -i 改成 +i">
+  <meta name="description" content="lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。 rm -rf [文件路径] 但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。   chattr -i /home/wwwroot/你的网站目录/.user.ini ok,大功告成，如果想加锁的话可以把 -i 改成 +i">
 <meta name="keywords" content="lnmp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lnmp删除文件.user.ini提示没有权限（Operation not permitted）">
 <meta property="og:url" content="https://lice.cc/学习记录/345.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。 rm -rf [文件路径]  但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。   chattr -i /home/wwwroot/你的网站目录/.user.ini  ok,大功告成，如果想加锁的话可以把 -i 改成 +i">
+<meta property="og:description" content="lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。 rm -rf [文件路径] 但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。   chattr -i /home/wwwroot/你的网站目录/.user.ini ok,大功告成，如果想加锁的话可以把 -i 改成 +i">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-11T04:21:34.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lnmp删除文件.user.ini提示没有权限（Operation not permitted）">
-<meta name="twitter:description" content="lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。 rm -rf [文件路径]  但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。   chattr -i /home/wwwroot/你的网站目录/.user.ini  ok,大功告成，如果想加锁的话可以把 -i 改成 +i">
+<meta name="twitter:description" content="lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。 rm -rf [文件路径] 但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。   chattr -i /home/wwwroot/你的网站目录/.user.ini ok,大功告成，如果想加锁的话可以把 -i 改成 +i">
   <meta name="robots" content="all">
   <meta name="google" content="all">
   <meta name="googlebot" content="all">
@@ -93,11 +93,9 @@
 	    </div>
 	    <div class="post-body">
 	        <p>lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。</p>
-<pre class="line-numbers language-php"><code class="language-php">rm <span class="token operator">-</span>rf <span class="token punctuation">[</span>文件路径<span class="token punctuation">]</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-php"><code class="language-php">rm <span class="token operator">-</span>rf <span class="token punctuation">[</span>文件路径<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。  </p>
-<pre class="line-numbers language-php"><code class="language-php">chattr <span class="token operator">-</span>i <span class="token operator">/</span>home<span class="token operator">/</span>wwwroot<span class="token operator">/</span>你的网站目录<span class="token operator">/</span><span class="token punctuation">.</span>user<span class="token punctuation">.</span>ini
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-php"><code class="language-php">chattr <span class="token operator">-</span>i <span class="token operator">/</span>home<span class="token operator">/</span>wwwroot<span class="token operator">/</span>你的网站目录<span class="token operator">/</span><span class="token punctuation">.</span>user<span class="token punctuation">.</span>ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>ok,大功告成，如果想加锁的话可以把 -i 改成 +i</p>
 
 	    </div>

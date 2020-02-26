@@ -98,8 +98,7 @@
 	        <p>其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？</p>
 <p> 为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。 </p>
 <pre class="line-numbers language-php"><code class="language-php">命令：
-netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid<span class="token operator">=</span>wifi7  key<span class="token operator">=</span>ailicecn 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid<span class="token operator">=</span>wifi7  key<span class="token operator">=</span>ailicecn <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>这里解释一下这三个参数 </p>
 <p>mode：是否启用虚拟WiFi网卡，改为disallow则为禁用。</p>
 <p> ssid：无线网名称，最好用英文(以wifi7为例)，即要设定的wifi名称。</p>
@@ -109,8 +108,7 @@ netsh wlan set hostednetwork mode<span class="token operator">=</span>allow ssid
 <p>然后会多出这个玩意，但是有红叉怎么办，没事，在设置一下就ok了。。</p>
 <p> <a href="https://ailice.cn/wp-content/uploads/2014/09/wifi002.jpg" target="_blank" rel="noopener"><img src="https://ailice.cn/wp-content/uploads/2014/09/wifi002-300x148.jpg" alt="wifi"></a> </p>
 <p>设置如上图，点确定。就ok了。那么接下来怎么启动wifi呢 ？？ </p>
-<pre class="line-numbers language-php"><code class="language-php">命令：netsh wlan start hostednetwork 
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-php"><code class="language-php">命令：netsh wlan start hostednetwork <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>将这个命令放到txt文档保存，改后缀bat。   右击管理员运行 就ok 了。。 等等等等。。。。，是不是还没有wifi？？？  是啊 是啊 是啊 ，为啥？？？ 简单，把电脑的无线网卡打开，然后运行一下那个命令就行了。哈哈，对了以后，在想开启wifi只需要以管理员运行那个bat文件就可以了。（命令：netsh wlan start hostednetwork ） 赶快来试一试把。</p>
 
 	    </div>

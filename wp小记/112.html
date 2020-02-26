@@ -29,18 +29,18 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个&amp;lt;?php wp_footer(); ?&amp;gt; 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。 从网上找了一些资料 ，最终在主">
+  <meta name="description" content="一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。 从网上找了一些资料 ，最终在主题里的functions.php文件里找到了。 fun">
 <meta name="keywords" content="wp_footer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="wordpress小记：4》wp_footer()控制底部版权">
 <meta property="og:url" content="https://lice.cc/wp小记/112.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个&amp;lt;?php wp_footer(); ?&amp;gt; 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。 从网上找了一些资料 ，最终在主">
+<meta property="og:description" content="一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。 从网上找了一些资料 ，最终在主题里的functions.php文件里找到了。 fun">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-05-29T02:35:21.242Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="wordpress小记：4》wp_footer()控制底部版权">
-<meta name="twitter:description" content="一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个&amp;lt;?php wp_footer(); ?&amp;gt; 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。 从网上找了一些资料 ，最终在主">
+<meta name="twitter:description" content="一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。 从网上找了一些资料 ，最终在主题里的functions.php文件里找到了。 fun">
   <meta name="robots" content="all">
   <meta name="google" content="all">
   <meta name="googlebot" content="all">
@@ -92,7 +92,7 @@
         </span>
 	    </div>
 	    <div class="post-body">
-	        <p>一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个&lt;?php wp_footer(); ?&gt; 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。</p>
+	        <p>一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个<?php wp_footer(); ?> 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。</p>
 <p>从网上找了一些资料 ，最终在主题里的functions.php文件里找到了。</p>
 <p>function weisay_copyright() {<br>echo ‘Theme by <a href="http://www.weisay.com/" rel="noopener" target="_blank">Weisay</a>.’;<br>}<br>add_action(‘wp_footer’, ‘weisay_copyright’);</p>
 <p>所以，只要把这个稍微改一下，就可以了。</p>

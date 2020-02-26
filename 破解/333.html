@@ -102,15 +102,13 @@
 004012E2 0000 add byte ptr ds:\[eax\],al
 004012E4 3000 xor byte ptr ds:\[eax\],al
 004012E6 0000 add byte ptr ds:\[eax\],al
-004012E8 48 dec eax
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+004012E8 48 dec eax<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-vb"><code class="language-vb">delphi:
 
 004A5C54 > 55 push ebp
 004A5C55 8BEC mov ebp,esp
 004A5C57 83C4 F0 add esp,-10
-004A5C5A B8 EC594A00 mov eax,openpro.004A59EC
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+004A5C5A B8 EC594A00 mov eax,openpro.004A59EC<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-vb"><code class="language-vb">BC++:
 
 00401678 > /EB 10 jmp short btengine.0040168A
@@ -129,8 +127,7 @@
 00401697 52 push edx
 00401698 6A 00 push 0
 0040169A E8 99D01300 call <jmp.&KERNEL32.GetModuleHandleA>
-0040169F 8BD0 mov edx,eax
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+0040169F 8BD0 mov edx,eax<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-vb"><code class="language-vb">VC++:
 
 0040A41E > 55 push ebp
@@ -144,8 +141,7 @@
 0040A43B 83EC 68 sub esp,68
 0040A43E 53 push ebx
 0040A43F 56 push esi
-0040A440 57 push edi
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+0040A440 57 push edi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-vb"><code class="language-vb">MASM(汇编):
 
 004035C9 > 6A 00 push 0
@@ -160,8 +156,7 @@
 004035F1 68 0B364000 push 11.0040360B
 004035F6 6A 00 push 0
 004035F8 6A 64 push 64
-004035FA FF35 5B704000 push dword ptr ds:\[40705B\]
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+004035FA FF35 5B704000 push dword ptr ds:\[40705B\]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 	    </div>
 	    <div class="post-tag">

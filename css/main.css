@@ -113,7 +113,7 @@ blockquote{
 	color: #b4b4b4;
 }
 .list-unstyled .meta a{
-  margin-right: 10px;
+  margin-right: 5px;
     color: #b4b4b4;
 }
 .list-unstyled .meta a:hover{
@@ -123,10 +123,7 @@ blockquote{
 .meta .pv-meta{
 	padding-left: 2px;
 }
-/*点赞*/
-.meta .heart-meta{
-	color: #ea6f5a!important;
-}
+
 /*分类*/
 
 /*评论*/
@@ -517,4 +514,40 @@ blockquote{
   background: #fff;
   box-shadow: 0 1px 2px 0 #e2e2e2;
   overflow: hidden;
+}
+/*table美化*/
+table {
+    padding: 0;
+    word-break: initial;
+    width: 100%;
+    margin-bottom:20px;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
 }

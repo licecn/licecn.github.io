@@ -29,18 +29,18 @@
     <script type="text/javascript">window.location.href="upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
-  <meta name="description" content="一、配置安装git这里就不多说了，个人感觉和安装qq没啥区别。  配置本地信息 git config --global user.name ‘账号名’  git config --global user.email 邮箱  git config --list 查看配置结果  创建本地ssh $ ssh-keygen -t rsa -C “github邮箱”    打开C:\Users\Admini">
+  <meta name="description" content="一、配置安装git这里就不多说了，个人感觉和安装qq没啥区别。  配置本地信息 git config --global user.name ‘账号名’  git config --global user.email 邮箱  git config --list 查看配置结果 创建本地ssh $ ssh-keygen -t rsa -C “github邮箱”   打开C:\Users\Administ">
 <meta name="keywords" content="Git,github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows Git本地代码推送到github的命令及配置">
 <meta property="og:url" content="https://lice.cc/学习记录/344.html">
 <meta property="og:site_name" content="李策">
-<meta property="og:description" content="一、配置安装git这里就不多说了，个人感觉和安装qq没啥区别。  配置本地信息 git config --global user.name ‘账号名’  git config --global user.email 邮箱  git config --list 查看配置结果  创建本地ssh $ ssh-keygen -t rsa -C “github邮箱”    打开C:\Users\Admini">
+<meta property="og:description" content="一、配置安装git这里就不多说了，个人感觉和安装qq没啥区别。  配置本地信息 git config --global user.name ‘账号名’  git config --global user.email 邮箱  git config --list 查看配置结果 创建本地ssh $ ssh-keygen -t rsa -C “github邮箱”   打开C:\Users\Administ">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-11T04:20:36.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows Git本地代码推送到github的命令及配置">
-<meta name="twitter:description" content="一、配置安装git这里就不多说了，个人感觉和安装qq没啥区别。  配置本地信息 git config --global user.name ‘账号名’  git config --global user.email 邮箱  git config --list 查看配置结果  创建本地ssh $ ssh-keygen -t rsa -C “github邮箱”    打开C:\Users\Admini">
+<meta name="twitter:description" content="一、配置安装git这里就不多说了，个人感觉和安装qq没啥区别。  配置本地信息 git config --global user.name ‘账号名’  git config --global user.email 邮箱  git config --list 查看配置结果 创建本地ssh $ ssh-keygen -t rsa -C “github邮箱”   打开C:\Users\Administ">
   <meta name="robots" content="all">
   <meta name="google" content="all">
   <meta name="googlebot" content="all">
@@ -97,14 +97,14 @@
 <p>配置本地信息</p>
 <pre class="line-numbers language-html"><code class="language-html">git config --global user.name ‘账号名’ 
 git config --global user.email 邮箱 
-git config --list 查看配置结果
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+git config --list 查看配置结果<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>创建本地ssh</p>
-<pre class="line-numbers language-html"><code class="language-html">$ ssh-keygen -t rsa -C “github邮箱” 
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-html"><code class="language-html">$ ssh-keygen -t rsa -C “github邮箱” <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <hr>
 <p>打开C:\Users\Administrator.ssh目录，“id_rsa.pub”文件内容就是公钥会用到。</p>
-<p>1.登陆github&gt;点击用户头像&gt;Settings&gt;SSH and GPG keys&gt;New SSH key&gt;title:自己看着写&gt;key：打开上面的id_rsa.pub,复制里面的内容粘贴进去&gt;Add SSH key<br>2.测试ssh key是否成功。<br><code>$ssh -T git@github.com</code><br>如果出现You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。<br><a id="more"></a></p>
+<p>1.登陆github&gt;点击用户头像&gt;Settings&gt;SSH and GPG keys&gt;New SSH key&gt;title:自己看着写&gt;key：打开上面的id_rsa.pub,复制里面的内容粘贴进去&gt;Add SSH key<br>2.测试ssh key是否成功。<br><code>$ssh -T git@github.com</code><br>如果出现You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。</p>
+<a id="more"></a>
+
 <h2 id="二、Git常用命令"><a href="#二、Git常用命令" class="headerlink" title="二、Git常用命令"></a>二、Git常用命令</h2><pre class="line-numbers language-php"><code class="language-php">git init   <span class="token comment" spellcheck="true">// 初始化版本库</span>
 
 git add <span class="token punctuation">.</span>   <span class="token comment" spellcheck="true">// 添加文件到版本库（只是添加到缓存区），.代表添加文件夹下所有文件 </span>
@@ -115,8 +115,7 @@ git remote add origin 你的远程库地址  <span class="token comment" spellch
 git push <span class="token operator">-</span>u origin master<span class="token comment" spellcheck="true">// 第一次推送时</span>
 
 git push origin master  <span class="token comment" spellcheck="true">// 第一次推送后，直接使用该命令即可推送修改</span>
-git clone git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>licecn<span class="token operator">/</span>web1234m<span class="token punctuation">.</span>git <span class="token comment" spellcheck="true">//Clone with SSH clone到本地</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+git clone git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>licecn<span class="token operator">/</span>web1234m<span class="token punctuation">.</span>git <span class="token comment" spellcheck="true">//Clone with SSH clone到本地</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 	    </div>
 	    <div class="post-tag">

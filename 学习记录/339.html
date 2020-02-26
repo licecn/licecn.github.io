@@ -95,7 +95,8 @@
         </span>
 	    </div>
 	    <div class="post-body">
-	        <p>前几天有人拿来了一个cisco的ap，让我设置成可以自动获取ip的，当时没多想感觉很简单的事情，玩过很多。但是我错了，我想的太简单了。cisco的东西没有那么简单，本来想着通过web直接设置会简单很多。但是没有找到。<br><br><br>百度了一下，发现只有胖ap可以设置web访问，然后我拿到的ap是个瘦ap，具体如何查看这里给大家说一下。<br><br><br><a id="more"></a></p>
+	        <p>前几天有人拿来了一个cisco的ap，让我设置成可以自动获取ip的，当时没多想感觉很简单的事情，玩过很多。但是我错了，我想的太简单了。cisco的东西没有那么简单，本来想着通过web直接设置会简单很多。但是没有找到。<br><br><br>百度了一下，发现只有胖ap可以设置web访问，然后我拿到的ap是个瘦ap，具体如何查看这里给大家说一下。<br><br></p>
+<a id="more"></a>
 <blockquote>
 <p>名称的识别：（主要用于在看文档上）</p>
 </blockquote>
@@ -105,15 +106,15 @@ AP： 前面不加其他字符，就是胖AP，也就是我们说的Autonomous A
 
 目前新的AP命名规则
 CAP：Controller-Based AP（基于控制器的AP，也就是瘦AP）
-SAP：Standalong AP（独立的AP，也就是胖AP）
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+SAP：Standalong AP（独立的AP，也就是胖AP）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>通过命令识别</p>
 </blockquote>
-<pre class="line-numbers language-c#"><code class="language-c#">ap#show version
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><br><br>显示如下图：<br></p>
-<p><img src="https://ailice.cn/images/003w0htjzy70Sm5mIST5b&amp;690.jpg" alt="瘦ap"><br><br><br><img src="https://ailice.cn/images/003w0htjzy70SebV058e6&amp;690.jpg" alt="胖ap"><br><br><br>    k9w8为瘦ap、k9w7为胖ap<br><br><br>通过命令发现自己的的ap为瘦ap，好在还可以升级，这里就介绍升级过程了，当然之后我也会把我的升级过程抽时间整理一下，毕竟废了很多时间。<br><br><br>预留一下连接：<br><br><br>然后通过超级终端连接ap设置web访问的命令如下：<br><br></p>
+<pre class="line-numbers language-c#"><code class="language-c#">ap#show version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<br>
+显示如下图：<br>
+
+<p><img src="https://ailice.cn/images/003w0htjzy70Sm5mIST5b&690.jpg" alt="瘦ap"><br><br><br><img src="https://ailice.cn/images/003w0htjzy70SebV058e6&690.jpg" alt="胖ap"><br><br><br>    k9w8为瘦ap、k9w7为胖ap<br><br><br>通过命令发现自己的的ap为瘦ap，好在还可以升级，这里就介绍升级过程了，当然之后我也会把我的升级过程抽时间整理一下，毕竟废了很多时间。<br><br><br>预留一下连接：<br><br><br>然后通过超级终端连接ap设置web访问的命令如下：<br><br></p>
 <pre class="line-numbers language-php"><code class="language-php">ap<span class="token operator">></span>enable
 
 显示让输入密码，这个密码在输入的过程中是看不到的，输进去回车就行，默认为Cisco，注意首字母为大写。
@@ -130,10 +131,10 @@ ap<span class="token punctuation">.</span><span class="token punctuation">.</spa
 
 ap<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token shell-comment comment">#end</span>
 
-ap<span class="token shell-comment comment">#show run \\查看有没有成功</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><br><br>到这里就可以通过ip来访问web管理页面了，当然账号密码是默认的Cisco。好了今天就到这里，下一篇抽时间写吧，还有没事百度一下，总有你想要的。<br><br></p>
-
+ap<span class="token shell-comment comment">#show run \\查看有没有成功</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<br>
+到这里就可以通过ip来访问web管理页面了，当然账号密码是默认的Cisco。好了今天就到这里，下一篇抽时间写吧，还有没事百度一下，总有你想要的。
+<br>
 	    </div>
 	    <div class="post-tag">
           <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AP/">AP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cisco/">Cisco</a></li></ul>

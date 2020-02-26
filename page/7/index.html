@@ -85,8 +85,8 @@
               <div class="content">
                 <a href="/wp小记/20.html" target="_blank" class="title">wordpress小记：1》威言威语主题导航栏去掉空隙</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/wp小记/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> wp小记
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -115,8 +115,8 @@
               <div class="content">
                 <a href="/生活DAY/18.html" target="_blank" class="title">个人博客就从今天开始</a>
                 <div class="meta">
-                  <!--<span class="heart-meta"><i class="fa fa-heart" aria-hidden="true"></i> 10
-                  </span>-->
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
                   <a href="/categories/生活DAY/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 生活DAY
                   </a>
                   <a href="#" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> 1
@@ -202,8 +202,8 @@
 <div class="site-tags">
             <h4 class="cc-title">热门标签</h4>
             <ul class="cc-all-tname clearfix">
-              <li class="cc-tname"><a href="/tags/生活DAY/" class="tstyle-1">生活DAY (5)</a></li>
-              <li class="cc-tname"><a href="/tags/生活/" class="tstyle-2">生活 (4)</a></li>
+              <li class="cc-tname"><a href="/tags/生活/" class="tstyle-1">生活 (4)</a></li>
+              <li class="cc-tname"><a href="/tags/生活DAY/" class="tstyle-2">生活DAY (5)</a></li>
               <li class="cc-tname"><a href="/tags/lnmp/" class="tstyle-3">lnmp (4)</a></li>
               <li class="cc-tname"><a href="/tags/laravel/" class="tstyle-4">laravel (2)</a></li>
               <li class="cc-tname"><a href="/tags/Centos/" class="tstyle-1">Centos (2)</a></li>
@@ -234,6 +234,29 @@
     </div>
   </footer>
   <script src="/js/index.js?rev=@@hash"></script>
+
+
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
 
 </body>
 </html>
