@@ -99,10 +99,13 @@ ul li{
 /*简介*/
 .list-unstyled .abstract{
 	margin: 20px 0 20px;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 24px;
     min-height: 80px;
     color: #333;
+}
+.list-unstyled .abstract > a,.list-unstyled .abstract p > a{
+  color: #F92668
 }
 /*小零件*/
 .list-unstyled .meta{
@@ -515,6 +518,16 @@ ul li{
 .btn-default:hover{
   background: #333;
   color: #fff;
+}
+.post-body{
+  font-size: 16px;
+}
+.post-body a,.post-body p a{
+  color: #F92668;
+}
+.post-tag{
+  font-weight: 600;
+  font-size: 16px;
 }
 /*comments*/
 #comments{
