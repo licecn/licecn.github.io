@@ -29,7 +29,7 @@
   <title>李策 | 分享生活，享受生活！</title>
   <link rel="icon" href="/favicon.ico">
   <!--[if lt IE 9]>
-    <script type="text/javascript">window.location.href="upgrade.html"</script>
+    <script type="text/javascript">window.location.href="/upgrade.html"</script>
   <![endif]-->
   <!--SEO-->
   <meta name="description" content="分享生活,享受生活,大家好,我是李策。">
@@ -90,6 +90,38 @@
         <div class="col-xs-12 col-md-9 main">
         <!-- 左侧文章循环开始 -->
           <ul class="list-unstyled">
+            <li>
+              <div class="content">
+                <a href="/学习记录/349.html" target="_blank" class="title">hexo主题开发小计</a>
+                <div class="meta">
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
+                  <a href="/categories/学习记录/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 学习记录
+                  </a>
+                  <a href="/学习记录/349.html#comments" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> <span class="post-comments-count valine-comment-count" data-xid="/学习记录/349.html" itemprop="commentCount"></span>
+                  </a>
+                  <span id="/学习记录/349.html" class="pv-meta leancloud_visitors" data-flag-title="hexo主题开发小计"><i class="fa fa-eye" aria-hidden="true"></i> <i class="leancloud-visitors-count">0</i>
+                  </span>
+                  <span class="tags-meta"><i class="fa fa-tags"></i> <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+                  </span>
+                </div>
+                <div class="abstract">
+                
+                <p>经过一个星期的学习和开发，最终把hexo 主题 <a href="https://github.com/licecn/hexo-theme-nfnf" target="_blank" rel="noopener">NFNF</a> 出阶段完成，就是现在用的这个主题，当然还有很多地方可以优化，但是先告一段落吧。</p>
+<p>如果有人想开发自己的主题的话，可以参考这篇文章：<a href="https://www.cnblogs.com/yyhh/p/11058985.html" target="_blank" rel="noopener">https://www.cnblogs.com/yyhh/p/11058985.html</a></p>
+<p>开发过程中借鉴了NEXT ,SNIPPER ,HIERO 等主题，布局借鉴了 简书。本来打算模仿简书的，但是在开发的过程中，逐渐把几个主题的整合了。开始的时候先把简书的模板在本地写好了，但是替换模板的时候，遇到了很多麻烦，其中比较麻烦的就是云标签，这也是准备不足吧，早知道先不写模板了，这样就可以根据系统生成标签写css 样式了。后面觉得重新写css 样式太麻烦了，就去研究了hexo 辅助函数tagcloud的源代码，参考源代码写出了符合自己要求的模板，不过后来想了想，还不如重新写样式。</p>
+<p>后面在写搜索的时候实在是搞不懂next的代码，就放弃使用algolia，把hiero中的搜索拿了过来使用，不过需要插件hexo-generator-json-content辅助，因为博客早就使用了这个插件，所以就更方便了不用重新安装插件。</p>
+<p>自己主题的开发就先告一段落吧，在这次疫情期间给自己规划了一些事情，下一件事就是学习和开发一款小说app，使用Android studio开发，也会遇到很多坑，就看自己能不能解决了，不过挺期待的。一会把计划写到about页面，慢慢来吧，毕竟已经离开这个行业了，希望自己可以坚持下来吧。</p>
+                <div class="post-button text-center">
+                <a class="btn" href="/学习记录/349.html#more" rel="contents">
+                阅读全文 »
+                </a>
+                </div>
+                
+                </div>
+                
+              </div>
+            </li>
             <li>
               <div class="content">
                 <a href="/学习记录/348.html" target="_blank" class="title">获取百度盘文件真实路径</a>
@@ -385,41 +417,6 @@ git config --list 查看配置结果</code></pre>
                 
               </div>
             </li>
-            <li>
-              <div class="content">
-                <a href="/Java笔记/345.html" target="_blank" class="title">JDBC七步连接数据库</a>
-                <div class="meta">
-                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
-                  </span>
-                  <a href="/categories/Java笔记/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> Java笔记
-                  </a>
-                  <a href="/Java笔记/345.html#comments" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> <span class="post-comments-count valine-comment-count" data-xid="/Java笔记/345.html" itemprop="commentCount"></span>
-                  </a>
-                  <span id="/Java笔记/345.html" class="pv-meta leancloud_visitors" data-flag-title="JDBC七步连接数据库"><i class="fa fa-eye" aria-hidden="true"></i> <i class="leancloud-visitors-count">0</i>
-                  </span>
-                  <span class="tags-meta"><i class="fa fa-tags"></i> <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JDBC/">JDBC</a></li></ul>
-                  </span>
-                </div>
-                <div class="abstract">
-                
-                <p>JDBC连接数据库 •创建一个以JDBC连接数据库的程序，包含7个步骤：</p>
-<h3 id="1、加载JDBC驱动程序："><a href="#1、加载JDBC驱动程序：" class="headerlink" title="1、加载JDBC驱动程序："></a>1、加载JDBC驱动程序：</h3><p>在连接数据库之前，首先要加载想要连接的数据库的驱动到JVM（Java虚拟机）， 这通过java.lang.Class类的静态方法forName(String className)实现。 例如： try{ //加载MySql的驱动类 Class.forName(“com.mysql.jdbc.Driver”) ; }catch(ClassNotFoundException e){ System.out.println(“找不到驱动程序类 ，加载驱动失败！”); e.printStackTrace() ; } 成功加载后，会将Driver类的实例注册到DriverManager类中。</p>
-<h3 id="2、提供JDBC连接的URL"><a href="#2、提供JDBC连接的URL" class="headerlink" title="2、提供JDBC连接的URL"></a>2、提供JDBC连接的URL</h3><p>•连接URL定义了连接数据库时的协议、子协议、数据源标识。 •书写形式：协议：子协议：数据源标识 协议：在JDBC中总是以jdbc开始 子协议：是桥连接的驱动程序或是数据库管理系统名称。 数据源标识：标记找到数据库来源的地址与连接端口。 例如：（MySql的连接URL） jdbc:mysql: //localhost:3306/test?useUnicode=true&amp;characterEncoding=gbk ; useUnicode=true：表示使用Unicode字符集。如果characterEncoding设置为 gb2312或GBK，本参数必须设置为true 。characterEncoding=gbk：字符编码方式。</p>
-<h3 id="3、创建数据库的连接"><a href="#3、创建数据库的连接" class="headerlink" title="3、创建数据库的连接"></a>3、创建数据库的连接</h3><p>•要连接数据库，需要向java.sql.DriverManager请求并获得Connection对象， 该对象就代表一个数据库的连接。 •使用DriverManager的getConnectin(String url , String username , String password )方法传入指定的欲连接的数据库的路径、数据库的用户名和 密码来获得。 例如： //连接MySql数据库，用户名和密码都是root String url = “jdbc:mysql://localhost:3306/test” ; String username = “root” ; String password = “root” ; try{ Connection con = DriverManager.getConnection(url , username , password ) ; }catch(SQLException se){ System.out.println(“数据库连接失败！”); se.printStackTrace() ; } </p>
-<h3 id="4、创建一个Statement"><a href="#4、创建一个Statement" class="headerlink" title="4、创建一个Statement"></a>4、创建一个Statement</h3><p>•要执行SQL语句，必须获得java.sql.Statement实例，Statement实例分为以下3 种类型：</p>
-<p>​     1、执行静态SQL语句。通常通过Statement实例实现。</p>
-<p>​     2、执行动态SQL语句。通常通过PreparedStatement实例实现。</p>
-<p>​     3、执行数据库存储过程。通常通过CallableStatement实例实现。 具体的实现方式： Statement stmt = con.createStatement() ; PreparedStatement pstmt = con.prepareStatement(sql) ; CallableStatement cstmt = con.prepareCall(“{CALL demoSp(? , ?)}”) ; </p>
-                <div class="post-button text-center">
-                <a class="btn" href="/Java笔记/345.html#more" rel="contents">
-                阅读全文 »
-                </a>
-                </div>
-                
-                </div>
-                
-              </div>
-            </li>
           </ul>
           <!-- 左侧文章循环结束 -->
                          <!-- 分页开始 -->
@@ -442,7 +439,7 @@ git config --list 查看配置结果</code></pre>
             <nav class="site-state">
               <div class="site-state-item site-state-posts">
                 <a href="/archives/">
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -454,7 +451,7 @@ git config --list 查看配置结果</code></pre>
               </div>
               <div class="site-state-item site-state-tags">
                 <a href="/tags/">
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">67</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -493,9 +490,9 @@ git config --list 查看配置结果</code></pre>
               <li class="cc-tname"><a href="/tags/Nginx/" class="tstyle-2">Nginx (4)</a></li>
               <li class="cc-tname"><a href="/tags/java/" class="tstyle-3">java (5)</a></li>
               <li class="cc-tname"><a href="/tags/学习记录/" class="tstyle-4">学习记录 (2)</a></li>
-              <li class="cc-tname"><a href="/tags/SEO优化/" class="tstyle-1">SEO优化 (2)</a></li>
-              <li class="cc-tname"><a href="/tags/seo/" class="tstyle-2">seo (4)</a></li>
-              <li class="cc-tname"><a href="/tags/百度快照/" class="tstyle-3">百度快照 (2)</a></li>
+              <li class="cc-tname"><a href="/tags/seo/" class="tstyle-1">seo (4)</a></li>
+              <li class="cc-tname"><a href="/tags/百度快照/" class="tstyle-2">百度快照 (2)</a></li>
+              <li class="cc-tname"><a href="/tags/SEO优化/" class="tstyle-3">SEO优化 (2)</a></li>
               <li class="cc-tname"><a href="/tags/wordpress/" class="tstyle-4">wordpress (4)</a></li>
               <li class="cc-tname"><a href="/tags/wp小记/" class="tstyle-1">wp小记 (3)</a></li>
               <li class="cc-tname"><a href="/tags/javascript/" class="tstyle-2">javascript (2)</a></li>

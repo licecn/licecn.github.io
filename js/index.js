@@ -24,7 +24,7 @@
 // 目录 变色
 $(document).ready(function () {
             $(window).scroll(function () {
-                var items = $("#post-body").find("h3");
+                var items = $("#post-body").find(".headerlink");
                 var menu = $("#site-post-toc");
                 var top = $(document).scrollTop();
                 var currentId = ""; //滚动条现在所在位置的item id
@@ -32,7 +32,7 @@ $(document).ready(function () {
                     var m = $(this);
                     //注意：m.offset().top代表每一个item的顶部位置
                     if (top > m.offset().top - 200) {
-                        currentId = "#" + m.attr("id");
+                        currentId = m.attr("href");
                     } else {
                         return false;
                     }
