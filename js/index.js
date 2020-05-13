@@ -23,6 +23,26 @@
 }
 // 目录 变色
 $(document).ready(function () {
+    //首先将#btn隐藏
+    $(".go-top").hide();
+    //当滚动条的位置处于距顶部50像素以下时，跳转链接出现，否则消失
+    $(function() {
+      $(window).scroll(function() {
+            if ($(window).scrollTop() > 50) {
+                $(".go-top").fadeIn(200);
+            } else {
+                $(".go-top").fadeOut(200);
+            }
+        });
+      //当点击跳转链接后，回到页面顶部位置
+      $(".go-top").click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        },
+        500);
+        return false;
+      });
+    });
             $(window).scroll(function () {
                 var items = $("#post-body").find(".headerlink");
                 var menu = $("#site-post-toc");
@@ -44,7 +64,7 @@ $(document).ready(function () {
                     menu.find( "[href='"+currentId+"']" ).addClass("current");
                 }
             });
-        });
+});
 // 滚动 定位
 
 $(function() {
