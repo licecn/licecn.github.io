@@ -142,7 +142,10 @@ th{
 .meta .pv-meta{
 	padding-left: 2px;
 }
-
+/*时间标签*/
+.time-meta{
+  margin-left: 5px;
+}
 /*分类*/
 
 /*评论*/
@@ -509,7 +512,7 @@ th{
 }
 .article-tag-list-item{
   display: inline-block;
-  margin-left: 5px;
+  /*margin-left: 5px;*/
 }
 .post-tag.article-tag-list-link:hover{
   background: #333;
