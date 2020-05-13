@@ -92,6 +92,35 @@
           <ul class="list-unstyled">
             <li>
               <div class="content">
+                <a href="/学习记录/339.html" target="_blank" class="title">初识CiscoAP</a>
+                <div class="meta">
+                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
+                  </span>
+                  <a href="/categories/学习记录/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 学习记录
+                  </a>
+<!--                  <a href="/学习记录/339.html#comments" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> <span class="post-comments-count valine-comment-count" data-xid="/学习记录/339.html" itemprop="commentCount"></span>
+                  </a>
+                  <span id="/学习记录/339.html" class="pv-meta leancloud_visitors" data-flag-title="初识CiscoAP"><i class="fa fa-eye" aria-hidden="true"></i> <i class="leancloud-visitors-count">0</i>
+                  </span>-->
+                  <span class="tags-meta"><i class="fa fa-tags"></i> <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AP/">AP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cisco/">Cisco</a></li></ul>
+                  </span>
+                  <time datetime="2018-06-07T08:14:11.000Z" itemprop="datePublished">2018-06-07 16:14:11</time>
+                </div>
+                <div class="abstract">
+                
+                <p>前几天有人拿来了一个cisco的ap，让我设置成可以自动获取ip的，当时没多想感觉很简单的事情，玩过很多。但是我错了，我想的太简单了。cisco的东西没有那么简单，本来想着通过web直接设置会简单很多。但是没有找到。<br><br><br>百度了一下，发现只有胖ap可以设置web访问，然后我拿到的ap是个瘦ap，具体如何查看这里给大家说一下。<br><br></p>
+                <div class="post-button text-center">
+                <a class="btn" href="/学习记录/339.html#more" rel="contents">
+                阅读全文 »
+                </a>
+                </div>
+                
+                </div>
+                
+              </div>
+            </li>
+            <li>
+              <div class="content">
                 <a href="/Java笔记/345.html" target="_blank" class="title">JDBC七步连接数据库</a>
                 <div class="meta">
                   <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
@@ -934,73 +963,6 @@
                 
               </div>
             </li>
-            <li>
-              <div class="content">
-                <a href="/服务器相关/298.html" target="_blank" class="title">LNMP安装了哪些软件？安装目录在哪？</a>
-                <div class="meta">
-                  <span class="auth-meta"><i class="fa fa-user" aria-hidden="true"></i> 李策
-                  </span>
-                  <a href="/categories/服务器相关/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 服务器相关
-                  </a>
-<!--                  <a href="/服务器相关/298.html#comments" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i> <span class="post-comments-count valine-comment-count" data-xid="/服务器相关/298.html" itemprop="commentCount"></span>
-                  </a>
-                  <span id="/服务器相关/298.html" class="pv-meta leancloud_visitors" data-flag-title="LNMP安装了哪些软件？安装目录在哪？"><i class="fa fa-eye" aria-hidden="true"></i> <i class="leancloud-visitors-count">0</i>
-                  </span>-->
-                  <span class="tags-meta"><i class="fa fa-tags"></i> <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lnmp/">lnmp</a></li></ul>
-                  </span>
-                  <time datetime="2016-11-22T12:26:41.000Z" itemprop="datePublished">2016-11-22 20:26:41</time>
-                </div>
-                <div class="abstract">
-                
-                    <p>LNMP一键安装包除去安装所必须的依赖包，还会默认安装以下软件： Nginx、MySQL/MariaDB、PHP、phpMyAdmin、Zend Optimizer/Zend GuardLoader。用户可以根据自己的需要安装其他组件，如FTP服务器、缓存组件，也可以使用升级脚本对Nginx、MySQL、PHP进行升级。 <strong>安装这些组件或升级都需要在lnmp下载解压缩后的目录，比如下载到/root目录，就进入/root/lnmp1.2-full目录，执行以下命令。</strong> <strong>虚拟主机管理：</strong></p>
-<p>参见：</p>
-<p><a href="http://lnmp.org/faq/lnmp-vhost-add-howto.html" target="_blank" rel="noopener">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a><strong>FTP服务器：</strong></p>
-<ul>
-<li>可选1，<a href="https://lnmp.org/faq/ftpserver.html" target="_blank" rel="noopener">PureFTPd</a>，执行：./pureftpd.sh 安装，<a href="http://yourIP/ftp/" target="_blank" rel="noopener">http://yourIP/ftp/</a> 进行管理。</li>
-<li>可选2(LNMP1.2下已经移除该脚本)，<a href="https://lnmp.org/faq/ftpserver.html" target="_blank" rel="noopener">Proftpd</a>，执行：./proftpd.sh 安装，执行命令：/root/proftpd_vhost.sh 添加FTP账号。</li>
-</ul>
-<p><strong>缓存加速：</strong></p>
-<p>LNMP1.2及更高版本统一使用./addons.sh 进行安装和卸载。 使用方法：./addons.sh {install|uninstall} {eaccelerator|xcache|memcached|opcache|redis|imagemagick|ioncube} 详细教程：</p>
-<p><a href="http://lnmp.org/faq/addons.html" target="_blank" rel="noopener">http://lnmp.org/faq/addons.html</a></p>
-<p>LNMP1.1下：*   可选1，<a href="https://lnmp.org/faq/Add-ons.html#eAccelerator" target="_blank" rel="noopener">eAccelerator</a>，执行：./eaccelerator.sh 安装。</p>
-<ul>
-<li>可选2，<a href="https://lnmp.org/faq/Add-ons.html#memcached" target="_blank" rel="noopener">memcached</a>，执行：./memcached.sh安装。</li>
-<li>可选3，<a href="https://lnmp.org/faq/Add-ons.html#xcache" target="_blank" rel="noopener">xcache</a>，安装时需选择版本和设置密码， <a href="http://yourIP/xcache/" target="_blank" rel="noopener">http://yourIP/xcache/</a> 进行管理，用户名 admin，密码为安装xcache时设置的。执行：./xcache.sh安装。</li>
-<li>可选4，<a href="https://lnmp.org/faq/Add-ons.html#redis" target="_blank" rel="noopener">redis</a>，执行：./redis.sh安装。</li>
-<li>可选5，<a href="https://lnmp.org/faq/Add-ons.html#opcache" target="_blank" rel="noopener">opcache</a>，执行：opcache.sh安装。<a href="http://yourIP/ocp.php" target="_blank" rel="noopener">http://yourIP/ocp.php</a> 进行管理。Zend Opcache与eaccelerator相冲突，需卸载eaccelerator。</li>
-</ul>
-<p>LNMP1.2及更高版本： 统一使用./upgrade.sh 进行升级工作。 使用方法：./upgrade.sh {nginx|mysql|mariadb|m2m|php|phpa} 详细教程：<a href="http://lnmp.org/faq/lnmp1-2-upgrade.html" target="_blank" rel="noopener">http://lnmp.org/faq/lnmp1-2-upgrade.html</a> LNMP1.1下： <strong>升级脚本：</strong></p>
-<ul>
-<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">Nginx升脚本可</a>，升级至任意Nginx版本。执行：./upgrade_nginx.sh 按提示进行升级。</li>
-<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">PHP升级脚本</a>，可升级至大部分PHP版本。执行：./upgrade_php.sh 按提示进行升级。</li>
-<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">MySQL升级脚本</a>，可升级至任意MySQL版本，MySQL升级风险较大，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql.sh 按提示进行升级。</li>
-<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">MySQL升级至MariaDB</a>，可从MySQL升级至Mariadb，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql2mariadb.sh 按提示进行升级。</li>
-<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">MariaDB升级脚本</a>，可升级已安装的Mariadb，虽然会自动备份数据，依然建议自行再备份一下。执行：./upgrade_mariadb.sh 按提示进行升级。</li>
-<li><a href="https://lnmp.org/faq/upgrade.html" target="_blank" rel="noopener">LNMPA PHP升级脚本</a>，可升级LNMPA的PHP至大部分版本。执行：./upgrade_lnmpa_php.sh 按提示进行升级。</li>
-</ul>
-<p><strong>图像处理：</strong></p>
-<ul>
-<li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#imageMagick" target="_blank" rel="noopener">imageMagick</a>，执行：./imageMagick.sh 安装。 执行：./imageMagick.sh 安装，imageMagick路径：/usr/local/imagemagick/bin/。</li>
-</ul>
-<p><strong>解密：</strong></p>
-<ul>
-<li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#ionCube" target="_blank" rel="noopener">ionCube</a>，执行：./ionCube.sh 安装。</li>
-</ul>
-<p><strong>其他：</strong></p>
-<ul>
-<li>可选1，执行：./php5.2.17.sh 可安装一个不与LNMP冲突的PHP 5.2.17单独存在，使用时需要将nginx虚拟主机配置文件里的 php-cgi.sock 修改为 php-cgi52.sock。</li>
-<li>可选2，执行：./reset_mysql_root_password.sh 可重置MySQL/MariaDB的root密码。</li>
-<li>可选3，执行：./check502.sh 可检测php-fpm是否挂掉,502报错时重启，配合crontab使用。</li>
-<li>可选4，执行：./cut_nginx_logs.sh 日志切割脚本。</li>
-<li>可选5，执行：./remove_disable_function.sh 运行此脚本可删掉禁用函数。</li>
-</ul>
-<p><strong>LNMP相关软件安装目录</strong> Nginx 目录: /usr/local/nginx/ MySQL 目录 : /usr/local/mysql/ MySQL数据库所在目录：/usr/local/mysql/var/ MariaDB 目录 : /usr/local/mariadb/ MariaDB数据库所在目录：/usr/local/mariadb/var/ PHP目录 : /usr/local/php/ PHPMyAdmin目录 : 0.9版本为/home/wwwroot/phpmyadmin/ 1.0及以后版本为 /home/wwwroot/default/phpmyadmin/ 强烈建议将此目录重命名为其不容易猜到的名字。phpmyadmin可自己从官网下载新版替换。 默认网站目录 : 0.9版本为 /home/wwwroot/ 1.0及以后版本为 /home/wwwroot/default/ Nginx日志目录：/home/wwwlogs/ /root/vhost.sh添加的虚拟主机配置文件所在目录：/usr/local/nginx/conf/vhost/ PureFtpd 目录：/usr/local/pureftpd/ PureFtpd web管理目录： 0.9版为/home/wwwroot/default/ftp/ 1.0版为 /home/wwwroot/default/ftp/ Proftpd 目录：/usr/local/proftpd/ Redis 目录：/usr/local/redis/ <strong>LNMP相关配置文件位置</strong> Nginx主配置(默认虚拟主机)文件：/usr/local/nginx/conf/nginx.conf 添加的虚拟主机配置文件：/usr/local/nginx/conf/vhost/域名.conf MySQL配置文件：/etc/my.cnf PHP配置文件：/usr/local/php/etc/php.ini php-fpm配置文件：/usr/local/php/etc/php-fpm.conf PureFtpd配置文件：/usr/local/pureftpd/pure-ftpd.conf PureFtpd MySQL配置文件：/usr/local/pureftpd/pureftpd-mysql.conf Proftpd配置文件：/usr/local/proftpd/etc/proftpd.conf 1.2及之前版本为/usr/local/proftpd/proftpd.conf Proftpd 用户配置文件：/usr/local/proftpd/etc/vhost/用户名.conf Redis 配置文件：/usr/local/redis/etc/redis.conf <strong>LNMPA相关目录文件位置</strong> Apache目录：/usr/local/apache/ Apache配置文件：/usr/local/apache/conf/httpd.conf Apache虚拟主机配置文件目录：/usr/local/apache/conf/vhost/ Apache默认虚拟主机配置文件：/usr/local/apache/conf/extra/httpd-vhosts.conf 虚拟主机配置文件名称：/usr/local/apache/conf/vhost/域名.conf</p>
-
-                
-                </div>
-                
-              </div>
-            </li>
           </ul>
           <!-- 左侧文章循环结束 -->
                          <!-- 分页开始 -->
@@ -1023,7 +985,7 @@
             <nav class="site-state">
               <div class="site-state-item site-state-posts">
                 <a href="/archives/">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1066,13 +1028,13 @@
 <div class="site-tags">
             <h4 class="cc-title">热门标签</h4>
             <ul class="cc-all-tname clearfix">
-              <li class="cc-tname"><a href="/tags/生活/" class="tstyle-1">生活 (4)</a></li>
-              <li class="cc-tname"><a href="/tags/生活DAY/" class="tstyle-2">生活DAY (5)</a></li>
+              <li class="cc-tname"><a href="/tags/生活DAY/" class="tstyle-1">生活DAY (6)</a></li>
+              <li class="cc-tname"><a href="/tags/生活/" class="tstyle-2">生活 (4)</a></li>
               <li class="cc-tname"><a href="/tags/lnmp/" class="tstyle-3">lnmp (4)</a></li>
               <li class="cc-tname"><a href="/tags/laravel/" class="tstyle-4">laravel (2)</a></li>
-              <li class="cc-tname"><a href="/tags/java/" class="tstyle-1">java (5)</a></li>
-              <li class="cc-tname"><a href="/tags/Centos/" class="tstyle-2">Centos (2)</a></li>
-              <li class="cc-tname"><a href="/tags/Nginx/" class="tstyle-3">Nginx (4)</a></li>
+              <li class="cc-tname"><a href="/tags/Centos/" class="tstyle-1">Centos (2)</a></li>
+              <li class="cc-tname"><a href="/tags/Nginx/" class="tstyle-2">Nginx (4)</a></li>
+              <li class="cc-tname"><a href="/tags/java/" class="tstyle-3">java (5)</a></li>
               <li class="cc-tname"><a href="/tags/学习记录/" class="tstyle-4">学习记录 (2)</a></li>
               <li class="cc-tname"><a href="/tags/seo/" class="tstyle-1">seo (4)</a></li>
               <li class="cc-tname"><a href="/tags/百度快照/" class="tstyle-2">百度快照 (2)</a></li>
