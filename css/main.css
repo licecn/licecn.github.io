@@ -37,10 +37,15 @@ h1, h2, h3,h4,h5,h6{
 }
 blockquote{
   border-left: 5px solid;
+  background-color: #F8F8F8;
+
 }
 ul li{
   list-style: none;
   padding-left: 0;
+}
+table > thead >tr >th{
+  text-align: none;
 }
 /*首页列表调整*/
 .list-unstyled > li{
