@@ -48,7 +48,7 @@ ul li{
   list-style: none;
   padding-left: 0;
 }
-table > thead >tr >th{
+th{
   text-align: none;
 }
 /*首页列表调整*/
