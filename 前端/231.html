@@ -39,13 +39,13 @@
 <meta property="og:site_name" content="李策">
 <meta property="og:description" content="偶尔的一次看到别人的博客里有下雪的特效感觉特别好看，然后在网上搜了一些下雪特效的代码，习惯的复制粘贴调试。等调试好了之后发现一个问题，那就是用jq 的时候内存会不断的被占用，直到98%甚至99%。从网上查了一下原因，妈的，也看不懂。算了继续寻找代码，之后找到一个不同形式的下雪特效。 这段js代码雪花的效果调用的图片，而之前下雪的效果是通过jq画出来的。 现在贴出我用的特效代码，如果想下载的话可以直">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ailice.cn/wp-content/uploads/2015/12/dt-300x192.gif">
+<meta property="og:image" content="https://lice.cc/wp-content/uploads/2015/12/dt-300x192.gif">
 <meta property="article:published_time" content="2015-12-31T07:12:40.000Z">
-<meta property="article:modified_time" content="2019-09-11T04:52:24.020Z">
+<meta property="article:modified_time" content="2023-04-01T13:55:16.803Z">
 <meta property="article:author" content="李策">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ailice.cn/wp-content/uploads/2015/12/dt-300x192.gif">
+<meta name="twitter:image" content="https://lice.cc/wp-content/uploads/2015/12/dt-300x192.gif">
   <meta name="robots" content="all" />
   <meta name="google" content="all" />
   <meta name="googlebot" content="all" />
@@ -113,7 +113,7 @@
 <pre><code class="javascript">(function()&#123;function k(a,b,c)&#123;if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent&amp;&amp;a.attachEvent(&quot;on&quot;+b,c)&#125;function g(a)&#123;if(typeof window.onload!=&quot;function&quot;)window.onload=a;else&#123;var b=window.onload;window.onload=function()&#123;b();a()&#125;&#125;&#125;function h()&#123;var a=&#123;&#125;;for(type in&#123;Top:&quot;&quot;,Left:&quot;&quot;&#125;)&#123;var b=type==&quot;Top&quot;?&quot;Y&quot;:&quot;X&quot;;if(typeof window\[&quot;page&quot;+b+&quot;Offset&quot;\]!=&quot;undefined&quot;)a\[type.toLowerCase()\]=window\[&quot;page&quot;+b+&quot;Offset&quot;\];else&#123;b=document.documentElement.clientHeight?document.documentElement:document.body; a\[type.toLowerCase()\]=b\[&quot;scroll&quot;+type\]&#125;&#125;return a&#125;function l()&#123;var a=document.body,b;if(window.innerHeight)b=window.innerHeight;else if(a.parentElement.clientHeight)b=a.parentElement.clientHeight;else if(a&amp;&amp;a.clientHeight)b=a.clientHeight;return b&#125;function i(a)&#123;this.parent=document.body;this.createEl(this.parent,a);this.size=Math.random()\*5+5;this.el.style.width=Math.round(this.size)+&quot;px&quot;;this.el.style.height=Math.round(this.size)+&quot;px&quot;;this.maxLeft=document.body.offsetWidth-this.size;this.maxTop=document.body.offsetHeight- this.size;this.left=Math.random()\*this.maxLeft;this.top=h().top+1;this.angle=1.4+0.2\*Math.random();this.minAngle=1.4;this.maxAngle=1.6;this.angleDelta=0.01\*Math.random();this.speed=2+Math.random()&#125;var j=false;g(function()&#123;j=true&#125;);var f=true;window.createSnow=function(a,b)&#123;if(j)&#123;var c=\[\],m=setInterval(function()&#123;f&amp;&amp;b&gt;c.length&amp;&amp;Math.random()&lt;b\*0.0025&amp;&amp;c.push(new i(a));!f&amp;&amp;!c.length&amp;&amp;clearInterval(m);for(var e=h().top,n=l(),d=c.length-1;d&gt;=0;d--)if(c\[d\])if(c\[d\].top&lt;e||c\[d\].top+c\[d\].size+1&gt;e+n)&#123;c\[d\].remove(); c\[d\]=null;c.splice(d,1)&#125;else&#123;c\[d\].move();c\[d\].draw()&#125;&#125;,40);k(window,&quot;scroll&quot;,function()&#123;for(var e=c.length-1;e&gt;=0;e--)c\[e\].draw()&#125;)&#125;else g(function()&#123;createSnow(a,b)&#125;)&#125;;window.removeSnow=function()&#123;f=false&#125;;i.prototype=&#123;createEl:function(a,b)&#123;this.el=document.createElement(&quot;img&quot;);this.el.setAttribute(&quot;src&quot;,b+&quot;snow&quot;+Math.floor(Math.random()\*4)+&quot;.gif&quot;);this.el.style.position=&quot;absolute&quot;;this.el.style.display=&quot;block&quot;;this.el.style.zIndex=&quot;99999&quot;;this.parent.appendChild(this.el)&#125;,move:function()&#123;if(this.angle&lt; this.minAngle||this.angle&gt;this.maxAngle)this.angleDelta=-this.angleDelta;this.angle+=this.angleDelta;this.left+=this.speed\*Math.cos(this.angle\*Math.PI);this.top-=this.speed\*Math.sin(this.angle\*Math.PI);if(this.left&lt;0)this.left=this.maxLeft;else if(this.left&gt;this.maxLeft)this.left=0&#125;,draw:function()&#123;this.el.style.top=Math.round(this.top)+&quot;px&quot;;this.el.style.left=Math.round(this.left)+&quot;px&quot;&#125;,remove:function()&#123;this.parent.removeChild(this.el);this.parent=this.el=null&#125;&#125;&#125;)();
 </code></pre>
 <p>再来一张效果图吧。</p>
-<p> <a target="_blank" rel="noopener" href="https://ailice.cn/wp-content/uploads/2015/12/dt.gif"><img src="https://ailice.cn/wp-content/uploads/2015/12/dt-300x192.gif" alt="下雪特效"></a></p>
+<p> <a href="https://lice.cc/wp-content/uploads/2015/12/dt.gif"><img src="https://lice.cc/wp-content/uploads/2015/12/dt-300x192.gif" alt="下雪特效"></a></p>
 
 	    </div>
 	    <div class="post-tag">

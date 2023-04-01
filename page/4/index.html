@@ -140,7 +140,7 @@
 <blockquote>
 <p>Date 类最主要的作用就是获得当前时间，同时这个类里面也具有设置时间以及一些其他的功能，但是由于本身设计的问题，这些方法却遭到众多批评，不建议使用，更推荐使用 Calendar 类进行时间和日期的处理。</p>
 <p>java.util.Calendar 类是一个抽象类，可以通过调用 getInstance()静态方法获取一个 Calendar 对象，此对象已由当前日期时间初始化，即默认代表当前时间，如 Calendar c = Calendar.getInstance();</p>
-<p><a target="_blank" rel="noopener" href="https://ailice.cn/wp-content/uploads/2016/04/53b23219000153b608030239.jpg"><img src="https://ailice.cn/wp-content/uploads/2016/04/53b23219000153b608030239.jpg" alt="Calendar"></a></p>
+<p><a href="https://lice.cc/wp-content/uploads/2016/04/53b23219000153b608030239.jpg"><img src="https://lice.cc/wp-content/uploads/2016/04/53b23219000153b608030239.jpg" alt="Calendar"></a></p>
 <p>其中，调用 Calendar 类的 getInstance() 方法获取一个实例，然后通过调用 get() 方法获取日期时间信息，参数为需要获得的字段的值， Calendar.Year 等为 Calendar 类中定义的静态常量。</p>
 <p>Calendar 类提供了 getTime() 方法，用来获取 Date 对象，完成 Calendar 和 Date 的转换，还可通过 getTimeInMillis() 方法，获取此 Calendar 的时间值，以毫秒为单位</p>
 </blockquote>
@@ -224,7 +224,7 @@
 <pre><code class="javascript">(function()&#123;function k(a,b,c)&#123;if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent&amp;&amp;a.attachEvent(&quot;on&quot;+b,c)&#125;function g(a)&#123;if(typeof window.onload!=&quot;function&quot;)window.onload=a;else&#123;var b=window.onload;window.onload=function()&#123;b();a()&#125;&#125;&#125;function h()&#123;var a=&#123;&#125;;for(type in&#123;Top:&quot;&quot;,Left:&quot;&quot;&#125;)&#123;var b=type==&quot;Top&quot;?&quot;Y&quot;:&quot;X&quot;;if(typeof window\[&quot;page&quot;+b+&quot;Offset&quot;\]!=&quot;undefined&quot;)a\[type.toLowerCase()\]=window\[&quot;page&quot;+b+&quot;Offset&quot;\];else&#123;b=document.documentElement.clientHeight?document.documentElement:document.body; a\[type.toLowerCase()\]=b\[&quot;scroll&quot;+type\]&#125;&#125;return a&#125;function l()&#123;var a=document.body,b;if(window.innerHeight)b=window.innerHeight;else if(a.parentElement.clientHeight)b=a.parentElement.clientHeight;else if(a&amp;&amp;a.clientHeight)b=a.clientHeight;return b&#125;function i(a)&#123;this.parent=document.body;this.createEl(this.parent,a);this.size=Math.random()\*5+5;this.el.style.width=Math.round(this.size)+&quot;px&quot;;this.el.style.height=Math.round(this.size)+&quot;px&quot;;this.maxLeft=document.body.offsetWidth-this.size;this.maxTop=document.body.offsetHeight- this.size;this.left=Math.random()\*this.maxLeft;this.top=h().top+1;this.angle=1.4+0.2\*Math.random();this.minAngle=1.4;this.maxAngle=1.6;this.angleDelta=0.01\*Math.random();this.speed=2+Math.random()&#125;var j=false;g(function()&#123;j=true&#125;);var f=true;window.createSnow=function(a,b)&#123;if(j)&#123;var c=\[\],m=setInterval(function()&#123;f&amp;&amp;b&gt;c.length&amp;&amp;Math.random()&lt;b\*0.0025&amp;&amp;c.push(new i(a));!f&amp;&amp;!c.length&amp;&amp;clearInterval(m);for(var e=h().top,n=l(),d=c.length-1;d&gt;=0;d--)if(c\[d\])if(c\[d\].top&lt;e||c\[d\].top+c\[d\].size+1&gt;e+n)&#123;c\[d\].remove(); c\[d\]=null;c.splice(d,1)&#125;else&#123;c\[d\].move();c\[d\].draw()&#125;&#125;,40);k(window,&quot;scroll&quot;,function()&#123;for(var e=c.length-1;e&gt;=0;e--)c\[e\].draw()&#125;)&#125;else g(function()&#123;createSnow(a,b)&#125;)&#125;;window.removeSnow=function()&#123;f=false&#125;;i.prototype=&#123;createEl:function(a,b)&#123;this.el=document.createElement(&quot;img&quot;);this.el.setAttribute(&quot;src&quot;,b+&quot;snow&quot;+Math.floor(Math.random()\*4)+&quot;.gif&quot;);this.el.style.position=&quot;absolute&quot;;this.el.style.display=&quot;block&quot;;this.el.style.zIndex=&quot;99999&quot;;this.parent.appendChild(this.el)&#125;,move:function()&#123;if(this.angle&lt; this.minAngle||this.angle&gt;this.maxAngle)this.angleDelta=-this.angleDelta;this.angle+=this.angleDelta;this.left+=this.speed\*Math.cos(this.angle\*Math.PI);this.top-=this.speed\*Math.sin(this.angle\*Math.PI);if(this.left&lt;0)this.left=this.maxLeft;else if(this.left&gt;this.maxLeft)this.left=0&#125;,draw:function()&#123;this.el.style.top=Math.round(this.top)+&quot;px&quot;;this.el.style.left=Math.round(this.left)+&quot;px&quot;&#125;,remove:function()&#123;this.parent.removeChild(this.el);this.parent=this.el=null&#125;&#125;&#125;)();
 </code></pre>
 <p>再来一张效果图吧。</p>
-<p> <a target="_blank" rel="noopener" href="https://ailice.cn/wp-content/uploads/2015/12/dt.gif"><img src="https://ailice.cn/wp-content/uploads/2015/12/dt-300x192.gif" alt="下雪特效"></a></p>
+<p> <a href="https://lice.cc/wp-content/uploads/2015/12/dt.gif"><img src="https://lice.cc/wp-content/uploads/2015/12/dt-300x192.gif" alt="下雪特效"></a></p>
 
                 
                 </div>
@@ -250,7 +250,7 @@
                 <div class="abstract">
                 
                     <p>之前问过很多人，竞价对优化有影响吗？都说没影响，但是心里一直都是犹豫的。应为我接触的很多站都是优化和竞价分离的，所以没有什么证据。</p>
-<p> <a target="_blank" rel="noopener" href="https://ailice.cn/wp-content/uploads/2015/12/seo4.jpg"><img src="https://ailice.cn/wp-content/uploads/2015/12/seo4-300x247.jpg" alt="seo"></a> </p>
+<p> <a href="https://lice.cc/wp-content/uploads/2015/12/seo4.jpg"><img src="https://lice.cc/wp-content/uploads/2015/12/seo4-300x247.jpg" alt="seo"></a> </p>
 <p>先说说优化排名的几点：外链、点击、停留时间、内链、二次点击等等吧。 如果说竞价的点击也被列入排名因素的话，那么显而易见对排名是有影响的。在搜索一个词的时候发现一个竞价站的专题页排在了首页，让我很是不解，毕竟这个词还是挺好的一个词。然后点进去看了看，发现就是一个普通的专题页，而且是那种把图片切图，然后通过alt来说明图片的内容。 这么一个页面居然能拍到首页，没有外链，内链几乎没有，那么因素只有点击了，那么点击从哪来，只有竞价了。这个现象不能说竞价占有多大的比重，我只想说竞价其实对优化是有影响的。也许很多人不会同意我的看法吧。当然也没人会拿竞价来做实验。 写这篇文章主要是想表达一下我的想法吧。</p>
 
                 
@@ -524,14 +524,14 @@
 <p>先假设第一个为a路由，第二个为b路由（当然是无线路由）</p>
 <p>从a lan口出来的线要插到b的wan口，解释一下，一般lan口是黄色的，wan口在旁边，一般是蓝色的。</p>
 <p>如果a路由 的lan口为192.168.1.1  那么就要去b把lan口设置成192.168.2.1（ 只要不和a一样就可以）。</p>
-<p><img src="https://ailice.cn/wp-content/uploads/2015/08/20150811001630_70065.jpg" alt="路由器接出来的分线连接无线路由该怎么设置"></p>
+<p><img src="https://lice.cc/wp-content/uploads/2015/08/20150811001630_70065.jpg" alt="路由器接出来的分线连接无线路由该怎么设置"></p>
 <p>然后设置b的wan口 为动态获取 。</p>
-<p><img src="https://ailice.cn/wp-content/uploads/2015/08/20150811002053_61935.png" alt=""></p>
+<p><img src="https://lice.cc/wp-content/uploads/2015/08/20150811002053_61935.png" alt=""></p>
 <p>点击保存，然后重启路由，基本就可以了。</p>
 <p>如果还是没有成功的话</p>
 <p>点击b路由的运行状态，然后点击右侧的 “释放”</p>
 <p>如图：</p>
-<p><img src="https://ailice.cn/wp-content/uploads/2015/08/20150811002355_79908.png" alt="">  </p>
+<p><img src="https://lice.cc/wp-content/uploads/2015/08/20150811002355_79908.png" alt="">  </p>
 <p>这就可以上网了。</p>
 
                 
@@ -637,16 +637,16 @@
 <div class="site-tags">
             <h4 class="cc-title">热门标签</h4>
             <ul class="cc-all-tname clearfix">
-              <li class="cc-tname"><a href="/tags/%E7%94%9F%E6%B4%BB/" class="tstyle-1">生活 (4)</a></li>
-              <li class="cc-tname"><a href="/tags/%E7%94%9F%E6%B4%BBDAY/" class="tstyle-2">生活DAY (6)</a></li>
-              <li class="cc-tname"><a href="/tags/lnmp/" class="tstyle-3">lnmp (4)</a></li>
-              <li class="cc-tname"><a href="/tags/laravel/" class="tstyle-4">laravel (2)</a></li>
-              <li class="cc-tname"><a href="/tags/java/" class="tstyle-1">java (5)</a></li>
-              <li class="cc-tname"><a href="/tags/Centos/" class="tstyle-2">Centos (2)</a></li>
-              <li class="cc-tname"><a href="/tags/Nginx/" class="tstyle-3">Nginx (4)</a></li>
-              <li class="cc-tname"><a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="tstyle-4">学习记录 (2)</a></li>
-              <li class="cc-tname"><a href="/tags/seo/" class="tstyle-1">seo (4)</a></li>
-              <li class="cc-tname"><a href="/tags/%E7%99%BE%E5%BA%A6%E5%BF%AB%E7%85%A7/" class="tstyle-2">百度快照 (2)</a></li>
+              <li class="cc-tname"><a href="/tags/%E7%94%9F%E6%B4%BBDAY/" class="tstyle-1">生活DAY (6)</a></li>
+              <li class="cc-tname"><a href="/tags/%E7%94%9F%E6%B4%BB/" class="tstyle-2">生活 (4)</a></li>
+              <li class="cc-tname"><a href="/tags/laravel/" class="tstyle-3">laravel (2)</a></li>
+              <li class="cc-tname"><a href="/tags/lnmp/" class="tstyle-4">lnmp (4)</a></li>
+              <li class="cc-tname"><a href="/tags/Centos/" class="tstyle-1">Centos (2)</a></li>
+              <li class="cc-tname"><a href="/tags/Nginx/" class="tstyle-2">Nginx (4)</a></li>
+              <li class="cc-tname"><a href="/tags/java/" class="tstyle-3">java (5)</a></li>
+              <li class="cc-tname"><a href="/tags/seo/" class="tstyle-4">seo (4)</a></li>
+              <li class="cc-tname"><a href="/tags/%E7%99%BE%E5%BA%A6%E5%BF%AB%E7%85%A7/" class="tstyle-1">百度快照 (2)</a></li>
+              <li class="cc-tname"><a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="tstyle-2">学习记录 (2)</a></li>
               <li class="cc-tname"><a href="/tags/SEO%E4%BC%98%E5%8C%96/" class="tstyle-3">SEO优化 (2)</a></li>
               <li class="cc-tname"><a href="/tags/wordpress/" class="tstyle-4">wordpress (4)</a></li>
               <li class="cc-tname"><a href="/tags/wp%E5%B0%8F%E8%AE%B0/" class="tstyle-1">wp小记 (3)</a></li>
