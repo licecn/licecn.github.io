@@ -40,7 +40,7 @@
 <meta property="og:description" content="昨天我的lenovo a320t 在升级系统的时候出现错误导致变砖了，本来想用卡刷，但是发现并没有cd卡。无奈。电源键+音量减键 发现可以fastboot模式。直接设置，插上数据线，但是通过命令发现没鸟用，没办法只能从网上下载fastboot 的驱动。 将下载好的驱动和boot.img system.img 放到一个文件夹里。cmdcd 你驱动和系统所在文件夹  fastboot devices">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-06-28T02:49:53.000Z">
-<meta property="article:modified_time" content="2018-05-29T02:35:21.243Z">
+<meta property="article:modified_time" content="2023-04-01T14:16:27.391Z">
 <meta property="article:author" content="李策">
 <meta property="article:tag" content="生活DAY">
 <meta name="twitter:card" content="summary">
@@ -117,6 +117,7 @@
 <p>二、fastboot命令:<br>加载驱动:fastboot devices   //加载fastboot驱动<br>擦除:fastboot erase xxxx    //假如我要擦除RECOVERY 就是:fastboot erase recovery<br>刷BOOT:fastboot flash boot boot.img<br>临时刷recovery:fastboot boot recovery.img</p>
 <p>刷system：fastboot flash system system.img<br>刷系统：fastboot flash userdata userdata.Img<br>刷系统：fastboot flash recovery recovery.img<br>刷SPL：fastboot flash hboot hboot.img<br>刷RADIO：fastboot flash radio radio.img<br>重启：fastboot reboot</p>
 <p>推送文件到系统文件夹：adb push Mms.apk /system/app</p>
+<span id="more"></span>
 <p>三、分区解释:<br>system:系统分区.<br>userdata:数据分区.<br>cache:缓存分区<br>recovery:Recovery分区.<br>boot:存放内核和ramdisk的分区。<br>hboot:这个是SPL所在的分区.很重要哦.也是fastboot所在的分区.刷错就真的变砖了.<br>splash1:这个就是开机第一屏幕了.<br>radio:这个是radio所在的分区；</p>
 <p>四、fastboot知识点总结：<br>android的分区知识：<br>splash1：开机画面，使用Nandroid backup备份系统后的文件为splash1.img<br>recovery：该分区是恢复模式(即开机按Home+power进入的界面)，使用Nandroid backup备份为recovery.img<br>boot：内核启动分区，使用Nandroid backup备份为boot.img<br>system：Android系统部分，目录表示为/system，通常为只读，使用Nandroid backup备份为system.img =<br>cache：缓存文件夹，目录表示为/cache，事实上除了T-mobile的OTA更新外，别无用处，使用Nandroid backup备份为cache.img<br>userdata：用户安装的软件以及各种数据，目录为/data，使用Nandroid backup备份为data.img</p>
 <p>因此对于刷机一般可以这么理解：<br>1. 修改开机画面, 修改的是splash1<br>2. root时刷的是所有分区<br>3. 刷test_keys，更新的应该是recovery<br>4. 使用update.zip刷是更新boot、system<br>5. 恢复出厂设置, 清空的是userdata和cache<br>明白这些之后就很好理解,一般无须更新recovery.IMG,正常情况下只需要更新BOOT和SYSTEM即可.但依我看来这两者是相互依存而不可分割的.好下面开始说刷机步骤。<br>进入手机的SPL模式（power+相机） ,且驱动已经安装。<br>驱动已经以附件上传,若在我的电脑设备管理中发现此情况,图1亦是未正确安装驱动,只需要右键更新驱动,且指向你从我这里下载的驱动即可。</p>
