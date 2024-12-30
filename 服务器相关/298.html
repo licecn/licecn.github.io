@@ -59,7 +59,7 @@
   
 <link rel="stylesheet" href="/css/main.css?rev=@@hash.css">
 
-<meta name="generator" content="Hexo 5.4.2"></head> 
+<meta name="generator" content="Hexo 7.3.0"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -110,37 +110,37 @@
 	    <div class="post-body" id="post-body">
 	        <p>LNMP一键安装包除去安装所必须的依赖包，还会默认安装以下软件： Nginx、MySQL/MariaDB、PHP、phpMyAdmin、Zend Optimizer/Zend GuardLoader。用户可以根据自己的需要安装其他组件，如FTP服务器、缓存组件，也可以使用升级脚本对Nginx、MySQL、PHP进行升级。 <strong>安装这些组件或升级都需要在lnmp下载解压缩后的目录，比如下载到/root目录，就进入/root/lnmp1.2-full目录，执行以下命令。</strong> <strong>虚拟主机管理：</strong></p>
 <p>参见：</p>
-<p><a target="_blank" rel="noopener" href="http://lnmp.org/faq/lnmp-vhost-add-howto.html">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a><strong>FTP服务器：</strong></p>
+<p><a href="http://lnmp.org/faq/lnmp-vhost-add-howto.html">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a><strong>FTP服务器：</strong></p>
 <ul>
-<li>可选1，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/ftpserver.html">PureFTPd</a>，执行：./pureftpd.sh 安装，<a target="_blank" rel="noopener" href="http://yourIP/ftp/">http://yourIP/ftp/</a> 进行管理。</li>
-<li>可选2(LNMP1.2下已经移除该脚本)，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/ftpserver.html">Proftpd</a>，执行：./proftpd.sh 安装，执行命令：/root/proftpd_vhost.sh 添加FTP账号。</li>
+<li>可选1，<a href="https://lnmp.org/faq/ftpserver.html">PureFTPd</a>，执行：./pureftpd.sh 安装，<a href="http://yourIP/ftp/">http://yourIP/ftp/</a> 进行管理。</li>
+<li>可选2(LNMP1.2下已经移除该脚本)，<a href="https://lnmp.org/faq/ftpserver.html">Proftpd</a>，执行：./proftpd.sh 安装，执行命令：/root/proftpd_vhost.sh 添加FTP账号。</li>
 </ul>
 <p><strong>缓存加速：</strong></p>
 <p>LNMP1.2及更高版本统一使用./addons.sh 进行安装和卸载。 使用方法：./addons.sh {install|uninstall} {eaccelerator|xcache|memcached|opcache|redis|imagemagick|ioncube} 详细教程：</p>
-<p><a target="_blank" rel="noopener" href="http://lnmp.org/faq/addons.html">http://lnmp.org/faq/addons.html</a></p>
-<p>LNMP1.1下：*   可选1，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#eAccelerator">eAccelerator</a>，执行：./eaccelerator.sh 安装。</p>
+<p><a href="http://lnmp.org/faq/addons.html">http://lnmp.org/faq/addons.html</a></p>
+<p>LNMP1.1下：*   可选1，<a href="https://lnmp.org/faq/Add-ons.html#eAccelerator">eAccelerator</a>，执行：./eaccelerator.sh 安装。</p>
 <ul>
-<li>可选2，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#memcached">memcached</a>，执行：./memcached.sh安装。</li>
-<li>可选3，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#xcache">xcache</a>，安装时需选择版本和设置密码， <a target="_blank" rel="noopener" href="http://yourIP/xcache/">http://yourIP/xcache/</a> 进行管理，用户名 admin，密码为安装xcache时设置的。执行：./xcache.sh安装。</li>
-<li>可选4，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#redis">redis</a>，执行：./redis.sh安装。</li>
-<li>可选5，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#opcache">opcache</a>，执行：opcache.sh安装。<a target="_blank" rel="noopener" href="http://yourIP/ocp.php">http://yourIP/ocp.php</a> 进行管理。Zend Opcache与eaccelerator相冲突，需卸载eaccelerator。</li>
+<li>可选2，<a href="https://lnmp.org/faq/Add-ons.html#memcached">memcached</a>，执行：./memcached.sh安装。</li>
+<li>可选3，<a href="https://lnmp.org/faq/Add-ons.html#xcache">xcache</a>，安装时需选择版本和设置密码， <a href="http://yourIP/xcache/">http://yourIP/xcache/</a> 进行管理，用户名 admin，密码为安装xcache时设置的。执行：./xcache.sh安装。</li>
+<li>可选4，<a href="https://lnmp.org/faq/Add-ons.html#redis">redis</a>，执行：./redis.sh安装。</li>
+<li>可选5，<a href="https://lnmp.org/faq/Add-ons.html#opcache">opcache</a>，执行：opcache.sh安装。<a href="http://yourIP/ocp.php">http://yourIP/ocp.php</a> 进行管理。Zend Opcache与eaccelerator相冲突，需卸载eaccelerator。</li>
 </ul>
-<p>LNMP1.2及更高版本： 统一使用./upgrade.sh 进行升级工作。 使用方法：./upgrade.sh {nginx|mysql|mariadb|m2m|php|phpa} 详细教程：<a target="_blank" rel="noopener" href="http://lnmp.org/faq/lnmp1-2-upgrade.html">http://lnmp.org/faq/lnmp1-2-upgrade.html</a> LNMP1.1下： <strong>升级脚本：</strong></p>
+<p>LNMP1.2及更高版本： 统一使用./upgrade.sh 进行升级工作。 使用方法：./upgrade.sh {nginx|mysql|mariadb|m2m|php|phpa} 详细教程：<a href="http://lnmp.org/faq/lnmp1-2-upgrade.html">http://lnmp.org/faq/lnmp1-2-upgrade.html</a> LNMP1.1下： <strong>升级脚本：</strong></p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">Nginx升脚本可</a>，升级至任意Nginx版本。执行：./upgrade_nginx.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">PHP升级脚本</a>，可升级至大部分PHP版本。执行：./upgrade_php.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">MySQL升级脚本</a>，可升级至任意MySQL版本，MySQL升级风险较大，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">MySQL升级至MariaDB</a>，可从MySQL升级至Mariadb，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql2mariadb.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">MariaDB升级脚本</a>，可升级已安装的Mariadb，虽然会自动备份数据，依然建议自行再备份一下。执行：./upgrade_mariadb.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">LNMPA PHP升级脚本</a>，可升级LNMPA的PHP至大部分版本。执行：./upgrade_lnmpa_php.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">Nginx升脚本可</a>，升级至任意Nginx版本。执行：./upgrade_nginx.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">PHP升级脚本</a>，可升级至大部分PHP版本。执行：./upgrade_php.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">MySQL升级脚本</a>，可升级至任意MySQL版本，MySQL升级风险较大，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">MySQL升级至MariaDB</a>，可从MySQL升级至Mariadb，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql2mariadb.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">MariaDB升级脚本</a>，可升级已安装的Mariadb，虽然会自动备份数据，依然建议自行再备份一下。执行：./upgrade_mariadb.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">LNMPA PHP升级脚本</a>，可升级LNMPA的PHP至大部分版本。执行：./upgrade_lnmpa_php.sh 按提示进行升级。</li>
 </ul>
 <p><strong>图像处理：</strong></p>
 <ul>
-<li>可选1，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#imageMagick">imageMagick</a>，执行：./imageMagick.sh 安装。 执行：./imageMagick.sh 安装，imageMagick路径：/usr/local/imagemagick/bin/。</li>
+<li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#imageMagick">imageMagick</a>，执行：./imageMagick.sh 安装。 执行：./imageMagick.sh 安装，imageMagick路径：/usr/local/imagemagick/bin/。</li>
 </ul>
 <p><strong>解密：</strong></p>
 <ul>
-<li>可选1，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#ionCube">ionCube</a>，执行：./ionCube.sh 安装。</li>
+<li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#ionCube">ionCube</a>，执行：./ionCube.sh 安装。</li>
 </ul>
 <p><strong>其他：</strong></p>
 <ul>
@@ -218,13 +218,13 @@
               </div>
               <div class="site-state-item site-state-categories">
                 <a href="/categories/">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
               <div class="site-state-item site-state-tags">
                 <a href="/tags/">
-                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -256,7 +256,7 @@
   </main><!-- /.container -->
   <footer class="bs-docs-footer">
     <div class="container">
-      <p>© 2014 - 2022</p>
+      <p>© 2014 - 2025</p>
       <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
       <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
       <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>

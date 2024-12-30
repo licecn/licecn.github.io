@@ -56,7 +56,7 @@
   
 <link rel="stylesheet" href="/css/main.css?rev=@@hash.css">
 
-<meta name="generator" content="Hexo 5.4.2"></head> 
+<meta name="generator" content="Hexo 7.3.0"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -238,37 +238,37 @@
                 
                     <p>LNMP一键安装包除去安装所必须的依赖包，还会默认安装以下软件： Nginx、MySQL/MariaDB、PHP、phpMyAdmin、Zend Optimizer/Zend GuardLoader。用户可以根据自己的需要安装其他组件，如FTP服务器、缓存组件，也可以使用升级脚本对Nginx、MySQL、PHP进行升级。 <strong>安装这些组件或升级都需要在lnmp下载解压缩后的目录，比如下载到/root目录，就进入/root/lnmp1.2-full目录，执行以下命令。</strong> <strong>虚拟主机管理：</strong></p>
 <p>参见：</p>
-<p><a target="_blank" rel="noopener" href="http://lnmp.org/faq/lnmp-vhost-add-howto.html">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a><strong>FTP服务器：</strong></p>
+<p><a href="http://lnmp.org/faq/lnmp-vhost-add-howto.html">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a><strong>FTP服务器：</strong></p>
 <ul>
-<li>可选1，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/ftpserver.html">PureFTPd</a>，执行：./pureftpd.sh 安装，<a target="_blank" rel="noopener" href="http://yourIP/ftp/">http://yourIP/ftp/</a> 进行管理。</li>
-<li>可选2(LNMP1.2下已经移除该脚本)，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/ftpserver.html">Proftpd</a>，执行：./proftpd.sh 安装，执行命令：/root/proftpd_vhost.sh 添加FTP账号。</li>
+<li>可选1，<a href="https://lnmp.org/faq/ftpserver.html">PureFTPd</a>，执行：./pureftpd.sh 安装，<a href="http://yourIP/ftp/">http://yourIP/ftp/</a> 进行管理。</li>
+<li>可选2(LNMP1.2下已经移除该脚本)，<a href="https://lnmp.org/faq/ftpserver.html">Proftpd</a>，执行：./proftpd.sh 安装，执行命令：/root/proftpd_vhost.sh 添加FTP账号。</li>
 </ul>
 <p><strong>缓存加速：</strong></p>
 <p>LNMP1.2及更高版本统一使用./addons.sh 进行安装和卸载。 使用方法：./addons.sh {install|uninstall} {eaccelerator|xcache|memcached|opcache|redis|imagemagick|ioncube} 详细教程：</p>
-<p><a target="_blank" rel="noopener" href="http://lnmp.org/faq/addons.html">http://lnmp.org/faq/addons.html</a></p>
-<p>LNMP1.1下：*   可选1，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#eAccelerator">eAccelerator</a>，执行：./eaccelerator.sh 安装。</p>
+<p><a href="http://lnmp.org/faq/addons.html">http://lnmp.org/faq/addons.html</a></p>
+<p>LNMP1.1下：*   可选1，<a href="https://lnmp.org/faq/Add-ons.html#eAccelerator">eAccelerator</a>，执行：./eaccelerator.sh 安装。</p>
 <ul>
-<li>可选2，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#memcached">memcached</a>，执行：./memcached.sh安装。</li>
-<li>可选3，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#xcache">xcache</a>，安装时需选择版本和设置密码， <a target="_blank" rel="noopener" href="http://yourIP/xcache/">http://yourIP/xcache/</a> 进行管理，用户名 admin，密码为安装xcache时设置的。执行：./xcache.sh安装。</li>
-<li>可选4，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#redis">redis</a>，执行：./redis.sh安装。</li>
-<li>可选5，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#opcache">opcache</a>，执行：opcache.sh安装。<a target="_blank" rel="noopener" href="http://yourIP/ocp.php">http://yourIP/ocp.php</a> 进行管理。Zend Opcache与eaccelerator相冲突，需卸载eaccelerator。</li>
+<li>可选2，<a href="https://lnmp.org/faq/Add-ons.html#memcached">memcached</a>，执行：./memcached.sh安装。</li>
+<li>可选3，<a href="https://lnmp.org/faq/Add-ons.html#xcache">xcache</a>，安装时需选择版本和设置密码， <a href="http://yourIP/xcache/">http://yourIP/xcache/</a> 进行管理，用户名 admin，密码为安装xcache时设置的。执行：./xcache.sh安装。</li>
+<li>可选4，<a href="https://lnmp.org/faq/Add-ons.html#redis">redis</a>，执行：./redis.sh安装。</li>
+<li>可选5，<a href="https://lnmp.org/faq/Add-ons.html#opcache">opcache</a>，执行：opcache.sh安装。<a href="http://yourIP/ocp.php">http://yourIP/ocp.php</a> 进行管理。Zend Opcache与eaccelerator相冲突，需卸载eaccelerator。</li>
 </ul>
-<p>LNMP1.2及更高版本： 统一使用./upgrade.sh 进行升级工作。 使用方法：./upgrade.sh {nginx|mysql|mariadb|m2m|php|phpa} 详细教程：<a target="_blank" rel="noopener" href="http://lnmp.org/faq/lnmp1-2-upgrade.html">http://lnmp.org/faq/lnmp1-2-upgrade.html</a> LNMP1.1下： <strong>升级脚本：</strong></p>
+<p>LNMP1.2及更高版本： 统一使用./upgrade.sh 进行升级工作。 使用方法：./upgrade.sh {nginx|mysql|mariadb|m2m|php|phpa} 详细教程：<a href="http://lnmp.org/faq/lnmp1-2-upgrade.html">http://lnmp.org/faq/lnmp1-2-upgrade.html</a> LNMP1.1下： <strong>升级脚本：</strong></p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">Nginx升脚本可</a>，升级至任意Nginx版本。执行：./upgrade_nginx.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">PHP升级脚本</a>，可升级至大部分PHP版本。执行：./upgrade_php.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">MySQL升级脚本</a>，可升级至任意MySQL版本，MySQL升级风险较大，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">MySQL升级至MariaDB</a>，可从MySQL升级至Mariadb，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql2mariadb.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">MariaDB升级脚本</a>，可升级已安装的Mariadb，虽然会自动备份数据，依然建议自行再备份一下。执行：./upgrade_mariadb.sh 按提示进行升级。</li>
-<li><a target="_blank" rel="noopener" href="https://lnmp.org/faq/upgrade.html">LNMPA PHP升级脚本</a>，可升级LNMPA的PHP至大部分版本。执行：./upgrade_lnmpa_php.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">Nginx升脚本可</a>，升级至任意Nginx版本。执行：./upgrade_nginx.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">PHP升级脚本</a>，可升级至大部分PHP版本。执行：./upgrade_php.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">MySQL升级脚本</a>，可升级至任意MySQL版本，MySQL升级风险较大，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">MySQL升级至MariaDB</a>，可从MySQL升级至Mariadb，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql2mariadb.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">MariaDB升级脚本</a>，可升级已安装的Mariadb，虽然会自动备份数据，依然建议自行再备份一下。执行：./upgrade_mariadb.sh 按提示进行升级。</li>
+<li><a href="https://lnmp.org/faq/upgrade.html">LNMPA PHP升级脚本</a>，可升级LNMPA的PHP至大部分版本。执行：./upgrade_lnmpa_php.sh 按提示进行升级。</li>
 </ul>
 <p><strong>图像处理：</strong></p>
 <ul>
-<li>可选1，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#imageMagick">imageMagick</a>，执行：./imageMagick.sh 安装。 执行：./imageMagick.sh 安装，imageMagick路径：/usr/local/imagemagick/bin/。</li>
+<li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#imageMagick">imageMagick</a>，执行：./imageMagick.sh 安装。 执行：./imageMagick.sh 安装，imageMagick路径：/usr/local/imagemagick/bin/。</li>
 </ul>
 <p><strong>解密：</strong></p>
 <ul>
-<li>可选1，<a target="_blank" rel="noopener" href="https://lnmp.org/faq/Add-ons.html#ionCube">ionCube</a>，执行：./ionCube.sh 安装。</li>
+<li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#ionCube">ionCube</a>，执行：./ionCube.sh 安装。</li>
 </ul>
 <p><strong>其他：</strong></p>
 <ul>
@@ -304,16 +304,16 @@
                 <div class="abstract">
                 
                     <p>一般情况下不建议对生产环境进行升级，升级开始后会停止LNMP相关服务。 本文仅适用于LNMP1.2、1.3及以后版本！ 在LNMP目前LNMP v1.2/1.3中已经包含了Nginx、MySQL/MariaDB、PHP的升级脚本，可以帮助搭建对环境中的程序进行升级。(注意：以下操作均需要在lnmp压缩包解压后的目录里运行)</p>
-<h3 id="一、Nginx升级脚本"><a href="#一、Nginx升级脚本" class="headerlink" title="一、Nginx升级脚本"></a><strong>一、Nginx升级脚本</strong></h3><p>执行：./upgrade.sh nginx 按提示输入版本号后回车（访问 <a target="_blank" rel="noopener" href="http://nginx.org/en/download.html">http://nginx.org/en/download.html</a> 可查找nginx的最新版本号和以往旧版本号。如：1.6.0 ），再次回车确认即可开始升级Nginx。<strong>如要升级到1.9.5或更高版本必须使用v1.3里面的升级脚本</strong>。Nginx升级为平滑升级，升级过程不影响nginx的运行。 另外如需添加其他模块可以编辑lnmp.conf 配置文件，在 Nginx_Modules_Options 参数的引号里加其他需要的参数。 lnmp 1.2版修改include/upgrade_nginx.sh文件 在Nginx_Modules_Arguments=”” 参数的双引号里添加需要的其他模块，多个模块参数空格隔开，然后再运行升级即可。 </p>
-<h3 id="二、MySQL升级脚本"><a href="#二、MySQL升级脚本" class="headerlink" title="二、MySQL升级脚本"></a><strong>二、MySQL升级脚本</strong></h3><p>虽然脚本会备份数据，但依然建议先自行备份！ 执行：./upgrade.sh mysql 需要先输入MySQL root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a target="_blank" rel="noopener" href="http://dev.mysql.com/downloads/mysql/">http://dev.mysql.com/downloads/mysql/</a> 获取MySQL的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生成mysql_upgrade日期.log的日志文件，供出错时排查。 如升级失败可将/usr/local/oldmysql日期的目录重命名为mysql，并将/etc/下的my.conf.bak.日期的配置文件重命名为my.cnf和/etc/init.d/下的mysql.bak.日期重命名为mysql即可恢复原mysql。(下面MySQL升级至MariaDB及升级MariaDB一样) </p>
+<h3 id="一、Nginx升级脚本"><a href="#一、Nginx升级脚本" class="headerlink" title="一、Nginx升级脚本"></a><strong>一、Nginx升级脚本</strong></h3><p>执行：./upgrade.sh nginx 按提示输入版本号后回车（访问 <a href="http://nginx.org/en/download.html">http://nginx.org/en/download.html</a> 可查找nginx的最新版本号和以往旧版本号。如：1.6.0 ），再次回车确认即可开始升级Nginx。<strong>如要升级到1.9.5或更高版本必须使用v1.3里面的升级脚本</strong>。Nginx升级为平滑升级，升级过程不影响nginx的运行。 另外如需添加其他模块可以编辑lnmp.conf 配置文件，在 Nginx_Modules_Options 参数的引号里加其他需要的参数。 lnmp 1.2版修改include/upgrade_nginx.sh文件 在Nginx_Modules_Arguments=”” 参数的双引号里添加需要的其他模块，多个模块参数空格隔开，然后再运行升级即可。 </p>
+<h3 id="二、MySQL升级脚本"><a href="#二、MySQL升级脚本" class="headerlink" title="二、MySQL升级脚本"></a><strong>二、MySQL升级脚本</strong></h3><p>虽然脚本会备份数据，但依然建议先自行备份！ 执行：./upgrade.sh mysql 需要先输入MySQL root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a href="http://dev.mysql.com/downloads/mysql/">http://dev.mysql.com/downloads/mysql/</a> 获取MySQL的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生成mysql_upgrade日期.log的日志文件，供出错时排查。 如升级失败可将/usr/local/oldmysql日期的目录重命名为mysql，并将/etc/下的my.conf.bak.日期的配置文件重命名为my.cnf和/etc/init.d/下的mysql.bak.日期重命名为mysql即可恢复原mysql。(下面MySQL升级至MariaDB及升级MariaDB一样) </p>
 <p><strong>三、MySQL升级至MariaDB脚本</strong> </p>
-<p>MariaDB是MySQL的一个分支，主要由开源社区在维护。MariaDB兼容MySQL，由MySQL创始人主导开发。依然建议先自行备份！ 执行：./upgrade.sh m2m 需要先输入MySQL root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a target="_blank" rel="noopener" href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a> 获取MariaDB的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生产mysql2mariadb_upgrade日期.log的日志文件，供出错时排查。 </p>
+<p>MariaDB是MySQL的一个分支，主要由开源社区在维护。MariaDB兼容MySQL，由MySQL创始人主导开发。依然建议先自行备份！ 执行：./upgrade.sh m2m 需要先输入MySQL root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a> 获取MariaDB的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生产mysql2mariadb_upgrade日期.log的日志文件，供出错时排查。 </p>
 <p><strong>四、MariaDB升级脚本</strong> </p>
-<p>依然建议先自行备份！ 执行：./upgrade.sh mariadb 需要先输入MariaDB root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a target="_blank" rel="noopener" href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a> 获取MariaDB的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生产mariadb_upgrade日期.log的日志文件，供出错时排查。 如升级失败可将/usr/local/oldmariadb日期的目录重命名为mariadb，并将/etc/下的my.conf.bak.日期的配置文件重命名为my.cnf和/etc/init.d/下的mariadb.bak.日期重命名为mariadb即可恢复原mariadb。 </p>
+<p>依然建议先自行备份！ 执行：./upgrade.sh mariadb 需要先输入MariaDB root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a> 获取MariaDB的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生产mariadb_upgrade日期.log的日志文件，供出错时排查。 如升级失败可将/usr/local/oldmariadb日期的目录重命名为mariadb，并将/etc/下的my.conf.bak.日期的配置文件重命名为my.cnf和/etc/init.d/下的mariadb.bak.日期重命名为mariadb即可恢复原mariadb。 </p>
 <p><strong>五、LNMP PHP升级脚本</strong> </p>
-<p>升级PHP前，请确认你的网站程序是否支持升级到的PHP版本，防止升级到网站程序不兼容的PHP版本，具体可以去你使用的PHP程序的官网查询相关版本支持信息。v1.3大部分情况下也可以进行降级操作。 执行：./upgrade.sh php 到<a target="_blank" rel="noopener" href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> 获取版本号，输入版本号，如5.3.28 回车，再次回车确认即可开始升级。 如需要编译其他参数可以，lnmp 1.3版可以修改lnmp.conf配置文件里的 PHP_Modules_Options 参数的引号里加其他需要的参数。 lnmp 1.2版修改include/upgrade_php.sh文件 在PHP_Modules_Arguments=”” 参数的双引号里添加需要的其他模块，多个模块参数空格隔开，然后再运行升级即可。 </p>
+<p>升级PHP前，请确认你的网站程序是否支持升级到的PHP版本，防止升级到网站程序不兼容的PHP版本，具体可以去你使用的PHP程序的官网查询相关版本支持信息。v1.3大部分情况下也可以进行降级操作。 执行：./upgrade.sh php 到<a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> 获取版本号，输入版本号，如5.3.28 回车，再次回车确认即可开始升级。 如需要编译其他参数可以，lnmp 1.3版可以修改lnmp.conf配置文件里的 PHP_Modules_Options 参数的引号里加其他需要的参数。 lnmp 1.2版修改include/upgrade_php.sh文件 在PHP_Modules_Arguments=”” 参数的双引号里添加需要的其他模块，多个模块参数空格隔开，然后再运行升级即可。 </p>
 <p><strong>六、LNMPA/LAMP PHP升级脚本</strong> </p>
-<p>升级PHP前，请确认你的网站程序是否支持升级到的PHP版本，防止升级到网站程序不兼容的PHP版本，具体可以去你使用的PHP程序的官网查询相关版本支持信息。 执行：./upgrade.sh phpa 到<a target="_blank" rel="noopener" href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> 获取版本号，输入版本号，如5.3.28 回车，再次回车确认即可开始升级。</p>
+<p>升级PHP前，请确认你的网站程序是否支持升级到的PHP版本，防止升级到网站程序不兼容的PHP版本，具体可以去你使用的PHP程序的官网查询相关版本支持信息。 执行：./upgrade.sh phpa 到<a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> 获取版本号，输入版本号，如5.3.28 回车，再次回车确认即可开始升级。</p>
 
                 
                 </div>
@@ -371,9 +371,9 @@
                 <div class="abstract">
                 
                     <p>最近买了一个腾讯云系统选得centos，开始的时候不知道怎么配置，后来群里的一个朋友给我介绍了lnmp，然后发了一个连接，然后就配置了。说实话开始的时候真的蛋疼虽然有教程但是还是很难。 这里把教程连接放出，以后可以看看。 </p>
-<p>#lnmp安装    <a target="_blank" rel="noopener" href="http://lnmp.org/install.html">http://lnmp.org/install.html</a></p>
-<p> #FTP服务器：<a target="_blank" rel="noopener" href="https://lnmp.org/faq/ftpserver.html">https://lnmp.org/faq/ftpserver.html</a> </p>
-<p>#添加、删除虚拟主机及伪静态管理  <a target="_blank" rel="noopener" href="http://lnmp.org/faq/lnmp-vhost-add-howto.html">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a></p>
+<p>#lnmp安装    <a href="http://lnmp.org/install.html">http://lnmp.org/install.html</a></p>
+<p> #FTP服务器：<a href="https://lnmp.org/faq/ftpserver.html">https://lnmp.org/faq/ftpserver.html</a> </p>
+<p>#添加、删除虚拟主机及伪静态管理  <a href="http://lnmp.org/faq/lnmp-vhost-add-howto.html">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a></p>
 
                 
                 </div>
@@ -497,13 +497,13 @@
               </div>
               <div class="site-state-item site-state-categories">
                 <a href="/categories/">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
               <div class="site-state-item site-state-tags">
                 <a href="/tags/">
-                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -561,7 +561,7 @@
   </main><!-- /.container -->
   <footer class="bs-docs-footer">
     <div class="container">
-      <p>© 2014 - 2022</p>
+      <p>© 2014 - 2025</p>
       <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
       <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
       <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>

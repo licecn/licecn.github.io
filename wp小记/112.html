@@ -58,7 +58,7 @@
   
 <link rel="stylesheet" href="/css/main.css?rev=@@hash.css">
 
-<meta name="generator" content="Hexo 5.4.2"></head> 
+<meta name="generator" content="Hexo 7.3.0"></head> 
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -109,7 +109,7 @@
 	    <div class="post-body" id="post-body">
 	        <p>一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个&lt;?php wp_footer(); ?&gt; 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。</p>
 <p>从网上找了一些资料 ，最终在主题里的functions.php文件里找到了。</p>
-<p>function weisay_copyright() {<br>echo ‘Theme by <a target="_blank" href="http://www.weisay.com/" rel="external noopener">Weisay</a>.’;<br>}<br>add_action(‘wp_footer’, ‘weisay_copyright’);</p>
+<p>function weisay_copyright() {<br>echo ‘Theme by <a href="http://www.weisay.com/" rel="external">Weisay</a>.’;<br>}<br>add_action(‘wp_footer’, ‘weisay_copyright’);</p>
 <p>所以，只要把这个稍微改一下，就可以了。</p>
 
 	    </div>
@@ -178,13 +178,13 @@
               </div>
               <div class="site-state-item site-state-categories">
                 <a href="/categories/">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
               <div class="site-state-item site-state-tags">
                 <a href="/tags/">
-                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -216,7 +216,7 @@
   </main><!-- /.container -->
   <footer class="bs-docs-footer">
     <div class="container">
-      <p>© 2014 - 2022</p>
+      <p>© 2014 - 2025</p>
       <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
       <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
       <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>
