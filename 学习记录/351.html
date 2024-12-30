@@ -1,0 +1,431 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head>
+  <!-- meta & link -->
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no"> 
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  
+  <meta name="baidu-site-verification" content="WAnzHU1gmT" />
+  
+  <link rel="dns-prefetch" href="https://lice.cc">
+  <!--Title-->
+  <title>npm、composer相关命令 | 李策</title>
+  <link rel="icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+    <script type="text/javascript">window.location.href="/upgrade.html"</script>
+  <![endif]-->
+  <!--SEO-->
+  <meta name="description" content="npm相关命令：     &#x2F;&#x2F; 查询源     npm config get registry      &#x2F;&#x2F; 更换国内源     npm config set registry https:&#x2F;&#x2F;registry.npmmirror.com      &#x2F;&#x2F; 恢复官方源     npm config set registry https:&#x2F;&#x2F;registry.npmjs.org      &#x2F;&#x2F; 删除">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm、composer相关命令">
+<meta property="og:url" content="https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/351.html">
+<meta property="og:site_name" content="李策">
+<meta property="og:description" content="npm相关命令：     &#x2F;&#x2F; 查询源     npm config get registry      &#x2F;&#x2F; 更换国内源     npm config set registry https:&#x2F;&#x2F;registry.npmmirror.com      &#x2F;&#x2F; 恢复官方源     npm config set registry https:&#x2F;&#x2F;registry.npmjs.org      &#x2F;&#x2F; 删除">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-11T15:28:00.000Z">
+<meta property="article:modified_time" content="2023-12-11T15:51:41.109Z">
+<meta property="article:author" content="李策">
+<meta property="article:tag" content="composer">
+<meta property="article:tag" content="npm">
+<meta name="twitter:card" content="summary">
+  <meta name="robots" content="all" />
+  <meta name="google" content="all" />
+  <meta name="googlebot" content="all" />
+  <meta name="verify" content="all" />
+  <link rel="canonical" href="https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/351.html">
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/css/main.css?rev=@@hash.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head> 
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button id="navbutton" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">你真帅</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </span>
+        </button>
+        <a href="/" class="navbar-brand">李策</a>        
+      </div>
+      <nav class="navbar-collapse collapse" id="navbar" aria-expanded="false">
+        <ul class="nav navbar-nav">
+          <li class><a href="/">主页</a></li>
+          <li class><a href="/archives/">归档</a></li>
+          <li class><a href="/categories/">分类</a></li>
+          <li class><a href="/tags/">标签</a></li>
+          <li class><a href="/about/">About</a></li>
+          <li class><a href="/links/">友链</a></li>
+          
+  <li id="search-form-wrap">
+    <a href="javascript:;" class="search-form-submit"><i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+</li>
+
+        </ul>
+        
+      </nav><!--/.nav-collapse -->
+    </div>
+  </header>
+  <main class="container m-h-10 index">
+      <div class="row">
+        <!-- 左侧列表开始 -->
+        <div class="col-xs-12 col-md-9 main">
+        <div class="site-post-wrap">
+	<article class="post">
+	    <h1 class="post-head">npm、composer相关命令</h1>
+	    <div class="post-meta">
+        <span><i class="fa fa-calendar" aria-hidden="true"></i><time class="time-meta" datetime="2023-12-11T15:28:00.000Z" itemprop="datePublished">2023-12-11 23:28:00</time></span>
+        <span><a href="/categories/学习记录/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 学习记录
+                  </a></span>
+        <span id="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/351.html" class="leancloud_visitors" data-flag-title="npm、composer相关命令">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">0</i>
+        </span>
+	    </div>
+	    <div class="post-body" id="post-body">
+	        <p>npm相关命令：</p>
+<pre><code>    // 查询源
+    npm config get registry
+
+    // 更换国内源
+    npm config set registry https://registry.npmmirror.com
+
+    // 恢复官方源
+    npm config set registry https://registry.npmjs.org
+
+    // 删除注册表
+    npm config delete registry
+</code></pre><span id="more"></span>
+<p>npm常用命令：</p>
+<pre><code>1、设置npm路径
+#全局安装路径
+npm config set prefix &quot;D:\Program Files\nodejs\node_global&quot;
+#缓存路径
+npm config set cache &quot;D:\Program Files\nodejs\node_cache&quot;
+
+2、设置镜像
+#1,淘宝镜像源
+npm config set registry https://registry.npmmirror.com
+npm config set registry https://registry.npm.taobao.org
+
+#2,腾讯云镜像源
+npm config set registry http://mirrors.cloud.tencent.com/npm/
+
+#3,华为云镜像源
+npm config set registry https://mirrors.huaweicloud.com/repository/npm/
+
+# 官方默认全局镜像
+npm config set registry https://registry.npmjs.org
+
+#检查当前镜像
+npm config get registry
+
+15
+3、常用命令简写说明
+-g： #--global 的缩写，表示安装到全局目录里
+-S： #--save 的缩写，表示安装的包将写入package.json里面的dependencies
+-D： #--save-dev 的缩写，表示将安装的包将写入packege.json里面的devDependencies
+ i： #install的缩写，表示安装
+
+4、安装模块
+npm init  # npm 初始化当前目录
+npm i   # 安装所有依赖
+npm install   # 安装所有依赖
+npm i express  # 安装模块到默认dependencies
+# 安装指定版本和临时源
+npm install -g express@2.5.8 --registry=https://registry.npm.taobao.org
+
+npm i express -g  # 会安装到配置的全局目录下
+npm i express -S  # 安装包信息将加入到dependencies生产依赖
+npm i express -D  # 安装包信息将加入到devDependencies开发依赖
+
+5、卸载模块
+npm uninstall express  # 卸载模块，但不卸载模块留在package.json中的对应信息
+npm uninstall express -g  # 卸载全局模块
+npm uninstall express --save  # 卸载模块，同时卸载留在package.json中dependencies下的信息
+npm uninstall express --save-dev  # 卸载模块，同时卸载留在package.json中devDependencies下的信息
+
+6、更新模块
+npm update express  # 更新最新版本的express
+npm update express@2.1.0  # 更新到指定版本号的express
+npm update express@latest  # 更新到最后的新版本
+
+7、查看命令
+npm -v   #查看版本号
+npm root  # 查看项目中模块所在的目录
+npm root -g  # 查看全局安装的模块所在目录
+npm list 或者 npm ls  # 查看本地已安装模块的清单列表
+npm view express dependencies  # 查看某个包对于各种包的依赖关系
+npm view express version  # 查看express最新的版本号
+npm view express versions  # 查看所有express历史版本号（很实用）
+npm view express  # 查看最新的express版本的信息
+npm info express  # 查看express的详细信息，等同于上面的npm view express
+npm list express 或 npm ls express  # 查看本地已安装的express的详细信息
+npm view express repository.url  # 查看express包的来源地址
+
+8、其他命令
+npm cache clean  # 清除npm的缓存
+npm prune  # 清除项目中没有被使用的包
+npm outdated  # 检查模块是否已经过时
+npm repo express  # 会打开默认浏览器跳转到github中express的页面
+npm docs express  # 会打开默认浏览器跳转到github中express的README.MD文件信息
+npm home express  # 会打开默认浏览器跳转到github中express的主页
+npm install -g npm@9.8.1 # 升级npm
+
+9、通过使用淘宝定制的cnpm安装
+npm install -g cnpm --registry=https://registry.npmmirror.com
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+# 查看版本号
+cnpm -v
+
+</code></pre><p>composer相关命令：</p>
+<pre><code>1.查看composer配置参数。带 -l 参数表示查看composer参数，不带 -l 表示设置composer参数，带-g表示针对全局参数
+# 查看 composer全局参数
+$ composer config -l -g  
+
+# 查看 composer 安装目录
+$ composer config -l -g | grep home
+
+# 设置composer全局镜像地址为阿里云镜像平台
+$ composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+
+2.升级composer到最新版本
+$ composer selfupdate 
+# 以下命令含义相同
+$ composer self-update
+
+3.install
+如果执行install命令所在目录存在composer.lock文件，则以composer.lock为标准去下载依赖，如果没有composer.lock，则 install 命令和 update没有区别，composer.lock可以保证执行install命令后，安装的依赖版本总相同，因此项目必须将 composer.lock 纳入代码仓库，库项目则不需要纳入.
+
+4.update
+# 更新所有依赖
+$ composer update
+# 更新指定的包
+$ composer update monolog/monolog
+# 更新指定的多个包
+$ composer update monolog/monolog symfony/dependency-injection
+# 更新通配符匹配的包
+$ composer update monolog/monolog symfony/*
+注意：包能升级的版本受到版本约束的约束，包不会升级到超出约束的版本的范围。例如, composer.json 里包的版本约束为 ^1.10，而最新版本为 2.0。那么 update 命令是不能把包升级到 2.0 版本的，只能最高升级到 1.x 版本。对于开发版本的包，如果包作者上传了新的同版本开发包，那么执行update命令可以更新到最新的开发版本包。
+
+5.remove
+remove 命令用于移除一个包及其依赖，前提是该包没有被其他包使用，如果依赖被其他包使用，则无法移除：
+$ composer remove monolog/monolog
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 0 installs, 0 updates, 2 removals
+  - Removing psr/log (1.0.2)
+  - Removing monolog/monolog (1.23.0)
+Generating autoload files
+
+6.show
+show 命令可以列出当前项目使用到包的信息，加上 --tree或者-t 可以以依赖关系树的形式展示。
+# 列出所有已经安装的包
+$ composer show
+
+# 可以通过通配符进行筛选
+$ composer show monolog/*
+
+# 显示具体某个包的信息
+$ composer show monolog/monolog
+
+# 查看依赖关系树
+$ composer show -t 
+
+# 列出当前所有的依赖及其版本
+$ composer show -i 
+
+命令结果示例
+symfony/console                    v3.4.4         Symfony Console Component
+symfony/debug                      v3.4.4         Symfony Debug Component
+symfony/http-foundation            v3.1.10        Symfony HttpFoundation Component
+symfony/polyfill-mbstring          v1.7.0         Symfony polyfill for the Mbstring extension
+
+
+7.clearcahe
+clearcache 可以清除本地的composer缓存信息
+
+8.
+
+</code></pre>
+	    </div>
+	    <div class="post-tag">
+          <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composer/" rel="tag">composer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/" rel="tag">npm</a></li></ul>
+	    </div>
+	</article>
+	<div class="post-prev-next">
+	    <div class="article-nav prev-next-wrap clearfix">
+        
+        <a href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/352.html" class="pre-post btn btn-default" title='hexo重装系统后如何恢复'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">hexo重装系统后如何恢复</span>
+        </a>
+        
+        
+        <a href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/350.html" class="next-post btn btn-default" title='npm命令出现卡顿解决办法'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">npm命令出现卡顿解决办法</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+        
+        </div>
+    </div>
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
+        </div>
+        <!-- zy左侧列表结束 -->        
+        <!-- 侧边栏 -->
+        <aside class="hidden-xs hidden-sm col-md-3 sidebar">
+          <div class="site-overview">
+            <div class="site-author">
+              <img src="/avatar.jpg" alt="李策" class="site-author-image" itemprop="image">
+              <p class="site-author-name" itemprop="name">李策</p>
+              <p class="site-description" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
+            </div>
+            <nav class="site-state">
+              <div class="site-state-item site-state-posts">
+                <a href="/archives/">
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/">
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            </nav>
+            <div class="links-of-author">
+              <span class="links-of-author-item">
+                <a href="//github.com/licecn" target="_blank" title="Github" rel="external nofollow"><i class="fa fa-fw fa-github"></i>Github</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="mailto:licecn_com@163.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="//gitee.com/licesn" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
+              </span>            </div>
+            
+          </div>
+          
+          
+<div class="site-post-toc" id="site-post-toc">
+<div class="post-toc-title">文章目录</div>
+
+<span style="font-size:16px;font-weight:bold;line-height:110px;">此文章没有目录</span>
+
+</div>
+
+        </aside>
+        <!-- 侧边栏结束 -->        
+      </div>
+  </main><!-- /.container -->
+  <footer class="bs-docs-footer">
+    <div class="container">
+      <p>© 2014 - 2022</p>
+      <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
+      <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
+      <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>
+      <span><a href="//weibo.com/ailicecn" rel="nofollow" target="_blank" title="Weibo"><img src="/img/social-weibo.png" alt="weibo"></a></span>
+      <a class="go-top fa fa-angle-up hidden-xs hidden-sm" href="javascript:scroll(0,0)" title="返回顶部" aria-label="返回顶部"></a>
+    </div>
+  </footer>
+  
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="/js/index.js?rev=@@hash.js"></script>
+
+
+<div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+</body>
+</html>

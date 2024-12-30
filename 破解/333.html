@@ -1,0 +1,336 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head>
+  <!-- meta & link -->
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no"> 
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  
+  <meta name="baidu-site-verification" content="WAnzHU1gmT" />
+  
+  <link rel="dns-prefetch" href="https://lice.cc">
+  <!--Title-->
+  <title>新手入门脱壳简单介绍 | 李策</title>
+  <link rel="icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+    <script type="text/javascript">window.location.href="/upgrade.html"</script>
+  <![endif]-->
+  <!--SEO-->
+  <meta name="description" content="壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&lt;XXXX 6。特殊 常见语言的入口点：  VB：  004012D4 &gt; 68 54474000 push QQ个性网.00404754 004012D9 E8 F0FFFFFF call &lt;jmp.&amp;MSVBV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新手入门脱壳简单介绍">
+<meta property="og:url" content="https://lice.cc/%E7%A0%B4%E8%A7%A3/333.html">
+<meta property="og:site_name" content="李策">
+<meta property="og:description" content="壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&lt;XXXX 6。特殊 常见语言的入口点：  VB：  004012D4 &gt; 68 54474000 push QQ个性网.00404754 004012D9 E8 F0FFFFFF call &lt;jmp.&amp;MSVBV">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-10-07T14:44:18.000Z">
+<meta property="article:modified_time" content="2023-04-01T14:16:04.393Z">
+<meta property="article:author" content="李策">
+<meta property="article:tag" content="脱壳">
+<meta name="twitter:card" content="summary">
+  <meta name="robots" content="all" />
+  <meta name="google" content="all" />
+  <meta name="googlebot" content="all" />
+  <meta name="verify" content="all" />
+  <link rel="canonical" href="https://lice.cc/%E7%A0%B4%E8%A7%A3/333.html">
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/css/main.css?rev=@@hash.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head> 
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button id="navbutton" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">你真帅</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </span>
+        </button>
+        <a href="/" class="navbar-brand">李策</a>        
+      </div>
+      <nav class="navbar-collapse collapse" id="navbar" aria-expanded="false">
+        <ul class="nav navbar-nav">
+          <li class><a href="/">主页</a></li>
+          <li class><a href="/archives/">归档</a></li>
+          <li class><a href="/categories/">分类</a></li>
+          <li class><a href="/tags/">标签</a></li>
+          <li class><a href="/about/">About</a></li>
+          <li class><a href="/links/">友链</a></li>
+          
+  <li id="search-form-wrap">
+    <a href="javascript:;" class="search-form-submit"><i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+</li>
+
+        </ul>
+        
+      </nav><!--/.nav-collapse -->
+    </div>
+  </header>
+  <main class="container m-h-10 index">
+      <div class="row">
+        <!-- 左侧列表开始 -->
+        <div class="col-xs-12 col-md-9 main">
+        <div class="site-post-wrap">
+	<article class="post">
+	    <h1 class="post-head">新手入门脱壳简单介绍</h1>
+	    <div class="post-meta">
+        <span><i class="fa fa-calendar" aria-hidden="true"></i><time class="time-meta" datetime="2017-10-07T14:44:18.000Z" itemprop="datePublished">2017-10-07 22:44:18</time></span>
+        <span><a href="/categories/破解/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 破解
+                  </a></span>
+        <span id="/%E7%A0%B4%E8%A7%A3/333.html" class="leancloud_visitors" data-flag-title="新手入门脱壳简单介绍">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">0</i>
+        </span>
+	    </div>
+	    <div class="post-body" id="post-body">
+	        <p>壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&lt;XXXX 6。特殊 常见语言的入口点：</p>
+<pre><code class="vb"> VB：
+
+004012D4 &gt; 68 54474000 push QQ个性网.00404754
+004012D9 E8 F0FFFFFF call &lt;jmp.&amp;MSVBVM60.#100&gt;
+004012DE 0000 add byte ptr ds:\[eax\],al
+004012E0 0000 add byte ptr ds:\[eax\],al
+004012E2 0000 add byte ptr ds:\[eax\],al
+004012E4 3000 xor byte ptr ds:\[eax\],al
+004012E6 0000 add byte ptr ds:\[eax\],al
+004012E8 48 dec eax
+</code></pre>
+<pre><code class="vb">delphi:
+
+004A5C54 &gt; 55 push ebp
+004A5C55 8BEC mov ebp,esp
+004A5C57 83C4 F0 add esp,-10
+004A5C5A B8 EC594A00 mov eax,openpro.004A59EC
+</code></pre>
+<pre><code class="vb">BC++:
+
+00401678 &gt; /EB 10 jmp short btengine.0040168A
+0040167A |66:623A bound di,dword ptr ds:\[edx\]
+0040167D |43 inc ebx
+0040167E |2B2B sub ebp,dword ptr ds:\[ebx\]
+00401680 |48 dec eax
+00401681 |4F dec edi
+00401682 |4F dec edi
+00401683 |4B dec ebx
+00401684 |90 nop
+00401685 -|E9 98005400 jmp 00941722
+0040168A \\A1 8B005400 mov eax,dword ptr ds:\[54008B\]
+0040168F C1E0 02 shl eax,2
+00401692 A3 8F005400 mov dword ptr ds:\[54008F\],eax
+00401697 52 push edx
+00401698 6A 00 push 0
+0040169A E8 99D01300 call &lt;jmp.&amp;KERNEL32.GetModuleHandleA&gt;
+0040169F 8BD0 mov edx,eax
+</code></pre>
+  <span id="more"></span>
+<pre><code class="vb">VC++:
+
+0040A41E &gt; 55 push ebp
+0040A41F 8BEC mov ebp,esp
+0040A421 6A FF push -1
+0040A423 68 C8CB4000 push 跑跑排行.0040CBC8
+0040A428 68 A4A54000 push &lt;jmp.&amp;MSVCRT.\_except\_handler3&gt;
+0040A42D 64:A1 00000000 mov eax,dword ptr fs:\[0\]
+0040A433 50 push eax
+0040A434 64:8925 0000000&gt;mov dword ptr fs:\[0\],esp
+0040A43B 83EC 68 sub esp,68
+0040A43E 53 push ebx
+0040A43F 56 push esi
+0040A440 57 push edi
+</code></pre>
+<pre><code class="vb">MASM(汇编):
+
+004035C9 &gt; 6A 00 push 0
+004035CB E8 A20A0000 call &lt;jmp.&amp;kernel32.GetModuleHandleA&gt;
+004035D0 A3 5B704000 mov dword ptr ds:\[40705B\],eax
+004035D5 68 80000000 push 80
+004035DA 68 2C754000 push 11.0040752C
+004035DF FF35 5B704000 push dword ptr ds:\[40705B\]
+004035E5 E8 820A0000 call &lt;jmp.&amp;kernel32.GetModuleFileNameA&gt;
+004035EA E8 87070000 call 11.00403D76
+004035EF 6A 00 push 0
+004035F1 68 0B364000 push 11.0040360B
+004035F6 6A 00 push 0
+004035F8 6A 64 push 64
+004035FA FF35 5B704000 push dword ptr ds:\[40705B\]
+</code></pre>
+
+	    </div>
+	    <div class="post-tag">
+          <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%84%B1%E5%A3%B3/" rel="tag">脱壳</a></li></ul>
+	    </div>
+	</article>
+	<div class="post-prev-next">
+	    <div class="article-nav prev-next-wrap clearfix">
+        
+        <a href="/%E5%B0%8F%E7%A6%8F%E5%88%A9/338.html" class="pre-post btn btn-default" title='摩拜、小黄车月卡免费领-20171009'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">摩拜、小黄车月卡免费领-20171009</span>
+        </a>
+        
+        
+        <a href="/%E5%89%8D%E7%AB%AF/328.html" class="next-post btn btn-default" title='JavaScript（js）监听兼容优化代码'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">JavaScript（js）监听兼容优化代码</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+        
+        </div>
+    </div>
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
+        </div>
+        <!-- zy左侧列表结束 -->        
+        <!-- 侧边栏 -->
+        <aside class="hidden-xs hidden-sm col-md-3 sidebar">
+          <div class="site-overview">
+            <div class="site-author">
+              <img src="/avatar.jpg" alt="李策" class="site-author-image" itemprop="image">
+              <p class="site-author-name" itemprop="name">李策</p>
+              <p class="site-description" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
+            </div>
+            <nav class="site-state">
+              <div class="site-state-item site-state-posts">
+                <a href="/archives/">
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/">
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            </nav>
+            <div class="links-of-author">
+              <span class="links-of-author-item">
+                <a href="//github.com/licecn" target="_blank" title="Github" rel="external nofollow"><i class="fa fa-fw fa-github"></i>Github</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="mailto:licecn_com@163.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="//gitee.com/licesn" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
+              </span>            </div>
+            
+          </div>
+          
+          
+<div class="site-post-toc" id="site-post-toc">
+<div class="post-toc-title">文章目录</div>
+
+<span style="font-size:16px;font-weight:bold;line-height:110px;">此文章没有目录</span>
+
+</div>
+
+        </aside>
+        <!-- 侧边栏结束 -->        
+      </div>
+  </main><!-- /.container -->
+  <footer class="bs-docs-footer">
+    <div class="container">
+      <p>© 2014 - 2022</p>
+      <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
+      <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
+      <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>
+      <span><a href="//weibo.com/ailicecn" rel="nofollow" target="_blank" title="Weibo"><img src="/img/social-weibo.png" alt="weibo"></a></span>
+      <a class="go-top fa fa-angle-up hidden-xs hidden-sm" href="javascript:scroll(0,0)" title="返回顶部" aria-label="返回顶部"></a>
+    </div>
+  </footer>
+  
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="/js/index.js?rev=@@hash.js"></script>
+
+
+<div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+</body>
+</html>

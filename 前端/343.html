@@ -1,0 +1,287 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head>
+  <!-- meta & link -->
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no"> 
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  
+  <meta name="baidu-site-verification" content="WAnzHU1gmT" />
+  
+  <link rel="dns-prefetch" href="https://lice.cc">
+  <!--Title-->
+  <title>自适应布局需要注意的总结 | 李策</title>
+  <link rel="icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+    <script type="text/javascript">window.location.href="/upgrade.html"</script>
+  <![endif]-->
+  <!--SEO-->
+  <meta name="description" content="最近给自己写的www.web1234.org 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。  一、 &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width,height&#x3D;device-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自适应布局需要注意的总结">
+<meta property="og:url" content="https://lice.cc/%E5%89%8D%E7%AB%AF/343.html">
+<meta property="og:site_name" content="李策">
+<meta property="og:description" content="最近给自己写的www.web1234.org 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。  一、 &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width,height&#x3D;device-">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-08-16T07:12:04.000Z">
+<meta property="article:modified_time" content="2019-09-11T05:24:13.509Z">
+<meta property="article:author" content="李策">
+<meta property="article:tag" content="自适应">
+<meta name="twitter:card" content="summary">
+  <meta name="robots" content="all" />
+  <meta name="google" content="all" />
+  <meta name="googlebot" content="all" />
+  <meta name="verify" content="all" />
+  <link rel="canonical" href="https://lice.cc/%E5%89%8D%E7%AB%AF/343.html">
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/css/main.css?rev=@@hash.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head> 
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button id="navbutton" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">你真帅</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </span>
+        </button>
+        <a href="/" class="navbar-brand">李策</a>        
+      </div>
+      <nav class="navbar-collapse collapse" id="navbar" aria-expanded="false">
+        <ul class="nav navbar-nav">
+          <li class><a href="/">主页</a></li>
+          <li class><a href="/archives/">归档</a></li>
+          <li class><a href="/categories/">分类</a></li>
+          <li class><a href="/tags/">标签</a></li>
+          <li class><a href="/about/">About</a></li>
+          <li class><a href="/links/">友链</a></li>
+          
+  <li id="search-form-wrap">
+    <a href="javascript:;" class="search-form-submit"><i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+</li>
+
+        </ul>
+        
+      </nav><!--/.nav-collapse -->
+    </div>
+  </header>
+  <main class="container m-h-10 index">
+      <div class="row">
+        <!-- 左侧列表开始 -->
+        <div class="col-xs-12 col-md-9 main">
+        <div class="site-post-wrap">
+	<article class="post">
+	    <h1 class="post-head">自适应布局需要注意的总结</h1>
+	    <div class="post-meta">
+        <span><i class="fa fa-calendar" aria-hidden="true"></i><time class="time-meta" datetime="2018-08-16T07:12:04.000Z" itemprop="datePublished">2018-08-16 15:12:04</time></span>
+        <span><a href="/categories/前端/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 前端
+                  </a></span>
+        <span id="/%E5%89%8D%E7%AB%AF/343.html" class="leancloud_visitors" data-flag-title="自适应布局需要注意的总结">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">0</i>
+        </span>
+	    </div>
+	    <div class="post-body" id="post-body">
+	        <p>最近给自己写的<a target="_blank" rel="noopener" href="http://www.web1234.org">www.web1234.org</a> 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。</p>
+<hr>
+<p>一、</p>
+<pre><code class="html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;
+</code></pre>
+<p>1.name=”viewport”      //设置视口（网页可绘制的区域）</p>
+<p>2.width=device-width    //应用程序的宽度和屏幕的宽度是一样的</p>
+<p>3.height=device-height  //应用程序的高度和屏幕的高是一样的</p>
+<p>4.initial-scale=1.0  //应用程序启动时候的缩放尺度（1.0表示不缩放）</p>
+<p>5.minimum-scale=1.0  //用户可以缩放到的最小尺度（1.0表示不缩放）</p>
+<p>6.maximum-scale=1.0  //用户可以放大到的最大尺度（1.0表示不缩放）</p>
+<p>7.user-scalable=no  //用户是否可以通过他的手势来缩放整个应用程序，使应用程序的尺度发生一个改变（yes/no）</p>
+<p>二、</p>
+<pre><code class="html">&lt;meta name=&quot;viewport&quot; content=&quot;target-densitydpi=device-dpi, width=480px, user-scalable=no&quot;&gt;
+</code></pre>
+<p>1.target-densitydpi=device-dpi     //指定屏幕像素密度DPI,device-dpi 为设备原本的DPI值,不会有任何缩放.( dpi是单位,一般指每英寸的像素)<br><span id="more"></span><br>三、</p>
+<pre><code class="html">&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
+</code></pre>
+<p>//说明：网站开启对web app程序的支持</p>
+<p>1.apple-mobile-web-app-capable //</p>
+<p>2.content=”yes”  //是否开启（开启）</p>
+<p>四、@media screen and (max-width | min-width) {} </p>
+
+	    </div>
+	    <div class="post-tag">
+          <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">自适应</a></li></ul>
+	    </div>
+	</article>
+	<div class="post-prev-next">
+	    <div class="article-nav prev-next-wrap clearfix">
+        
+        <a href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/344.html" class="pre-post btn btn-default" title='Windows Git本地代码推送到github的命令及配置'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Windows Git本地代码推送到github的命令及配置</span>
+        </a>
+        
+        
+        <a href="/%E7%94%9F%E6%B4%BBDAY/342.html" class="next-post btn btn-default" title='今天遇到一名军人聊了两句'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">今天遇到一名军人聊了两句</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+        
+        </div>
+    </div>
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
+        </div>
+        <!-- zy左侧列表结束 -->        
+        <!-- 侧边栏 -->
+        <aside class="hidden-xs hidden-sm col-md-3 sidebar">
+          <div class="site-overview">
+            <div class="site-author">
+              <img src="/avatar.jpg" alt="李策" class="site-author-image" itemprop="image">
+              <p class="site-author-name" itemprop="name">李策</p>
+              <p class="site-description" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
+            </div>
+            <nav class="site-state">
+              <div class="site-state-item site-state-posts">
+                <a href="/archives/">
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/">
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            </nav>
+            <div class="links-of-author">
+              <span class="links-of-author-item">
+                <a href="//github.com/licecn" target="_blank" title="Github" rel="external nofollow"><i class="fa fa-fw fa-github"></i>Github</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="mailto:licecn_com@163.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="//gitee.com/licesn" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
+              </span>            </div>
+            
+          </div>
+          
+          
+<div class="site-post-toc" id="site-post-toc">
+<div class="post-toc-title">文章目录</div>
+
+<span style="font-size:16px;font-weight:bold;line-height:110px;">此文章没有目录</span>
+
+</div>
+
+        </aside>
+        <!-- 侧边栏结束 -->        
+      </div>
+  </main><!-- /.container -->
+  <footer class="bs-docs-footer">
+    <div class="container">
+      <p>© 2014 - 2022</p>
+      <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
+      <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
+      <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>
+      <span><a href="//weibo.com/ailicecn" rel="nofollow" target="_blank" title="Weibo"><img src="/img/social-weibo.png" alt="weibo"></a></span>
+      <a class="go-top fa fa-angle-up hidden-xs hidden-sm" href="javascript:scroll(0,0)" title="返回顶部" aria-label="返回顶部"></a>
+    </div>
+  </footer>
+  
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="/js/index.js?rev=@@hash.js"></script>
+
+
+<div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head>
+  <!-- meta & link -->
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no"> 
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  
+  <meta name="baidu-site-verification" content="WAnzHU1gmT" />
+  
+  <link rel="dns-prefetch" href="https://lice.cc">
+  <!--Title-->
+  <title>搭建laravel 开发环境 | 李策</title>
+  <link rel="icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+    <script type="text/javascript">window.location.href="/upgrade.html"</script>
+  <![endif]-->
+  <!--SEO-->
+  <meta name="description" content="安装composer从网上查了相关资料，需要通过composer安装和更新laravel，所以要先安装composer。 下载：Composer-Setup.exe  安装的时候路径填写php安装路径。  安装之后通过命令composer –version 来查看是否安装成功。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建laravel 开发环境">
+<meta property="og:url" content="https://lice.cc/Laravel/346.html">
+<meta property="og:site_name" content="李策">
+<meta property="og:description" content="安装composer从网上查了相关资料，需要通过composer安装和更新laravel，所以要先安装composer。 下载：Composer-Setup.exe  安装的时候路径填写php安装路径。  安装之后通过命令composer –version 来查看是否安装成功。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lice.cc/images/How-to-Install-Composer-on-Windows-Specify-PHP-File-Location.png">
+<meta property="article:published_time" content="2019-09-11T05:08:04.000Z">
+<meta property="article:modified_time" content="2019-10-22T10:38:45.175Z">
+<meta property="article:author" content="李策">
+<meta property="article:tag" content="laravel">
+<meta property="article:tag" content="composer">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lice.cc/images/How-to-Install-Composer-on-Windows-Specify-PHP-File-Location.png">
+  <meta name="robots" content="all" />
+  <meta name="google" content="all" />
+  <meta name="googlebot" content="all" />
+  <meta name="verify" content="all" />
+  <link rel="canonical" href="https://lice.cc/Laravel/346.html">
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/css/main.css?rev=@@hash.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head> 
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button id="navbutton" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">你真帅</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </span>
+        </button>
+        <a href="/" class="navbar-brand">李策</a>        
+      </div>
+      <nav class="navbar-collapse collapse" id="navbar" aria-expanded="false">
+        <ul class="nav navbar-nav">
+          <li class><a href="/">主页</a></li>
+          <li class><a href="/archives/">归档</a></li>
+          <li class><a href="/categories/">分类</a></li>
+          <li class><a href="/tags/">标签</a></li>
+          <li class><a href="/about/">About</a></li>
+          <li class><a href="/links/">友链</a></li>
+          
+  <li id="search-form-wrap">
+    <a href="javascript:;" class="search-form-submit"><i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+</li>
+
+        </ul>
+        
+      </nav><!--/.nav-collapse -->
+    </div>
+  </header>
+  <main class="container m-h-10 index">
+      <div class="row">
+        <!-- 左侧列表开始 -->
+        <div class="col-xs-12 col-md-9 main">
+        <div class="site-post-wrap">
+	<article class="post">
+	    <h1 class="post-head">搭建laravel 开发环境</h1>
+	    <div class="post-meta">
+        <span><i class="fa fa-calendar" aria-hidden="true"></i><time class="time-meta" datetime="2019-09-11T05:08:04.000Z" itemprop="datePublished">2019-09-11 13:08:04</time></span>
+        <span><a href="/categories/Laravel/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> Laravel
+                  </a></span>
+        <span id="/Laravel/346.html" class="leancloud_visitors" data-flag-title="搭建laravel 开发环境">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">0</i>
+        </span>
+	    </div>
+	    <div class="post-body" id="post-body">
+	        <h2 id="安装composer"><a href="#安装composer" class="headerlink" title="安装composer"></a>安装composer</h2><p>从网上查了相关资料，需要通过composer安装和更新laravel，所以要先安装composer。</p>
+<p>下载：<a target="_blank" rel="noopener" href="https://getcomposer.org/Composer-Setup.exe">Composer-Setup.exe</a> </p>
+<p>安装的时候路径填写php安装路径。</p>
+<p><img src="../images/How-to-Install-Composer-on-Windows-Specify-PHP-File-Location.png" alt=""></p>
+<p>安装之后通过命令<strong>composer –version</strong> 来查看是否安装成功。</p>
+<span id="more"></span>
+<h2 id="通过composer安装laravel"><a href="#通过composer安装laravel" class="headerlink" title="通过composer安装laravel"></a>通过composer安装laravel</h2><p>通过composer安装laravel 有两种方式，但是本人习惯使用<strong>composer create-project </strong>来创建。</p>
+<pre><code class="php">composer create-project --prefer-dist laravel/she &quot;5.5.*&quot;//laravel代表laravel项目 ；she代表项目名称。5.5* 代表版本号  本人载安装的时候忽略了这一项 。
+</code></pre>
+<p>这里说一下安装的时候设置一下镜像，这样下载的快些，并且不会出现问题。</p>
+<p>配置全局镜像：</p>
+<pre><code class="php">composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+</code></pre>
+<p>取消配置：</p>
+<pre><code class="php">composer config -g --unset repos.packagist
+</code></pre>
+<h2 id="使用phpstudy搭建本地环境"><a href="#使用phpstudy搭建本地环境" class="headerlink" title="使用phpstudy搭建本地环境"></a>使用phpstudy搭建本地环境</h2><p>laravel框架对环境有一些要求，虽然官网有自己的推荐，但是作为长时间使用phpstudy的人来说，能不换就不换吧。</p>
+<p>来看看官方对其他环境的要求：</p>
+<pre><code class="php">  - PHP &gt;= 5.5.9
+  - OpenSSL PHP Extension
+  - PDO PHP Extension
+  - Mbstring PHP Extension
+  - Tokenizer PHP Extension
+</code></pre>
+<p>  在phpstudy找到相应的服务开启即可。</p>
+<p>因为laravel 的入口文件在项目的public文件夹，所以url要写成：localhost/she/public  //she 为项目名称</p>
+<p>到此基本配置完成。</p>
+<p>如果你使用nginx，那么在vhost.conf 里的 location /   下加入：</p>
+<pre><code class="php">try_files $uri $uri/ /index.php?$query_string;
+</code></pre>
+<p>还有就是大家最好下载所以使用版本的文档，这样大多数问题基本可以解决。</p>
+<p>大家也可以在laravel china 社区查找相关问题。虽然现在没以前火热了，但解决基本问题还是可以的。</p>
+<p><a target="_blank" rel="noopener" href="https://learnku.com/laravel">https://learnku.com/laravel</a></p>
+
+	    </div>
+	    <div class="post-tag">
+          <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composer/" rel="tag">composer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/" rel="tag">laravel</a></li></ul>
+	    </div>
+	</article>
+	<div class="post-prev-next">
+	    <div class="article-nav prev-next-wrap clearfix">
+        
+        <a href="/Laravel/347.html" class="pre-post btn btn-default" title='laravel5.5 php artisan 常用命令'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">laravel5.5 php artisan 常用命令</span>
+        </a>
+        
+        
+        <a href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/345.html" class="next-post btn btn-default" title='lnmp删除文件.user.ini提示没有权限（Operation not permitted）'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">lnmp删除文件.user.ini提示没有权限（Operation not permitted）</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+        
+        </div>
+    </div>
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
+        </div>
+        <!-- zy左侧列表结束 -->        
+        <!-- 侧边栏 -->
+        <aside class="hidden-xs hidden-sm col-md-3 sidebar">
+          <div class="site-overview">
+            <div class="site-author">
+              <img src="/avatar.jpg" alt="李策" class="site-author-image" itemprop="image">
+              <p class="site-author-name" itemprop="name">李策</p>
+              <p class="site-description" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
+            </div>
+            <nav class="site-state">
+              <div class="site-state-item site-state-posts">
+                <a href="/archives/">
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/">
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            </nav>
+            <div class="links-of-author">
+              <span class="links-of-author-item">
+                <a href="//github.com/licecn" target="_blank" title="Github" rel="external nofollow"><i class="fa fa-fw fa-github"></i>Github</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="mailto:licecn_com@163.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="//gitee.com/licesn" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
+              </span>            </div>
+            
+          </div>
+          
+          
+<div class="site-post-toc" id="site-post-toc">
+<div class="post-toc-title">文章目录</div>
+
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85composer"><span class="toc-text">安装composer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87composer%E5%AE%89%E8%A3%85laravel"><span class="toc-text">通过composer安装laravel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8phpstudy%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83"><span class="toc-text">使用phpstudy搭建本地环境</span></a></li></ol>
+
+</div>
+
+        </aside>
+        <!-- 侧边栏结束 -->        
+      </div>
+  </main><!-- /.container -->
+  <footer class="bs-docs-footer">
+    <div class="container">
+      <p>© 2014 - 2022</p>
+      <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
+      <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
+      <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>
+      <span><a href="//weibo.com/ailicecn" rel="nofollow" target="_blank" title="Weibo"><img src="/img/social-weibo.png" alt="weibo"></a></span>
+      <a class="go-top fa fa-angle-up hidden-xs hidden-sm" href="javascript:scroll(0,0)" title="返回顶部" aria-label="返回顶部"></a>
+    </div>
+  </footer>
+  
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="/js/index.js?rev=@@hash.js"></script>
+
+
+<div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+</body>
+</html>

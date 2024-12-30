@@ -1,0 +1,273 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head>
+  <!-- meta & link -->
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no"> 
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  
+  <meta name="baidu-site-verification" content="WAnzHU1gmT" />
+  
+  <link rel="dns-prefetch" href="https://lice.cc">
+  <!--Title-->
+  <title>hexo主题开发小计 | 李策</title>
+  <link rel="icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+    <script type="text/javascript">window.location.href="/upgrade.html"</script>
+  <![endif]-->
+  <!--SEO-->
+  <meta name="description" content="经过一个星期的学习和开发，最终把hexo 主题 NFNF 出阶段完成，就是现在用的这个主题，当然还有很多地方可以优化，但是先告一段落吧。 如果有人想开发自己的主题的话，可以参考这篇文章：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;yyhh&#x2F;p&#x2F;11058985.html 开发过程中借鉴了NEXT ,SNIPPER ,HIERO 等主题，布局借鉴了 简书。本来打算模仿简书的，但是在开发的过程中，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo主题开发小计">
+<meta property="og:url" content="https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/349.html">
+<meta property="og:site_name" content="李策">
+<meta property="og:description" content="经过一个星期的学习和开发，最终把hexo 主题 NFNF 出阶段完成，就是现在用的这个主题，当然还有很多地方可以优化，但是先告一段落吧。 如果有人想开发自己的主题的话，可以参考这篇文章：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;yyhh&#x2F;p&#x2F;11058985.html 开发过程中借鉴了NEXT ,SNIPPER ,HIERO 等主题，布局借鉴了 简书。本来打算模仿简书的，但是在开发的过程中，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-29T08:35:08.000Z">
+<meta property="article:modified_time" content="2020-02-29T09:13:48.267Z">
+<meta property="article:author" content="李策">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+  <meta name="robots" content="all" />
+  <meta name="google" content="all" />
+  <meta name="googlebot" content="all" />
+  <meta name="verify" content="all" />
+  <link rel="canonical" href="https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/349.html">
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/css/main.css?rev=@@hash.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head> 
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button id="navbutton" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">你真帅</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </span>
+        </button>
+        <a href="/" class="navbar-brand">李策</a>        
+      </div>
+      <nav class="navbar-collapse collapse" id="navbar" aria-expanded="false">
+        <ul class="nav navbar-nav">
+          <li class><a href="/">主页</a></li>
+          <li class><a href="/archives/">归档</a></li>
+          <li class><a href="/categories/">分类</a></li>
+          <li class><a href="/tags/">标签</a></li>
+          <li class><a href="/about/">About</a></li>
+          <li class><a href="/links/">友链</a></li>
+          
+  <li id="search-form-wrap">
+    <a href="javascript:;" class="search-form-submit"><i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+</li>
+
+        </ul>
+        
+      </nav><!--/.nav-collapse -->
+    </div>
+  </header>
+  <main class="container m-h-10 index">
+      <div class="row">
+        <!-- 左侧列表开始 -->
+        <div class="col-xs-12 col-md-9 main">
+        <div class="site-post-wrap">
+	<article class="post">
+	    <h1 class="post-head">hexo主题开发小计</h1>
+	    <div class="post-meta">
+        <span><i class="fa fa-calendar" aria-hidden="true"></i><time class="time-meta" datetime="2020-02-29T08:35:08.000Z" itemprop="datePublished">2020-02-29 16:35:08</time></span>
+        <span><a href="/categories/学习记录/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 学习记录
+                  </a></span>
+        <span id="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/349.html" class="leancloud_visitors" data-flag-title="hexo主题开发小计">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">0</i>
+        </span>
+	    </div>
+	    <div class="post-body" id="post-body">
+	        <p>经过一个星期的学习和开发，最终把hexo 主题 <a target="_blank" rel="noopener" href="https://github.com/licecn/hexo-theme-nfnf">NFNF</a> 出阶段完成，就是现在用的这个主题，当然还有很多地方可以优化，但是先告一段落吧。</p>
+<p>如果有人想开发自己的主题的话，可以参考这篇文章：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a></p>
+<p>开发过程中借鉴了NEXT ,SNIPPER ,HIERO 等主题，布局借鉴了 简书。本来打算模仿简书的，但是在开发的过程中，逐渐把几个主题的整合了。开始的时候先把简书的模板在本地写好了，但是替换模板的时候，遇到了很多麻烦，其中比较麻烦的就是云标签，这也是准备不足吧，早知道先不写模板了，这样就可以根据系统生成标签写css 样式了。后面觉得重新写css 样式太麻烦了，就去研究了hexo 辅助函数tagcloud的源代码，参考源代码写出了符合自己要求的模板，不过后来想了想，还不如重新写样式。</p>
+<p>后面在写搜索的时候实在是搞不懂next的代码，就放弃使用algolia，把hiero中的搜索拿了过来使用，不过需要插件hexo-generator-json-content辅助，因为博客早就使用了这个插件，所以就更方便了不用重新安装插件。</p>
+<p>自己主题的开发就先告一段落吧，在这次疫情期间给自己规划了一些事情，下一件事就是学习和开发一款小说app，使用Android studio开发，也会遇到很多坑，就看自己能不能解决了，不过挺期待的。一会把计划写到about页面，慢慢来吧，毕竟已经离开这个行业了，希望自己可以坚持下来吧。</p>
+<span id="more"></span>
+<p>每个人都有自己喜欢的事，也会遇到很多阻碍，但是会遵循着一句流传的话：生命不息，折腾不止。我们可以脱离自己喜欢的事业，但如果把自己喜欢的事也放弃，那和咸鱼又有什么区别呢，在保证自己工作无碍的前提下向着自己喜爱的方向继续前行。也希望大家不要放弃曾经自己那么喜爱事情。</p>
+<p>写在最后：愿世界和平！</p>
+
+	    </div>
+	    <div class="post-tag">
+          <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+	    </div>
+	</article>
+	<div class="post-prev-next">
+	    <div class="article-nav prev-next-wrap clearfix">
+        
+        <a href="/%E7%94%9F%E6%B4%BBDAY/349.html" class="pre-post btn btn-default" title='关于近期学习Android的想法'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">关于近期学习Android的想法</span>
+        </a>
+        
+        
+        <a href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/348.html" class="next-post btn btn-default" title='获取百度盘文件真实路径'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">获取百度盘文件真实路径</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+        
+        </div>
+    </div>
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
+        </div>
+        <!-- zy左侧列表结束 -->        
+        <!-- 侧边栏 -->
+        <aside class="hidden-xs hidden-sm col-md-3 sidebar">
+          <div class="site-overview">
+            <div class="site-author">
+              <img src="/avatar.jpg" alt="李策" class="site-author-image" itemprop="image">
+              <p class="site-author-name" itemprop="name">李策</p>
+              <p class="site-description" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
+            </div>
+            <nav class="site-state">
+              <div class="site-state-item site-state-posts">
+                <a href="/archives/">
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/">
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            </nav>
+            <div class="links-of-author">
+              <span class="links-of-author-item">
+                <a href="//github.com/licecn" target="_blank" title="Github" rel="external nofollow"><i class="fa fa-fw fa-github"></i>Github</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="mailto:licecn_com@163.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="//gitee.com/licesn" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
+              </span>            </div>
+            
+          </div>
+          
+          
+<div class="site-post-toc" id="site-post-toc">
+<div class="post-toc-title">文章目录</div>
+
+<span style="font-size:16px;font-weight:bold;line-height:110px;">此文章没有目录</span>
+
+</div>
+
+        </aside>
+        <!-- 侧边栏结束 -->        
+      </div>
+  </main><!-- /.container -->
+  <footer class="bs-docs-footer">
+    <div class="container">
+      <p>© 2014 - 2022</p>
+      <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
+      <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
+      <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>
+      <span><a href="//weibo.com/ailicecn" rel="nofollow" target="_blank" title="Weibo"><img src="/img/social-weibo.png" alt="weibo"></a></span>
+      <a class="go-top fa fa-angle-up hidden-xs hidden-sm" href="javascript:scroll(0,0)" title="返回顶部" aria-label="返回顶部"></a>
+    </div>
+  </footer>
+  
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="/js/index.js?rev=@@hash.js"></script>
+
+
+<div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+</body>
+</html>

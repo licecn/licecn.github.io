@@ -1,0 +1,279 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head>
+  <!-- meta & link -->
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no"> 
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  
+  <meta name="baidu-site-verification" content="WAnzHU1gmT" />
+  
+  <link rel="dns-prefetch" href="https://lice.cc">
+  <!--Title-->
+  <title>LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程 | 李策</title>
+  <link rel="icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+    <script type="text/javascript">window.location.href="/upgrade.html"</script>
+  <![endif]-->
+  <!--SEO-->
+  <meta name="description" content="一般情况下不建议对生产环境进行升级，升级开始后会停止LNMP相关服务。 本文仅适用于LNMP1.2、1.3及以后版本！ 在LNMP目前LNMP v1.2&#x2F;1.3中已经包含了Nginx、MySQL&#x2F;MariaDB、PHP的升级脚本，可以帮助搭建对环境中的程序进行升级。(注意：以下操作均需要在lnmp压缩包解压后的目录里运行) 一、Nginx升级脚本执行：.&#x2F;upgrade.sh nginx 按提示输">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LNMP 1.2&#x2F;1.3升级Nginx、MySQL&#x2F;MariaDB、PHP教程">
+<meta property="og:url" content="https://lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/296.html">
+<meta property="og:site_name" content="李策">
+<meta property="og:description" content="一般情况下不建议对生产环境进行升级，升级开始后会停止LNMP相关服务。 本文仅适用于LNMP1.2、1.3及以后版本！ 在LNMP目前LNMP v1.2&#x2F;1.3中已经包含了Nginx、MySQL&#x2F;MariaDB、PHP的升级脚本，可以帮助搭建对环境中的程序进行升级。(注意：以下操作均需要在lnmp压缩包解压后的目录里运行) 一、Nginx升级脚本执行：.&#x2F;upgrade.sh nginx 按提示输">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-11-20T13:25:03.000Z">
+<meta property="article:modified_time" content="2019-09-11T04:54:56.035Z">
+<meta property="article:author" content="李策">
+<meta property="article:tag" content="lnmp">
+<meta property="article:tag" content="Centos">
+<meta property="article:tag" content="Nginx">
+<meta property="article:tag" content="php">
+<meta name="twitter:card" content="summary">
+  <meta name="robots" content="all" />
+  <meta name="google" content="all" />
+  <meta name="googlebot" content="all" />
+  <meta name="verify" content="all" />
+  <link rel="canonical" href="https://lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/296.html">
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/css/main.css?rev=@@hash.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head> 
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button id="navbutton" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">你真帅</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </span>
+        </button>
+        <a href="/" class="navbar-brand">李策</a>        
+      </div>
+      <nav class="navbar-collapse collapse" id="navbar" aria-expanded="false">
+        <ul class="nav navbar-nav">
+          <li class><a href="/">主页</a></li>
+          <li class><a href="/archives/">归档</a></li>
+          <li class><a href="/categories/">分类</a></li>
+          <li class><a href="/tags/">标签</a></li>
+          <li class><a href="/about/">About</a></li>
+          <li class><a href="/links/">友链</a></li>
+          
+  <li id="search-form-wrap">
+    <a href="javascript:;" class="search-form-submit"><i class="menu-item-icon fa fa-search fa-fw"></i> 搜索</a>
+</li>
+
+        </ul>
+        
+      </nav><!--/.nav-collapse -->
+    </div>
+  </header>
+  <main class="container m-h-10 index">
+      <div class="row">
+        <!-- 左侧列表开始 -->
+        <div class="col-xs-12 col-md-9 main">
+        <div class="site-post-wrap">
+	<article class="post">
+	    <h1 class="post-head">LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程</h1>
+	    <div class="post-meta">
+        <span><i class="fa fa-calendar" aria-hidden="true"></i><time class="time-meta" datetime="2016-11-20T13:25:03.000Z" itemprop="datePublished">2016-11-20 21:25:03</time></span>
+        <span><a href="/categories/服务器相关/" target="_blank" class="category"><i class="fa fa-list" aria-hidden="true"></i> 服务器相关
+                  </a></span>
+        <span id="/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/296.html" class="leancloud_visitors" data-flag-title="LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程">
+        <em class="post-meta-item-text">阅读量:</em>
+        <i class="leancloud-visitors-count">0</i>
+        </span>
+	    </div>
+	    <div class="post-body" id="post-body">
+	        <p>一般情况下不建议对生产环境进行升级，升级开始后会停止LNMP相关服务。 本文仅适用于LNMP1.2、1.3及以后版本！ 在LNMP目前LNMP v1.2/1.3中已经包含了Nginx、MySQL/MariaDB、PHP的升级脚本，可以帮助搭建对环境中的程序进行升级。(注意：以下操作均需要在lnmp压缩包解压后的目录里运行)</p>
+<h3 id="一、Nginx升级脚本"><a href="#一、Nginx升级脚本" class="headerlink" title="一、Nginx升级脚本"></a><strong>一、Nginx升级脚本</strong></h3><p>执行：./upgrade.sh nginx 按提示输入版本号后回车（访问 <a target="_blank" rel="noopener" href="http://nginx.org/en/download.html">http://nginx.org/en/download.html</a> 可查找nginx的最新版本号和以往旧版本号。如：1.6.0 ），再次回车确认即可开始升级Nginx。<strong>如要升级到1.9.5或更高版本必须使用v1.3里面的升级脚本</strong>。Nginx升级为平滑升级，升级过程不影响nginx的运行。 另外如需添加其他模块可以编辑lnmp.conf 配置文件，在 Nginx_Modules_Options 参数的引号里加其他需要的参数。 lnmp 1.2版修改include/upgrade_nginx.sh文件 在Nginx_Modules_Arguments=”” 参数的双引号里添加需要的其他模块，多个模块参数空格隔开，然后再运行升级即可。 </p>
+<h3 id="二、MySQL升级脚本"><a href="#二、MySQL升级脚本" class="headerlink" title="二、MySQL升级脚本"></a><strong>二、MySQL升级脚本</strong></h3><p>虽然脚本会备份数据，但依然建议先自行备份！ 执行：./upgrade.sh mysql 需要先输入MySQL root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a target="_blank" rel="noopener" href="http://dev.mysql.com/downloads/mysql/">http://dev.mysql.com/downloads/mysql/</a> 获取MySQL的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生成mysql_upgrade日期.log的日志文件，供出错时排查。 如升级失败可将/usr/local/oldmysql日期的目录重命名为mysql，并将/etc/下的my.conf.bak.日期的配置文件重命名为my.cnf和/etc/init.d/下的mysql.bak.日期重命名为mysql即可恢复原mysql。(下面MySQL升级至MariaDB及升级MariaDB一样) </p>
+<p><strong>三、MySQL升级至MariaDB脚本</strong> </p>
+<p>MariaDB是MySQL的一个分支，主要由开源社区在维护。MariaDB兼容MySQL，由MySQL创始人主导开发。依然建议先自行备份！ 执行：./upgrade.sh m2m 需要先输入MySQL root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a target="_blank" rel="noopener" href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a> 获取MariaDB的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生产mysql2mariadb_upgrade日期.log的日志文件，供出错时排查。 </p>
+<p><strong>四、MariaDB升级脚本</strong> </p>
+<p>依然建议先自行备份！ 执行：./upgrade.sh mariadb 需要先输入MariaDB root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a target="_blank" rel="noopener" href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a> 获取MariaDB的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生产mariadb_upgrade日期.log的日志文件，供出错时排查。 如升级失败可将/usr/local/oldmariadb日期的目录重命名为mariadb，并将/etc/下的my.conf.bak.日期的配置文件重命名为my.cnf和/etc/init.d/下的mariadb.bak.日期重命名为mariadb即可恢复原mariadb。 </p>
+<p><strong>五、LNMP PHP升级脚本</strong> </p>
+<p>升级PHP前，请确认你的网站程序是否支持升级到的PHP版本，防止升级到网站程序不兼容的PHP版本，具体可以去你使用的PHP程序的官网查询相关版本支持信息。v1.3大部分情况下也可以进行降级操作。 执行：./upgrade.sh php 到<a target="_blank" rel="noopener" href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> 获取版本号，输入版本号，如5.3.28 回车，再次回车确认即可开始升级。 如需要编译其他参数可以，lnmp 1.3版可以修改lnmp.conf配置文件里的 PHP_Modules_Options 参数的引号里加其他需要的参数。 lnmp 1.2版修改include/upgrade_php.sh文件 在PHP_Modules_Arguments=”” 参数的双引号里添加需要的其他模块，多个模块参数空格隔开，然后再运行升级即可。 </p>
+<p><strong>六、LNMPA/LAMP PHP升级脚本</strong> </p>
+<p>升级PHP前，请确认你的网站程序是否支持升级到的PHP版本，防止升级到网站程序不兼容的PHP版本，具体可以去你使用的PHP程序的官网查询相关版本支持信息。 执行：./upgrade.sh phpa 到<a target="_blank" rel="noopener" href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> 获取版本号，输入版本号，如5.3.28 回车，再次回车确认即可开始升级。</p>
+
+	    </div>
+	    <div class="post-tag">
+          <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos/" rel="tag">Centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lnmp/" rel="tag">lnmp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/" rel="tag">php</a></li></ul>
+	    </div>
+	</article>
+	<div class="post-prev-next">
+	    <div class="article-nav prev-next-wrap clearfix">
+        
+        <a href="/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/298.html" class="pre-post btn btn-default" title='LNMP安装了哪些软件？安装目录在哪？'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">LNMP安装了哪些软件？安装目录在哪？</span>
+        </a>
+        
+        
+        <a href="/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/291.html" class="next-post btn btn-default" title='windows apache nginx php mysql 服务器配置'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">windows apache nginx php mysql 服务器配置</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+        
+        </div>
+    </div>
+</div>
+
+
+  <div class="comments" id="comments"></div>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el:'#comments',
+        appId: 'Nrm8yrOp6Ln9NhDMVz6XBfam-gzGzoHsz',
+        appKey: 'bWwCKIo5gkmte7KkYeeKb3fk',
+        notify: false,
+        verify: true,
+        placeholder: '写点什么吧！',
+        avatar: 'monsterid',
+        meta: guest,
+        pageSize: 10 || 10,
+        visitor: true
+    })
+</script>
+
+          
+        </div>
+        <!-- zy左侧列表结束 -->        
+        <!-- 侧边栏 -->
+        <aside class="hidden-xs hidden-sm col-md-3 sidebar">
+          <div class="site-overview">
+            <div class="site-author">
+              <img src="/avatar.jpg" alt="李策" class="site-author-image" itemprop="image">
+              <p class="site-author-name" itemprop="name">李策</p>
+              <p class="site-description" itemprop="description">分享生活,享受生活,大家好,我是李策。</p>
+            </div>
+            <nav class="site-state">
+              <div class="site-state-item site-state-posts">
+                <a href="/archives/">
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/">
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            </nav>
+            <div class="links-of-author">
+              <span class="links-of-author-item">
+                <a href="//github.com/licecn" target="_blank" title="Github" rel="external nofollow"><i class="fa fa-fw fa-github"></i>Github</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="mailto:licecn_com@163.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="//gitee.com/licesn" target="_blank" title="Gitee" rel="external nofollow"><i class="fa fa-fw fa-git"></i>Gitee</a>
+              </span>            </div>
+            
+          </div>
+          
+          
+<div class="site-post-toc" id="site-post-toc">
+<div class="post-toc-title">文章目录</div>
+
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Nginx%E5%8D%87%E7%BA%A7%E8%84%9A%E6%9C%AC"><span class="toc-text">一、Nginx升级脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81MySQL%E5%8D%87%E7%BA%A7%E8%84%9A%E6%9C%AC"><span class="toc-text">二、MySQL升级脚本</span></a></li></ol>
+
+</div>
+
+        </aside>
+        <!-- 侧边栏结束 -->        
+      </div>
+  </main><!-- /.container -->
+  <footer class="bs-docs-footer">
+    <div class="container">
+      <p>© 2014 - 2022</p>
+      <p>由 <a href="https://hexo.io/" rel="nofollow" target="_blank" title="github" style="color:#99979c;">HEXO</a> 强力驱动 | 主题 - <a href="https://github.com/licecn/hexo-theme-nfnf" rel="nofollow" target="_blank" title="github" style="color:#99979c;">NFNF</a></p>
+      <span><a href="//github.com/licecn" rel="nofollow" target="_blank" title="GitHub"><img src="/img/social-github.png" alt="github"></a></span>
+      <span><a href="//gitee.com/licesn" rel="nofollow" target="_blank" title="Gitee"><img src="/img/social-gitee.png" alt="gitee"></a></span>
+      <span><a href="//weibo.com/ailicecn" rel="nofollow" target="_blank" title="Weibo"><img src="/img/social-weibo.png" alt="weibo"></a></span>
+      <a class="go-top fa fa-angle-up hidden-xs hidden-sm" href="javascript:scroll(0,0)" title="返回顶部" aria-label="返回顶部"></a>
+    </div>
+  </footer>
+  
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="/js/index.js?rev=@@hash.js"></script>
+
+
+<div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+</body>
+</html>
