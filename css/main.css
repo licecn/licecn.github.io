@@ -610,11 +610,15 @@ table tr td:last-child {
   overflow: hidden;
   min-height: 150px;
 }
+
 .site-post-toc .toc{
   list-style: none;
   text-align: left;
   font-size: 14px;
   margin-top: 10px;
+}
+.site-post-toc .toc .toc-child{
+  list-style: none;
 }
 .post-body h1,.post-body h2,.post-body h3,
 .post-body h4,.post-body h5,.post-body h6{
