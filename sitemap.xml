@@ -2,7 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://b.lice.cc/404.html</loc>
+    <loc>https://lice.cc/tags/index.html</loc>
+    
+    <lastmod>2025-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lice.cc/categories/index.html</loc>
+    
+    <lastmod>2025-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lice.cc/about/index.html</loc>
+    
+    <lastmod>2025-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lice.cc/links/index.html</loc>
+    
+    <lastmod>2025-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lice.cc/404.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -11,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/352.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/352.html</loc>
     
     <lastmod>2024-12-30</lastmod>
     
@@ -20,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/351.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/351.html</loc>
     
     <lastmod>2023-12-11</lastmod>
     
@@ -29,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/350.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/350.html</loc>
     
     <lastmod>2023-12-11</lastmod>
     
@@ -38,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/306.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/306.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -47,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/73.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/73.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -56,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/221.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/221.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -65,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/126.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/126.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -74,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/wp%E5%B0%8F%E8%AE%B0/50.html</loc>
+    <loc>https://lice.cc/wp%E5%B0%8F%E8%AE%B0/50.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -83,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/304.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/304.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -92,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%A0%B4%E8%A7%A3/333.html</loc>
+    <loc>https://lice.cc/%E7%A0%B4%E8%A7%A3/333.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -101,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/about/index.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/95.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -110,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/95.html</loc>
+    <loc>https://lice.cc/Java%E7%AC%94%E8%AE%B0/248.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -119,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/Java%E7%AC%94%E8%AE%B0/248.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/224.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -128,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/224.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/339.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -137,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/339.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/197.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -146,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/102.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/102.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -155,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/197.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/137.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -164,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/Java%E7%AC%94%E8%AE%B0/314.html</loc>
+    <loc>https://lice.cc/%E5%89%8D%E7%AB%AF/231.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -173,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/137.html</loc>
+    <loc>https://lice.cc/Java%E7%AC%94%E8%AE%B0/314.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -182,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%89%8D%E7%AB%AF/231.html</loc>
+    <loc>https://lice.cc/wp%E5%B0%8F%E8%AE%B0/20.html</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -191,16 +227,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/wp%E5%B0%8F%E8%AE%B0/20.html</loc>
-    
-    <lastmod>2023-04-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/280.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/280.html</loc>
     
     <lastmod>2022-05-03</lastmod>
     
@@ -209,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/291.html</loc>
+    <loc>https://lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/291.html</loc>
     
     <lastmod>2022-05-03</lastmod>
     
@@ -218,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/349.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/349.html</loc>
     
     <lastmod>2020-05-13</lastmod>
     
@@ -227,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/349.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/349.html</loc>
     
     <lastmod>2020-02-29</lastmod>
     
@@ -236,16 +263,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/links/index.html</loc>
-    
-    <lastmod>2020-02-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://b.lice.cc/Java%E7%AC%94%E8%AE%B0/345.html</loc>
+    <loc>https://lice.cc/Java%E7%AC%94%E8%AE%B0/345.html</loc>
     
     <lastmod>2020-02-21</lastmod>
     
@@ -254,25 +272,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/index.html</loc>
-    
-    <lastmod>2020-02-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://b.lice.cc/tags/index.html</loc>
-    
-    <lastmod>2020-02-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/301.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/301.html</loc>
     
     <lastmod>2020-02-18</lastmod>
     
@@ -281,7 +281,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/wp%E5%B0%8F%E8%AE%B0/243.html</loc>
+    <loc>https://lice.cc/wp%E5%B0%8F%E8%AE%B0/243.html</loc>
     
     <lastmod>2020-02-18</lastmod>
     
@@ -290,7 +290,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/Java%E7%AC%94%E8%AE%B0/237.html</loc>
+    <loc>https://lice.cc/Java%E7%AC%94%E8%AE%B0/237.html</loc>
     
     <lastmod>2020-02-18</lastmod>
     
@@ -299,7 +299,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/348.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/348.html</loc>
     
     <lastmod>2019-10-26</lastmod>
     
@@ -308,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/Laravel/347.html</loc>
+    <loc>https://lice.cc/Laravel/347.html</loc>
     
     <lastmod>2019-10-25</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/Laravel/346.html</loc>
+    <loc>https://lice.cc/Laravel/346.html</loc>
     
     <lastmod>2019-10-22</lastmod>
     
@@ -326,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%89%8D%E7%AB%AF/343.html</loc>
+    <loc>https://lice.cc/%E5%89%8D%E7%AB%AF/343.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -335,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/Java%E7%AC%94%E8%AE%B0/252.html</loc>
+    <loc>https://lice.cc/Java%E7%AC%94%E8%AE%B0/252.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -344,7 +344,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%89%8D%E7%AB%AF/328.html</loc>
+    <loc>https://lice.cc/%E5%89%8D%E7%AB%AF/328.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -353,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/296.html</loc>
+    <loc>https://lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/296.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -362,7 +362,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/264.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/264.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -371,7 +371,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/Java%E7%AC%94%E8%AE%B0/310.html</loc>
+    <loc>https://lice.cc/Java%E7%AC%94%E8%AE%B0/310.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -380,7 +380,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/80.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/80.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -389,7 +389,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%BB%87%E6%A2%A6%E4%BB%BF%E7%AB%99/82.html</loc>
+    <loc>https://lice.cc/%E7%BB%87%E6%A2%A6%E4%BB%BF%E7%AB%99/82.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -398,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%B0%8F%E7%A6%8F%E5%88%A9/338.html</loc>
+    <loc>https://lice.cc/%E5%B0%8F%E7%A6%8F%E5%88%A9/338.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -407,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/267.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/267.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -416,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/Java%E7%AC%94%E8%AE%B0/260.html</loc>
+    <loc>https://lice.cc/Java%E7%AC%94%E8%AE%B0/260.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -425,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/288.html</loc>
+    <loc>https://lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/288.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -434,7 +434,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/345.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/345.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -443,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/344.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/344.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -452,7 +452,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/342.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/342.html</loc>
     
     <lastmod>2019-09-11</lastmod>
     
@@ -461,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/341.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/341.html</loc>
     
     <lastmod>2018-07-03</lastmod>
     
@@ -470,7 +470,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/255.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/255.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -479,7 +479,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/212.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/212.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -488,7 +488,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/132.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/132.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -497,7 +497,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/192.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/192.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -506,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/189.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/189.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -515,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/107.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/107.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -524,7 +524,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/298.html</loc>
+    <loc>https://lice.cc/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/298.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -533,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/wp%E5%B0%8F%E8%AE%B0/205.html</loc>
+    <loc>https://lice.cc/wp%E5%B0%8F%E8%AE%B0/205.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -542,7 +542,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/110.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/110.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -551,7 +551,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/124.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/77.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -560,7 +560,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/77.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/124.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -569,7 +569,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/SEO%E4%BC%98%E5%8C%96/115.html</loc>
+    <loc>https://lice.cc/SEO%E4%BC%98%E5%8C%96/115.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -578,7 +578,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/93.html</loc>
+    <loc>https://lice.cc/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/93.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -587,7 +587,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/wp%E5%B0%8F%E8%AE%B0/112.html</loc>
+    <loc>https://lice.cc/wp%E5%B0%8F%E8%AE%B0/112.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -596,7 +596,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/wp%E5%B0%8F%E8%AE%B0/119.html</loc>
+    <loc>https://lice.cc/wp%E5%B0%8F%E8%AE%B0/119.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -605,7 +605,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/wp%E5%B0%8F%E8%AE%B0/128.html</loc>
+    <loc>https://lice.cc/wp%E5%B0%8F%E8%AE%B0/128.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -614,7 +614,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/18.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/18.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -623,7 +623,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/70.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/70.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -632,7 +632,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/%E7%94%9F%E6%B4%BBDAY/64.html</loc>
+    <loc>https://lice.cc/%E7%94%9F%E6%B4%BBDAY/64.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -641,7 +641,7 @@
   </url>
   
   <url>
-    <loc>https://b.lice.cc/wp%E5%B0%8F%E8%AE%B0/66.html</loc>
+    <loc>https://lice.cc/wp%E5%B0%8F%E8%AE%B0/66.html</loc>
     
     <lastmod>2018-05-29</lastmod>
     
@@ -651,485 +651,485 @@
   
 
   <url>
-    <loc>https://b.lice.cc/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%99%BE%E5%BA%A6%E6%8E%92%E5%90%8D/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E5%86%9B%E4%BA%BA/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E5%86%9B%E4%BA%BA/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/Cisco/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%94%9F%E6%B4%BBDAY/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/AP/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/Cisco/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%94%9F%E6%B4%BBDAY/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/AP/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E8%87%AA%E9%80%82%E5%BA%94/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E8%87%AA%E9%80%82%E5%BA%94/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%99%BE%E5%BA%A6%E6%8E%92%E5%90%8D/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/Git/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/laravel/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/github/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/composer/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/laravel/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/lnmp/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/composer/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%99%BE%E5%BA%A6%E7%9B%98/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/lnmp/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/Git/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%99%BE%E5%BA%A6%E7%9B%98/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/github/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/wifi/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/npm/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/win7/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/hexo/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/wifi/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/Centos/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/win7/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/Nginx/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/java/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/Centos/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/UI%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/Nginx/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/UI%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/seo/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%99%BE%E5%BA%A6%E5%BF%AB%E7%85%A7/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/java/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/BR/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/BR/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/SEO%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/SEO%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%99%BE%E5%BA%A6%E6%9D%83%E9%87%8D/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%99%BE%E5%BA%A6%E6%9D%83%E9%87%8D/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E5%B0%8F%E7%B1%B3%E5%85%B0%E4%BA%AD/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/seo/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E5%89%A7%E5%9C%BA%E7%89%88/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%99%BE%E5%BA%A6%E5%BF%AB%E7%85%A7/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E5%90%8D%E4%BE%A6%E6%8E%A2%E6%9F%AF%E5%8D%97/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E5%89%A7%E5%9C%BA%E7%89%88/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/wordpress/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E5%90%8D%E4%BE%A6%E6%8E%A2%E6%9F%AF%E5%8D%97/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/ofo/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E5%B0%8F%E7%B1%B3%E5%85%B0%E4%BA%AD/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E5%B0%8F%E9%BB%84%E8%BD%A6/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/ofo/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E6%91%A9%E6%8B%9C/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E5%B0%8F%E9%BB%84%E8%BD%A6/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E8%84%B1%E5%A3%B3/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E6%91%A9%E6%8B%9C/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%99%BE%E5%BA%A6%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E8%84%B1%E5%A3%B3/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E6%8F%90%E7%A4%BA%E4%BF%A1%E6%81%AF/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/wordpress/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%BB%87%E6%A2%A6%E4%BB%BF%E7%AB%99/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%99%BE%E5%BA%A6%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%AB%9E%E4%BB%B7/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E9%BB%91%E5%AE%A2/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%AB%9E%E4%BB%B7/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E9%BB%91%E5%AE%A2/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%BD%91%E7%AB%99%E8%A2%ABk/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E6%8F%90%E7%A4%BA%E4%BF%A1%E6%81%AF/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/domain/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%BB%87%E6%A2%A6%E4%BB%BF%E7%AB%99/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E5%86%85%E5%AE%B9%E4%B8%BA%E7%8E%8B/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/wp%E5%B0%8F%E8%AE%B0/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E5%A4%96%E9%93%BE%E4%B8%BA%E7%9A%87/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/wp%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/wp%E5%B0%8F%E8%AE%B0/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%BD%91%E7%AB%99%E8%A2%ABk/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/wp%E6%8F%92%E4%BB%B6/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E9%9D%A2%E5%8C%85%E5%B1%91%E5%AF%BC%E8%88%AA/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E9%9D%A2%E5%8C%85%E5%B1%91%E5%AF%BC%E8%88%AA/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E6%8F%92%E4%BB%B6/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%81%AB%E7%8B%90/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%81%AB%E7%8B%90/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/HTTP%E7%8A%B6%E6%80%81%E7%A0%81/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/HTTP%E7%8A%B6%E6%80%81%E7%A0%81/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/domain/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/java%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E5%86%85%E5%AE%B9%E4%B8%BA%E7%8E%8B/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/javascript/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E5%A4%96%E9%93%BE%E4%B8%BA%E7%9A%87/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/js/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/java%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E7%9B%91%E5%90%AC%E5%85%BC%E5%AE%B9/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/JDBC/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/JDBC/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/javascript/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/php/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/js/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/hexo/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E7%9B%91%E5%90%AC%E5%85%BC%E5%AE%B9/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/myeclipse/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/php/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/myeclipse2014/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/sublime/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/sublime/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/win10/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/win10/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E5%BC%80%E6%9C%BA/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E5%BC%80%E6%9C%BA/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/myeclipse/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/apache/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/myeclipse2014/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/wp-footer/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/apache/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E8%B0%B7%E6%AD%8C%E5%AD%97%E4%BD%93/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/wp-footer/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E8%B0%B7%E6%AD%8C%E5%AD%97%E4%BD%93/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/tags/npm/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/tags/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1137,78 +1137,78 @@
 
   
   <url>
-    <loc>https://b.lice.cc/categories/%E7%94%9F%E6%B4%BBDAY/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/%E7%94%9F%E6%B4%BBDAY/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/SEO%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/SEO%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/Laravel/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/Laravel/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/Java%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/Java%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/%E5%B0%8F%E7%A6%8F%E5%88%A9/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/%E5%B0%8F%E7%A6%8F%E5%88%A9/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/%E7%A0%B4%E8%A7%A3/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/%E7%A0%B4%E8%A7%A3/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/%E7%BB%87%E6%A2%A6%E4%BB%BF%E7%AB%99/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/%E7%BB%87%E6%A2%A6%E4%BB%BF%E7%AB%99/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://b.lice.cc/categories/wp%E5%B0%8F%E8%AE%B0/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://lice.cc/categories/wp%E5%B0%8F%E8%AE%B0/</loc>
+    <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

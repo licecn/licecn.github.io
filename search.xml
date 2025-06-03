@@ -1,0 +1,1754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>hexo重装系统后如何恢复</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/352.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/352.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、恢复基础环境"><a href="#一、恢复基础环境" class="headerlink" title="一、恢复基础环境"></a>一、恢复基础环境</h2><p>重装系统后首先要安装git和nodejs，这个就不详细描述了，网上一搜一大堆。</p><p>安装好后查看是否安装成功。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git --version  <span class="comment">#查看git版本</span></span><br><span class="line"></span><br><span class="line">node -v  <span class="comment">#查看node版本</span></span><br><span class="line"></span><br><span class="line">npm -v <span class="comment">#查看npm版本 ，一般安装nodejs 时就一块安装了。</span></span><br></pre></td></tr></table></figure><p>都显示出版本后就说明基础环境已经安装好。</p><h2 id="二、-设置Git"><a href="#二、-设置Git" class="headerlink" title="二、 设置Git"></a>二、 设置Git</h2><h3 id="1-设置个人信息"><a href="#1-设置个人信息" class="headerlink" title="1.设置个人信息"></a>1.设置个人信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;用户名&quot;</span></span><br><span class="line"></span><br><span class="line">git config --global user.email <span class="string">&quot;邮箱&quot;</span></span><br></pre></td></tr></table></figure><h3 id="2-配置SSH-key"><a href="#2-配置SSH-key" class="headerlink" title="2.配置SSH key"></a>2.配置SSH key</h3><p>右键 点击 Git bash here 输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;邮件地址&quot;</span></span><br></pre></td></tr></table></figure><p>生成的key在“C:\Users\用户\用户名.ssh”路径下，找到“id_rsa.pub”文件，右键—打开方式—记事本，打开后全选复制里面的内容</p><p>登录“github”，右上角用户图标，找到“Settings”，点击后找到“SSH and GPG keys” ，再点击“New SSH key” </p><p>将复制的key粘贴进去，title随便写一个，点击 add ssh key。</p><span id="more"></span><p>然后测试连接，看能不能连接成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com  <span class="comment">#如果返回信息中出现successfully 字样说明连接成功</span></span><br></pre></td></tr></table></figure><h3 id="3-初始化仓库"><a href="#3-初始化仓库" class="headerlink" title="3.初始化仓库"></a>3.初始化仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure><h2 id="三、hexo安装部署"><a href="#三、hexo安装部署" class="headerlink" title="三、hexo安装部署"></a>三、hexo安装部署</h2><p>安装之前将以下文件删除。</p><p><img src="../images/image-20241230155339931.png" alt="image-20241230155339931"></p><p><code>.deploy_git 这个文件夹是部署时生成的</code></p><p><code>mode_modules 这里面是依赖包</code></p><p><code>public 这里是生成静态文件</code></p><p>然后开始安装hexo</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli   <span class="comment">#安装hexo</span></span><br><span class="line"></span><br><span class="line">npm install   <span class="comment"># 安装依赖</span></span><br><span class="line"></span><br><span class="line">npm instal hexo-deployer-git --save  <span class="comment">#安装一键部署插件</span></span><br></pre></td></tr></table></figure><p>之后就可以生成静态网页，测试了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo s   </span><br></pre></td></tr></table></figure><p>注： hexo g 是 hexo generate 的缩写，用于生成静态网页</p><p>​         hexo s 是 hexo server 的缩写，启动本地服务，用于预览主题</p><p>测试没问题后就可以部署到远程仓库了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d  <span class="comment">#hexo d 是 hexo deploy 的缩写，用于网页配置部署到git仓库</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>npm、composer相关命令</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/351.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/351.html</url>
+      
+        <content type="html"><![CDATA[<p>npm相关命令：</p><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询源</span></span><br><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"><span class="comment">// 更换国内源</span></span><br><span class="line">npm config set registry https:<span class="comment">//registry.npmmirror.com</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 恢复官方源</span></span><br><span class="line">npm config set registry https:<span class="comment">//registry.npmjs.org</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除注册表</span></span><br><span class="line">npm config <span class="keyword">delete</span> registry</span><br></pre></td></tr></table></figure><span id="more"></span><p>npm常用命令：</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">1、设置npm路径</span><br><span class="line"><span class="comment">#全局安装路径</span></span><br><span class="line">npm config <span class="keyword">set</span> prefix <span class="string">&quot;D:\Program Files\nodejs\node_global&quot;</span></span><br><span class="line"><span class="comment">#缓存路径</span></span><br><span class="line">npm config <span class="keyword">set</span> cache <span class="string">&quot;D:\Program Files\nodejs\node_cache&quot;</span></span><br><span class="line"></span><br><span class="line">2、设置镜像</span><br><span class="line"><span class="comment">#1,淘宝镜像源</span></span><br><span class="line">npm config <span class="keyword">set</span> registry https:<span class="string">//registry.npmmirror.com</span></span><br><span class="line">npm config <span class="keyword">set</span> registry https:<span class="string">//registry.npm.taobao.org</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#2,腾讯云镜像源</span></span><br><span class="line">npm config <span class="keyword">set</span> registry http:<span class="string">//mirrors.cloud.tencent.com/npm/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#3,华为云镜像源</span></span><br><span class="line">npm config <span class="keyword">set</span> registry https:<span class="string">//mirrors.huaweicloud.com/repository/npm/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 官方默认全局镜像</span></span><br><span class="line">npm config <span class="keyword">set</span> registry https:<span class="string">//registry.npmjs.org</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#检查当前镜像</span></span><br><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line">15</span><br><span class="line">3、常用命令简写说明</span><br><span class="line">-g： <span class="comment">#--global 的缩写，表示安装到全局目录里</span></span><br><span class="line">-S： <span class="comment">#--save 的缩写，表示安装的包将写入package.json里面的dependencies</span></span><br><span class="line">-D： <span class="comment">#--save-dev 的缩写，表示将安装的包将写入packege.json里面的devDependencies</span></span><br><span class="line"> i： <span class="comment">#install的缩写，表示安装</span></span><br><span class="line"></span><br><span class="line">4、安装模块</span><br><span class="line">npm init  <span class="comment"># npm 初始化当前目录</span></span><br><span class="line">npm i   <span class="comment"># 安装所有依赖</span></span><br><span class="line">npm install   <span class="comment"># 安装所有依赖</span></span><br><span class="line">npm i express  <span class="comment"># 安装模块到默认dependencies</span></span><br><span class="line"><span class="comment"># 安装指定版本和临时源</span></span><br><span class="line">npm install -g express@2.5.8 <span class="params">--registry=https</span>:<span class="string">//registry.npm.taobao.org</span></span><br><span class="line"></span><br><span class="line">npm i express -g  <span class="comment"># 会安装到配置的全局目录下</span></span><br><span class="line">npm i express -S  <span class="comment"># 安装包信息将加入到dependencies生产依赖</span></span><br><span class="line">npm i express -D  <span class="comment"># 安装包信息将加入到devDependencies开发依赖</span></span><br><span class="line"></span><br><span class="line">5、卸载模块</span><br><span class="line">npm uninstall express  <span class="comment"># 卸载模块，但不卸载模块留在package.json中的对应信息</span></span><br><span class="line">npm uninstall express -g  <span class="comment"># 卸载全局模块</span></span><br><span class="line">npm uninstall express <span class="params">--save</span>  <span class="comment"># 卸载模块，同时卸载留在package.json中dependencies下的信息</span></span><br><span class="line">npm uninstall express <span class="params">--save-dev</span>  <span class="comment"># 卸载模块，同时卸载留在package.json中devDependencies下的信息</span></span><br><span class="line"></span><br><span class="line">6、更新模块</span><br><span class="line">npm update express  <span class="comment"># 更新最新版本的express</span></span><br><span class="line">npm update express@2.1.0  <span class="comment"># 更新到指定版本号的express</span></span><br><span class="line">npm update express@latest  <span class="comment"># 更新到最后的新版本</span></span><br><span class="line"></span><br><span class="line">7、查看命令</span><br><span class="line">npm -v   <span class="comment">#查看版本号</span></span><br><span class="line">npm root  <span class="comment"># 查看项目中模块所在的目录</span></span><br><span class="line">npm root -g  <span class="comment"># 查看全局安装的模块所在目录</span></span><br><span class="line">npm list 或者 npm <span class="keyword">ls</span>  <span class="comment"># 查看本地已安装模块的清单列表</span></span><br><span class="line">npm view express dependencies  <span class="comment"># 查看某个包对于各种包的依赖关系</span></span><br><span class="line">npm view express <span class="keyword">version</span>  <span class="comment"># 查看express最新的版本号</span></span><br><span class="line">npm view express versions  <span class="comment"># 查看所有express历史版本号（很实用）</span></span><br><span class="line">npm view express  <span class="comment"># 查看最新的express版本的信息</span></span><br><span class="line">npm info express  <span class="comment"># 查看express的详细信息，等同于上面的npm view express</span></span><br><span class="line">npm list express 或 npm <span class="keyword">ls</span> express  <span class="comment"># 查看本地已安装的express的详细信息</span></span><br><span class="line">npm view express repository.url  <span class="comment"># 查看express包的来源地址</span></span><br><span class="line"></span><br><span class="line">8、其他命令</span><br><span class="line">npm cache clean  <span class="comment"># 清除npm的缓存</span></span><br><span class="line">npm prune  <span class="comment"># 清除项目中没有被使用的包</span></span><br><span class="line">npm outdated  <span class="comment"># 检查模块是否已经过时</span></span><br><span class="line">npm repo express  <span class="comment"># 会打开默认浏览器跳转到github中express的页面</span></span><br><span class="line">npm docs express  <span class="comment"># 会打开默认浏览器跳转到github中express的README.MD文件信息</span></span><br><span class="line">npm home express  <span class="comment"># 会打开默认浏览器跳转到github中express的主页</span></span><br><span class="line">npm install -g npm@9.8.1 <span class="comment"># 升级npm</span></span><br><span class="line"></span><br><span class="line">9、通过使用淘宝定制的cnpm安装</span><br><span class="line">npm install -g cnpm <span class="params">--registry=https</span>:<span class="string">//registry.npmmirror.com</span></span><br><span class="line">npm install -g cnpm <span class="params">--registry=https</span>:<span class="string">//registry.npm.taobao.org</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看版本号</span></span><br><span class="line">cnpm -v</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>composer相关命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">1.查看composer配置参数。带 -l 参数表示查看composer参数，不带 -l 表示设置composer参数，带-g表示针对全局参数</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看 composer全局参数</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer config -l -g</span>  </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看 composer 安装目录</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer config -l -g | grep home</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置composer全局镜像地址为阿里云镜像平台</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/</span></span><br><span class="line"></span><br><span class="line">2.升级composer到最新版本</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer selfupdate</span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以下命令含义相同</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer self-update</span></span><br><span class="line"></span><br><span class="line">3.install</span><br><span class="line">如果执行install命令所在目录存在composer.lock文件，则以composer.lock为标准去下载依赖，如果没有composer.lock，则 install 命令和 update没有区别，composer.lock可以保证执行install命令后，安装的依赖版本总相同，因此项目必须将 composer.lock 纳入代码仓库，库项目则不需要纳入.</span><br><span class="line"></span><br><span class="line">4.update</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新所有依赖</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer update</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新指定的包</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer update monolog/monolog</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新指定的多个包</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer update monolog/monolog symfony/dependency-injection</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新通配符匹配的包</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer update monolog/monolog symfony/*</span></span><br><span class="line">注意：包能升级的版本受到版本约束的约束，包不会升级到超出约束的版本的范围。例如, composer.json 里包的版本约束为 ^1.10，而最新版本为 2.0。那么 update 命令是不能把包升级到 2.0 版本的，只能最高升级到 1.x 版本。对于开发版本的包，如果包作者上传了新的同版本开发包，那么执行update命令可以更新到最新的开发版本包。</span><br><span class="line"></span><br><span class="line">5.remove</span><br><span class="line">remove 命令用于移除一个包及其依赖，前提是该包没有被其他包使用，如果依赖被其他包使用，则无法移除：</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer remove monolog/monolog</span></span><br><span class="line">Loading composer repositories with package information</span><br><span class="line">Updating dependencies (including require-dev)</span><br><span class="line">Package operations: 0 installs, 0 updates, 2 removals</span><br><span class="line">  - Removing psr/log (1.0.2)</span><br><span class="line">  - Removing monolog/monolog (1.23.0)</span><br><span class="line">Generating autoload files</span><br><span class="line"></span><br><span class="line">6.show</span><br><span class="line">show 命令可以列出当前项目使用到包的信息，加上 --tree或者-t 可以以依赖关系树的形式展示。</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">列出所有已经安装的包</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer show</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">可以通过通配符进行筛选</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer show monolog/*</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">显示具体某个包的信息</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer show monolog/monolog</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看依赖关系树</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer show -t</span> </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">列出当前所有的依赖及其版本</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">composer show -i</span> </span><br><span class="line"></span><br><span class="line">命令结果示例</span><br><span class="line">symfony/console                    v3.4.4         Symfony Console Component</span><br><span class="line">symfony/debug                      v3.4.4         Symfony Debug Component</span><br><span class="line">symfony/http-foundation            v3.1.10        Symfony HttpFoundation Component</span><br><span class="line">symfony/polyfill-mbstring          v1.7.0         Symfony polyfill for the Mbstring extension</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">7.clearcahe</span><br><span class="line">clearcache 可以清除本地的composer缓存信息</span><br><span class="line"></span><br><span class="line">8.</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> composer </tag>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>npm命令出现卡顿解决办法</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/350.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/350.html</url>
+      
+        <content type="html"><![CDATA[<p>今天通过<code>npm install</code> 进行安装的时候发现卡在一个地方将近两分钟，在网上查询的时候需要换源，于是通过</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure><p>查看源</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>//registry.npm.taobao<span class="meta">.org</span>/</span><br></pre></td></tr></table></figure><p>发现是淘宝的，按理说不应该出现这样的问题啊，通过查询发现淘宝的源已经凉了，换了url。悲剧。</p><p>访问上面链接发现跳转到了一个新网站。</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//registry.npmmirror.com/</span></span><br></pre></td></tr></table></figure><p>好吧重新设置一下</p><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https:<span class="comment">//registry.npmmirror.com</span></span><br></pre></td></tr></table></figure><p>OK!在运行命令，秒过。</p><p>本来想着在下面记录一下相关命令和国内源的，但是想了想还是算了重新写一篇吧方便以后查询。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于近期学习Android的想法</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/349.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/349.html</url>
+      
+        <content type="html"><![CDATA[<p>由于之前的大言不惭，说要开发一个小说app，在实战中给我深深的上了一课。我需要学习的东西太多了，所以决定先把Android放下一段时间，打算从小的软件开始学起。本以为会很简单的完成，毕竟轮子太多了，本着拿来主义的精神，也就是稍微组sj合一下的问题，所以牛逼哄哄的胯下海口。对就是胯。我是万万没想到，组装车子他也是要看说明书的啊。在这里对曾经的自己表示：臣妾做不到啊。这件事就先告一段落吧，因为laravel在我的计划里躺了半年的时间了。</p><p>抱歉，只能深表歉意的说一句：laravel 我来啦。</p><p><img src="../images/u=1661052876,3189654850&amp;fm=26&amp;gp=0.jpg" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活DAY </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo主题开发小计</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/349.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/349.html</url>
+      
+        <content type="html"><![CDATA[<p>经过一个星期的学习和开发，最终把hexo 主题 <a href="https://github.com/licecn/hexo-theme-nfnf">NFNF</a> 出阶段完成，就是现在用的这个主题，当然还有很多地方可以优化，但是先告一段落吧。</p><p>如果有人想开发自己的主题的话，可以参考这篇文章：<a href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a></p><p>开发过程中借鉴了NEXT ,SNIPPER ,HIERO 等主题，布局借鉴了 简书。本来打算模仿简书的，但是在开发的过程中，逐渐把几个主题的整合了。开始的时候先把简书的模板在本地写好了，但是替换模板的时候，遇到了很多麻烦，其中比较麻烦的就是云标签，这也是准备不足吧，早知道先不写模板了，这样就可以根据系统生成标签写css 样式了。后面觉得重新写css 样式太麻烦了，就去研究了hexo 辅助函数tagcloud的源代码，参考源代码写出了符合自己要求的模板，不过后来想了想，还不如重新写样式。</p><p>后面在写搜索的时候实在是搞不懂next的代码，就放弃使用algolia，把hiero中的搜索拿了过来使用，不过需要插件hexo-generator-json-content辅助，因为博客早就使用了这个插件，所以就更方便了不用重新安装插件。</p><p>自己主题的开发就先告一段落吧，在这次疫情期间给自己规划了一些事情，下一件事就是学习和开发一款小说app，使用Android studio开发，也会遇到很多坑，就看自己能不能解决了，不过挺期待的。一会把计划写到about页面，慢慢来吧，毕竟已经离开这个行业了，希望自己可以坚持下来吧。</p><span id="more"></span><p>每个人都有自己喜欢的事，也会遇到很多阻碍，但是会遵循着一句流传的话：生命不息，折腾不止。我们可以脱离自己喜欢的事业，但如果把自己喜欢的事也放弃，那和咸鱼又有什么区别呢，在保证自己工作无碍的前提下向着自己喜爱的方向继续前行。也希望大家不要放弃曾经自己那么喜爱事情。</p><p>写在最后：愿世界和平！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>获取百度盘文件真实路径</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/348.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/348.html</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> _id    = <span class="number">309847</span>;</span><br><span class="line">    <span class="keyword">var</span> isHome = $(<span class="string">&#x27;a[title=&quot;我的卡包&quot;]&#x27;</span>).<span class="title function_">html</span>();</span><br><span class="line">    <span class="keyword">var</span> _temp  = isHome ? <span class="string">&quot;&quot;</span> : $(<span class="string">&#x27;span[title]:first&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;title&#x27;</span>).<span class="title function_">slice</span>(<span class="number">4</span>);</span><br><span class="line">    <span class="keyword">var</span> _name  = <span class="string">&#x27;10.15 (19A583)Clover PE ZD-SQ.dmg&#x27;</span>; <span class="comment">//10.15 (19A583)Clover PE ZD-SQ.dmg 改为所下载文件名称</span></span><br><span class="line">    <span class="keyword">var</span> _path  = <span class="built_in">encodeURIComponent</span>(_temp + <span class="string">&#x27;/&#x27;</span> + _name);</span><br><span class="line">    <span class="keyword">var</span> _link  = <span class="string">&#x27;https://pcs.baidu.com/rest/2.0/pcs/file?method=download&amp;app_id=&#x27;</span>+_id+<span class="string">&#x27;&amp;path=&#x27;</span>+_path;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;下载地址为：&#x27;</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c%s&#x27;</span>,<span class="string">&#x27;color:#00ff00;background-color:#000000;&#x27;</span>,_link);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure><p>首先 把别人分享的文件保存在自己的网盘里然后在控制台复制上面代码，将<strong>10.15 (19A583)Clover PE ZD-SQ.dmg</strong>改为你想要下载的文件名。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 百度盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>laravel5.5 php artisan 常用命令</title>
+      <link href="/Laravel/347.html"/>
+      <url>/Laravel/347.html</url>
+      
+        <content type="html"><![CDATA[<p>这里收集一下php artisan 常用的命令，以备不时之需。</p><p>php artisan 命令列表可以使用：php srtisan list 来查看。下面是列出常用命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">php artisan key:generate    <span class="comment">#设置程序密钥  </span></span><br><span class="line">php artisan make:controller ?   <span class="comment">#生成一个资源控制类</span></span><br><span class="line">php artisan make:middleware ?   <span class="comment">#生成一个中间件 </span></span><br><span class="line">php artisan make:migration create_articles_table    <span class="comment">#生成一个迁移文件    ，article为表名为复数</span></span><br><span class="line">php artisan migrate  <span class="comment">#执行迁移文件 ，上面是创建迁移文件</span></span><br><span class="line">php artisan make:model ?    <span class="comment">#生成一个Eloquent 模型类   -m 生成模型的同时生成迁移文件</span></span><br><span class="line">php artisan migrate:rollback <span class="comment">#回滚迁移文件</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> laravel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>搭建laravel 开发环境</title>
+      <link href="/Laravel/346.html"/>
+      <url>/Laravel/346.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装composer"><a href="#安装composer" class="headerlink" title="安装composer"></a>安装composer</h2><p>从网上查了相关资料，需要通过composer安装和更新laravel，所以要先安装composer。</p><p>下载：<a href="https://getcomposer.org/Composer-Setup.exe">Composer-Setup.exe</a> </p><p>安装的时候路径填写php安装路径。</p><p><img src="../images/How-to-Install-Composer-on-Windows-Specify-PHP-File-Location.png" alt=""></p><p>安装之后通过命令<strong>composer –version</strong> 来查看是否安装成功。</p><span id="more"></span><h2 id="通过composer安装laravel"><a href="#通过composer安装laravel" class="headerlink" title="通过composer安装laravel"></a>通过composer安装laravel</h2><p>通过composer安装laravel 有两种方式，但是本人习惯使用<strong>composer create-project </strong>来创建。</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer create-project --prefer-dist laravel/she <span class="string">&quot;5.5.*&quot;</span><span class="comment">//laravel代表laravel项目 ；she代表项目名称。5.5* 代表版本号  本人载安装的时候忽略了这一项 。</span></span><br></pre></td></tr></table></figure><p>这里说一下安装的时候设置一下镜像，这样下载的快些，并且不会出现问题。</p><p>配置全局镜像：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https:<span class="comment">//mirrors.aliyun.com/composer/</span></span><br></pre></td></tr></table></figure><p>取消配置：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g --<span class="keyword">unset</span> repos.packagist</span><br></pre></td></tr></table></figure><h2 id="使用phpstudy搭建本地环境"><a href="#使用phpstudy搭建本地环境" class="headerlink" title="使用phpstudy搭建本地环境"></a>使用phpstudy搭建本地环境</h2><p>laravel框架对环境有一些要求，虽然官网有自己的推荐，但是作为长时间使用phpstudy的人来说，能不换就不换吧。</p><p>来看看官方对其他环境的要求：</p> <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- PHP &gt;= <span class="number">5.5</span>.<span class="number">9</span></span><br><span class="line">- OpenSSL PHP Extension</span><br><span class="line">- PDO PHP Extension</span><br><span class="line">- Mbstring PHP Extension</span><br><span class="line">- Tokenizer PHP Extension</span><br></pre></td></tr></table></figure><p>  在phpstudy找到相应的服务开启即可。</p><p>因为laravel 的入口文件在项目的public文件夹，所以url要写成：localhost/she/public  //she 为项目名称</p><p>到此基本配置完成。</p><p>如果你使用nginx，那么在vhost.conf 里的 location /   下加入：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.php?<span class="variable">$query_string</span>;</span><br></pre></td></tr></table></figure><p>还有就是大家最好下载所以使用版本的文档，这样大多数问题基本可以解决。</p><p>大家也可以在laravel china 社区查找相关问题。虽然现在没以前火热了，但解决基本问题还是可以的。</p><p><a href="https://learnku.com/laravel">https://learnku.com/laravel</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> laravel </tag>
+            
+            <tag> composer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>lnmp删除文件.user.ini提示没有权限（Operation not permitted）</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/345.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/345.html</url>
+      
+        <content type="html"><![CDATA[<p>lnmp 删除虚拟主机后，发现生成的文件夹还在，所以想着使用命令删除一下。</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf [文件路径]</span><br></pre></td></tr></table></figure><p>但是发现提示：Operation not permitted 于是从网上查找到是因为被锁定了，所以可以命令解锁然后删除。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chattr -i /home/wwwroot/你的网站目录/.user.ini</span><br></pre></td></tr></table></figure><br>ok,大功告成，如果想加锁的话可以把 -i 改成 +i</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> lnmp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows Git本地代码推送到github的命令及配置</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/344.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/344.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、配置"><a href="#一、配置" class="headerlink" title="一、配置"></a>一、配置</h2><p>安装git这里就不多说了，个人感觉和安装qq没啥区别。</p><hr><p>配置本地信息<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name ‘账号名’ </span><br><span class="line">git config --global user.email 邮箱 </span><br><span class="line">git config --list 查看配置结果</span><br></pre></td></tr></table></figure></p><p>创建本地ssh<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C “github邮箱” </span><br></pre></td></tr></table></figure></p><hr><p>打开C:\Users\Administrator.ssh目录，“id_rsa.pub”文件内容就是公钥会用到。</p><p>1.登陆github&gt;点击用户头像&gt;Settings&gt;SSH and GPG keys&gt;New SSH key&gt;title:自己看着写&gt;key：打开上面的id_rsa.pub,复制里面的内容粘贴进去&gt;Add SSH key<br>2.测试ssh key是否成功。<br><code>$ssh -T git@github.com</code><br>如果出现You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。<br><span id="more"></span></p><h2 id="二、Git常用命令"><a href="#二、Git常用命令" class="headerlink" title="二、Git常用命令"></a>二、Git常用命令</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git init   <span class="comment">// 初始化版本库</span></span><br><span class="line"></span><br><span class="line">git add .   <span class="comment">// 添加文件到版本库（只是添加到缓存区），.代表添加文件夹下所有文件 </span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span> <span class="comment">// 把添加的文件提交到版本库，并填写提交备注</span></span><br><span class="line">git remote add origin 你的远程库地址  <span class="comment">// 把本地库与远程库关联</span></span><br><span class="line"></span><br><span class="line">git push -u origin master<span class="comment">// 第一次推送时</span></span><br><span class="line"></span><br><span class="line">git push origin master  <span class="comment">// 第一次推送后，直接使用该命令即可推送修改</span></span><br><span class="line">git <span class="keyword">clone</span> git@github.com:licecn/web1234m.git <span class="comment">//Clone with SSH clone到本地</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>自适应布局需要注意的总结</title>
+      <link href="/%E5%89%8D%E7%AB%AF/343.html"/>
+      <url>/%E5%89%8D%E7%AB%AF/343.html</url>
+      
+        <content type="html"><![CDATA[<p>最近给自己写的<a href="http://www.web1234.org">www.web1234.org</a> 导航网站，搞一个手机端的自适应，对于没有接触过太多的人来说有点复杂，所以只能求救万能的百度、bing、google，这篇文章就记录一些自适应布局需要注意的点，也为了以后能复习一下。</p><hr><p>一、</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure><p>1.name=”viewport”      //设置视口（网页可绘制的区域）</p><p>2.width=device-width    //应用程序的宽度和屏幕的宽度是一样的</p><p>3.height=device-height  //应用程序的高度和屏幕的高是一样的</p><p>4.initial-scale=1.0  //应用程序启动时候的缩放尺度（1.0表示不缩放）</p><p>5.minimum-scale=1.0  //用户可以缩放到的最小尺度（1.0表示不缩放）</p><p>6.maximum-scale=1.0  //用户可以放大到的最大尺度（1.0表示不缩放）</p><p>7.user-scalable=no  //用户是否可以通过他的手势来缩放整个应用程序，使应用程序的尺度发生一个改变（yes/no）</p><p>二、</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;target-densitydpi=device-dpi, width=480px, user-scalable=no&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure><p>1.target-densitydpi=device-dpi     //指定屏幕像素密度DPI,device-dpi 为设备原本的DPI值,不会有任何缩放.( dpi是单位,一般指每英寸的像素)<br><span id="more"></span><br>三、</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;apple-mobile-web-app-capable&quot;</span> <span class="attr">content</span>=<span class="string">&quot;yes&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure><p>//说明：网站开启对web app程序的支持</p><p>1.apple-mobile-web-app-capable //</p><p>2.content=”yes”  //是否开启（开启）</p><p>四、@media screen and (max-width | min-width) {} </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 自适应 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>今天遇到一名军人聊了两句</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/342.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/342.html</url>
+      
+        <content type="html"><![CDATA[<p>今天来到一个公司，发现新招了一个员工，给他解决了一些问题之后我就坐在工位上打开电脑看新闻，通过听他和公司人聊天知道他是一名军人，说了很多野外生存的事情。</p><p>没多久，他起身去了厨房抽烟，我身边的水没了，起身去厨房倒水，看到我问了句：抽烟吗？我欣然的说了句：恩。然后就坐下来开始聊天，更详细的了解到他是医疗兵不上前线，在缅甸边境。</p><p>也许很多人不知道，在人们平和的生活中，有一群人在我国边境在战斗，付出了生命的代价也不会有人知道他们的名字。好了别的就不多说了，能活着就是最好的结果。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 军人 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>百度排名回暖小计</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/341.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/341.html</url>
+      
+        <content type="html"><![CDATA[<p>自从网站被黑之后排名就掉了，虽然才是几百指数的一个词，但是心里还是有点失落的，被迫选择一个纯静态的网站，曾经接触node.js感觉挺新颖，所以就有了现在的这个hexo博客。<br>经过几天的摸索和建设博客重新上线，但是排名已经全无，不过不要紧，毕竟大概了很多，掉排名是正常的，不能像以前那样，很快恢复排名。<br>就在昨天经过一段时间的等待和操作之后排名来到了首页第八位，我相信不久之后就会来到前三。<br>之所以会把这篇文章放到seo优化这个分类，是想简单的介绍一些优化的常识。</p><blockquote><ol><li>每个页面的标题、关键词、描述很重要，一定要合理配置。</li><li>每个页面尽量只出现一次h1标签</li><li>文章尽量加入一些符合的图片，来增加对蜘蛛的好感。</li><li>内链尽量多但要合理分配，一味的徒增。</li><li>友链一定要在首页，友链对于seo来说就是传递权重的，那么很显然首页的权重是最高，你传给他，他传给你。这也是为什么很多人换友链时会有要求。</li><li>临时加的，文章页的标题一定要加h1标签，这是告诉蜘蛛这个页面这个标题是最重要的，也是这个页面索要展现的。</li></ol></blockquote><p>好了，这篇文章就到这里了，希望对一些人有帮助。</p><h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/341.jpg" alt="seo"></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 百度排名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>初识CiscoAP</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/339.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/339.html</url>
+      
+        <content type="html"><![CDATA[<p>前几天有人拿来了一个cisco的ap，让我设置成可以自动获取ip的，当时没多想感觉很简单的事情，玩过很多。但是我错了，我想的太简单了。cisco的东西没有那么简单，本来想着通过web直接设置会简单很多。但是没有找到。<br><br><br>百度了一下，发现只有胖ap可以设置web访问，然后我拿到的ap是个瘦ap，具体如何查看这里给大家说一下。<br><br><br><span id="more"></span></p><blockquote><p>名称的识别：（主要用于在看文档上）</p></blockquote><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">之前老的AP命名规则</span><br><span class="line">LAP： lightweight AP（轻量级AP，也就是我们常说的瘦AP）</span><br><span class="line">AP： 前面不加其他字符，就是胖AP，也就是我们说的Autonomous AP。</span><br><span class="line"></span><br><span class="line">目前新的AP命名规则</span><br><span class="line">CAP：Controller-Based AP（基于控制器的AP，也就是瘦AP）</span><br><span class="line">SAP：Standalong AP（独立的AP，也就是胖AP）</span><br></pre></td></tr></table></figure><blockquote><p>通过命令识别</p></blockquote><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ap<span class="meta">#show version</span></span><br></pre></td></tr></table></figure><p><br><br>显示如下图：<br></p><p><img src="https://lice.cc/images/003w0htjzy70Sm5mIST5b&amp;690.jpg" alt="瘦ap"><br><br><br><img src="https://lice.cc/images/003w0htjzy70SebV058e6&amp;690.jpg" alt="胖ap"><br><br><br>    k9w8为瘦ap、k9w7为胖ap<br><br><br>通过命令发现自己的的ap为瘦ap，好在还可以升级，这里就介绍升级过程了，当然之后我也会把我的升级过程抽时间整理一下，毕竟废了很多时间。<br><br><br>预留一下连接：<br><br><br>然后通过超级终端连接ap设置web访问的命令如下：<br><br></p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ap&gt;enable</span><br><span class="line"></span><br><span class="line">显示让输入密码，这个密码在输入的过程中是看不到的，输进去回车就行，默认为Cisco，注意首字母为大写。</span><br><span class="line"></span><br><span class="line">ap<span class="comment">#</span></span><br><span class="line"></span><br><span class="line">ap<span class="comment">#conf t \\回车 备注：conf t 是我写的缩写，如果想看全，按tab键可自动补全</span></span><br><span class="line"></span><br><span class="line">ap...<span class="comment">#int bvi1</span></span><br><span class="line"></span><br><span class="line">ap...<span class="comment">#ip address 192.168.1.1 255.255.255.0</span></span><br><span class="line"></span><br><span class="line">ap...<span class="comment">#no shutdown</span></span><br><span class="line"></span><br><span class="line">ap...<span class="comment">#end</span></span><br><span class="line"></span><br><span class="line">ap<span class="comment">#show run \\查看有没有成功</span></span><br></pre></td></tr></table></figure><p><br><br>到这里就可以通过ip来访问web管理页面了，当然账号密码是默认的Cisco。好了今天就到这里，下一篇抽时间写吧，还有没事百度一下，总有你想要的。<br><br></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cisco </tag>
+            
+            <tag> AP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JDBC七步连接数据库</title>
+      <link href="/Java%E7%AC%94%E8%AE%B0/345.html"/>
+      <url>/Java%E7%AC%94%E8%AE%B0/345.html</url>
+      
+        <content type="html"><![CDATA[<p>JDBC连接数据库 •创建一个以JDBC连接数据库的程序，包含7个步骤：</p><h3 id="1、加载JDBC驱动程序："><a href="#1、加载JDBC驱动程序：" class="headerlink" title="1、加载JDBC驱动程序："></a>1、加载JDBC驱动程序：</h3><p>在连接数据库之前，首先要加载想要连接的数据库的驱动到JVM（Java虚拟机）， 这通过java.lang.Class类的静态方法forName(String className)实现。 例如： try{ //加载MySql的驱动类 Class.forName(“com.mysql.jdbc.Driver”) ; }catch(ClassNotFoundException e){ System.out.println(“找不到驱动程序类 ，加载驱动失败！”); e.printStackTrace() ; } 成功加载后，会将Driver类的实例注册到DriverManager类中。</p><h3 id="2、提供JDBC连接的URL"><a href="#2、提供JDBC连接的URL" class="headerlink" title="2、提供JDBC连接的URL"></a>2、提供JDBC连接的URL</h3><p>•连接URL定义了连接数据库时的协议、子协议、数据源标识。 •书写形式：协议：子协议：数据源标识 协议：在JDBC中总是以jdbc开始 子协议：是桥连接的驱动程序或是数据库管理系统名称。 数据源标识：标记找到数据库来源的地址与连接端口。 例如：（MySql的连接URL） jdbc:mysql: //localhost:3306/test?useUnicode=true&amp;characterEncoding=gbk ; useUnicode=true：表示使用Unicode字符集。如果characterEncoding设置为 gb2312或GBK，本参数必须设置为true 。characterEncoding=gbk：字符编码方式。</p><h3 id="3、创建数据库的连接"><a href="#3、创建数据库的连接" class="headerlink" title="3、创建数据库的连接"></a>3、创建数据库的连接</h3><p>•要连接数据库，需要向java.sql.DriverManager请求并获得Connection对象， 该对象就代表一个数据库的连接。 •使用DriverManager的getConnectin(String url , String username , String password )方法传入指定的欲连接的数据库的路径、数据库的用户名和 密码来获得。 例如： //连接MySql数据库，用户名和密码都是root String url = “jdbc:mysql://localhost:3306/test” ; String username = “root” ; String password = “root” ; try{ Connection con = DriverManager.getConnection(url , username , password ) ; }catch(SQLException se){ System.out.println(“数据库连接失败！”); se.printStackTrace() ; } </p><h3 id="4、创建一个Statement"><a href="#4、创建一个Statement" class="headerlink" title="4、创建一个Statement"></a>4、创建一个Statement</h3><p>•要执行SQL语句，必须获得java.sql.Statement实例，Statement实例分为以下3 种类型：</p><p>​     1、执行静态SQL语句。通常通过Statement实例实现。</p><p>​     2、执行动态SQL语句。通常通过PreparedStatement实例实现。</p><p>​     3、执行数据库存储过程。通常通过CallableStatement实例实现。 具体的实现方式： Statement stmt = con.createStatement() ; PreparedStatement pstmt = con.prepareStatement(sql) ; CallableStatement cstmt = con.prepareCall(“{CALL demoSp(? , ?)}”) ; </p><span id="more"></span><h3 id="5、执行SQL语句"><a href="#5、执行SQL语句" class="headerlink" title="5、执行SQL语句"></a>5、执行SQL语句</h3><p>Statement接口提供了三种执行SQL语句的方法：executeQuery 、executeUpdate 和execute </p><p>​    1、ResultSet executeQuery(String sqlString)：执行查询数据库的SQL语句 ，返回一个结果集（ResultSet）对象。     </p><p>​    2、int executeUpdate(String sqlString)：用于执行INSERT、UPDATE或 DELETE语句以及SQL DDL语句，如：CREATE TABLE和DROP TABLE等 3、execute(sqlString):用于执行返回多个结果集、多个更新计数或二者组合的 语句。 具体实现的代码： ResultSet rs = stmt.executeQuery(“SELECT * FROM …”) ; int rows = stmt.executeUpdate(“INSERT INTO …”) ; boolean flag = stmt.execute(String sql) ; </p><h3 id="6、处理结果-两种情况："><a href="#6、处理结果-两种情况：" class="headerlink" title="6、处理结果 两种情况："></a>6、处理结果 两种情况：</h3><p>​     1、执行更新返回的是本次操作影响到的记录数。</p><p>​     2、执行查询返回的结果是一个ResultSet对象。 • ResultSet包含符合SQL语句中条件的所有行，并且它通过一套get方法提供了对这些 行中数据的访问。 • 使用结果集（ResultSet）对象的访问方法获取数据： while(rs.next()){ String name = rs.getString(“name”) ; String pass = rs.getString(1) ; // 此方法比较高效 } （列是从左到右编号的，并且从列1开始）</p><h3 id="7、关闭JDBC对象"><a href="#7、关闭JDBC对象" class="headerlink" title="7、关闭JDBC对象"></a>7、关闭JDBC对象</h3><p>操作完成以后要把所有使用的JDBC对象全都关闭，以释放JDBC资源，关闭顺序和声 明顺序相反：</p><p>​     1、关闭记录集 </p><p>​    2、关闭声明</p><p>​    3、关闭连接对象 if(rs != null){ // 关闭记录集 try{ rs.close() ; }catch(SQLException e){ e.printStackTrace() ; } } if(stmt != null){ // 关闭声明 try{ stmt.close() ; }catch(SQLException e){ e.printStackTrace() ; } } if(conn != null){ // 关闭连接对象 try{ conn.close() ; }catch(SQLException e){ e.printStackTrace() ; } }</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JDBC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>摩拜、小黄车月卡免费领-20171009</title>
+      <link href="/%E5%B0%8F%E7%A6%8F%E5%88%A9/338.html"/>
+      <url>/%E5%B0%8F%E7%A6%8F%E5%88%A9/338.html</url>
+      
+        <content type="html"><![CDATA[<p>摩拜、小黄车月卡免费领-20171009 摩拜</p><p> <a href="https://event.mobike.com/mc/?src=jtgb">https://event.mobike.com/mc/?src=jtgb</a> <a href="https://event.mobike.com/mc/?src=zgnyyh">https://event.mobike.com/mc/?src=zgnyyh</a> <a href="https://event.mobike.com/mc/?src=gxzq">https://event.mobike.com/mc/?src=gxzq</a> <a href="https://event.mobike.com/mc/?src=mydy">https://event.mobike.com/mc/?src=mydy</a> <a href="https://event.mobike.com/mc/?src=gmxhk">https://event.mobike.com/mc/?src=gmxhk</a> <a href="https://event.mobike.com/mc/?src=dybh">https://event.mobike.com/mc/?src=dybh</a> <a href="https://event.mobike.com/mc/">https://event.mobike.com/mc/</a>? OFO <a href="https://common.ofo.so/newdist/?MouthCardPage=&amp;channel=21323_1503563975517&amp;type=2&amp;duringType=1&amp;subType=13341283&amp;from=singlemessage&amp;isappinstalled=0">https://common.ofo.so/newdist/?MouthCardPage=&amp;channel=21323_1503563975517&amp;type=2&amp;duringType=1&amp;subType=13341283&amp;from=singlemessage&amp;isappinstalled=0</a> <a href="https://common.ofo.so/newdist/?MouthCardPage=&amp;channel=954_1504577697253&amp;type=2&amp;duringType=1&amp;subType=37186985&amp;from=singlemessage">https://common.ofo.so/newdist/?MouthCardPage=&amp;channel=954_1504577697253&amp;type=2&amp;duringType=1&amp;subType=37186985&amp;from=singlemessage</a> <a href="https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502951390188&amp;type=2&amp;duringType=1&amp;subType=27276995">https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502951390188&amp;type=2&amp;duringType=1&amp;subType=27276995</a> <a href="https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502849545428&amp;type=2&amp;duringType=1&amp;subType=45128140">https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502849545428&amp;type=2&amp;duringType=1&amp;subType=45128140</a> <a href="https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1503115957682&amp;type=2&amp;duringType=1&amp;subType=99911062">https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1503115957682&amp;type=2&amp;duringType=1&amp;subType=99911062</a> <a href="https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502848591686&amp;type=2&amp;duringType=1&amp;subType=60279234">https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502848591686&amp;type=2&amp;duringType=1&amp;subType=60279234</a> <a href="https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502896052247&amp;type=2&amp;duringType=1&amp;subType=54976839">https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502896052247&amp;type=2&amp;duringType=1&amp;subType=54976839</a> <a href="https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502866729702&amp;type=2&amp;duringType=1&amp;subType=12209636">https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502866729702&amp;type=2&amp;duringType=1&amp;subType=12209636</a> <a href="https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502943014209&amp;type=2&amp;duringType=1&amp;subType=48759012">https://common.ofo.so/newdist/?MouthCardPage&amp;channel=21323_1502943014209&amp;type=2&amp;duringType=1&amp;subType=48759012</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 小福利 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ofo </tag>
+            
+            <tag> 小黄车 </tag>
+            
+            <tag> 摩拜 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>新手入门脱壳简单介绍</title>
+      <link href="/%E7%A0%B4%E8%A7%A3/333.html"/>
+      <url>/%E7%A0%B4%E8%A7%A3/333.html</url>
+      
+        <content type="html"><![CDATA[<p>壳的分类：压缩壳、加密壳 脱壳的基本方法： 1。单步 2。ESP定律 3。内存镜像 4。模拟跟踪（2类）   5。最后一次异常 1）SFX跟踪 2）tc eip&lt;XXXX 6。特殊 常见语言的入口点：</p><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> VB：</span><br><span class="line"></span><br><span class="line"><span class="number">004012</span>D4 &gt; <span class="number">68</span> <span class="number">54474000</span> push QQ个性网.<span class="number">00404754</span></span><br><span class="line"><span class="number">004012</span>D9 E8 F0FFFFFF <span class="keyword">call</span> &lt;jmp.&amp;MSVBVM60.#<span class="number">100</span>&gt;</span><br><span class="line"><span class="number">004012</span>DE <span class="number">0000</span> add <span class="type">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E0</span> <span class="number">0000</span> add <span class="type">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E2</span> <span class="number">0000</span> add <span class="type">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E4</span> <span class="number">3000</span> <span class="built_in">xor</span> <span class="type">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E6</span> <span class="number">0000</span> add <span class="type">byte</span> ptr ds:\[eax\],al</span><br><span class="line"><span class="number">004012E8</span> <span class="number">48</span> dec eax</span><br></pre></td></tr></table></figure><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">delphi:</span></span><br><span class="line"></span><br><span class="line"><span class="number">004</span>A5C54 &gt; <span class="number">55</span> push ebp</span><br><span class="line"><span class="number">004</span>A5C55 <span class="number">8</span>BEC mov ebp,esp</span><br><span class="line"><span class="number">004</span>A5C57 <span class="number">83</span>C4 F0 add esp,-<span class="number">10</span></span><br><span class="line"><span class="number">004</span>A5C5A B8 EC594A00 mov eax,openpro.<span class="number">004</span>A59EC</span><br></pre></td></tr></table></figure><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">BC++:</span><br><span class="line"></span><br><span class="line"><span class="number">00401678</span> &gt; /EB <span class="number">10</span> jmp <span class="type">short</span> btengine.<span class="number">0040168</span>A</span><br><span class="line"><span class="number">0040167</span>A |<span class="number">66</span>:<span class="number">623</span>A bound di,dword ptr ds:\[edx\]</span><br><span class="line"><span class="number">0040167</span>D |<span class="number">43</span> inc ebx</span><br><span class="line"><span class="number">0040167</span>E |<span class="number">2</span>B2B <span class="keyword">sub</span> ebp,dword ptr ds:\[ebx\]</span><br><span class="line"><span class="number">00401680</span> |<span class="number">48</span> dec eax</span><br><span class="line"><span class="number">00401681</span> |<span class="number">4</span>F dec edi</span><br><span class="line"><span class="number">00401682</span> |<span class="number">4</span>F dec edi</span><br><span class="line"><span class="number">00401683</span> |<span class="number">4</span>B dec ebx</span><br><span class="line"><span class="number">00401684</span> |<span class="number">90</span> nop</span><br><span class="line"><span class="number">00401685</span> -|E9 <span class="number">98005400</span> jmp <span class="number">00941722</span></span><br><span class="line"><span class="number">0040168</span>A \\A1 <span class="number">8</span>B005400 mov eax,dword ptr ds:\[<span class="number">54008</span>B\]</span><br><span class="line"><span class="number">0040168</span>F C1E0 <span class="number">02</span> shl eax,<span class="number">2</span></span><br><span class="line"><span class="number">00401692</span> A3 <span class="number">8</span>F005400 mov dword ptr ds:\[<span class="number">54008</span>F\],eax</span><br><span class="line"><span class="number">00401697</span> <span class="number">52</span> push edx</span><br><span class="line"><span class="number">00401698</span> <span class="number">6</span>A <span class="number">00</span> push <span class="number">0</span></span><br><span class="line"><span class="number">0040169</span>A E8 <span class="number">99</span>D01300 <span class="keyword">call</span> &lt;jmp.&amp;KERNEL32.GetModuleHandleA&gt;</span><br><span class="line"><span class="number">0040169</span>F <span class="number">8</span>BD0 mov edx,eax</span><br></pre></td></tr></table></figure>  <span id="more"></span><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">VC++:</span><br><span class="line"></span><br><span class="line"><span class="number">0040</span>A41E &gt; <span class="number">55</span> push ebp</span><br><span class="line"><span class="number">0040</span>A41F <span class="number">8</span>BEC mov ebp,esp</span><br><span class="line"><span class="number">0040</span>A421 <span class="number">6</span>A FF push -<span class="number">1</span></span><br><span class="line"><span class="number">0040</span>A423 <span class="number">68</span> C8CB4000 push 跑跑排行.<span class="number">0040</span>CBC8</span><br><span class="line"><span class="number">0040</span>A428 <span class="number">68</span> A4A54000 push &lt;jmp.&amp;MSVCRT.\_except\_handler3&gt;</span><br><span class="line"><span class="number">0040</span>A42D <span class="number">64</span>:A1 <span class="number">00000000</span> mov eax,dword ptr fs:\[<span class="number">0</span>\]</span><br><span class="line"><span class="number">0040</span>A433 <span class="number">50</span> push eax</span><br><span class="line"><span class="number">0040</span>A434 <span class="number">64</span>:<span class="number">8925</span> <span class="number">0000000</span>&gt;mov dword ptr fs:\[<span class="number">0</span>\],esp</span><br><span class="line"><span class="number">0040</span>A43B <span class="number">83</span>EC <span class="number">68</span> <span class="keyword">sub</span> esp,<span class="number">68</span></span><br><span class="line"><span class="number">0040</span>A43E <span class="number">53</span> push ebx</span><br><span class="line"><span class="number">0040</span>A43F <span class="number">56</span> push esi</span><br><span class="line"><span class="number">0040</span>A440 <span class="number">57</span> push edi</span><br></pre></td></tr></table></figure><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">MASM(汇编):</span><br><span class="line"></span><br><span class="line"><span class="number">004035</span>C9 &gt; <span class="number">6</span>A <span class="number">00</span> push <span class="number">0</span></span><br><span class="line"><span class="number">004035</span>CB E8 A20A0000 <span class="keyword">call</span> &lt;jmp.&amp;kernel32.GetModuleHandleA&gt;</span><br><span class="line"><span class="number">004035</span>D0 A3 <span class="number">5</span>B704000 mov dword ptr ds:\[<span class="number">40705</span>B\],eax</span><br><span class="line"><span class="number">004035</span>D5 <span class="number">68</span> <span class="number">80000000</span> push <span class="number">80</span></span><br><span class="line"><span class="number">004035</span>DA <span class="number">68</span> <span class="number">2</span>C754000 push <span class="number">11.0040752</span>C</span><br><span class="line"><span class="number">004035</span>DF FF35 <span class="number">5</span>B704000 push dword ptr ds:\[<span class="number">40705</span>B\]</span><br><span class="line"><span class="number">004035E5</span> E8 <span class="number">820</span>A0000 <span class="keyword">call</span> &lt;jmp.&amp;kernel32.GetModuleFileNameA&gt;</span><br><span class="line"><span class="number">004035</span>EA E8 <span class="number">87070000</span> <span class="keyword">call</span> <span class="number">11.00403D</span>76</span><br><span class="line"><span class="number">004035</span>EF <span class="number">6</span>A <span class="number">00</span> push <span class="number">0</span></span><br><span class="line"><span class="number">004035</span>F1 <span class="number">68</span> <span class="number">0</span>B364000 push <span class="number">11.0040360</span>B</span><br><span class="line"><span class="number">004035</span>F6 <span class="number">6</span>A <span class="number">00</span> push <span class="number">0</span></span><br><span class="line"><span class="number">004035</span>F8 <span class="number">6</span>A <span class="number">64</span> push <span class="number">64</span></span><br><span class="line"><span class="number">004035</span>FA FF35 <span class="number">5</span>B704000 push dword ptr ds:\[<span class="number">40705</span>B\]</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 破解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 脱壳 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript（js）监听兼容优化代码</title>
+      <link href="/%E5%89%8D%E7%AB%AF/328.html"/>
+      <url>/%E5%89%8D%E7%AB%AF/328.html</url>
+      
+        <content type="html"><![CDATA[<p>关于js监听代码与兼容  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//添加事件监听兼容函数  </span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">addHandler</span>(<span class="params">target, eventType, handler</span>)&#123;  </span><br><span class="line">    <span class="keyword">if</span>(target.<span class="property">addEventListener</span>)&#123;<span class="comment">//主流浏览器  </span></span><br><span class="line">        addHandler = <span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)&#123;  </span><br><span class="line">            target.<span class="title function_">addEventListener</span>(eventType, handler, <span class="literal">false</span>);  </span><br><span class="line">        &#125;;  </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;<span class="comment">//IE  </span></span><br><span class="line">        addHandler = <span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)&#123;  </span><br><span class="line">            target.<span class="title function_">attachEvent</span>(<span class="string">&quot;on&quot;</span>+eventType, handler);  </span><br><span class="line">        &#125;;        </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="comment">//执行新的函数  </span></span><br><span class="line">    <span class="title function_">addHandler</span>(target, eventType, handler);  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">// //删除事件监听兼容函数  </span></span><br><span class="line"><span class="comment">// function removeHandler(target, eventType, handler)&#123;  </span></span><br><span class="line"><span class="comment">//     if(target.removeEventListener)&#123;//主流浏览器  </span></span><br><span class="line"><span class="comment">//         removeHandler = function(target, eventType, handler)&#123;  </span></span><br><span class="line"><span class="comment">//             target.removeEventListener(eventType, handler, false);  </span></span><br><span class="line"><span class="comment">//         &#125;         </span></span><br><span class="line"><span class="comment">//     &#125;else&#123;//IE  </span></span><br><span class="line"><span class="comment">//         removeHandler = function(target, eventType, handler)&#123;  </span></span><br><span class="line"><span class="comment">//             target.detachEvent(&quot;on&quot;+eventType, handler);  </span></span><br><span class="line"><span class="comment">//         &#125;         </span></span><br><span class="line"><span class="comment">//     &#125;  </span></span><br><span class="line"><span class="comment">//     //执行新的函数  </span></span><br><span class="line"><span class="comment">//     removeHandler(target, eventType, handler);  </span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="title function_">addHandler</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;xzlx&quot;</span>),<span class="string">&quot;click&quot;</span>,<span class="keyword">function</span>(<span class="params">event</span>)&#123;</span><br><span class="line"><span class="keyword">var</span> target=event.<span class="property">target</span>;</span><br><span class="line"><span class="keyword">if</span>(target.<span class="property">value</span>==<span class="string">&quot;website&quot;</span>)&#123;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;wenzzh&quot;</span>).<span class="property">style</span>.<span class="property">display</span>=<span class="string">&quot;none&quot;</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;wanzzh&quot;</span>).<span class="property">style</span>.<span class="property">display</span>=<span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(target.<span class="property">value</span>==<span class="string">&quot;article&quot;</span>)&#123;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;wenzzh&quot;</span>).<span class="property">style</span>.<span class="property">display</span>=<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;wanzzh&quot;</span>).<span class="property">style</span>.<span class="property">display</span>=<span class="string">&quot;none&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+            <tag> js </tag>
+            
+            <tag> 监听兼容 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>myeclipse2014相关配置（2017/8/13）</title>
+      <link href="/Java%E7%AC%94%E8%AE%B0/314.html"/>
+      <url>/Java%E7%AC%94%E8%AE%B0/314.html</url>
+      
+        <content type="html"><![CDATA[<p>1.jsp默认打开方式修改 使用Myeclipse开发web项目，编辑jsp页面时，会打开它的默认编辑器页面，同时也有预览页面，直接修改成code模式。 方法：window-preference-General-editor-Editors-File Associations-（右侧）File types 选中*.jsp ,下面 Associatted editors  选中myeclipse jsp editor 默认。具体设置如图： <a href="https://lice.cc/wp-content/uploads/2017/08/0813215012.png"><img src="https://lice.cc/wp-content/uploads/2017/08/0813215012-269x300.png" alt="myeclipse配置"></a> 2.等待更新</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> myeclipse </tag>
+            
+            <tag> myeclipse2014 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java中 @ page指令语法介绍</title>
+      <link href="/Java%E7%AC%94%E8%AE%B0/310.html"/>
+      <url>/Java%E7%AC%94%E8%AE%B0/310.html</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="meta">@page</span> \[language=<span class="string">&quot;Java&quot;</span>\] \[extends=<span class="string">&quot;package.class&quot;</span>\] \[<span class="keyword">import</span>=<span class="string">&quot;package.class|package.*,...&quot;</span>\] \[session=<span class="string">&quot;true|false&quot;</span>\] \[buffer=<span class="string">&quot;none|8KB|size Kb&quot;</span>\] \[autoFlush=<span class="string">&quot;true|false&quot;</span>\] \[isThreadSafe=<span class="string">&quot;true|false&quot;</span>\] \[info=<span class="string">&quot;text&quot;</span>\] \[errorPage=<span class="string">&quot;relativeURL&quot;</span>\] \[contentType=<span class="string">&quot;mimeType\[;charset=characterSet\]&quot;</span>|<span class="string">&quot;text/html;charSet=ISO-8859-1&quot;</span>\] \[pageEncoding=<span class="string">&quot;ISO-8859-1&quot;</span>\] \[isErrorPage=<span class="string">&quot;true|false&quot;</span>\] %&gt;</span><br></pre></td></tr></table></figure><p> language：声明当前JSP页面使用的脚本语言 extends：指定JSP页面编译所产生的Java类所继承的父类，或所实现的接口。 import：导入包。 session：设定是否需要HTTP Session。 buffer：指定缓存区大小。 autoFlush：当输出缓冲区即将溢出时，是否需要强制输出缓冲区的内容。true-正常输出；false-溢出时产生异常。 info：设置JSP程序的信息，可以通过Servlet.getServletInfo()方法获取。 errorPage：指定错误处理页面。 isErrorPage：设置本页是否为错误处理程序。如果是处理页面，不需设置errorPage。 contentType：设法网页的文件格式和编码字符集。默认MIME类型是text/html。 pageEncoding：指定网页的编码字符集。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>sublime text 2/3 相关快捷方式。</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/306.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/306.html</url>
+      
+        <content type="html"><![CDATA[<p>sublime text 2/3 相关快捷方式。 [caption id=”attachment_307” align=”alignleft” width=”256”][<img src="https://lice.cc/wp-content/uploads/2017/07/sublime_text1.png" alt="sublime_text[1]](https://lice.cc/wp-content/uploads/2017/07/sublime_text1.png)"> sublime_text[/caption]</p><p>快捷键</p><p>功能</p><p>ctrl+shift+n</p><p>打开新Sublime</p><p>ctrl+shift+w</p><p>关闭Sublime，关闭所有打开文件</p><p>ctrl+shift+t</p><p>重新打开最近关闭文件</p><p>ctrl+n</p><p>新建文件</p><p>ctrl+s</p><p>保存</p><p>ctrl+shift+s</p><p>另存为</p><p>ctrl+f4</p><p>关闭文件</p><p>ctrl+w</p><p>关闭</p><p>ctrl+k, ctrl+b</p><p>切换侧边栏显示状态</p><p>f11</p><p>切换全屏状态</p><p>shift+f11</p><p>免打扰模式状态切换</p><p>backspace</p><p>删除左侧</p><p>shift+backspace</p><p>左侧删除</p><p>ctrl+shift+backspace</p><p>左侧全部删除</p><p>delete</p><p>右侧删除</p><span id="more"></span><p>enter</p><p>插入</p><p>shift+enter</p><p>插入</p><p>ctrl+z</p><p>撤消</p><p>ctrl+shift+z</p><p>重做</p><p>ctrl+y</p><p>重做或重复</p><p>ctrl+u</p><p>软撤消</p><p>ctrl+shift+u</p><p>软重做</p><p>ctrl+shift+v</p><p>粘贴并格式化</p><p>shift+delete</p><p>剪切</p><p>ctrl+insert</p><p>拷贝</p><p>shift+insert</p><p>粘贴</p><p>ctrl+x</p><p>剪切</p><p>ctrl+c</p><p>拷贝</p><p>ctrl+v</p><p>粘贴</p><p>left</p><p>移动</p><p>right</p><p>移动</p><p>up</p><p>移动</p><p>down</p><p>移动</p><p>shift+left</p><p>移动并选择</p><p>shift+right</p><p>移动并选择</p><p>shift+up</p><p>移动并选择</p><p>shift+down</p><p>移动并选择</p><p>ctrl+left</p><p>按\w规则移动（跳跃）</p><p>ctrl+right</p><p>按\w规则移动（跳跃）</p><p>ctrl+shift+left</p><p>按\w规则移动并选择（跳跃）</p><p>ctrl+shift+right</p><p>按\w规则移动并选择（跳跃）</p><p>alt+left</p><p>按单词移动</p><p>alt+right</p><p>按单词移动</p><p>alt+shift+left</p><p>按单词移动并选择</p><p>alt+shift+right</p><p>按单词移动并选择</p><p>ctrl+alt+up</p><p>选择多行进行编辑</p><p>ctrl+alt+down</p><p>选择多行进行编辑</p><p>pageup</p><p>移动</p><p>pagedown</p><p>移动</p><p>shift+pageup</p><p>移动+选择</p><p>shift+pagedown</p><p>移动+选择</p><p>home</p><p>移动到行首</p><p>end</p><p>移动到行尾</p><p>shift+home</p><p>选择到行首</p><p>shift+end</p><p>选择到行尾</p><p>ctrl+home</p><p>移动到页首行头</p><p>ctrl+end</p><p>移动到页尾行尾</p><p>ctrl+shift+home</p><p>选择到页首行头</p><p>ctrl+shift+end</p><p>选择到页尾行尾</p><p>ctrl+up</p><p>滚动行</p><p>ctrl+down</p><p>滚动行</p><p>ctrl+pagedown</p><p>下一视图（视觉位置）</p><p>ctrl+pageup</p><p>前一视图</p><p>ctrl+tab</p><p>栈中下一视图（打开顺序）</p><p>ctrl+shift+tab</p><p>栈中前一视图</p><p>ctrl+a</p><p>全选</p><p>ctrl+shift+l</p><p>选择多行编辑</p><p>escape</p><p>单个选择</p><p>escape</p><p>清除字段</p><p>escape</p><p>清除字段</p><p>escape</p><p>隐藏面板</p><p>escape</p><p>hide overlay</p><p>escape</p><p>hide auto complete</p><p>tab</p><p>insert best completion</p><p>tab</p><p>insert best completion</p><p>tab</p><p>replace completion with next completion</p><p>tab</p><p>reindent</p><p>tab</p><p>indent</p><p>tab</p><p>next field</p><p>tab</p><p>commit completion</p><p>shift+tab</p><p>insert</p><p>shift+tab</p><p>unindent</p><p>shift+tab</p><p>unindent</p><p>shift+tab</p><p>unindent</p><p>shift+tab</p><p>prev field</p><p>ctrl+]</p><p>缩进</p><p>ctrl+[</p><p>不缩进</p><p>insert</p><p>toggle overwrite</p><p>ctrl+l</p><p>选择行，重复可依次增加选择下一行</p><p>ctrl+d</p><p>选择单词，重复可增加选择下一个相同的单词</p><p>ctrl+k, ctrl+d</p><p>find under expand skip</p><p>ctrl+shift+space</p><p>expand selection</p><p>ctrl+shift+m</p><p>expand selection</p><p>ctrl+m</p><p>跳转到对应括号</p><p>ctrl+shift+j</p><p>expand selection</p><p>ctrl+shift+a</p><p>expand selection</p><p>alt+.</p><p>close tag</p><p>ctrl+q</p><p>toggle record macro</p><p>ctrl+shift+q</p><p>run macro</p><p>ctrl+enter</p><p>run macro file</p><p>ctrl+shift+enter</p><p>在当前行前插入新行</p><p>enter</p><p>commit completion</p><p>ctrl+p</p><p>搜索项目中的文件</p><p>ctrl+shift+p</p><p>打开命令面板</p><p>ctrl+alt+p</p><p>prompt select project</p><p>ctrl+r</p><p>前往Method</p><p>ctrl+g</p><p>跳转到第几行</p><p>ctrl+;</p><p>show overlay</p><p>ctrl+i</p><p>show panel</p><p>ctrl+shift+i</p><p>show panel</p><p>ctrl+f</p><p>查找</p><p>ctrl+h</p><p>查找替换</p><p>ctrl+shift+h</p><p>查找替换下一个</p><p>f3</p><p>下一个匹配项</p><p>shift+f3</p><p>上一个匹配项</p><p>ctrl+f3</p><p>下一个匹配项</p><p>ctrl+shift+f3</p><p>find under prev</p><p>alt+f3</p><p>find all under</p><p>ctrl+e</p><p>slurp find string</p><p>ctrl+shift+e</p><p>slurp replace string</p><p>ctrl+shift+f</p><p>show panel</p><p>f4</p><p>next result</p><p>shift+f4</p><p>prev result</p><p>f6</p><p>toggle setting</p><p>ctrl+f6</p><p>next misspelling</p><p>ctrl+shift+f6</p><p>prev misspelling</p><p>ctrl+shift+up</p><p>swap line up</p><p>ctrl+shift+down</p><p>swap line down</p><p>ctrl+backspace</p><p>delete word</p><p>ctrl+shift+backspace</p><p>run macro file</p><p>ctrl+delete</p><p>delete word</p><p>ctrl+shift+delete</p><p>run macro file</p><p>ctrl+/</p><p>当前行注释状态切换</p><p>ctrl+shift+/</p><p>当前位置注释状态切换</p><p>ctrl+j</p><p>选择标签内容，将后继行附加到行尾</p><p>ctrl+shift+d</p><p>duplicate line</p><p>ctrl+`</p><p>show panel</p><p>ctrl+space</p><p>auto complete</p><p>ctrl+space</p><p>replace completion with auto complete</p><p>ctrl+alt+shift+p</p><p>show scope name</p><p>f7</p><p>build</p><p>ctrl+b</p><p>build</p><p>ctrl+shift+b</p><p>build</p><p>ctrl+break</p><p>exec</p><p>ctrl+t</p><p>transpose</p><p>f9</p><p>行排序</p><p>ctrl+f9</p><p>行排序</p><p>// Auto-pair quotes</p><p>\</p><p>insert snippet</p><p>\</p><p>insert snippet</p><p>\</p><p>move</p><p>backspace</p><p>run macro file</p><p>// Auto-pair single quotes</p><p>‘</p><p>insert snippet</p><p>‘</p><p>insert snippet</p><p>‘</p><p>move</p><p>backspace</p><p>run macro file</p><p>// Auto-pair brackets</p><p>(</p><p>insert snippet</p><p>(</p><p>insert snippet</p><p>)</p><p>move</p><p>backspace</p><p>run macro file</p><p>// Auto-pair square brackets</p><p>[</p><p>insert snippet</p><p>[</p><p>insert snippet</p><p>]</p><p>move</p><p>backspace</p><p>run macro file</p><p>// Auto-pair curly brackets</p><p>{</p><p>insert snippet</p><p>{</p><p>insert snippet</p><p>}</p><p>move</p><p>backspace</p><p>run macro file</p><p>enter</p><p>run macro file</p><p>shift+enter</p><p>run macro file</p><p>ctrl+1</p><p>focus group</p><p>ctrl+2</p><p>focus group</p><p>ctrl+3</p><p>focus group</p><p>ctrl+4</p><p>focus group</p><p>ctrl+shift+1</p><p>move to group</p><p>ctrl+shift+2</p><p>move to group</p><p>ctrl+shift+3</p><p>move to group</p><p>ctrl+shift+4</p><p>move to group</p><p>ctrl+0</p><p>focus side bar</p><p>alt+1</p><p>select by index</p><p>alt+2</p><p>select by index</p><p>alt+3</p><p>select by index</p><p>alt+4</p><p>select by index</p><p>alt+5</p><p>select by index</p><p>alt+6</p><p>select by index</p><p>alt+7</p><p>select by index</p><p>alt+8</p><p>select by index</p><p>alt+9</p><p>select by index</p><p>alt+0</p><p>select by index</p><p>f2</p><p>next bookmark</p><p>shift+f2</p><p>prev bookmark</p><p>ctrl+f2</p><p>标记状态切换</p><p>ctrl+shift+f2</p><p>clear bookmarks</p><p>alt+f2</p><p>select all bookmarks</p><p>ctrl+shift+k</p><p>run macro file</p><p>alt+q</p><p>wrap lines</p><p>ctrl+k, ctrl+u</p><p>upper case</p><p>ctrl+k, ctrl+l</p><p>lower case</p><p>ctrl+k, ctrl+space</p><p>set mark</p><p>ctrl+k, ctrl+a</p><p>select to mark</p><p>ctrl+k, ctrl+w</p><p>delete to mark</p><p>ctrl+k, ctrl+x</p><p>swap with mark</p><p>ctrl+k, ctrl+y</p><p>yank</p><p>ctrl+k, ctrl+k</p><p>run macro file</p><p>ctrl+k, ctrl+backspace</p><p>run macro file</p><p>ctrl+k, ctrl+g</p><p>clear bookmarks</p><p>ctrl+k, ctrl+c</p><p>show at center</p><p>ctrl++</p><p>increase font size</p><p>ctrl+=</p><p>increase font size</p><p>ctrl+keypad plus</p><p>increase font size</p><p>ctrl+-</p><p>decrease font size</p><p>ctrl+keypad minus</p><p>decrease font size</p><p>alt+shift+w</p><p>insert snippet</p><p>ctrl+shift+[</p><p>折叠(代码)</p><p>ctrl+shift+]</p><p>不折叠</p><p>ctrl+k, ctrl+1</p><p>按层级折叠(代码），数字是层级数</p><p>ctrl+k, ctrl+2</p><p>按层级折叠(代码），数字是层级数</p><p>ctrl+k, ctrl+3</p><p>按层级折叠(代码），数字是层级数</p><p>ctrl+k, ctrl+4</p><p>按层级折叠(代码），数字是层级数</p><p>ctrl+k, ctrl+5</p><p>按层级折叠(代码），数字是层级数</p><p>ctrl+k, ctrl+6</p><p>按层级折叠(代码），数字是层级数</p><p>ctrl+k, ctrl+7</p><p>按层级折叠(代码），数字是层级数</p><p>ctrl+k, ctrl+8</p><p>按层级折叠(代码），数字是层级数</p><p>ctrl+k, ctrl+9</p><p>按层级折叠(代码），数字是层级数</p><p>ctrl+k, ctrl+0</p><p>unfold all</p><p>ctrl+k, ctrl+j</p><p>unfold all</p><p>ctrl+k, ctrl+t</p><p>fold tag attributes</p><p>context menu</p><p>context menu</p><p>alt+c</p><p>toggle case sensitive</p><p>alt+r</p><p>toggle regex</p><p>alt+w</p><p>toggle whole word</p><p>alt+a</p><p>toggle preserve case</p><p>// 查找面板的按键绑定</p><p>enter</p><p>向后查找</p><p>shift+enter</p><p>向前查找</p><p>alt+enter</p><p>查找全部</p><p>// 替换面板的按键绑定</p><p>enter</p><p>查找下一个</p><p>shift+enter</p><p>查找前一个</p><p>alt+enter</p><p>查找全部</p><p>ctrl+alt+enter</p><p>替换全部</p><p>// Incremental find panel key bindings</p><p>enter</p><p>hide panel</p><p>shift+enter</p><p>find prev</p><p>alt+enter</p><p>find all</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> sublime </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Fastboot刷机：常说的线刷</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/304.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/304.html</url>
+      
+        <content type="html"><![CDATA[<p>昨天我的lenovo a320t 在升级系统的时候出现错误导致变砖了，本来想用卡刷，但是发现并没有cd卡。无奈。电源键+音量减键 发现可以fastboot模式。直接设置，插上数据线，但是通过命令发现没鸟用，没办法只能从网上下载fastboot 的驱动。</p><p>将下载好的驱动和boot.img system.img 放到一个文件夹里。<br>cmd<br>cd 你驱动和系统所在文件夹</p><blockquote><p>fastboot devices   \\查看连接电脑的设备命令：<br>fastboot flash boot boot.img \\刷boot<br>fastboot flash system system.img  \\刷system<br>fastboot reboot \\重启手机<br>此时手机会重启，拔掉数据线就可以了。<br>当然还有很多命令，但是刷机的话这两条命令足够了。</p></blockquote><p>下面是一些相关命令。</p><p>一、常用命令:<br>1、先进入fastboot文件所在目录；<br>2、输入fastboot.exe启动fastboot；<br>3、查看连接电脑的设备命令：fastboot devices；<br>4、删除recover、boot、system命令：fastboot erase recovery；<br>5、只需将boot.img和system.img刷入系统即可完成系统的刷新：fastboot flash recovery cn170.img<br>6、fastboot boot recovery.img（这个不是刷入recovery，而是进入临时救机的recovery）；</p><p>二、fastboot命令:<br>加载驱动:fastboot devices   //加载fastboot驱动<br>擦除:fastboot erase xxxx    //假如我要擦除RECOVERY 就是:fastboot erase recovery<br>刷BOOT:fastboot flash boot boot.img<br>临时刷recovery:fastboot boot recovery.img</p><p>刷system：fastboot flash system system.img<br>刷系统：fastboot flash userdata userdata.Img<br>刷系统：fastboot flash recovery recovery.img<br>刷SPL：fastboot flash hboot hboot.img<br>刷RADIO：fastboot flash radio radio.img<br>重启：fastboot reboot</p><p>推送文件到系统文件夹：adb push Mms.apk /system/app</p><span id="more"></span><p>三、分区解释:<br>system:系统分区.<br>userdata:数据分区.<br>cache:缓存分区<br>recovery:Recovery分区.<br>boot:存放内核和ramdisk的分区。<br>hboot:这个是SPL所在的分区.很重要哦.也是fastboot所在的分区.刷错就真的变砖了.<br>splash1:这个就是开机第一屏幕了.<br>radio:这个是radio所在的分区；</p><p>四、fastboot知识点总结：<br>android的分区知识：<br>splash1：开机画面，使用Nandroid backup备份系统后的文件为splash1.img<br>recovery：该分区是恢复模式(即开机按Home+power进入的界面)，使用Nandroid backup备份为recovery.img<br>boot：内核启动分区，使用Nandroid backup备份为boot.img<br>system：Android系统部分，目录表示为/system，通常为只读，使用Nandroid backup备份为system.img =<br>cache：缓存文件夹，目录表示为/cache，事实上除了T-mobile的OTA更新外，别无用处，使用Nandroid backup备份为cache.img<br>userdata：用户安装的软件以及各种数据，目录为/data，使用Nandroid backup备份为data.img</p><p>因此对于刷机一般可以这么理解：<br>1. 修改开机画面, 修改的是splash1<br>2. root时刷的是所有分区<br>3. 刷test_keys，更新的应该是recovery<br>4. 使用update.zip刷是更新boot、system<br>5. 恢复出厂设置, 清空的是userdata和cache<br>明白这些之后就很好理解,一般无须更新recovery.IMG,正常情况下只需要更新BOOT和SYSTEM即可.但依我看来这两者是相互依存而不可分割的.好下面开始说刷机步骤。<br>进入手机的SPL模式（power+相机） ,且驱动已经安装。<br>驱动已经以附件上传,若在我的电脑设备管理中发现此情况,图1亦是未正确安装驱动,只需要右键更新驱动,且指向你从我这里下载的驱动即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活DAY </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2016年最后一天，杂记</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/301.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/301.html</url>
+      
+        <content type="html"><![CDATA[<p>2016年的最后一天，谈谈我的收获。 给诺亚看了看眼，确定在家配的眼镜没有什么问题，不错。解决了我的担心问题。 看完之后在我边上拿着《十万个为什么》在那里给我一个劲的提问，我觉的这是非常幼稚的，但我只答对一道题。 好了 ，不写了，一直在我问题，一个也没打对的问题！我太悲惨了！+_+</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活DAY </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LNMP安装了哪些软件？安装目录在哪？</title>
+      <link href="/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/298.html"/>
+      <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/298.html</url>
+      
+        <content type="html"><![CDATA[<p>LNMP一键安装包除去安装所必须的依赖包，还会默认安装以下软件： Nginx、MySQL/MariaDB、PHP、phpMyAdmin、Zend Optimizer/Zend GuardLoader。用户可以根据自己的需要安装其他组件，如FTP服务器、缓存组件，也可以使用升级脚本对Nginx、MySQL、PHP进行升级。 <strong>安装这些组件或升级都需要在lnmp下载解压缩后的目录，比如下载到/root目录，就进入/root/lnmp1.2-full目录，执行以下命令。</strong> <strong>虚拟主机管理：</strong></p><p>参见：</p><p><a href="http://lnmp.org/faq/lnmp-vhost-add-howto.html">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a><strong>FTP服务器：</strong></p><ul><li>可选1，<a href="https://lnmp.org/faq/ftpserver.html">PureFTPd</a>，执行：./pureftpd.sh 安装，<a href="http://yourIP/ftp/">http://yourIP/ftp/</a> 进行管理。</li><li>可选2(LNMP1.2下已经移除该脚本)，<a href="https://lnmp.org/faq/ftpserver.html">Proftpd</a>，执行：./proftpd.sh 安装，执行命令：/root/proftpd_vhost.sh 添加FTP账号。</li></ul><p><strong>缓存加速：</strong></p><p>LNMP1.2及更高版本统一使用./addons.sh 进行安装和卸载。 使用方法：./addons.sh {install|uninstall} {eaccelerator|xcache|memcached|opcache|redis|imagemagick|ioncube} 详细教程：</p><p><a href="http://lnmp.org/faq/addons.html">http://lnmp.org/faq/addons.html</a></p><p>LNMP1.1下：*   可选1，<a href="https://lnmp.org/faq/Add-ons.html#eAccelerator">eAccelerator</a>，执行：./eaccelerator.sh 安装。</p><ul><li>可选2，<a href="https://lnmp.org/faq/Add-ons.html#memcached">memcached</a>，执行：./memcached.sh安装。</li><li>可选3，<a href="https://lnmp.org/faq/Add-ons.html#xcache">xcache</a>，安装时需选择版本和设置密码， <a href="http://yourIP/xcache/">http://yourIP/xcache/</a> 进行管理，用户名 admin，密码为安装xcache时设置的。执行：./xcache.sh安装。</li><li>可选4，<a href="https://lnmp.org/faq/Add-ons.html#redis">redis</a>，执行：./redis.sh安装。</li><li>可选5，<a href="https://lnmp.org/faq/Add-ons.html#opcache">opcache</a>，执行：opcache.sh安装。<a href="http://yourIP/ocp.php">http://yourIP/ocp.php</a> 进行管理。Zend Opcache与eaccelerator相冲突，需卸载eaccelerator。</li></ul><p>LNMP1.2及更高版本： 统一使用./upgrade.sh 进行升级工作。 使用方法：./upgrade.sh {nginx|mysql|mariadb|m2m|php|phpa} 详细教程：<a href="http://lnmp.org/faq/lnmp1-2-upgrade.html">http://lnmp.org/faq/lnmp1-2-upgrade.html</a> LNMP1.1下： <strong>升级脚本：</strong></p><ul><li><a href="https://lnmp.org/faq/upgrade.html">Nginx升脚本可</a>，升级至任意Nginx版本。执行：./upgrade_nginx.sh 按提示进行升级。</li><li><a href="https://lnmp.org/faq/upgrade.html">PHP升级脚本</a>，可升级至大部分PHP版本。执行：./upgrade_php.sh 按提示进行升级。</li><li><a href="https://lnmp.org/faq/upgrade.html">MySQL升级脚本</a>，可升级至任意MySQL版本，MySQL升级风险较大，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql.sh 按提示进行升级。</li><li><a href="https://lnmp.org/faq/upgrade.html">MySQL升级至MariaDB</a>，可从MySQL升级至Mariadb，虽然会自动备份数据，建议自行再备份一下。执行：./upgrade_mysql2mariadb.sh 按提示进行升级。</li><li><a href="https://lnmp.org/faq/upgrade.html">MariaDB升级脚本</a>，可升级已安装的Mariadb，虽然会自动备份数据，依然建议自行再备份一下。执行：./upgrade_mariadb.sh 按提示进行升级。</li><li><a href="https://lnmp.org/faq/upgrade.html">LNMPA PHP升级脚本</a>，可升级LNMPA的PHP至大部分版本。执行：./upgrade_lnmpa_php.sh 按提示进行升级。</li></ul><p><strong>图像处理：</strong></p><ul><li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#imageMagick">imageMagick</a>，执行：./imageMagick.sh 安装。 执行：./imageMagick.sh 安装，imageMagick路径：/usr/local/imagemagick/bin/。</li></ul><p><strong>解密：</strong></p><ul><li>可选1，<a href="https://lnmp.org/faq/Add-ons.html#ionCube">ionCube</a>，执行：./ionCube.sh 安装。</li></ul><p><strong>其他：</strong></p><ul><li>可选1，执行：./php5.2.17.sh 可安装一个不与LNMP冲突的PHP 5.2.17单独存在，使用时需要将nginx虚拟主机配置文件里的 php-cgi.sock 修改为 php-cgi52.sock。</li><li>可选2，执行：./reset_mysql_root_password.sh 可重置MySQL/MariaDB的root密码。</li><li>可选3，执行：./check502.sh 可检测php-fpm是否挂掉,502报错时重启，配合crontab使用。</li><li>可选4，执行：./cut_nginx_logs.sh 日志切割脚本。</li><li>可选5，执行：./remove_disable_function.sh 运行此脚本可删掉禁用函数。</li></ul><p><strong>LNMP相关软件安装目录</strong> Nginx 目录: /usr/local/nginx/ MySQL 目录 : /usr/local/mysql/ MySQL数据库所在目录：/usr/local/mysql/var/ MariaDB 目录 : /usr/local/mariadb/ MariaDB数据库所在目录：/usr/local/mariadb/var/ PHP目录 : /usr/local/php/ PHPMyAdmin目录 : 0.9版本为/home/wwwroot/phpmyadmin/ 1.0及以后版本为 /home/wwwroot/default/phpmyadmin/ 强烈建议将此目录重命名为其不容易猜到的名字。phpmyadmin可自己从官网下载新版替换。 默认网站目录 : 0.9版本为 /home/wwwroot/ 1.0及以后版本为 /home/wwwroot/default/ Nginx日志目录：/home/wwwlogs/ /root/vhost.sh添加的虚拟主机配置文件所在目录：/usr/local/nginx/conf/vhost/ PureFtpd 目录：/usr/local/pureftpd/ PureFtpd web管理目录： 0.9版为/home/wwwroot/default/ftp/ 1.0版为 /home/wwwroot/default/ftp/ Proftpd 目录：/usr/local/proftpd/ Redis 目录：/usr/local/redis/ <strong>LNMP相关配置文件位置</strong> Nginx主配置(默认虚拟主机)文件：/usr/local/nginx/conf/nginx.conf 添加的虚拟主机配置文件：/usr/local/nginx/conf/vhost/域名.conf MySQL配置文件：/etc/my.cnf PHP配置文件：/usr/local/php/etc/php.ini php-fpm配置文件：/usr/local/php/etc/php-fpm.conf PureFtpd配置文件：/usr/local/pureftpd/pure-ftpd.conf PureFtpd MySQL配置文件：/usr/local/pureftpd/pureftpd-mysql.conf Proftpd配置文件：/usr/local/proftpd/etc/proftpd.conf 1.2及之前版本为/usr/local/proftpd/proftpd.conf Proftpd 用户配置文件：/usr/local/proftpd/etc/vhost/用户名.conf Redis 配置文件：/usr/local/redis/etc/redis.conf <strong>LNMPA相关目录文件位置</strong> Apache目录：/usr/local/apache/ Apache配置文件：/usr/local/apache/conf/httpd.conf Apache虚拟主机配置文件目录：/usr/local/apache/conf/vhost/ Apache默认虚拟主机配置文件：/usr/local/apache/conf/extra/httpd-vhosts.conf 虚拟主机配置文件名称：/usr/local/apache/conf/vhost/域名.conf</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 服务器相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> lnmp </tag>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LNMP 1.2/1.3升级Nginx、MySQL/MariaDB、PHP教程</title>
+      <link href="/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/296.html"/>
+      <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/296.html</url>
+      
+        <content type="html"><![CDATA[<p>一般情况下不建议对生产环境进行升级，升级开始后会停止LNMP相关服务。 本文仅适用于LNMP1.2、1.3及以后版本！ 在LNMP目前LNMP v1.2/1.3中已经包含了Nginx、MySQL/MariaDB、PHP的升级脚本，可以帮助搭建对环境中的程序进行升级。(注意：以下操作均需要在lnmp压缩包解压后的目录里运行)</p><h3 id="一、Nginx升级脚本"><a href="#一、Nginx升级脚本" class="headerlink" title="一、Nginx升级脚本"></a><strong>一、Nginx升级脚本</strong></h3><p>执行：./upgrade.sh nginx 按提示输入版本号后回车（访问 <a href="http://nginx.org/en/download.html">http://nginx.org/en/download.html</a> 可查找nginx的最新版本号和以往旧版本号。如：1.6.0 ），再次回车确认即可开始升级Nginx。<strong>如要升级到1.9.5或更高版本必须使用v1.3里面的升级脚本</strong>。Nginx升级为平滑升级，升级过程不影响nginx的运行。 另外如需添加其他模块可以编辑lnmp.conf 配置文件，在 Nginx_Modules_Options 参数的引号里加其他需要的参数。 lnmp 1.2版修改include/upgrade_nginx.sh文件 在Nginx_Modules_Arguments=”” 参数的双引号里添加需要的其他模块，多个模块参数空格隔开，然后再运行升级即可。 </p><h3 id="二、MySQL升级脚本"><a href="#二、MySQL升级脚本" class="headerlink" title="二、MySQL升级脚本"></a><strong>二、MySQL升级脚本</strong></h3><p>虽然脚本会备份数据，但依然建议先自行备份！ 执行：./upgrade.sh mysql 需要先输入MySQL root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a href="http://dev.mysql.com/downloads/mysql/">http://dev.mysql.com/downloads/mysql/</a> 获取MySQL的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生成mysql_upgrade日期.log的日志文件，供出错时排查。 如升级失败可将/usr/local/oldmysql日期的目录重命名为mysql，并将/etc/下的my.conf.bak.日期的配置文件重命名为my.cnf和/etc/init.d/下的mysql.bak.日期重命名为mysql即可恢复原mysql。(下面MySQL升级至MariaDB及升级MariaDB一样) </p><p><strong>三、MySQL升级至MariaDB脚本</strong> </p><p>MariaDB是MySQL的一个分支，主要由开源社区在维护。MariaDB兼容MySQL，由MySQL创始人主导开发。依然建议先自行备份！ 执行：./upgrade.sh m2m 需要先输入MySQL root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a> 获取MariaDB的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生产mysql2mariadb_upgrade日期.log的日志文件，供出错时排查。 </p><p><strong>四、MariaDB升级脚本</strong> </p><p>依然建议先自行备份！ 执行：./upgrade.sh mariadb 需要先输入MariaDB root密码进行验证，验证不通过将无法进行升级，验证通过后可以到<a href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a> 获取MariaDB的版本号，输入后回车确认，如要启用Innodb，输入y，不确定的话也可以输入输入y 回车确认，再次回车确认即可开始升级。会在/root 目录下生产mariadb_upgrade日期.log的日志文件，供出错时排查。 如升级失败可将/usr/local/oldmariadb日期的目录重命名为mariadb，并将/etc/下的my.conf.bak.日期的配置文件重命名为my.cnf和/etc/init.d/下的mariadb.bak.日期重命名为mariadb即可恢复原mariadb。 </p><p><strong>五、LNMP PHP升级脚本</strong> </p><p>升级PHP前，请确认你的网站程序是否支持升级到的PHP版本，防止升级到网站程序不兼容的PHP版本，具体可以去你使用的PHP程序的官网查询相关版本支持信息。v1.3大部分情况下也可以进行降级操作。 执行：./upgrade.sh php 到<a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> 获取版本号，输入版本号，如5.3.28 回车，再次回车确认即可开始升级。 如需要编译其他参数可以，lnmp 1.3版可以修改lnmp.conf配置文件里的 PHP_Modules_Options 参数的引号里加其他需要的参数。 lnmp 1.2版修改include/upgrade_php.sh文件 在PHP_Modules_Arguments=”” 参数的双引号里添加需要的其他模块，多个模块参数空格隔开，然后再运行升级即可。 </p><p><strong>六、LNMPA/LAMP PHP升级脚本</strong> </p><p>升级PHP前，请确认你的网站程序是否支持升级到的PHP版本，防止升级到网站程序不兼容的PHP版本，具体可以去你使用的PHP程序的官网查询相关版本支持信息。 执行：./upgrade.sh phpa 到<a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> 获取版本号，输入版本号，如5.3.28 回车，再次回车确认即可开始升级。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 服务器相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> lnmp </tag>
+            
+            <tag> Centos </tag>
+            
+            <tag> Nginx </tag>
+            
+            <tag> php </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>windows apache nginx php mysql 服务器配置</title>
+      <link href="/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/291.html"/>
+      <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/291.html</url>
+      
+        <content type="html"><![CDATA[<p>在网上找了很多windows apache nginx php mysql 相关的配置，在这里做个笔记，以后用到的地方来看看。也不是很确定是不是正确的，到时候在百度吧。 </p><p>网上配置服务器教程多如牛毛,但是写的明明白白或者有配图,等你自己去实践你会发现问题还是非常的多,笔者就以双服务器配置演示一次,抛弃我使用很久的集成环境,到写这篇笔记时候,已经完美可以运行项目了,在配置过程中,还是遇到很多问题我都一一列出来,希望你们可以在遇到相同错误有个好的解决方案,在配置之前对于以前安装的集成环境卸载,然后用软件清理完注册表垃圾,什么管家之类都可以,不说名字了.接着去下载Nginx1.2版本windows的zip文件,一般不用msi,zip是绿色软件,重装系统也可以用,接着下载mysql5.5,zip版本,比较大,100多M,压缩版msi小好多,但是zip绿色版更好.</p><p>这里所有软件都是win32位系统版本,windows7旗舰版上边测试的,还有php下载5.2.17,就是VC6编译的zip版本,这里有ts是安全版本,另一版本我在配置apache有问题,所以记住是ts版本,也就是生产环境版本,同时下载对应版本的源代码,这个如果你和我一样,打算用C/C++来开发php扩展,记住一定要下载这个对应版本源代码,否则编译扩展的时候不能成功,接着下载phpmyadmin数据库管理软件包吧,只有几M,选择多语言的,后边使用.还有就是apache服务器,这个我找了半天没有zip版本,只好下载msi版本.准备工作就这么多. </p><p>现在进入正题,先安装哪个呢,我是先解压php到C:/web/php5目录,以后我的开发软件apache,nginx,mysql都在c:/web下面对应文件夹不多说了.网站目录我放到G这个独立盘,所以后边的myphpadmin和mysql数据库data数据都在G盘,最后用thinkphp框架测试是否成功! </p><p>php配置:修改php.ini-recommended为php.ini. 542行extension_dir = “./“改为自己目录C:/web/php5/ext,644-708为模块选择需要的, 去掉前面分号就是启用.这里列出部分,下面列举常用的 extension=php_curl.dll extension=php_gd2.dll extension=php_mbstring.dll extension=php_mssql.dll extension=php_mysql.dll extension=php_mysqli.dll extension=php_sqlite.dll 553行 cgi.force_redirect = 1去掉分号 571行去掉分号cgi.fix_pathinfo=1 588行去掉分号并且改为1 cgi.rfc2616_headers =1 php要改的就这么多记住把php目录也就是php5添加到系统环境变量,不会的就不要往下看了,这样就不用复制到系统目录system32了,因为后边apache配置需要. nginx配置:解压到nginx目录,打开conf\nginx.conf配置文件,44行就是网站目录G:/,在45行添加index.php如:index index.html index.htm index.php; 65-71行去掉#,69行去掉/scripts改成网站目录例如我的G:/ 因我的G盘就是网站目录 接着下载RunHiddenConsole.exe,功能是隐藏cmd窗口的.创建 start_nginx.bat和stop_nginx.bat用来启动和关闭php与nginx,这些cmd的命令后边我会给出下载包,不用你自己写四个功能分别是启动mysql,关闭mysql,启动nginx,关闭nginx,都认识吧.这样就可以启动php了,在G盘新建一个index.php输入 phpinfo()函数查看配置.不过这里不能像apache列出所有文件,在没有文件时候出现403错误,就是无权查看,不要担心接着看. 在nginx.conf里面http{}添加 autoindex on;列出目录 autoindex_exact_size off;关闭文件详细大小改成大概大小 autoindex_localtime on;时间为本地时间打开 注意分号后边注释可不要哦,然后保存文件,就可以启动了,默认服务器是80端口,不用输入直接输入127.0.0.1就可以了. Mysql配置,解压即可,在mysql文件夹下面新建my.ini文件输入</p><p>[mysqld]<br>basedir=C:/web/mysql</p><p>datadir=G:/data</p><p>注意字符集不要设置,否则出现1067错误,就是这个文件错误,分别设置的是mysql目录和数据目录,数据重要所以不妨到c. 用cmd进入到c:\web\mysql\bin,这个会不,就是cd命令 输入命令 mysqld –install mysql5 –defaults-file=C:/web/mysql/my.ini 这个是注册服务到系统 接着 net start mysql5启动,相应的net stop mysql5就是关闭,后边有命令文件下载,压缩包版mysql默认用户root,密码空,把mysql的bin目录加入环境变量,打开cmd 输入mysql -uroot -p;就进入了,说明mysql安装成功啦. 安装phpmyadmin,解压到G盘根目录,文件夹就是phpmyadmin,现在在nginx服务器上面就可以操作mysql,不过默认是不能密码为空,空密码不能登陆,出现1045错误.修改libraries/config.default.php 422行为true phpmyadmin下面config.sample.inc.php 36行为true. 就可以用root空密码了,注意重启nginx哦,mysql哦.登陆进去,首先是添加密码. 接着进去修改mysql-user表,添加root密码并使用password函数.这样重启mysql就可以正常了,注意改回上边的两个false为true. 这里刚刚修改密码后要重启mysql,最好清除缓存和cookies,否则容易出现1045错误,明明密码正确不能登陆切记!!! apache配置;一路点下一步注意这一过程中端口选择8080,后边配置中改也可以.在安装完以后,apache启动不了,我的就是这个问 我想是前面装过集成环境或是nginx引起的,不管他,自己配置好了,把php5路径添加到环境变量,不然后边apache启动不了,或者复制到system32,选择前者 接着打开conf/httpd.conf修改配置. ServerRoot “C:/web/apache” #apache服务器目录 Listen 8080 #端口号 LoadFile “C:/web/php5/libmysql.dll” LoadModule php5_module “C:/web/php5/php5apache2_2.dll” PHPIniDir “C:/web/php5/php.ini” #三行就是启动php的 ServerName 127.0.0.1:8080 #服务器名称新添加 DocumentRoot “G:/“ #网站目录 # 同上 DirectoryIndex index.php index.html # 添加index.php AddType application/x-httpd-php .php #添加php文件类型 现在就可以启动apache了,完美可以支持mysql,php用phpmyadmin测试即可. 没有截图,这个主要是写的文字,不过应该还是能看懂吧,就是修改一些配置文件,后边我会附上我的配置文件,我打一个包,清单就是在各自文件夹,注意启动nginx的两个命令不能移动到nginx文件夹以外否则启动不了. <a href="/wp-content/uploads/2016/11/2012060309493179445.png"><img src="/wp-content/uploads/2016/11/2012060309493179445.png" alt="2012060309493179445"></a> 这就是同时运行的两个服务器,一个是80端口,一个是8080端口,同时登录到phpmyadmin的图片.    记录就先到这里吧。以后在说了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 服务器相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+            <tag> apache </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Centos Nginx Lnmp 服务器配置</title>
+      <link href="/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/288.html"/>
+      <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/288.html</url>
+      
+        <content type="html"><![CDATA[<p>最近买了一个腾讯云系统选得centos，开始的时候不知道怎么配置，后来群里的一个朋友给我介绍了lnmp，然后发了一个连接，然后就配置了。说实话开始的时候真的蛋疼虽然有教程但是还是很难。 这里把教程连接放出，以后可以看看。 </p><p>#lnmp安装    <a href="http://lnmp.org/install.html">http://lnmp.org/install.html</a></p><p> #FTP服务器：<a href="https://lnmp.org/faq/ftpserver.html">https://lnmp.org/faq/ftpserver.html</a> </p><p>#添加、删除虚拟主机及伪静态管理  <a href="http://lnmp.org/faq/lnmp-vhost-add-howto.html">http://lnmp.org/faq/lnmp-vhost-add-howto.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 服务器相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> lnmp </tag>
+            
+            <tag> Centos </tag>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>说说我这两年：就像一眨眼</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/280.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/280.html</url>
+      
+        <content type="html"><![CDATA[<p>从14年建博客到16年，整整两年的时间，认识了很多人，做了很多事。坚持过自己也迷茫过自己，茫茫木木，两年的时间就像一眨眼。 记得之前逛微博的时候看到一个短视频，一个中年秃顶的男人在楼顶浇花，不小心踩到香蕉皮摔下了楼，在坠楼的过程中，一群小鸟叼着一个电视给他播放了他这一生，从小学到大学，从结婚到生孩子。这期间他的生活是丰富多彩的，但是之后就是无穷无尽的坐在办公桌上工作，慢慢的头发没了，脸色也苍老了很多，但还是如行尸走肉般活着。看到这里秃顶老人从惊吓中缓过来，点了根雪茄，然后就这样完了。然后最后出现一句话，其实你在25岁的时候就死了，只不过到了85岁才埋到土里。 看了之后感触颇深，除了工作就是工作，想出去玩，却懒得走动，这一点都不像以前的我。至少我以前还会出去上网，打打篮球，打打乒乓球，然后去操场看看妹子也不赖。 不知道从什么时候开始接触外面的世界需要从网络上看事件，我从开始相信网上的言论和事件到慢慢的对这个满是谎言的世界失去信心。网民的无脑骂人，媒体的不负责任，水军的颠倒黑白。唉，我估计多少人能看出这是一次营销事件，多少人能看出什么事是真的，什么事是假的。随着网络的发展造就出了一批又一批的不负责任的专家、叫兽。 但是即便如此，当我对网络失去信心的时候，一个网友对我的一个有点过激的评论写了很多他的想法的时候我明白了一件事。并不是所有的人都会上来就骂，并不是所有的专家都自称专家。社会有好人有坏人，不过值得庆幸的是我的这两年遇到了能影响到我的人。改正了我的很多不足。这两年都想不起经历了什么，很多事都恍如昨天。一个真理，这辈子就是一眨眼的功夫，想做什么就去做什么吧。至少自己没有什么后悔的。 ps：文采不好，想到什么写什么了。 最后放上我的女神。</p><p> <a href="/wp-content/uploads/2016/09/1H61155J-3.jpg"><img src="/wp-content/uploads/2016/09/1H61155J-3-300x206.jpg" alt="1h61155j-3"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>十年前十年后我们错过了什么</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/267.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/267.html</url>
+      
+        <content type="html"><![CDATA[<p>1st. 十年前，自习课上，你递来一张纸条，上面写着:我喜欢你。 我怔了怔，扭头看你。 你一丝不苟写着作业，一副若有所思的样子，只是握笔的手有些发颤，眸子里写满了慌乱。 白色衬衣染着阳光的味道，侧脸很是好看。 十年后，你寄来一张请帖，上面说:我要结婚了。 婚礼那天，我如约而至。 台上，你挽着她的臂膀，两人依偎在对方怀里，脸上挂满了幸福。白色西装配上领带 ，洁净无瑕。帅气而梦幻。 角落里，我端起酒杯一饮而尽，眼眶有些湿润。 婚礼结束，你问我怎么了。 我摇了摇头，说，没事。 傻瓜，我怎么会哭呢？那是辣的。 </p><p>2nd. 十年前，作业如山，常做功课到深夜。母亲心疼我，老是半夜起床热一大杯牛奶，逼着我喝完才肯睡。 十年后，工作繁忙，总是忙到深夜。倘若困了，就冲包速溶咖啡，咕咚咕咚喝完，撑着眼皮继续工作。 </p><p>3rd. 十年前，厨房是热热闹闹的，父亲淘米，母亲炒菜，我打下手。我总是趁机溜走，抱着漫画书猫在后上坡的角落，母亲费了好大劲才找到我，说：臭丫头，饭都凉了. 十年后，偶尔看到家里闲置的厨房，也会心血来潮做做饭，满心欢喜将菜肴端上桌，置好碗筷，突然手停了， 你做菜干什么，别傻了，爸妈都不在身边，你做给谁吃？ </p><p>4th. 十年前，学校举行作文比赛，我拿了第一，全班同学兴奋地将我围住，送上最衷心的祝福。 我扬起小脸，很是得意。 十年后，一个作者盗用我的作品，小有成就，同行为她举行庆功宴，要她给新人说说经验。 我坐在角落，任她夸夸其谈，一言不发。我看见她的眼睛，写满世俗和理所当然。 我没有去质问她。 大家都了解，在这个人吃人的世界啊，兵荒马乱，没有牙齿，只会被啃成一堆枯骨。 </p><p>5th. 十年前，我骑车摔伤了大腿，龇牙咧嘴躺在地上，一个戴着金丝眼镜的斯文男人冲上前来，把我抱到医院，并通知了我的母亲。 母亲赶来后，男人已经付了全款，悄然离去。 十年后，一个男孩去家旁的便利店购物，一辆闯红灯的轿车将他撞飞，血淌了一地。 轿车在不远处停下，一个男人摇下车窗，吐了口吐沫，醉醺醺地吼道:“傻X”，扬长而去。 无数人从身侧路过，他们朝男孩投去怜悯的目光，好像在说“真可怜呢，谁让你这么倒霉”，而后淡漠地离去。 我将男孩送去医院时，他已经在地上躺了近半个小时。 </p><p>6th. 十年前，毕业晚会。 「不论今后身在何方，不论时间过去多久，永远不要忘记，我们是一辈子的兄弟姐妹，情比金坚！现在散了，以后常聚！」 那天晚上，很多人喝到酩酊，哭了，笑了，誓言铮铮犹记在心。 十年后，我翻着通讯录，发现很多名字都已经模糊和陌生。 曾经热闹的同学群，也不知何时也变得死气沉沉，只剩几个不常上线的死号，还顽固地守着那些回忆。 心被触碰，乱了阵脚。 十年了，原来时光一直在欺骗我们，他改变了好多东西。 </p><p>7th. 十年前，睡不着的时候，我喜欢坐在天台上，静静趴着栏杆，吹着夜风看星星。 这座南方小城天空很干净，一挂挂星河璀璨，每一颗星星，都是最纯净的琥珀，包含爱与希望。 十年后，夜半醒来，我站在阳台，窗外月黑星寂，于是那万家灯火也好像隔了千山万水，遥不可及。 寂寞席卷身上的每一个角落，我突然感觉好冷，忍不住想要逃离这座水泥森林，逃得越远越好…… </p><p>9th. 十年前，楼下的烧烤店是我最爱去的地方，我喜欢点上一杯饮料，与朋友们谈论少女时期的这点那点八卦。 十年后，我不得不穿梭于各大酒店里，虚与委蛇之后，将商业伙伴送走，晃晃荡荡回到家，倚着沙发吐到天亮。 </p><p>10th. 十年前，我做过一个梦。梦里我长大了，有自己的房子和车子。 冬天的午后，太阳温吞吞地挂在天边。房间里暖气充足，父亲在阳台喝茶，母亲给孩子织毛衣，我和丈夫窝在沙发看电视。 梦醒后，我笑了。 十年后，我做了一个梦。梦里青瓦白墙，绿油油的爬山虎挤满屋檐。夏日蝉鸣，光影透过树叶缝隙，洒满院子整个角落。父亲躺在竹椅上呼呼大睡，母亲专心致志的做着手工，而我抱着新买的布娃娃，蹒跚学步。 十年了，每次起床看到镜子里的人，会突然产生一种“原来我都这么大了哇，好想回到小时候呢”的感慨。 曾经我的梦想很大很多，向往诗和远方。后来阿，渐渐得得过且过，不再为一件小事就泫然欲泣..有酒和钱就好。 曾经，我固执且认真地相信这个世界，相信每个陌生人。 后来，我抱着最大的恶意去揣测每个人，开始认为一局安百变，叵测是人心…… 曾经的我啊，我固执且认真地相信如果水到八级的话，就不用再水。但是，想不到我居然上瘾般的迷恋上了这种感觉，于是……</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>win10快速实现10内开机</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/264.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/264.html</url>
+      
+        <content type="html"><![CDATA[<p>教程一：win10快速实现10内开机 很多用户反映，Win10系统在最近的更新后，开机变得很慢，动不动就要30几秒，简直就要回到5年前了。那么有没有什么办法可以解决更新后Win10开机慢的问题呢? Win10更新后开机变得很慢怎么办? </p><p>方法一 1、按快捷键“win+R” 打开 运行窗口 2、这时候输入“msconfig”后 ，点击“确定”或者按“ENTER”键 3、这时候会打开一个名为“系统配置”的窗口，在“常规”选项框下 勾选“有选择的启动”下的“加载系统服务”和“加载启动项” 4、后依次点击“引导——高级选项“在”引导高级选项“窗口勾选”处理器个数“ ”处理器个数“下的数字选一个最大的数 小编这里是”4“，点击”确定“ 5、接下来在”超时”对话框中输入“3”，最后点击“确定” </p><p>方法二 1、右击“此电脑”(计算机) 点击“属性” 2、这时候会打开一个系统的窗口，点击“高级系统设置” 3、这时候会弹出一个“系统属性”窗口，点击“启动和恢复故障”下“设置” 4、在“启动和恢复故障”窗口里，把以下两栏的时间改短一些，小编这里改为“0”，你们可以改为“3”，然后“确定“ 5、回到“系统属性”窗口，点击“性能”下“设置”，在“性能选项窗口”点击“高级——更改” 6、点击“更改”后，来到”虚拟内存“窗口，取消勾选“自动管理所有驱动器的分页文件大小”，勾选“无分页文件”，勾选过后，点击“设置”，点击“设置”后会出现一个“系统属性”窗口，点击“是”，点击“是”后，点击”虚拟内存“窗口下的“确定” 7、“性能选项窗口”和“系统属性”窗口点击确定后，一定要重启电脑，重启电脑后还会有操作 8、重启后再来打开下图这个界面，然后又把“自动管理所有驱动器的分页文件大小”勾选了，最后保存 </p><p>方法三 1、右击开始图标 打开“控制面板” 2、在控制面板里 (查看方式为小图标)。点击“电源选项” 3、在“电源选项”窗口里 点击“选择电源按钮的功能” 4、点击“选择电源按钮的功能”后悔弹出“系统设置窗口”，在这个窗口里 先点击“更改当前不可用的设置”，然后勾选“启用快速启动”，最后“保存修改” </p><p>方法四 1、按快捷键“WIN+R”。输入“gpedit.msc” 确定 2、依次点击“管理模板——系统——关机”，然后双击“要求使用快速启动” 3、弹出来的“要求使用快速启动”窗口里，勾选“已启动”，最后点击“确定” </p><p>教程二：取消Win10开机密码 取消Win10开机密码设置步骤如下： 一、首先点击Win10桌面左下角的Windows开始图标，进入Win10开始菜单，打开开始菜单后，在底部搜索框中键入netplwiz命令; 二、之后会搜索出netplwiz控制账户入口，点击最顶部如图所示的“netplwiz”，进入Win10账户设置; 三、进入Win10用户账户窗口后，将【要使用本计算机，用户必须输入用户名和密码】前面的勾去掉，然后点击底部的“确定” 四、最后在弹出的自动登录设置中，填写上Win10开机密码，完成后，点击底部的“确定”即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> win10 </tag>
+            
+            <tag> 开机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【ZT】Java做了6年，给新手一些建议</title>
+      <link href="/Java%E7%AC%94%E8%AE%B0/260.html"/>
+      <url>/Java%E7%AC%94%E8%AE%B0/260.html</url>
+      
+        <content type="html"><![CDATA[<p>1.不要再拿AWT和Swing练手了，很少公司会用，多写点算法和数据结构，工作后你会获益良多 </p><p>2.学Java最重要不是记住基础类型有几种，int的范围是多少，而是培养自己一切皆对象的OO思维，那些所谓的基础，在你实际开发过程中，随着代码量的积累，会变成永久记忆刻在你脑海里的 </p><p>3.设计模式和代码重构，Java的两大精髓，一定要重视，要记住结构良好，命名规范的代码，就是最好的注释，很多做了多年java的人只是机械的按照约定俗成的格式写代码，甚至从没试图去搞清楚为什么Service层要加一个interface来实现。 </p><p>4.学习框架的时候，不要图快从网上抄大段的配置，去官网或github上找官方文档，照着配，自己做过一次，以后会少很多配置方面的痛苦，相信我 </p><p>5.多写多错，多调试bug，每一次通过自己双手而不是依靠网络解决可恶的红字错误，把bug想象成武林高手，每一次bug的解决，都是一次修为的提升。 </p><p>6.开个技术博客吧，把自己掌握的技术梳理一遍，把自己的学习心得分享给后来者，利己利人，功德无量 </p><p>7.英文很重要，要坚持学 </p><p>8.Stay hungry. Stay foolish.保持一颗学习的心，开始的几年，不要太计较薪水差那么几百，5年才是人才和庸才的分水岭，10年才能看出来大神和普通程序员的区别 借用Facebook的一句标语：code wins arguments，别BB，亮代码！  </p><blockquote><p>From java ba to baidu.com</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>小米兰亭字体_下载</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/255.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/255.html</url>
+      
+        <content type="html"><![CDATA[<p>昨天是小米max 的发布会，看到了小米兰亭字体感觉非常棒，在刚刚逛博客的时候 发现有人分享了这个字体，并提供了下载。所以我直接copy 过来了。当然我自己也收藏了一份。好了现在上连接。 下载地址： <a href="http://pan.baidu.com/s/1eSv0aQm">http://pan.baidu.com/s/1eSv0aQm</a> 密码: bmdh</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 小米兰亭 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java创建一个数组的方法</title>
+      <link href="/Java%E7%AC%94%E8%AE%B0/252.html"/>
+      <url>/Java%E7%AC%94%E8%AE%B0/252.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="以下三个方法："><a href="#以下三个方法：" class="headerlink" title="以下三个方法："></a>以下三个方法：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>  java.util.Arrays; </span><br><span class="line"><span class="keyword">public</span>   <span class="keyword">class</span>  <span class="title class_">Sum</span></span><br><span class="line">&#123;</span><br><span class="line">     <span class="keyword">public</span>   <span class="keyword">static</span>   <span class="keyword">void</span>  <span class="title function_">main</span><span class="params">(String\[\] args)</span>  &#123;</span><br><span class="line">       <span class="type">int</span> vec\[\] = <span class="keyword">new</span> <span class="title class_">int</span>\[\]&#123;<span class="number">1</span>, <span class="number">5</span>, <span class="number">3</span>&#125;;  <span class="comment">// 第一种方法          </span></span><br><span class="line">       <span class="type">int</span>  vec\[\]  =  &#123; <span class="number">37</span> ,  <span class="number">47</span> ,  <span class="number">23</span> &#125; ;   <span class="comment">// 第二种方法  </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   <span class="type">int</span> vec\[\] = <span class="keyword">new</span> <span class="title class_">int</span> \[<span class="number">3</span>\];</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">   vec\[i\]=i+<span class="number">1</span>;           <span class="comment">//第三种方法</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> java数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Date format()和parse() SimpleDateFormat()</title>
+      <link href="/Java%E7%AC%94%E8%AE%B0/248.html"/>
+      <url>/Java%E7%AC%94%E8%AE%B0/248.html</url>
+      
+        <content type="html"><![CDATA[<p>format方法</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用format()方法将日期转换为指定格式的文本</span></span><br><span class="line"><span class="type">SimpleDateFormat</span> <span class="variable">sdf1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;</span>);</span><br><span class="line"><span class="type">SimpleDateFormat</span> <span class="variable">sdf2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy/MM/dd HH:mm&quot;</span>);</span><br><span class="line"><span class="type">SimpleDateFormat</span> <span class="variable">sdf3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);</span><br><span class="line">   </span><br><span class="line"><span class="comment">// 创建Date对象，表示当前时间</span></span><br><span class="line">   Date now=<span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">   </span><br><span class="line">   <span class="comment">// 调用format()方法，将日期转换为字符串并输出</span></span><br><span class="line">System.out.println(  sdf1.format(now)                        );</span><br><span class="line">System.out.println(sdf2.format(now));</span><br><span class="line">System.out.println(sdf3.format(now));</span><br></pre></td></tr></table></figure><p>parse方法</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用parse()方法将文本转换为日期</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> <span class="string">&quot;2014-6-1 21:05:36&quot;</span>;</span><br><span class="line"><span class="type">SimpleDateFormat</span> <span class="variable">sdf</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);</span><br><span class="line">   </span><br><span class="line">    <span class="comment">// 调用parse()方法，将字符串转换为日期</span></span><br><span class="line"><span class="type">Date</span> <span class="variable">date</span> <span class="operator">=</span>sdf.parse(d);</span><br><span class="line">   </span><br><span class="line">System.out.println(date);</span><br></pre></td></tr></table></figure><p>SimpleDateFormat方法 来设置时间格式。</p><blockquote><p>Date 类最主要的作用就是获得当前时间，同时这个类里面也具有设置时间以及一些其他的功能，但是由于本身设计的问题，这些方法却遭到众多批评，不建议使用，更推荐使用 Calendar 类进行时间和日期的处理。</p><p>java.util.Calendar 类是一个抽象类，可以通过调用 getInstance()静态方法获取一个 Calendar 对象，此对象已由当前日期时间初始化，即默认代表当前时间，如 Calendar c = Calendar.getInstance();</p><p><a href="https://lice.cc/wp-content/uploads/2016/04/53b23219000153b608030239.jpg"><img src="https://lice.cc/wp-content/uploads/2016/04/53b23219000153b608030239.jpg" alt="Calendar"></a></p><p>其中，调用 Calendar 类的 getInstance() 方法获取一个实例，然后通过调用 get() 方法获取日期时间信息，参数为需要获得的字段的值， Calendar.Year 等为 Calendar 类中定义的静态常量。</p><p>Calendar 类提供了 getTime() 方法，用来获取 Date 对象，完成 Calendar 和 Date 的转换，还可通过 getTimeInMillis() 方法，获取此 Calendar 的时间值，以毫秒为单位</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wordpress主题去版权网站不能打开</title>
+      <link href="/wp%E5%B0%8F%E8%AE%B0/243.html"/>
+      <url>/wp%E5%B0%8F%E8%AE%B0/243.html</url>
+      
+        <content type="html"><![CDATA[<p>使用wordpress 主题一般都是用别人的，毕竟自己的能力有限。以前刚开始玩什么也不懂，感觉挂着别人的版权，挂着别人的连接感觉很不爽，于是乎，删之。 但是，到了现在，个人感觉主题作者写个主题很辛苦，挂版权没什么不好。由于学了seo所以连接肯定是不会挂的，版权是没问题的。那么问题来了，很多主题的作者为了留住版权设置了暗箱，删掉版权网站打不开了。 在这里我说一下简单的在去掉版权的同时也能打开网站。其实很简单，就是将版权注释掉就可以了，现在很多主题作者应该还没有将算法写的很复杂所以可以这样简单的去掉版权并能正常显示网站。好了 就这样吧。</p><p>   =============================================== </p><p>前几天网站再次被黑，醉得的不要不要的，幸亏本网站价值不大，要不就亏大了。所以建议大家，做网站安全是第一位的，否则你辛辛苦苦做的网站就成了别人的嫁衣了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wp小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wordpress </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JDK8与eclipse不兼容问题</title>
+      <link href="/Java%E7%AC%94%E8%AE%B0/237.html"/>
+      <url>/Java%E7%AC%94%E8%AE%B0/237.html</url>
+      
+        <content type="html"><![CDATA[<p>在练习写代码的时候发现不能 import java.util.Arrays  这个包，感觉很诧异，这是很常用的包为什么不能导入呢，于是在网上了查了很多籽料，发现很多人都在说兼容问题。当时在想都是下载的最新的，为什么不兼容呢。 后来在eclipse里发现最高支持1.7，没办法，卸载1.8，下载了1.7 。重新安装，配置好环境变量之后，问题解决了。 找问题解决办法的时候很多人都建议用低版本的比较好，兼容性要好很多。在这里记录一下。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Web前端下雪特效实现</title>
+      <link href="/%E5%89%8D%E7%AB%AF/231.html"/>
+      <url>/%E5%89%8D%E7%AB%AF/231.html</url>
+      
+        <content type="html"><![CDATA[<p>偶尔的一次看到别人的博客里有下雪的特效感觉特别好看，然后在网上搜了一些下雪特效的代码，习惯的复制粘贴调试。等调试好了之后发现一个问题，那就是用jq 的时候内存会不断的被占用，直到98%甚至99%。从网上查了一下原因，妈的，也看不懂。算了继续寻找代码，之后找到一个不同形式的下雪特效。 这段js代码雪花的效果调用的图片，而之前下雪的效果是通过jq画出来的。 现在贴出我用的特效代码，如果想下载的话可以直接下载我源码里的js。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">function</span> <span class="title function_">k</span>(<span class="params">a,b,c</span>)&#123;<span class="keyword">if</span>(a.<span class="property">addEventListener</span>)a.<span class="title function_">addEventListener</span>(b,c,<span class="literal">false</span>);<span class="keyword">else</span> a.<span class="property">attachEvent</span>&amp;&amp;a.<span class="title function_">attachEvent</span>(<span class="string">&quot;on&quot;</span>+b,c)&#125;<span class="keyword">function</span> <span class="title function_">g</span>(<span class="params">a</span>)&#123;<span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="variable language_">window</span>.<span class="property">onload</span>!=<span class="string">&quot;function&quot;</span>)<span class="variable language_">window</span>.<span class="property">onload</span>=a;<span class="keyword">else</span>&#123;<span class="keyword">var</span> b=<span class="variable language_">window</span>.<span class="property">onload</span>;<span class="variable language_">window</span>.<span class="property">onload</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="title function_">b</span>();<span class="title function_">a</span>()&#125;&#125;&#125;<span class="keyword">function</span> <span class="title function_">h</span>(<span class="params"></span>)&#123;<span class="keyword">var</span> a=&#123;&#125;;<span class="keyword">for</span>(type <span class="keyword">in</span>&#123;<span class="title class_">Top</span>:<span class="string">&quot;&quot;</span>,<span class="title class_">Left</span>:<span class="string">&quot;&quot;</span>&#125;)&#123;<span class="keyword">var</span> b=type==<span class="string">&quot;Top&quot;</span>?<span class="string">&quot;Y&quot;</span>:<span class="string">&quot;X&quot;</span>;<span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="variable language_">window</span>\[<span class="string">&quot;page&quot;</span>+b+<span class="string">&quot;Offset&quot;</span>\]!=<span class="string">&quot;undefined&quot;</span>)a\[type.<span class="title function_">toLowerCase</span>()\]=<span class="variable language_">window</span>\[<span class="string">&quot;page&quot;</span>+b+<span class="string">&quot;Offset&quot;</span>\];<span class="keyword">else</span>&#123;b=<span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">clientHeight</span>?<span class="variable language_">document</span>.<span class="property">documentElement</span>:<span class="variable language_">document</span>.<span class="property">body</span>; a\[type.<span class="title function_">toLowerCase</span>()\]=b\[<span class="string">&quot;scroll&quot;</span>+type\]&#125;&#125;<span class="keyword">return</span> a&#125;<span class="keyword">function</span> <span class="title function_">l</span>(<span class="params"></span>)&#123;<span class="keyword">var</span> a=<span class="variable language_">document</span>.<span class="property">body</span>,b;<span class="keyword">if</span>(<span class="variable language_">window</span>.<span class="property">innerHeight</span>)b=<span class="variable language_">window</span>.<span class="property">innerHeight</span>;<span class="keyword">else</span> <span class="keyword">if</span>(a.<span class="property">parentElement</span>.<span class="property">clientHeight</span>)b=a.<span class="property">parentElement</span>.<span class="property">clientHeight</span>;<span class="keyword">else</span> <span class="keyword">if</span>(a&amp;&amp;a.<span class="property">clientHeight</span>)b=a.<span class="property">clientHeight</span>;<span class="keyword">return</span> b&#125;<span class="keyword">function</span> <span class="title function_">i</span>(<span class="params">a</span>)&#123;<span class="variable language_">this</span>.<span class="property">parent</span>=<span class="variable language_">document</span>.<span class="property">body</span>;<span class="variable language_">this</span>.<span class="title function_">createEl</span>(<span class="variable language_">this</span>.<span class="property">parent</span>,a);<span class="variable language_">this</span>.<span class="property">size</span>=<span class="title class_">Math</span>.<span class="title function_">random</span>()\*<span class="number">5</span>+<span class="number">5</span>;<span class="variable language_">this</span>.<span class="property">el</span>.<span class="property">style</span>.<span class="property">width</span>=<span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="variable language_">this</span>.<span class="property">size</span>)+<span class="string">&quot;px&quot;</span>;<span class="variable language_">this</span>.<span class="property">el</span>.<span class="property">style</span>.<span class="property">height</span>=<span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="variable language_">this</span>.<span class="property">size</span>)+<span class="string">&quot;px&quot;</span>;<span class="variable language_">this</span>.<span class="property">maxLeft</span>=<span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">offsetWidth</span>-<span class="variable language_">this</span>.<span class="property">size</span>;<span class="variable language_">this</span>.<span class="property">maxTop</span>=<span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">offsetHeight</span>- <span class="variable language_">this</span>.<span class="property">size</span>;<span class="variable language_">this</span>.<span class="property">left</span>=<span class="title class_">Math</span>.<span class="title function_">random</span>()\*<span class="variable language_">this</span>.<span class="property">maxLeft</span>;<span class="variable language_">this</span>.<span class="property">top</span>=<span class="title function_">h</span>().<span class="property">top</span>+<span class="number">1</span>;<span class="variable language_">this</span>.<span class="property">angle</span>=<span class="number">1.4</span>+<span class="number">0.2</span>\*<span class="title class_">Math</span>.<span class="title function_">random</span>();<span class="variable language_">this</span>.<span class="property">minAngle</span>=<span class="number">1.4</span>;<span class="variable language_">this</span>.<span class="property">maxAngle</span>=<span class="number">1.6</span>;<span class="variable language_">this</span>.<span class="property">angleDelta</span>=<span class="number">0.01</span>\*<span class="title class_">Math</span>.<span class="title function_">random</span>();<span class="variable language_">this</span>.<span class="property">speed</span>=<span class="number">2</span>+<span class="title class_">Math</span>.<span class="title function_">random</span>()&#125;<span class="keyword">var</span> j=<span class="literal">false</span>;<span class="title function_">g</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;j=<span class="literal">true</span>&#125;);<span class="keyword">var</span> f=<span class="literal">true</span>;<span class="variable language_">window</span>.<span class="property">createSnow</span>=<span class="keyword">function</span>(<span class="params">a,b</span>)&#123;<span class="keyword">if</span>(j)&#123;<span class="keyword">var</span> c=\[\],m=<span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;f&amp;&amp;b&gt;c.<span class="property">length</span>&amp;&amp;<span class="title class_">Math</span>.<span class="title function_">random</span>()&lt;b\*<span class="number">0.0025</span>&amp;&amp;c.<span class="title function_">push</span>(<span class="keyword">new</span> <span class="title function_">i</span>(a));!f&amp;&amp;!c.<span class="property">length</span>&amp;&amp;<span class="built_in">clearInterval</span>(m);<span class="keyword">for</span>(<span class="keyword">var</span> e=<span class="title function_">h</span>().<span class="property">top</span>,n=<span class="title function_">l</span>(),d=c.<span class="property">length</span>-<span class="number">1</span>;d&gt;=<span class="number">0</span>;d--)<span class="keyword">if</span>(c\[d\])<span class="keyword">if</span>(c\[d\].<span class="property">top</span>&lt;e||c\[d\].<span class="property">top</span>+c\[d\].<span class="property">size</span>+<span class="number">1</span>&gt;e+n)&#123;c\[d\].<span class="title function_">remove</span>(); c\[d\]=<span class="literal">null</span>;c.<span class="title function_">splice</span>(d,<span class="number">1</span>)&#125;<span class="keyword">else</span>&#123;c\[d\].<span class="title function_">move</span>();c\[d\].<span class="title function_">draw</span>()&#125;&#125;,<span class="number">40</span>);<span class="title function_">k</span>(<span class="variable language_">window</span>,<span class="string">&quot;scroll&quot;</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">for</span>(<span class="keyword">var</span> e=c.<span class="property">length</span>-<span class="number">1</span>;e&gt;=<span class="number">0</span>;e--)c\[e\].<span class="title function_">draw</span>()&#125;)&#125;<span class="keyword">else</span> <span class="title function_">g</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="title function_">createSnow</span>(a,b)&#125;)&#125;;<span class="variable language_">window</span>.<span class="property">removeSnow</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;f=<span class="literal">false</span>&#125;;i.<span class="property"><span class="keyword">prototype</span></span>=&#123;<span class="attr">createEl</span>:<span class="keyword">function</span>(<span class="params">a,b</span>)&#123;<span class="variable language_">this</span>.<span class="property">el</span>=<span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;img&quot;</span>);<span class="variable language_">this</span>.<span class="property">el</span>.<span class="title function_">setAttribute</span>(<span class="string">&quot;src&quot;</span>,b+<span class="string">&quot;snow&quot;</span>+<span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()\*<span class="number">4</span>)+<span class="string">&quot;.gif&quot;</span>);<span class="variable language_">this</span>.<span class="property">el</span>.<span class="property">style</span>.<span class="property">position</span>=<span class="string">&quot;absolute&quot;</span>;<span class="variable language_">this</span>.<span class="property">el</span>.<span class="property">style</span>.<span class="property">display</span>=<span class="string">&quot;block&quot;</span>;<span class="variable language_">this</span>.<span class="property">el</span>.<span class="property">style</span>.<span class="property">zIndex</span>=<span class="string">&quot;99999&quot;</span>;<span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">appendChild</span>(<span class="variable language_">this</span>.<span class="property">el</span>)&#125;,<span class="attr">move</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">if</span>(<span class="variable language_">this</span>.<span class="property">angle</span>&lt; <span class="variable language_">this</span>.<span class="property">minAngle</span>||<span class="variable language_">this</span>.<span class="property">angle</span>&gt;<span class="variable language_">this</span>.<span class="property">maxAngle</span>)<span class="variable language_">this</span>.<span class="property">angleDelta</span>=-<span class="variable language_">this</span>.<span class="property">angleDelta</span>;<span class="variable language_">this</span>.<span class="property">angle</span>+=<span class="variable language_">this</span>.<span class="property">angleDelta</span>;<span class="variable language_">this</span>.<span class="property">left</span>+=<span class="variable language_">this</span>.<span class="property">speed</span>\*<span class="title class_">Math</span>.<span class="title function_">cos</span>(<span class="variable language_">this</span>.<span class="property">angle</span>\*<span class="title class_">Math</span>.<span class="property">PI</span>);<span class="variable language_">this</span>.<span class="property">top</span>-=<span class="variable language_">this</span>.<span class="property">speed</span>\*<span class="title class_">Math</span>.<span class="title function_">sin</span>(<span class="variable language_">this</span>.<span class="property">angle</span>\*<span class="title class_">Math</span>.<span class="property">PI</span>);<span class="keyword">if</span>(<span class="variable language_">this</span>.<span class="property">left</span>&lt;<span class="number">0</span>)<span class="variable language_">this</span>.<span class="property">left</span>=<span class="variable language_">this</span>.<span class="property">maxLeft</span>;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="variable language_">this</span>.<span class="property">left</span>&gt;<span class="variable language_">this</span>.<span class="property">maxLeft</span>)<span class="variable language_">this</span>.<span class="property">left</span>=<span class="number">0</span>&#125;,<span class="attr">draw</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">this</span>.<span class="property">el</span>.<span class="property">style</span>.<span class="property">top</span>=<span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="variable language_">this</span>.<span class="property">top</span>)+<span class="string">&quot;px&quot;</span>;<span class="variable language_">this</span>.<span class="property">el</span>.<span class="property">style</span>.<span class="property">left</span>=<span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="variable language_">this</span>.<span class="property">left</span>)+<span class="string">&quot;px&quot;</span>&#125;,<span class="attr">remove</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">removeChild</span>(<span class="variable language_">this</span>.<span class="property">el</span>);<span class="variable language_">this</span>.<span class="property">parent</span>=<span class="variable language_">this</span>.<span class="property">el</span>=<span class="literal">null</span>&#125;&#125;&#125;)();</span><br></pre></td></tr></table></figure><p>再来一张效果图吧。</p><p> <a href="https://lice.cc/wp-content/uploads/2015/12/dt.gif"><img src="https://lice.cc/wp-content/uploads/2015/12/dt-300x192.gif" alt="下雪特效"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>竞价对优化会有影响吗</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/224.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/224.html</url>
+      
+        <content type="html"><![CDATA[<p>之前问过很多人，竞价对优化有影响吗？都说没影响，但是心里一直都是犹豫的。应为我接触的很多站都是优化和竞价分离的，所以没有什么证据。</p><p> <a href="https://lice.cc/wp-content/uploads/2015/12/seo4.jpg"><img src="https://lice.cc/wp-content/uploads/2015/12/seo4-300x247.jpg" alt="seo"></a> </p><p>先说说优化排名的几点：外链、点击、停留时间、内链、二次点击等等吧。 如果说竞价的点击也被列入排名因素的话，那么显而易见对排名是有影响的。在搜索一个词的时候发现一个竞价站的专题页排在了首页，让我很是不解，毕竟这个词还是挺好的一个词。然后点进去看了看，发现就是一个普通的专题页，而且是那种把图片切图，然后通过alt来说明图片的内容。 这么一个页面居然能拍到首页，没有外链，内链几乎没有，那么因素只有点击了，那么点击从哪来，只有竞价了。这个现象不能说竞价占有多大的比重，我只想说竞价其实对优化是有影响的。也许很多人不会同意我的看法吧。当然也没人会拿竞价来做实验。 写这篇文章主要是想表达一下我的想法吧。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> seo </tag>
+            
+            <tag> 竞价 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>名侦探柯南剧场版</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/221.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/221.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="http://pic.baike.soso.com/p/20140429/20140429092147-305709911.jpg" alt="名侦探柯南"></p><p>1</p><p>时计じかけの摩天楼</p><p><strong>引爆摩天楼</strong></p><p>A Clockwork Skyscraper</p><p>95分</p><p>1997年4月19日</p><p>11亿</p><p>2</p><p>14番目の标的</p><p><strong>第14个目标</strong></p><p>The Fourteenth Target</p><p>99分</p><p>1998年4月18日</p><p>18.5亿</p><p>3</p><p>世纪末の魔术师</p><p><strong>世纪末的魔术师</strong></p><p>The Last Wizard Of The Century</p><p>100分</p><p>1999年4月17日</p><p>26亿</p><p>4</p><p>瞳の中の暗杀者</p><p><strong>瞳孔中的暗杀者</strong></p><p>Captured In Her Eyes</p><p>100分</p><p>2000年4月22日</p><p>25亿</p><p>5</p><p>天国へのカウントダウン</p><p><strong>通往天国的倒计时</strong></p><p>Count Down to Heaven</p><p>100分</p><p>2001年4月21日</p><p>29亿</p><span id="more"></span><p>6</p><p>ベイカー街の亡霊</p><p><strong>贝克街的亡灵</strong></p><p>The Phantom Of Baker Street</p><p>107分</p><p>2002年4月20日</p><p>33.8亿</p><p>7</p><p>迷宫の十字路</p><p><strong>迷宫的十字路</strong></p><p>Crossroad in the Ancient Capital</p><p>107分</p><p>2003年4月19日</p><p>32亿</p><p>8</p><p>银翼の奇术师</p><p><strong>银翼的魔术师</strong></p><p>Magician of the Silver Sky</p><p>108分</p><p>2004年4月17日</p><p>28.5亿</p><p>9</p><p>水平线上の阴谋</p><p><strong>水平线上的阴谋</strong></p><p>Strategy Above the Depths</p><p>105分</p><p>2005年4月9日</p><p>21.5亿</p><p>10</p><p>探侦たちの镇魂歌</p><p><strong>侦探们的镇魂歌</strong></p><p>The Private Eyes’ Requiem</p><p>111分</p><p>2006年4月15日</p><p>30.3亿</p><p>11</p><p>绀碧の棺</p><p><strong>绀碧之棺</strong></p><p>Jolly Roger in the Deep Azure</p><p>107分</p><p>2007年4月21日</p><p>25.3亿</p><p>12</p><p>戦栗の楽谱</p><p><strong>战栗的乐谱</strong></p><p>Full Score of Fear</p><p>115分</p><p>2008年4月19日</p><p>24.2亿</p><p>13</p><p>漆黒の追迹者</p><p><strong>漆黑的追踪者</strong></p><p>The Raven Chaser</p><p>110分</p><p>2009年4月18日</p><p>34.9亿</p><p>14</p><p>天空の难破船</p><p><strong>天空的遇难船</strong></p><p>The Lost Ship in The Sky</p><p>102分</p><p>2010年4月17日</p><p>32亿</p><p>15</p><p>沈黙の15分</p><p><strong>沉默的15分钟</strong></p><p>Quarter of Silence</p><p>109分</p><p>2011年4月16日</p><p>31.5亿</p><p>16</p><p>11人目のストライカー</p><p><strong>第11个前锋</strong></p><p>The Eleventh Striker</p><p>110分</p><p>2012年4月14日</p><p>32.9亿</p><p>17</p><p>绝海の探侦</p><p><strong>绝海的侦探</strong></p><p>Private Eye in The Distant Sea</p><p>110分</p><p>2013年4月20日</p><p>36.3亿</p><p>18</p><p>异次元の狙撃手</p><p><strong>异次元的狙击手</strong></p><p>Dimensional Sniper</p><p>110分</p><p>2014年4月19日</p><p>-</p><p>19</p><p>名探偵コナン 業火の向日葵</p><p><strong>名侦探柯南：业火的向日葵</strong></p><p>Detective Conan: Sunflowers of Inferno</p><p>113分</p><p>2015年4月18日</p><p>-</p><p>全部的都在这里了，抽时间把没看的看完吧。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 剧场版 </tag>
+            
+            <tag> 名侦探柯南 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>峰回路转依旧选择Wordpress</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/212.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/212.html</url>
+      
+        <content type="html"><![CDATA[<p>作为在天朝长大的孩子，有些东西真的能尽善尽美。我伟大的wordpress也未能幸免遇难，很多网站外国网站被墙了，导致wordpress在加载的时候异常的慢。对wordpress进行过优化，打开速度确实有所提升，但是又一个问题砸在我的头上。gravatar也出问题了，导致无法加载，无奈只能通过插件来解决问题，但是很多时候再打开网站的时候有些头像还是打不开，郁闷了。 没办法，不是大神的我只能选择国内的博客程序。 找了很长时间，发现emlog和z-blog 两款博客程序在中国还是可以的，然后我就一个一个的下载下来进行本地测试，这里说一下两个博客的优点和缺点吧。 emlog ，重点在于轻。不管是前台还是后台给人的感觉就是很简洁，非常适合新手或对博客要求不高且不懂代码的人。如果你的服务器不是很好，同时对博客要求不高，可以选择这个。 z-blog ，这个以前是asp版的，现在出了一个php版本的。给人的感觉还可以，插件不是很强大。最重要的是php版本感觉像是后妈生的，还是asp 版本的亲。但是我对asp的印象不是很好所以决然拒绝了z-blog。如果你对博客有点要求但是不是很高，可以推荐给你这个z-blog。 也许是出于装逼de心理，最后还是选择了wordpress。我会继续优化wordpress，到时候 会把优化的内容单独写成日志。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wordpress </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wordpress小记：7》wordpress“添加媒体”按钮点击没反应</title>
+      <link href="/wp%E5%B0%8F%E8%AE%B0/205.html"/>
+      <url>/wp%E5%B0%8F%E8%AE%B0/205.html</url>
+      
+        <content type="html"><![CDATA[<p>开始的时候只是不能上传图片点击半天没有是吗反映，后来升级了wordpress，发现竟然点击没有反映了。然后我在网上找了找解决办法还真找到了，下面是相关内容。</p><blockquote><p>可视化/文本模式无法切换，点击添加“媒体按钮”没反应等等。在“优化站Wordpress”的道路上真是一波三折啊，在网上找到了解决办法，特记录下。下面是wordpress的官方解释：</p></blockquote><h3 id="Disable-Javascript-Concatenation"><a href="#Disable-Javascript-Concatenation" class="headerlink" title="Disable Javascript Concatenation"></a>Disable Javascript Concatenation</h3><blockquote><p>To result in a faster administration area, all Javascript files are concatenated into one URL. If Javascript is failing to work in your administration area, you can try disabling this feature: define(‘CONCATENATE_SCRIPTS’, false);</p></blockquote><p>汉化其内容大致意思是 wordpress 为了提高效率要求你所有的js要集中到一起，只需更改路径集中存放，问题迎刃而解，具体操作很简单，在wordpress根目录下找到 wp-config.php 这个配置文件，打开文件后在页面的最后添加下面代码:</p><p>define(‘CONCATENATE_SCRIPTS’, false );</p><p>  添加之后刷新一下，发现可以用了。 <code>define(&#39;CONCATENATE_SCRIPTS&#39;, false );</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wp小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wordpress </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>路由接出来的分线连接无线路由怎么设置</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/197.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/197.html</url>
+      
+        <content type="html"><![CDATA[<p>如果是猫连接无线路由那么就好设置了，但是今天遇到的情况显然不是这样的。</p><p>分到我们宿舍的网线已经经过了一个路由分出来的，所以这个时候用以前的方法显然不行。于是乎在网上查了很多方法，开始的时候怎么设置也不行，直到我灵光一闪，进行了一个操作，然后网通了。太激动了，接下来就说说我是如何设置的吧。</p><p>先假设第一个为a路由，第二个为b路由（当然是无线路由）</p><p>从a lan口出来的线要插到b的wan口，解释一下，一般lan口是黄色的，wan口在旁边，一般是蓝色的。</p><p>如果a路由 的lan口为192.168.1.1  那么就要去b把lan口设置成192.168.2.1（ 只要不和a一样就可以）。</p><p><img src="https://lice.cc/wp-content/uploads/2015/08/20150811001630_70065.jpg" alt="路由器接出来的分线连接无线路由该怎么设置"></p><p>然后设置b的wan口 为动态获取 。</p><p><img src="https://lice.cc/wp-content/uploads/2015/08/20150811002053_61935.png" alt=""></p><p>点击保存，然后重启路由，基本就可以了。</p><p>如果还是没有成功的话</p><p>点击b路由的运行状态，然后点击右侧的 “释放”</p><p>如图：</p><p><img src="https://lice.cc/wp-content/uploads/2015/08/20150811002355_79908.png" alt="">  </p><p>这就可以上网了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 无线路由 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>百度超链算法全面升级</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/192.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/192.html</url>
+      
+        <content type="html"><![CDATA[<p>百度超链算法全面升级，从之前的内测数据中我们可以看到，算法升级后扩大了对垃圾外链的覆盖。同时百度站长平台的外链分析工具升级更名为链接分析，除了增加死链数据分析外、取消了外链拒绝功能，即不再需要网站管理员进行手工拒绝，百度可自动对垃圾外链进行处理。</p><p>站点进行外链建设可满足被搜索引擎蜘蛛发现收录的需求，和超链权重计算的需求。但目前百度仅信任非常小范围内的优质重要外链，站点只要获得一些重要的、基本内容相关站点的超链即可满足需求。在这一点上，PC端与移动端是相互贯通的。百度站长平台在此呼吁各位站点，不要再为外链浪费时间与金钱了。</p><p>从最近的SITEMAP工具更名、网站改版工具升级、外链拒绝功能下线等一系列动作可以看出：“去技术化”是百度站长平台工具2015年的重点之一，即让站长更简单便捷地与百度进行数据交互和沟通。目前很多工具升级工作正在进行中，大家陆续会看到更多变化，请各位站长持续关注百度站长站台。</p><blockquote><p>> 本文固定链接: <a href="http://www.epee.cn/2015/280.html">http://www.epee.cn/2015/280.html</a></p></blockquote><blockquote><p>> 转载请注明: 北京SEO 2015年07月08日 于 北京SEO 发表</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> seo </tag>
+            
+            <tag> 百度算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网站被黑该怎么处理</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/189.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/189.html</url>
+      
+        <content type="html"><![CDATA[<p>网站被黑有段时间了，但是今天才写下来，一是时间有限，二是博客出了点问题。</p><p>好了说一下吧。因为博客不是经常上所以被黑后过了段时间才知道，但是黑客也还挺够意思没有过分的搞我的网站，也算是个有职业道德的黑客了。</p><p>下面截图：</p><p><img src="/wp-content/uploads/2015/06/20150624220616_92007.gif" alt=""></p><p>从源代码里发现了这个。我也是。。</p><p><img src="/wp-content/uploads/2015/06/20150624215945_24468.gif" alt=""></p><p>接下来我说说网站被黑后我都做了些什么。</p><p>1.立即修改了密码，这个不用说。先做就对了。因为我的网站权重不高，所以不会有人特意来黑，应该是通过某种方式获取了我的密码。wp的安全还是可以的。</p><p>2.添加了验证码。这个是我让主机商那边给我检查了一下，没有发现后门，应该只是密码泄漏了。所以增加一下登录的繁琐程度吧。</p><p>可以说我就做了这么多吧，因为是虚拟机所以也灭有过多的排查。但是一些我认为的还是说一下。</p><p>3.数据库密码  ftp 密码  虚拟主机商的网站密码  这些都要改一下，有可能他们已经获取了这些密码。</p><p>4.排查后门，网上应该有教程搜一下就能找到，也可以找服务商帮忙排查。</p><p>5.如果还是不行的话可以考虑把主机格式化一下重装一下系统程序从新搞一下。</p><p>这是我所能想到的了，不过我的网站应该还到不了黑客刻意黑我的程度吧。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 优化 </tag>
+            
+            <tag> 黑客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>seo影响排名的因素</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/137.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/137.html</url>
+      
+        <content type="html"><![CDATA[<p>关于这个问题，网上其实有很多，不同的人 有不同的见解所以我就不多说什么了。一般就是文章内容，外部链接，服务器的稳定性等等，这里我想说的是其中一个点，也是我这个博客这几天所经历的吧。 之前一个新浪博客挂了我博客 的友情链接，当然我基本就没有发外链，所以外部链接基本就是那个博客了吧。李策这个小几百的词排到了首页第二位，这里就不多说了，就在前几天，因为某些原因吧，把新浪博客的标题改了，这里都懂。被降权了，过了两天这个词就被降到第二页首位。 连锁反映吧，这里想说的是其实，不是说友情连接的重要性，而是说。假如手里有一万个站的资源，怎么样 在短期内做某个词的排名，我想效果会好一些，具体怎么操作就不说了，经常玩百度算法的人应该很清楚吧。 有资源的小伙伴，可以拿别人的站做个测试撒。哈哈。   截个图： <a href="https://lice.cc/wp-content/uploads/2015/04/lice.jpg"><img src="https://lice.cc/wp-content/uploads/2015/04/lice-300x182.jpg" alt="seo"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> seo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>百度取消了百度快照时间</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/132.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/132.html</url>
+      
+        <content type="html"><![CDATA[<p>今天下午5点多的时候，在查询一些排名的时候，发现百度没有快照时间了，前一阵子官网就说要取消百度快照时间，没想到这么快。</p><p>怎么说呢，暂时还有点不适应，看惯了突然不见了心里也是很不舒服。</p><p>正巧今天是正月十五，看来百度在今天取消是有意义的啊。</p><p>我们可以这样写到： 百度快照时间于公元2015年3月5日 阴历正月十五 星期四 ，与世长辞。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 百度快照 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wordpress小记：6》(WP)wordpress如何添加微博2015</title>
+      <link href="/wp%E5%B0%8F%E8%AE%B0/128.html"/>
+      <url>/wp%E5%B0%8F%E8%AE%B0/128.html</url>
+      
+        <content type="html"><![CDATA[<p>记忆当中在wordpress中添加微博，是一件很简单的事，但是现在却发现没有以前那么容易了，在网上了找了很多大多都是以前的东西，后来发现一个微信开放平台，在这里找到了我想要的东西。</p><blockquote><p>微信开放平台URL：<a href="http://open.weibo.com/">http://open.weibo.com/</a></p></blockquote><p>接下来给大家说一下如果在wordpress中添加微博。</p><p><strong>1.打开微信开放平台，点击 下图中的 网站接入。</strong></p><p><img src="/wp-content/uploads/2015/03/20150302140948_39363.png" alt="wordpress如何添加微博1" title="wordpress如何添加微博1"></p><p><strong>2.点击微博组建。</strong></p><p><img src="/wp-content/uploads/2015/03/20150302141140_79082.png" alt="wordpress如何添加微博2" title="wordpress如何添加微博2"></p><p><strong>3.点击微博秀</strong></p><p><img src="/wp-content/uploads/2015/03/20150302142610_81567.png" alt=""></p><p><strong>4.设置好后点击复制代码（如何设置，就根据自己的爱好了。）</strong></p><p><img src="/wp-content/uploads/2015/03/20150302142834_13081.png" alt=""></p><p><strong>5.然后点击自己网站后台。左侧栏-外观-小工具-文本。如下图：</strong></p><p><img src="/wp-content/uploads/2015/03/20150302143218_84495.png" alt=""></p><p><strong>6.**</strong>将文本拖到右侧 小工具1 适当的位置，然后复制代码，保存。**</p><p><img src="/wp-content/uploads/2015/03/20150302143556_40140.png" alt=""><img src="/wp-content/uploads/2015/03/20150302143601_24587.png" alt="">  </p><p><strong>7.ok，来看看效果吧</strong></p><p><img src="/wp-content/uploads/2015/03/20150302143810_28273.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wp小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 新浪微博 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网站被k怎么办该怎么处理</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/126.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/126.html</url>
+      
+        <content type="html"><![CDATA[<p>网站被k无疑是进行了作弊操作，比如说短期内流量剧增，外链剧增，等等。有的时候我们也不是有意操作，那么网站被k我们该怎么办，该怎么处理呢，接下来，我们看看一家seo公司是怎么说的，希望可以给大家带来帮助。</p><p>==========================================</p><p>没被K过的网站肯定不知道：网站被K后怎么让网站重新被收录?</p><p>今天，就为大家详细解说解说，为各位没有被K过的站长普及一下SEO常识。</p><p><strong>网站为什么会被K?</strong></p><p>原因很简单：</p><p>1：网站作弊</p><p>2：网站用户体验极其差劲</p><p>网站作弊的处理方法就不用多说了，只要摒弃违规的SEO操作，用白帽SEO进行优化即可!</p><p>主要来说一说，网站用户体验极其差劲的解决办法!</p><p><strong>网站用户体验极其差劲，可以体现在：</strong></p><p>1：网站打开速度太慢，用户没耐性等待，点击打不开，马上退出，跳出率高!</p><p>2：网站页面总是出现错误页面，404页面提示没做好，用户感觉不良!</p><p>3：网站内容实在差劲，无可读性，无价值性，更无浏览性</p><p>4：网站不稳定，主机，服务器几天出现一次故障，频繁发生。</p><p>5：网站进行改版操作，未做风险规避</p><p>综上5大点，网站被K，不管是首页，内容页，或者每天更新的最新内容。只要网站不做SEO处理，搜索引擎就不会在短时间内对网站进行重新收录!</p><p>首页也好，内容页也罢，总之，网站被K的剩下多少，网站收录就是多少。</p><span id="more"></span><p><strong>那么，如果想要让网站重新被收录，解决方法可以这样操作：</strong></p><p>1：首先保证网站主机，服务器的稳定。这是基础，如果这个都不稳定，网站内容再好又有何用?</p><p>2：加快网站打开的页面，提高用户第一体验。</p><p>3：保障网站内容的原创和质量。被K后的网站，可以多做一些原创文章，来重新获取搜索引擎的友好度。</p><p>4：对改版的内容，要做及时的处理，给百度提交一个改版请求，或重新提交一下改版后</p><p>5：稳定外链的发布。循序渐进地添加外链条数，保障网站有人点击。</p><p>6：坚持正规的SEO操作，确保网站SEO优化的持续性。</p><p>那么，只要坚持一段时间，7天到15天左右，百度大更新后，网站首页，内容页面等都会重新收录!</p><p>给各位站长一个警示：网站被K是因为搜索引擎友好度实在太差!网站内容，板块，SEO操作都让搜索引擎觉得厌恶!所以狠心对网站做出K的处罚!</p><p>那么，处理方法的核心就是：投其所好!投搜索引擎的喜好，来慢慢增加网站在它心中的友好程度，从而一点点融化它的“厌恶”之心，最终使网站恢复正常!</p><p>其实说简单点就是被搜索引擎所讨厌，上面的操作就可以解决 这一个问题。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网站被k </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于百度快照倒退的说明</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/124.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/124.html</url>
+      
+        <content type="html"><![CDATA[<p>很多人认为网站的百度快照和其本身的权重有关系，开始我也不是很确认，感觉快照越新，说明蜘蛛爬取的越快。但是当我查询相关资料的时候发现，结果并非如此。百度的官方是这么解释的。</p><hr><p>一直以来，部分站长对百度快照的更新时间都存在一些误解，认为网站的快照更新时间与网站的权重状态存在一定关系，快照更新越频繁，网站的权重越高，反之，越低。</p><p>而实际上，<strong>网站快照的更新频率与权重并不存在任何直接的关系。</strong></p><p><strong>百度快照为什么会更新？</strong></p><p>首先，需要澄清一下网页的抓取频率和快照的更新频率是完全不同的两个概念。</p><p>每一个被百度收录的网站，baiduspider都会根据其网站内容更新的频率不断的检查有无新网页产生，通常情况下，Baiduspider的抓取频率会和网站产生新内容的速度相符，通常说的更新，是指Baiduspider对网页内容的抓取。</p><p>每个新抓取或者新检查过的网页，我们都会根据其重要程度以及其时效性价值以不同的速度去创建索引，通常所说的快照更新时间是指索引时间，一些经常有重要内容更新的网页，我们会以更快的速度创建索引。如果一个网页只是一般的文字变更或者内容没有时效性的价值，并不一定会被搜索引擎认为有快速更新索引的价值，即便百度蜘蛛重新抓取了该网页内容，其快照也不一定会快速更新，但这并不意味着它不重要或者百度更新的速度很慢。</p><p><strong>快照时间为什么会倒退？</strong></p><p>一个重要网页的快照往往会在搜索引擎数据库中保存有多份网页快照，这些快照的抓取时间并不相同。在一些极特殊情况下，搜索引擎系统可能会选择不同于当前搜索结果中的快照版本，导致出现快照时间倒退的情况。这对网站在搜索引擎中的表现无任何影响，也并不代表搜索引擎对该网站做了降权处理。</p><p>综上，快照的更新与页面中是否出现重要新增内容有直接关联，而与网站本身的“权重”、是否“被K”并无直接关联。站长不必过多关注网站的快照时间，我们建议站长将精力集中在网站的内容建设中，只有提高网站的内容价值和检索体验，方可受到用户和搜索引擎的信赖。</p><hr><p>由此可见，网站百度快照与其自身权重没有关系。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> seo </tag>
+            
+            <tag> 百度快照 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wordpress小记：5》解决wordpress打开慢的问题</title>
+      <link href="/wp%E5%B0%8F%E8%AE%B0/119.html"/>
+      <url>/wp%E5%B0%8F%E8%AE%B0/119.html</url>
+      
+        <content type="html"><![CDATA[<p>自从更新的wordpress以后，发现网站打开的速度很慢，也不知道什么原因，开始以为是虚拟主机的问题，后来发现不是，就从网上查了查，发现是由于 Google服务器无法访问造成的，因为系统中会加载谷歌Opensans字体样式，导致网站非常的慢，需要加载很久才可以勉强打开，于是从网上找了一些方法来解决。</p><p>1、安装插件：在插件中搜索 Disable Google Fonts，选择安装，然后启用，这样就可以禁止Google字体的加载，这样就可以提高访问速度了。</p><p>2、删除代码：很多人不喜欢用插件那么这个可以修改代码打开/wp-includes/script-loader.php搜索fonts.googleapis.com找到代码位置，直接把//fonts.googleapis.com/…这个链接整个删掉即可。（修改前请备份好数据，用//注释掉也是可以的哦）</p><p><img src="/wp-content/uploads/2015/02/20150205151733_31769.png" alt="">  </p><p>3、推荐使用这种方法，依次打开 /wp-includes/script-loader.php，约581行的位置，替换谷歌的字体库为360网站卫士的国内CDN节点（推荐）将其中 googleapis.com 全部替换为 useso.com。这样，fonts.googleapis.com 就变成了 fonts.useso.com ， ajax.googleapis.com 就变成了 ajax.useso.com 。保存上传。  </p><p>有一点要注意，就是每次更新都要改一次，否则会覆盖我们修改的代码。可以设置一下禁止版本更新，wordpress中文网上很多网友提出希望wp官网能换节点，也许以后的某个版本就不用改代码了呢，期待吧。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wp小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wordpress </tag>
+            
+            <tag> 谷歌字体 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>面包屑导航是什么，有什么作用，怎么做</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/115.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/115.html</url>
+      
+        <content type="html"><![CDATA[<p>关于面包屑导航，网上有很多。我就不过多介绍了，简单介绍一下。</p><p><strong>1.面包屑导航是什么？</strong></p><p><img src="/wp-content/uploads/2015/01/20150116111458_41036.png" alt=""></p><p><strong>2.面包屑导航有什么作用</strong></p><p>面包屑导航(BreadcrumbNavigation)这个概念来自童话故事”汉赛尔和格莱特”，当汉赛尔和格莱特穿过森林时，不小心迷路了，但是他们发现在沿途走过的地方都撒下了面包屑，让这些面包屑来帮助他们找到回家的路。所以，面包屑导航的作用是告诉访问者他们目前在网站中的位置以及如何返回，增加用户体验，也能更好地起到优化的作用，百度白皮书上提到，合理的利用面包屑导航，有助于网站的”权重“提升。</p><p>1、让用户体味当前所处位置，以及当前页面在整个网站中的位置。</p><p>2、浮现了网站的架构层级，能够辅助用户快速进修和熟悉网站内容和组织方式，从而形成很好的位置感。</p><p>3、供给返回各个层级的快速进口，便操作户操作。</p><p>4、经将面包屑导航整合到搜索功效里面，是以优化面包屑导航每个层级的名称，多使用关头字，都可以实现SEO优化。面包屑路径，对于提高用户体验来说，是很有救援的。</p><p>5、利便用户，面包屑首要用于为用户供给导航一个网站的次要方式，经由过程为一个大型多级网站的所有页面提供面包屑路径，用户可以更轻易的定位到上一次目录，指导用户通行;</p><p>6、削减返回到上一级页面的点击或操作，不用使用浏览器的“返回”按钮或网站的主要导航来返回到上一级页面;</p><p>7、不用经常占用屏幕空间，因为它们凡是是水平枚举以及简单的样式，面包屑路径不会占用页面太多的空间。这样的益处是，从内容过载方面来说，他们几乎没有任何负面影响;</p><p>8、降低跳出率，面包屑路径会是一个诱惑初度会见者在进入一个页面后去浏览这个网站的很是好的方法。好比说，一个用户通过谷歌搜索到一个页面，然后看到一个面包屑路径，这将会诱使用户点击上一级页面去浏览感乐趣的相关主题。这样，从而，可以降低网站的总体跳出率;</p><p>9、有哄骗百度引擎蜘蛛对网站的抓取，蜘蛛直接沿着阿谁链走就可以了，很随意纰漏;</p><p>10、面包屑有利于网站内链的培植，用面包屑大大增添了网站的内部毗连，提高用户体验。</p><p><strong>3.面包屑导航怎么做</strong></p><p>面包屑导航一般出现在列表页也就是栏目页和内容页，最好出现在显而易见的地方。关于代码如何去实现，我想应该不难。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面包屑导航 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wordpress小记：4》wp_footer()控制底部版权</title>
+      <link href="/wp%E5%B0%8F%E8%AE%B0/112.html"/>
+      <url>/wp%E5%B0%8F%E8%AE%B0/112.html</url>
+      
+        <content type="html"><![CDATA[<p>一个主题底部有版权是正常的，但是如果连代码都不知道在哪里，我心里就很不爽。所以找了很多资料，想着找到底部版权的代码在哪里。相信大家应该都找过威哥的底部版权吧，本来想着把威哥的超链接去掉的，或者加个nofollow标签啥的。后来发现，根本找不到，而是有一个&lt;?php wp_footer(); ?&gt; 把这个删掉的话，底部就没有了，有的时候还会出现崩溃的现象。</p><p>从网上找了一些资料 ，最终在主题里的functions.php文件里找到了。</p><p>function weisay_copyright() {<br>echo ‘Theme by <a href="http://www.weisay.com/" rel="external">Weisay</a>.’;<br>}<br>add_action(‘wp_footer’, ‘weisay_copyright’);</p><p>所以，只要把这个稍微改一下，就可以了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wp小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wp_footer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2014年就这样结束了</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/110.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/110.html</url>
+      
+        <content type="html"><![CDATA[<p>2014年12月31日，2014年的最后一天，也是12月的最后一天，回想这一年真的感觉没什么感觉，就这样过来了，没什么成就也没什么做自己想做的事情，超超和亮亮等着我的超帅发型也有一年了。想着曾经说过要理一个超帅的发型，但是却忘记了，真有点说不过去了。</p><p>总想着今天能做一件什么事来纪念2014年，但是做了很多也不能表达我的2014 ，所以还在想。如果我们坚持做一件事，坚持做一年会怎样呢，不敢想象。曾经想着在博客记录自己的事情，但是发现没有那么多的时间了。所以我只能保证一个月发一篇文章。也许以后会正常吧。</p><p>今天就到这里吧。</p><p>再见 。2014 ，你好。2015</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随便写一些这些天的事</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/107.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/107.html</url>
+      
+        <content type="html"><![CDATA[<p>这些天一直都在忙新闻源的事，可以说所有的精力都在上面了，月初的剧风行动，还有月末的百度大力打击垃圾信息，无形的压力让我很难走。绝处逢生这个词验证了我的新突破，感觉做了很多事，但效果不理想，但是总体来说我很满意，这也说明付出可能有回报，但是不付出就一定没有回报。不想写太多了，一个月有这么一篇足以了。就这样吧。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>谈谈我认为seo优化是什么</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/102.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/102.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://lice.cc/wp-content/uploads/2014/10/20141016221355_69905.jpg" alt="seo优化"></p><p>俗话说内容为王，外链为皇。什么意思呢?就是说网站的内容质量是非常重要的，尤其是新站千万不要直接复制粘贴其他网站的文章，这样无疑是埋送自己的网站。至于这外链为皇的意思就是在高权重的网站发布外链，这样做呢有两个目的，一个呢是传递权重的效果，一个呢是引蜘蛛的效果。</p><p>温馨提示：百度呢是没有权重滴，之所以我们会说百度权重，是为了方便表达一个网站的“受欢迎程度”。也许我解释的也不对，但肯定的是百度权重是没有的。切记。</p><p>接着说，虽然上面说的已经很老套了，但是我们发现，做站根本就离不开这两点，有的人说，我做站从来不发外链，对此我只能呵呵，如果他说没有做外链，可以domain 一下。还有我要说的是外链在现在的版本是要少而精，为什么这么说呢，以前狂发外链是为了让蜘蛛更好的爬取，现在呢我们可以控制蜘蛛的爬取频率。再加上现在的百度更加智能话，过多的垃圾外链百度会给与相应的惩罚，轻则降权，重则有k站的可能。</p><p>就这两点，一个内容，一个外链就可以说是基本的优化了。但是有一点一定要理解优化绝对不是机械化的更新文章和发布外链，我们更多的要想提高用户体验，当你的用户多了，即使不去优化你网站的排名也差不了。</p><p>当然了，像那些做黑帽的我不想说什么，里面的技术，只有它们懂，我一点不懂。到这里也差不多了，我认为的SEO优化总结起来就是八个字。</p><p><strong>内容外链，用户体验。</strong></p><p>好了，今天就到这里，10月份的文章得有对嘛。哈哈。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> domain </tag>
+            
+            <tag> 内容为王 </tag>
+            
+            <tag> 外链为皇 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何通过笔记本[win7系统]设置自己的wifi</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/95.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/95.html</url>
+      
+        <content type="html"><![CDATA[<p>其实网上已经有了很多自动创建wifi的软件，但是我总感觉那些软件对电脑的运行有损，向我们这种内存很小，运行很卡的机子，就更别说了，光运行个软件就已经很卡了，所以我想既然win7自带为什么不自己设计一下呢？？？这样不是很好。？？</p><p> 为此，我从网上找了很多相关的教程，而且也很多，我就简单的说一下，再此留念一下。 </p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">命令：</span><br><span class="line">netsh wlan set hostednetwork mode=allow ssid=wifi7  key=ailicecn </span><br></pre></td></tr></table></figure><p>这里解释一下这三个参数 </p><p>mode：是否启用虚拟WiFi网卡，改为disallow则为禁用。</p><p> ssid：无线网名称，最好用英文(以wifi7为例)，即要设定的wifi名称。</p><p> key：无线网密码，八个以上字符(以ailicecn为例），即你要设定的wifi密码。   </p><p>把这条命令放到一个txt文档里然后保存，然后将txt文档的后缀改成bat的。然后右击管理员运行。 </p><p><a href="https://lice.cc/wp-content/uploads/2014/09/wifi001.jpg"><img src="https://lice.cc/wp-content/uploads/2014/09/wifi001-300x133.jpg" alt="wifi"></a> </p><p>然后会多出这个玩意，但是有红叉怎么办，没事，在设置一下就ok了。。</p><p> <a href="https://lice.cc/wp-content/uploads/2014/09/wifi002.jpg"><img src="https://lice.cc/wp-content/uploads/2014/09/wifi002-300x148.jpg" alt="wifi"></a> </p><p>设置如上图，点确定。就ok了。那么接下来怎么启动wifi呢 ？？ </p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令：netsh wlan start hostednetwork </span><br></pre></td></tr></table></figure><p>将这个命令放到txt文档保存，改后缀bat。   右击管理员运行 就ok 了。。 等等等等。。。。，是不是还没有wifi？？？  是啊 是啊 是啊 ，为啥？？？ 简单，把电脑的无线网卡打开，然后运行一下那个命令就行了。哈哈，对了以后，在想开启wifi只需要以管理员运行那个bat文件就可以了。（命令：netsh wlan start hostednetwork ） 赶快来试一试把。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wifi </tag>
+            
+            <tag> win7 </tag>
+            
+            <tag> 无线网卡 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>黑客(hacker)必备插件[火狐(firefox)]</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/93.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/93.html</url>
+      
+        <content type="html"><![CDATA[<p>现在用的几个火狐插件，现在记录一下以免以后还得四处乱找。 <strong>FireBug</strong> 这个就不多说了，上网的应该都知道这个插件，很强大。就不多介绍了。 <strong>HackBar</strong> 在手工注入的时候地址栏填满了不能看到全部链接怎么办，这个插件有个”被动技能“ 能直观的看到，还有什么其他的功能，就交给你们百度吧，我自己也不是太清楚。 <strong>Live Http headers</strong> 这个插件用于数据的抓包和改包不错。具体怎么用自己百度吧。 <strong>User Agent Switcher</strong> 改变客户端的User Agent的一款插件   待续。。。 发现好的插件在添加。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习记录 </tag>
+            
+            <tag> 插件 </tag>
+            
+            <tag> 火狐 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>织梦搜索登陆提示信息的修改</title>
+      <link href="/%E7%BB%87%E6%A2%A6%E4%BB%BF%E7%AB%99/82.html"/>
+      <url>/%E7%BB%87%E6%A2%A6%E4%BB%BF%E7%AB%99/82.html</url>
+      
+        <content type="html"><![CDATA[<p>　　在我们搜索文档过于频繁或者留言成功，等待管理员审核的时候，都会返回一个“DEDECMS提示信息!”的提示框，然后是“如果你的浏览器没反应，请点击这里…”。要去掉这个提示信息，方法很简单，修改两个地方就可以了： 　　在include/common.func.php文件中有两处提示信息，打开文件后搜索“DEDECMS提示信息”就可以定位这两处。 　　第一处代码如下：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$htmlhead</span> = “\\r\\n\\r\\nDEDECMS提示信息\\r\\n\\r\\n”; </span><br><span class="line"><span class="variable">$htmlhead</span> .= “\\r\\ndiv&#123;line-height:<span class="number">160</span>%;&#125;\\r\\n”.(<span class="keyword">isset</span>(<span class="variable">$GLOBALS</span>\[<span class="string">&#x27;ucsynlogin&#x27;</span>\]) ? <span class="variable">$GLOBALS</span>\[<span class="string">&#x27;ucsynlogin&#x27;</span>\] : ”).”\\r\\n</span><br><span class="line"></span><br><span class="line">\\r\\n\\r\\n”;</span><br></pre></td></tr></table></figure><p>　　第二处代码如下：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$rmsg</span> .= “document.<span class="title function_ invoke__">write</span>(\\”&lt;br /&gt;&lt;div style=’<span class="attr">width</span>:<span class="number">450</span>px;<span class="attr">padding</span>:<span class="number">0</span>px;<span class="attr">border</span>:<span class="number">1</span>px solid #D1DDAA;’&gt;”;  </span><br><span class="line"><span class="variable">$rmsg</span> .= “&lt;div style=’<span class="attr">padding</span>:<span class="number">6</span>px;font-<span class="attr">size</span>:<span class="number">12</span>px;border-<span class="attr">bottom</span>:<span class="number">1</span>px solid #D1DDAA;<span class="attr">background</span>:#DBEEBD <span class="title function_ invoke__">url</span>(&#123;<span class="variable">$GLOBALS</span>\[<span class="string">&#x27;cfg_phpurl&#x27;</span>\]&#125;/img/wbg.gif)’;’&gt;&lt;b&gt;DEDECMS 提示信息！&lt;/b&gt;&lt;/div&gt;\\”);\\r\\n”;  </span><br><span class="line"><span class="variable">$rmsg</span> .= “document.<span class="title function_ invoke__">write</span>(\\”&lt;div style=<span class="string">&#x27;height:130px;font-size:10pt;background:#ffffff&#x27;</span>&gt;&lt;br /&gt;\\”);\\r\\n”;</span><br></pre></td></tr></table></figure><p>　　只要修改了这两处的“DEDECMS提示信息”就可以了！</p><p><blockquote>第一处是title的修改，也就是修改标题的显示信息，第二处的页面标题的修改。。</blockquote><br></x-turndown></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 织梦仿站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 提示信息 </tag>
+            
+            <tag> 织梦仿站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTTP状态码（HTTP Status Code）返回查询</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/80.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/80.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>　　1xx(临时响应) 　　表示临时响应并需要请求者继续执行操作的状态代码。</p><p> 　　代码 说明</p><p> 　　100 (继续) 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。</p><p> 　　101 (切换协议) 请求者已要求服务器切换协议，服务器已确认并准备切换。</p><p> 　　2xx (成功) 　　表示成功处理了请求的状态代码。 　　</p><p>​        代码 说明 　　</p><p>​        200 (成功) 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。 　　</p><p>​        201 (已创建) 请求成功并且服务器创建了新的资源。</p><p> 　　202 (已接受) 服务器已接受请求，但尚未处理。</p><p> 　　203 (非授权信息) 服务器已成功处理了请求，但返回的信息可能来自另一来源。</p><p> 　　204 (无内容) 服务器成功处理了请求，但没有返回任何内容。</p><p> 　　205 (重置内容) 服务器成功处理了请求，但没有返回任何内容。</p><p> 　　206 (部分内容) 服务器成功处理了部分 GET 请求。</p><p> 　　3xx (重定向) 　　表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。</p><p> 　　代码 说明</p><p> 　　300 (多种选择) 针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。</p><p> 　　301 (永久移动) 请求的网页已永久移动到新位置。 服务器返回此响应(对 GET 或 HEAD 请求的响应)时，会自动将请求者转到新位置。</p><p> 　　302 (临时移动) 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。</p><p> 　　303 (查看其他位置) 请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。</p><p> 　　304 (未修改) 自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。</p><p> 　　305 (使用代理) 请求者只能使用代理访问请求的网页。 如果服务器返回此响应，还表示请求者应使用代理。</p><p> 　　307 (临时重定向) 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。</p><p> 　　4xx(请求错误) 　　这些状态代码表示请求可能出错，妨碍了服务器的处理。</p><p> 　　代码 说明 </p><p>　　400 (错误请求) 服务器不理解请求的语法。</p><p> 　　401 (未授权) 请求要求身份验证。 对于需要登录的网页，服务器可能返回此响应。</p><p> 　　403 (禁止) 服务器拒绝请求。</p><p> 　　404 (未找到) 服务器找不到请求的网页。</p><p> 　　405 (方法禁用) 禁用请求中指定的方法。</p><p> 　　406 (不接受) 无法使用请求的内容特性响应请求的网页。</p><p> 　　407 (需要代理授权) 此状态代码与 401(未授权)类似，但指定请求者应当授权使用代理。</p><p> 　　408 (请求超时) 服务器等候请求时发生超时。</p><p> 　　409 (冲突) 服务器在完成请求时发生冲突。 服务器必须在响应中包含有关冲突的信息。</p><p> 　　410 (已删除) 如果请求的资源已永久删除，服务器就会返回此响应。</p><p> 　　411 (需要有效长度) 服务器不接受不含有效内容长度标头字段的请求。</p><p> 　　412 (未满足前提条件) 服务器未满足请求者在请求中设置的其中一个前提条件。</p><p> 　　413 (请求实体过大) 服务器无法处理请求，因为请求实体过大，超出服务器的处理能力。</p><p> 　　414 (请求的 URI 过长) 请求的 URI(通常为网址)过长，服务器无法处理。</p><p> 　　415 (不支持的媒体类型) 请求的格式不受请求页面的支持。</p><p> 　　416 (请求范围不符合要求) 如果页面无法提供请求的范围，则服务器会返回此状态代码。</p><p> 　　417 (未满足期望值) 服务器未满足”期望”请求标头字段的要求。 </p><p>　　5xx(服务器错误) 　　这些状态代码表示服务器在尝试处理请求时发生内部错误。</p><pre><code>这些错误可能是服务器本身的错误，而不是请求出错。</code></pre><p> 　　代码 说明 　　500 (服务器内部错误) 服务器遇到错误，无法完成请求。</p><p> 　　501 (尚未实施) 服务器不具备完成请求的功能。 例如，服务器无法识别请求方法时可能会返回此代码。</p><p> 　　502 (错误网关) 服务器作为网关或代理，从上游服务器收到无效响应。</p><p> 　　503 (服务不可用) 服务器目前无法使用(由于超载或停机维护)。</p><pre><code>通常，这只是暂时状态。</code></pre><p> 　　504 (网关超时) 服务器作为网关或代理，但是没有及时从上游服务器收到请求。</p><p> 　　505 (HTTP 版本不受支持) 服务器不支持请求中所用的 HTTP 协议版本。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SEO优化 </tag>
+            
+            <tag> HTTP状态码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于站长工具的br问题</title>
+      <link href="/SEO%E4%BC%98%E5%8C%96/77.html"/>
+      <url>/SEO%E4%BC%98%E5%8C%96/77.html</url>
+      
+        <content type="html"><![CDATA[<p>说到买黑链，相信任何一个做优化的人应该都了解一些。高质量的外链可以提升网站的权重和排名，那么友链无非是最高质量的外链了，权重越高，影响越大。所以很多优化会买一些高权重网站的友链，但是百度根本就没有权重一说，而站长工具和爱站 只是虚拟出来一个br以供大家的参考。 那么站长工具是怎么计算权重的呢？据我所知，有一个关键词，不管指数高低，br就是1。而当流量上百，基本上br 就是2 。以此类推，所以很明显要想让站长工具的br显示的高的话，只要把关键词和预计流量搞上去就可以了。有一个词可以概括，就是刷权重。具体怎么操作我就不说了，毕竟这个东西人知道的越少越好。 那么”br“看什么呢？其实这个问题很多优化文章都说过，说说我怎么看吧，仅供参考，毕竟每个人的看法是不一样的。不要盲目的效仿别人，因为无论你怎么操作，只要你网站的关键词排名上去了，而且站住脚跟了，那你就是牛 逼 的，说别的都没用。 快照、收录、外链、关键词排名。当然还有很多，不过这几点就够了。 快照要新，收录要稳定，外链不要过多高于收录，一个网站在站长工具里显示的br再高，关键词没排名，那都是瞎扯。 说这么多，其实就一句话，不要相信有br，那只是一个参考。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SEO优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> BR </tag>
+            
+            <tag> SEO优化 </tag>
+            
+            <tag> 百度权重 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>五十个UI设计资源网站</title>
+      <link href="/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/73.html"/>
+      <url>/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/73.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>无意间在网上找的资源，这里记录一下，以后可能会用到。</p></blockquote><p>用户体验团队网站</p><p> 1、UCD大社区 <a href="http://ucdchina.com/">http://ucdchina.com/</a> </p><p>2、腾讯WSD <a href="http://wsd.tencent.com/">http://wsd.tencent.com/</a> </p><p>3、腾讯CDC <a href="http://cdc.tencent.com/">http://cdc.tencent.com/</a> </p><p>4、腾讯ISD <a href="http://isd.tencent.com/">http://isd.tencent.com/</a> </p><p>5、淘宝UED <a href="http://ued.taobao.com/">http://ued.taobao.com/</a> </p><p>6、著片会<a href="http://www.shupianhui.com/">http://www.shupianhui.com/</a> </p><p>7、口啤UED <a href="http://ued.koubei.com/">http://ued.koubei.com/</a> </p><p>8、阿里UED <a href="http://www.aliued.cn/">http://www.aliued.cn/</a> </p><p>9、阿里妈妈UED <a href="http://ued.alimama.com/">http://ued.alimama.com/</a> </p><p>10、163UED <a href="http://www.ued163.com/">http://www.ued163.com/</a> </p><p>11、搜狐UED <a href="http://todd-lee.net/blog/">http://todd-lee.net/blog/</a> ============================================================================== </p><p>图标设计及素材 </p><p>1、中文图标搜索 <a href="http://www.iconpng.com/">http://www.iconpng.com/</a></p><p>2、<a href="http://www.fasticon.com/">http://www.fasticon.com/</a> </p><p>3、<a href="http://dryicons.com/">http://dryicons.com/</a> </p><p>4、<a href="http://www.icotrip.com/">http://www.icotrip.com/</a> </p><p>5、提供搜索<a href="http://www.icones.pro/">http://www.icones.pro/</a> </p><p>6、国外图标<a href="http://weloveicons.com/">http://weloveicons.com/</a> </p><p>7、图标搜索 <a href="http://www.iconfinder.com/">http://www.iconfinder.com/</a> </p><p>9、<a href="http://www.freeiconsdownload.com/">http://www.freeiconsdownload.com/</a> </p><p>10、<a href="http://www.freeiconsweb.com/">http://www.freeiconsweb.com/</a> =============================================================================== </p><span id="more"></span><p>网页、UI设计门户 </p><p>1、站酷<a href="http://www.zcool.com.cn/">http://www.zcool.com.cn/</a> </p><p>2、八只熊<a href="http://www.8bears.com/coolsite/">http://www.8bears.com/coolsite/</a> </p><p>3、国外网站欣赏<a href="http://www.thefwa.com/">http://www.thefwa.com/</a> </p><p>4、网页设计师联盟<a href="http://www.68design.net/">http://www.68design.net/</a> </p><p>5、我爱设计网<a href="http://www.52design.com/">http://www.52design.com/</a> </p><p>6、蓝色理想<a href="http://www.blueidea.com/">http://www.blueidea.com/</a> </p><p>7、视觉中国<a href="http://www.chinavisual.com">http://www.chinavisual.com</a> </p><p>8、创意视觉<a href="http://cvsion.com/">http://cvsion.com/</a> </p><p>9、国外设计门户<a href="http://www.deviantart.com/">http://www.deviantart.com/</a> </p><p>10、合子UI <a href="http://www.boxui.com/">http://www.boxui.com/</a> </p><p>11、酷点<a href="http://www.koodian.com/">http://www.koodian.com/</a> </p><p>12、优艾网<a href="http://www.chinaui.com/">http://www.chinaui.com/</a> </p><p>13、中国UI设计师大社区<a href="http://www.uirsss.com">http://www.uirsss.com</a> </p><p>14、UI制造<a href="http://www.uimaker.com/">http://www.uimaker.com/</a> </p><p>15、UI设计网<a href="http://www.worldui.com/">http://www.worldui.com/</a> </p><p>16、标准之路<a href="http://www.aa25.cn">http://www.aa25.cn</a> ============================================================================== </p><p>专业UI设计团队 </p><p>1、Eico设计 <a href="http://www.eicodesign.com/">http://www.eicodesign.com/</a> </p><p>2、Reooo 设计 <a href="http://www.reooo.com/">http://www.reooo.com/</a> </p><p>3、西安超人科技 <a href="http://www.skyui.net/">http://www.skyui.net/</a> </p><p>4、UI power <a href="http://www.uipower.com/">http://www.uipower.com/</a> </p><p>5、Rigo设计 <a href="http://www.rigodesign.com">http://www.rigodesign.com</a> </p><p>6、ICON设计 <a href="http://icon.cn/cn/">http://icon.cn/cn/</a> </p><p>7、记忆拼图 <a href="http://www.zcool.com.cn/u/35500/">http://www.zcool.com.cn/u/35500/</a> =============================================================================== </p><p>素材门户 </p><p>1、素材精品屋 <a href="http://www.sucaiw.com/">http://www.sucaiw.com/</a> </p><p>2、昵图网 <a href="http://www.nipic.com">http://www.nipic.com</a> </p><p>3、全景网 <a href="http://www.quanjing.com">http://www.quanjing.com</a> </p><p>4、图库 <a href="http://www.tucool.com">http://www.tucool.com</a> (行业LOGO) </p><p>5、素材库 <a href="http://www.sccooo.com/">http://www.sccooo.com/</a> </p><p>6、LOGO大全 <a href="http://logopond.com/">http://logopond.com/</a> </p><p>7、图图网 <a href="http://www.tutu001.com/">http://www.tutu001.com/</a> </p><p>8、创意悠悠花园 <a href="http://uuhy.com/">http://uuhy.com/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> UI设计 </tag>
+            
+            <tag> 学习记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>今天搬了床铺搬到里面了</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/70.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/70.html</url>
+      
+        <content type="html"><![CDATA[<p>本来打算今天录点视频的，但是这一搬床铺整了将近一个小时，唉！整理了太多的东西。把所有的东西都翻了一个遍，很多东西都招蟑螂了，哈哈，真是衰啊。今天就不整了，下周在说吧，正好这些时间我准备一下。嗯 ，今天就这样吧。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活DAY </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wordpress小记：3》文章id不连续问题</title>
+      <link href="/wp%E5%B0%8F%E8%AE%B0/66.html"/>
+      <url>/wp%E5%B0%8F%E8%AE%B0/66.html</url>
+      
+        <content type="html"><![CDATA[<p>今天发文章发现，之前发的文章都不是连续的，所以从网上找了一些方法。我就直接粘贴过来了，记录一下。</p><blockquote><p>wordpress自动保存文章的功能是让博主们能够在特殊情况下而不丢失文章的编辑，比如断电、死机等等。。。wordpress默认的保存文章的时间间隔是 30 秒，且还保存最后的 5 个文章修订版本。但是正是这些功能产生了wordpress文章id不连续，和多余的数据库垃圾，如果你想对其进行修改，那么今天这篇文章将可以帮到你。</p></blockquote><blockquote><p>修改wordpress自动保存文章时间： 打开wp-config.php文件，在 require_once(ABSPATH . ‘wp-settings.php’); 前添加这段代码： define(‘AUTOSAVE_INTERVAL’, 600 );</p></blockquote><p>//一分钟保存一次<br>define(‘AUTOSAVE_INTERVAL’, 60);<br>//保存 10 个版本<br>define(‘WP_POST_REVISIONS’, 10);<br>//一个版本都不保存（即 禁用自动保存功能）<br>define(‘WP_POST_REVISIONS’, false);</p><p>这么有个小弊端，那就是每次wordpress 更新都要重新设置一次。 好了，就这样吧。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wp小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wp小记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客就这样明天开始搞站</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/64.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/64.html</url>
+      
+        <content type="html"><![CDATA[<p>这些天都在搞博客了，今天就这样吧。博客不搞了，明天开始搞站，全程我是想着用视频记录。嗯 就这样，看看明天效果。好了，休息了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活DAY </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wordpress小记：2》我的博客用的wp插件</title>
+      <link href="/wp%E5%B0%8F%E8%AE%B0/50.html"/>
+      <url>/wp%E5%B0%8F%E8%AE%B0/50.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>搞博客的这几天呢，我的博客一共装了 4 个插件，现在介绍一下。</p></blockquote><p>1.<strong>百度sitemap</strong> 下载地址：<a href="http://bs.baidu.com/zhanzhang/wp-baidusubmit-140213.zip">http://bs.baidu.com/zhanzhang/wp-baidusubmit-140213.zip</a> 这个是百度新出的结构化数据插件，有助于百度收录的，这个就不多说了。</p><p>2.<strong>Top Level Categories</strong> 下载地址：<a href="http://downloads.wordpress.org/plugin/top-level-cats.release-1.0.1.zip">http://downloads.wordpress.org/plugin/top-level-cats.release-1.0.1.zip</a> 固定连接后，二级目录的中间会出现 ：/category/ ，而这个插件可以去掉。 插件介绍：Removes the prefix from the URL for a category. For instance, if your old category link was /category/catname it will now be /catname </p><p>3.<strong>WP Code Highlight</strong> 下载地址：<a href="http://downloads.wordpress.org/plugin/wp-code-highlight.1.2.8.zip">http://downloads.wordpress.org/plugin/wp-code-highlight.1.2.8.zip</a> </p><p>（1）下载后解压得到wp-code-highlight文件夹，上传至 /wp-content/plugins/ 目录,或者直接将压缩包插件上传，然后启用就好了，然后在后台“插件”那里启用。 </p><p>（2）因为wordpress的可视化编辑器会将代码来回转义，所以最好禁用，方法：登入后→用户→点击你的帐户→把第一个选项勾上“禁用可视化编辑器” </p><p>（3）对插件进行个性化的设置，方法：登入后→设置→WP Code Highlight </p><p>（4）写文章时将代码放在&lt; pre &gt;和&lt; /pre &gt;中间即可（Html编辑器中已经提供了一个名为WP-Code-Highlight的按钮，方便你插入代码）。 （5）如果你以前是使用WP-Syntax的，你现在仍然可以使用原来的方法插入代码，WP Code Highlight完全兼容WP-Syntax的代码插入风格。可以保证你过渡无忧。 </p><p>（6）“Code Button”：勾选“enable”则在Html编辑器中插入一个名为“WP-Code-Highlight”的按钮，方便我们插入代码。 </p><p>（7）“Highlight Themes”：可以选择4种不同的代码高亮主题，也可以勾选“random”则随机显示代码高亮主题。另外，WP Code Highlight支持在当前wordpress主题文件夹中寻找“wp-code-highlight.css”文件，如果wp-code-highlight.css存在则会自动调用。所以如果你对样式不满意想自己定制，只需要自己写一个wp-code-highlight.css文件放入当前你使用的wordpress主题文件夹即可，写法可参考插件文件夹css目录中的wp-code-highlight.css文件。 </p><p>（8）“Line Numbers”：勾选“enable”则显示代码行号，勾选“disable”则不显示代码行号。 （9）“Delete Options”：勾选后可以在禁用此插件时自动删除在数据库中的设置选项，做到绿色化。</p><span id="more"></span><p> 4.<strong>WP SMTP</strong> 下载地址：<a href="http://downloads.wordpress.org/plugin/wp-smtp.1.1.7.zip">http://downloads.wordpress.org/plugin/wp-smtp.1.1.7.zip</a> 有很多朋友的主机甚至禁用了mail函数，可以用这个插件。 （1）下载后解压得到wp-smtp文件夹，上传至 /wp-content/plugins/ 目录，然后在后台“插件”那里启用。 </p><p>（2）进行参数配置：“设置”→“WP SMTP”即进入了设置页面。上面有Gmail邮箱、Yahoo!邮箱、微软邮箱、163邮箱、QQ邮箱的设置示例，可以点击对应的图标查看示例截图。 </p><p>（3）配置好以后，可以输入“收件地址”“邮件标题”“邮件正文”，然后点击“发送测试”。 如下图：</p><p>  <a href="https://lice.cc/wp-content/uploads/2014/06/wp-smtp.png"><img src="https://lice.cc/wp-content/uploads/2014/06/wp-smtp-197x260.png" alt="wp smtp"></a></p><h3 id="5-IIS-Chinese-Tag-Permalink"><a href="#5-IIS-Chinese-Tag-Permalink" class="headerlink" title="5.IIS Chinese Tag Permalink"></a>5.IIS Chinese Tag Permalink</h3><p>直接搜标题第一个就是了，这个插件是为了修复tag标签不能显示中文的bug。因为我的虚拟主机是win，所以用的这个插件。</p><h4 id="6-Permalink-Trailing-Slash-Fixer"><a href="#6-Permalink-Trailing-Slash-Fixer" class="headerlink" title="6.Permalink Trailing Slash Fixer"></a>6.Permalink Trailing Slash Fixer</h4><p>这个插件是在栏目后面加一个斜杠，有助于seo。懂优化的你懂得。</p><blockquote></blockquote><blockquote><p>我现在用的就这么多插件，够我用了，插件太多也不是很好。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> wp小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wp小记 </tag>
+            
+            <tag> wp插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wordpress小记：1》威言威语主题导航栏去掉空隙</title>
+      <link href="/wp%E5%B0%8F%E8%AE%B0/20.html"/>
+      <url>/wp%E5%B0%8F%E8%AE%B0/20.html</url>
+      
+        <content type="html"><![CDATA[<p>1.威言威语的主题默认是显示顶部页面导航的，我不是很喜欢，所以关闭了，但是发现关闭后，中间有很高的空隙，如下图：</p><p> <a href="https://lice.cc/wp-content/uploads/2014/06/daohang001.jpg"><img src="https://lice.cc/wp-content/uploads/2014/06/daohang001-300x90.jpg" alt="导航间隙001"></a>   </p><p>所以我进行了以下操作：</p><p>2.进后台》外观》编辑》style.css》找到 #header  height: 142px;   把 142px 改成119px 就好了。（我感觉119px 比较好，你觉得怎样好看，就改成多少就好了。）</p><p>我上传了图片操作：</p><p> <a href="https://lice.cc/wp-content/uploads/2014/06/daohang002.jpg"><img src="https://lice.cc/wp-content/uploads/2014/06/daohang002-300x147.jpg" alt="导航间隙002"></a> </p><p>就这样吧，不懂得，可以留言。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wp小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wp小记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人博客就从今天开始</title>
+      <link href="/%E7%94%9F%E6%B4%BBDAY/18.html"/>
+      <url>/%E7%94%9F%E6%B4%BBDAY/18.html</url>
+      
+        <content type="html"><![CDATA[<p>就这样吧</p><p>今天已经很晚了，其他的功能以后在说吧。会搞好的。加油吧！</p><p>bye ，晚安。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活DAY </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活DAY </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
